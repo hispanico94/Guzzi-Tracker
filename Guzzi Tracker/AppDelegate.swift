@@ -12,10 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let assembler = ViewControllerAssembler()
+        let firstVC = UINavigationController(rootViewController: assembler.MotorcyclesVCAssembler())
+        let secondVC = UINavigationController(rootViewController: assembler.SearchVCAssembler())
+        let thirdVC = UINavigationController(rootViewController: assembler.MyGarageVCAssembler())
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [firstVC, secondVC, thirdVC]
+        
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
         return true
     }
 

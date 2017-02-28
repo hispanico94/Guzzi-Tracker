@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1A41D61E60808C00E76F11 /* MotorcyclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */; };
+		CF1A41D71E60808C00E76F11 /* MotorcyclesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */; };
+		CF1A41DA1E6080B100E76F11 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A41D81E6080B100E76F11 /* SearchViewController.swift */; };
+		CF1A41DB1E6080B100E76F11 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A41D91E6080B100E76F11 /* SearchViewController.xib */; };
+		CF1A41DE1E6080E800E76F11 /* MyGarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A41DC1E6080E800E76F11 /* MyGarageViewController.swift */; };
+		CF1A41DF1E6080E800E76F11 /* MyGarageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A41DD1E6080E800E76F11 /* MyGarageViewController.xib */; };
+		CF1A41E21E6081F000E76F11 /* ViewControllerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A41E11E6081F000E76F11 /* ViewControllerAssembler.swift */; };
 		CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB03F11E60432E0032BD11 /* AppDelegate.swift */; };
-		CFAB03F41E60432E0032BD11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB03F31E60432E0032BD11 /* ViewController.swift */; };
-		CFAB03F71E60432E0032BD11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAB03F51E60432E0032BD11 /* Main.storyboard */; };
 		CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAB03F81E60432E0032BD11 /* Assets.xcassets */; };
 		CFAB03FC1E60432E0032BD11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAB03FA1E60432E0032BD11 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcyclesViewController.swift; sourceTree = "<group>"; };
+		CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcyclesViewController.xib; sourceTree = "<group>"; };
+		CF1A41D81E6080B100E76F11 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CF1A41D91E6080B100E76F11 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		CF1A41DC1E6080E800E76F11 /* MyGarageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGarageViewController.swift; sourceTree = "<group>"; };
+		CF1A41DD1E6080E800E76F11 /* MyGarageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyGarageViewController.xib; sourceTree = "<group>"; };
+		CF1A41E11E6081F000E76F11 /* ViewControllerAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembler.swift; sourceTree = "<group>"; };
 		CFAB03EE1E60432E0032BD11 /* Guzzi Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guzzi Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAB03F11E60432E0032BD11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFAB03F31E60432E0032BD11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CFAB03F61E60432E0032BD11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFAB03F81E60432E0032BD11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFAB03FB1E60432E0032BD11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFAB03FD1E60432E0032BD11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,11 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				CFAB03F11E60432E0032BD11 /* AppDelegate.swift */,
-				CFAB03F31E60432E0032BD11 /* ViewController.swift */,
-				CFAB03F51E60432E0032BD11 /* Main.storyboard */,
 				CFAB03F81E60432E0032BD11 /* Assets.xcassets */,
 				CFAB03FA1E60432E0032BD11 /* LaunchScreen.storyboard */,
 				CFAB03FD1E60432E0032BD11 /* Info.plist */,
+				CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */,
+				CF1A41D81E6080B100E76F11 /* SearchViewController.swift */,
+				CF1A41DC1E6080E800E76F11 /* MyGarageViewController.swift */,
+				CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */,
+				CF1A41D91E6080B100E76F11 /* SearchViewController.xib */,
+				CF1A41DD1E6080E800E76F11 /* MyGarageViewController.xib */,
+				CF1A41E11E6081F000E76F11 /* ViewControllerAssembler.swift */,
 			);
 			path = "Guzzi Tracker";
 			sourceTree = "<group>";
@@ -125,8 +140,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFAB03FC1E60432E0032BD11 /* LaunchScreen.storyboard in Resources */,
+				CF1A41D71E60808C00E76F11 /* MotorcyclesViewController.xib in Resources */,
+				CF1A41DB1E6080B100E76F11 /* SearchViewController.xib in Resources */,
 				CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */,
-				CFAB03F71E60432E0032BD11 /* Main.storyboard in Resources */,
+				CF1A41DF1E6080E800E76F11 /* MyGarageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,22 +154,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFAB03F41E60432E0032BD11 /* ViewController.swift in Sources */,
+				CF1A41D61E60808C00E76F11 /* MotorcyclesViewController.swift in Sources */,
+				CF1A41DA1E6080B100E76F11 /* SearchViewController.swift in Sources */,
 				CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */,
+				CF1A41E21E6081F000E76F11 /* ViewControllerAssembler.swift in Sources */,
+				CF1A41DE1E6080E800E76F11 /* MyGarageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CFAB03F51E60432E0032BD11 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CFAB03F61E60432E0032BD11 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CFAB03FA1E60432E0032BD11 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -302,6 +314,7 @@
 				CFAB04021E60432E0032BD11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
