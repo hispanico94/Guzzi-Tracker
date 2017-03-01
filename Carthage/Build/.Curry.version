@@ -1,0 +1,10 @@
+{
+  "xcodeVersion" : "Xcode 8.2.1\nBuild version 8C1002",
+  "commitish" : "v3.0.0",
+  "iOS" : [
+    {
+      "name" : "Curry",
+      "md5" : "902fc4a3696641d1d935165c765627d4"
+    }
+  ]
+}

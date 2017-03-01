@@ -17,15 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let assembler = ViewControllerAssembler()
-        let firstVC = UINavigationController(rootViewController: assembler.MotorcyclesVCAssembler())
-        let secondVC = UINavigationController(rootViewController: assembler.SearchVCAssembler())
-        let thirdVC = UINavigationController(rootViewController: assembler.MyGarageVCAssembler())
+        let firstVC = UINavigationController(rootViewController: assembler.MotorcyclesVCAssemble())
+        let secondVC = UINavigationController(rootViewController: assembler.SearchVCAssemble())
+        let thirdVC = UINavigationController(rootViewController: assembler.MyGarageVCAssemble())
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [firstVC, secondVC, thirdVC]
         
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
+        
         return true
     }
 

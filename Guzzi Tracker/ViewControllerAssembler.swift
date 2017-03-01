@@ -10,7 +10,7 @@ import UIKit
 
 class ViewControllerAssembler {
     
-    func MotorcyclesVCAssembler() -> MotorcyclesViewController {
+    func MotorcyclesVCAssemble() -> MotorcyclesViewController {
         let motorcyclesVC = MotorcyclesViewController(nibName: "MotorcyclesViewController", bundle: nil)
         motorcyclesVC.title = "Motorcycles"
         motorcyclesVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: nil, action: nil)
@@ -18,14 +18,14 @@ class ViewControllerAssembler {
         return motorcyclesVC
     }
     
-    func SearchVCAssembler() -> SearchViewController {
+    func SearchVCAssemble() -> SearchViewController {
         let searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
         searchVC.title = "Search"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         return searchVC
     }
     
-    func MyGarageVCAssembler() -> MyGarageViewController {
+    func MyGarageVCAssemble() -> MyGarageViewController {
         let myGarageVC = MyGarageViewController(nibName: "MyGarageViewController", bundle: nil)
         myGarageVC.title = "My Garage"
         myGarageVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings_icon"), style: .plain, target: nil, action: nil)

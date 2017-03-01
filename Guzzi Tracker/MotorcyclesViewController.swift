@@ -9,10 +9,31 @@
 import UIKit
 
 class MotorcyclesViewController: UITableViewController {
-        
+    
+    private var motorcycleList: [Motorcycle]
+    private var motorcycleListToShow: [Motorcycle]
+    
+    override init(nibName: String?, bundle: Bundle?) {
+        do {
+            motorcycleList = try getMotorcycleListFromJson()
+            motorcycleListToShow = motorcycleList
+        } catch {
+            print("\(error)")
+            motorcycleList = []
+            motorcycleListToShow = []
+        }
+        super.init(nibName: nibName, bundle: bundle)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tableView.register(MotorcycleCell.self, forCellReuseIdentifier: MotorcycleCell.defaultIdentifier)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,24 +49,18 @@ class MotorcyclesViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return motorcycleListToShow.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: MotorcycleCell.defaultIdentifier, for: indexPath) as! MotorcycleCell
+        return cell.set(withMotorcycleData: motorcycleListToShow[indexPath.row])
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

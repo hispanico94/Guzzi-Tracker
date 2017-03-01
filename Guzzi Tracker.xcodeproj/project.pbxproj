@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF094F711E66C1CA00D351E1 /* info_moto.json in Resources */ = {isa = PBXBuildFile; fileRef = CF094F701E66C1CA00D351E1 /* info_moto.json */; };
 		CF1A41D61E60808C00E76F11 /* MotorcyclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */; };
 		CF1A41D71E60808C00E76F11 /* MotorcyclesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */; };
 		CF1A41DA1E6080B100E76F11 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A41D81E6080B100E76F11 /* SearchViewController.swift */; };
@@ -14,24 +15,43 @@
 		CF1A41DE1E6080E800E76F11 /* MyGarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A41DC1E6080E800E76F11 /* MyGarageViewController.swift */; };
 		CF1A41DF1E6080E800E76F11 /* MyGarageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A41DD1E6080E800E76F11 /* MyGarageViewController.xib */; };
 		CF1A41E21E6081F000E76F11 /* ViewControllerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A41E11E6081F000E76F11 /* ViewControllerAssembler.swift */; };
+		CF8CCE921E65CBB500F4A37E /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CCE901E65CBB500F4A37E /* Argo.framework */; };
+		CF8CCE931E65CBB500F4A37E /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CCE911E65CBB500F4A37E /* Runes.framework */; };
+		CF8CCE961E65CFFE00F4A37E /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CCE951E65CFFE00F4A37E /* Curry.framework */; };
+		CF8CCE9A1E65D10400F4A37E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8CCE991E65D10400F4A37E /* Models.swift */; };
+		CF8CCE9E1E65D8A300F4A37E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */; };
 		CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB03F11E60432E0032BD11 /* AppDelegate.swift */; };
 		CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAB03F81E60432E0032BD11 /* Assets.xcassets */; };
 		CFAB03FC1E60432E0032BD11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAB03FA1E60432E0032BD11 /* LaunchScreen.storyboard */; };
+		CFD4E44F1E66DC8000EFAB57 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E44E1E66DC8000EFAB57 /* Data.swift */; };
+		CFD4E4521E67355900EFAB57 /* MotorcycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E4511E67355900EFAB57 /* MotorcycleCell.swift */; };
+		CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */; };
+		CFD4E4561E673B7A00EFAB57 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E4551E673B7A00EFAB57 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcyclesViewController.swift; sourceTree = "<group>"; };
-		CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcyclesViewController.xib; sourceTree = "<group>"; };
-		CF1A41D81E6080B100E76F11 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		CF1A41D91E6080B100E76F11 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		CF1A41DC1E6080E800E76F11 /* MyGarageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGarageViewController.swift; sourceTree = "<group>"; };
-		CF1A41DD1E6080E800E76F11 /* MyGarageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyGarageViewController.xib; sourceTree = "<group>"; };
+		CF094F701E66C1CA00D351E1 /* info_moto.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = info_moto.json; sourceTree = "<group>"; };
+		CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotorcyclesViewController.swift; path = "Guzzi Tracker/MotorcyclesViewController.swift"; sourceTree = "<group>"; };
+		CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MotorcyclesViewController.xib; path = "Guzzi Tracker/MotorcyclesViewController.xib"; sourceTree = "<group>"; };
+		CF1A41D81E6080B100E76F11 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "Guzzi Tracker/SearchViewController.swift"; sourceTree = "<group>"; };
+		CF1A41D91E6080B100E76F11 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = "Guzzi Tracker/SearchViewController.xib"; sourceTree = "<group>"; };
+		CF1A41DC1E6080E800E76F11 /* MyGarageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGarageViewController.swift; path = "Guzzi Tracker/MyGarageViewController.swift"; sourceTree = "<group>"; };
+		CF1A41DD1E6080E800E76F11 /* MyGarageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyGarageViewController.xib; path = "Guzzi Tracker/MyGarageViewController.xib"; sourceTree = "<group>"; };
 		CF1A41E11E6081F000E76F11 /* ViewControllerAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembler.swift; sourceTree = "<group>"; };
+		CF8CCE901E65CBB500F4A37E /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		CF8CCE911E65CBB500F4A37E /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		CF8CCE951E65CFFE00F4A37E /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
+		CF8CCE991E65D10400F4A37E /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CFAB03EE1E60432E0032BD11 /* Guzzi Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guzzi Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAB03F11E60432E0032BD11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFAB03F81E60432E0032BD11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFAB03FB1E60432E0032BD11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFAB03FD1E60432E0032BD11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD4E44E1E66DC8000EFAB57 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		CFD4E4511E67355900EFAB57 /* MotorcycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleCell.swift; sourceTree = "<group>"; };
+		CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleCell.xib; sourceTree = "<group>"; };
+		CFD4E4551E673B7A00EFAB57 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,16 +59,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8CCE931E65CBB500F4A37E /* Runes.framework in Frameworks */,
+				CF8CCE921E65CBB500F4A37E /* Argo.framework in Frameworks */,
+				CF8CCE961E65CFFE00F4A37E /* Curry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF8CCE8B1E65CAEA00F4A37E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */,
+				CF1A41D81E6080B100E76F11 /* SearchViewController.swift */,
+				CF1A41DC1E6080E800E76F11 /* MyGarageViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CF8CCE8C1E65CB2200F4A37E /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */,
+				CF1A41D91E6080B100E76F11 /* SearchViewController.xib */,
+				CF1A41DD1E6080E800E76F11 /* MyGarageViewController.xib */,
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
+		CF8CCE8F1E65CB9300F4A37E /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				CF8CCE951E65CFFE00F4A37E /* Curry.framework */,
+				CF8CCE901E65CBB500F4A37E /* Argo.framework */,
+				CF8CCE911E65CBB500F4A37E /* Runes.framework */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		CF8CCE981E65D0F200F4A37E /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				CF8CCE991E65D10400F4A37E /* Models.swift */,
+				CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */,
+				CFD4E44E1E66DC8000EFAB57 /* Data.swift */,
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
 		CFAB03E51E60432D0032BD11 = {
 			isa = PBXGroup;
 			children = (
+				CF8CCE8F1E65CB9300F4A37E /* Libraries */,
 				CFAB03F01E60432E0032BD11 /* Guzzi Tracker */,
+				CF8CCE981E65D0F200F4A37E /* Elements */,
+				CF8CCE8B1E65CAEA00F4A37E /* ViewControllers */,
+				CF8CCE8C1E65CB2200F4A37E /* Xib */,
+				CFD4E4501E67350900EFAB57 /* Cell */,
 				CFAB03EF1E60432E0032BD11 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,15 +136,20 @@
 				CFAB03F81E60432E0032BD11 /* Assets.xcassets */,
 				CFAB03FA1E60432E0032BD11 /* LaunchScreen.storyboard */,
 				CFAB03FD1E60432E0032BD11 /* Info.plist */,
-				CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */,
-				CF1A41D81E6080B100E76F11 /* SearchViewController.swift */,
-				CF1A41DC1E6080E800E76F11 /* MyGarageViewController.swift */,
-				CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */,
-				CF1A41D91E6080B100E76F11 /* SearchViewController.xib */,
-				CF1A41DD1E6080E800E76F11 /* MyGarageViewController.xib */,
 				CF1A41E11E6081F000E76F11 /* ViewControllerAssembler.swift */,
+				CF094F701E66C1CA00D351E1 /* info_moto.json */,
+				CFD4E4551E673B7A00EFAB57 /* TableViewCell.swift */,
 			);
 			path = "Guzzi Tracker";
+			sourceTree = "<group>";
+		};
+		CFD4E4501E67350900EFAB57 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CFD4E4511E67355900EFAB57 /* MotorcycleCell.swift */,
+				CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +162,7 @@
 				CFAB03EA1E60432D0032BD11 /* Sources */,
 				CFAB03EB1E60432D0032BD11 /* Frameworks */,
 				CFAB03EC1E60432D0032BD11 /* Resources */,
+				CF8CCE941E65CC8D00F4A37E /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +215,8 @@
 			files = (
 				CFAB03FC1E60432E0032BD11 /* LaunchScreen.storyboard in Resources */,
 				CF1A41D71E60808C00E76F11 /* MotorcyclesViewController.xib in Resources */,
+				CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */,
+				CF094F711E66C1CA00D351E1 /* info_moto.json in Resources */,
 				CF1A41DB1E6080B100E76F11 /* SearchViewController.xib in Resources */,
 				CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */,
 				CF1A41DF1E6080E800E76F11 /* MyGarageViewController.xib in Resources */,
@@ -149,16 +225,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CF8CCE941E65CC8D00F4A37E /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFAB03EA1E60432D0032BD11 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8CCE9A1E65D10400F4A37E /* Models.swift in Sources */,
+				CFD4E4521E67355900EFAB57 /* MotorcycleCell.swift in Sources */,
 				CF1A41D61E60808C00E76F11 /* MotorcyclesViewController.swift in Sources */,
 				CF1A41DA1E6080B100E76F11 /* SearchViewController.swift in Sources */,
 				CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */,
+				CFD4E4561E673B7A00EFAB57 /* TableViewCell.swift in Sources */,
 				CF1A41E21E6081F000E76F11 /* ViewControllerAssembler.swift in Sources */,
 				CF1A41DE1E6080E800E76F11 /* MyGarageViewController.swift in Sources */,
+				CF8CCE9E1E65D8A300F4A37E /* Extensions.swift in Sources */,
+				CFD4E44F1E66DC8000EFAB57 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +375,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y99795RM29;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Guzzi Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.PaoloRocca.Guzzi-Tracker";
@@ -287,6 +392,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y99795RM29;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Guzzi Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.PaoloRocca.Guzzi-Tracker";

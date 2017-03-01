@@ -1,0 +1,10 @@
+{
+  "xcodeVersion" : "Xcode 8.2.1\nBuild version 8C1002",
+  "commitish" : "v4.0.1",
+  "iOS" : [
+    {
+      "name" : "Runes",
+      "md5" : "a76cb702bfda71a6eccf793e4e2eb146"
+    }
+  ]
+}
