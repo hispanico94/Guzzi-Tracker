@@ -11,13 +11,6 @@ import UIKit
 class MotorcycleCell: UITableViewCell {
     static let defaultIdentifier: String = "MotorcycleCell"
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     func set(withMotorcycleData motorcycleData: Motorcycle) -> MotorcycleCell{
         textLabel?.text = motorcycleData.name
