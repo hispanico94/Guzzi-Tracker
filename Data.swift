@@ -118,15 +118,19 @@ extension Motorcycle.Other: ArrayConvertible {
 }
 
 extension Motorcycle {
-    func createArrayfromStruct() -> [(String, [RowElement])] {
-        var elements: [(String, [RowElement])] = []
-        elements.append((Key.Motorcycle.GeneralInfo.guiKey, generalInfo.convertToArray()))
-        elements.append((Key.Motorcycle.Engine.guiKey, engine.convertToArray()))
-        elements.append((Key.Motorcycle.Frame.guiKey, frame.convertToArray()))
-        elements.append((Key.Motorcycle.CapacitiesAndPerformance.guiKey, capacitiesAndPerformance.convertToArray()))
-        elements.append((Key.Motorcycle.Other.guiKey, otherInfo.convertToArray()))
+    func createArrayfromStruct() -> [SectionData] {
+        var elements: [SectionData] = []
+        elements.append(SectionData(sectionName: Key.Motorcycle.GeneralInfo.guiKey,
+                                    sectionElements: generalInfo.convertToArray()))
+        elements.append(SectionData(sectionName: Key.Motorcycle.Engine.guiKey,
+                                    sectionElements: engine.convertToArray()))
+        elements.append(SectionData(sectionName: Key.Motorcycle.Frame.guiKey,
+                                    sectionElements: frame.convertToArray()))
+        elements.append(SectionData(sectionName: Key.Motorcycle.CapacitiesAndPerformance.guiKey,
+                                    sectionElements: capacitiesAndPerformance.convertToArray()))
+        elements.append(SectionData(sectionName: Key.Motorcycle.Other.guiKey,
+                                    sectionElements: otherInfo.convertToArray()))
         return elements
     }
 }
-
 

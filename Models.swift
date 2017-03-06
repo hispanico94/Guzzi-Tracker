@@ -42,7 +42,7 @@ struct Motorcycle {
             let peak: Double
             let rpm: Int
             var formattedValue: String {
-                return "\(peak) hp at \(rpm)"
+                return "\(peak) hp at \(rpm) rpm"
             }
         }
     }
@@ -75,6 +75,16 @@ struct JsonFile {
     let elements: [Motorcycle]
 }
 
+struct RowElement {
+    let rowKey: String
+    let rowValue: String
+}
+
+struct SectionData {
+    let sectionName: String
+    let sectionElements: [RowElement]
+}
+
 struct Key {
     
     struct Motorcycle {
@@ -103,7 +113,7 @@ struct Key {
             static let bore = JsonOrGUIKey(jsonKey: "bore", guiKey: "Bore")
             static let stroke = JsonOrGUIKey(jsonKey: "stroke", guiKey: "Stroke")
             static let displacement = JsonOrGUIKey(jsonKey: "displacement", guiKey: "Displacement")
-            static let compression = JsonOrGUIKey(jsonKey: "compression", guiKey: "Compression")
+            static let compression = JsonOrGUIKey(jsonKey: "compression", guiKey: "Compression ratio")
             let power: Power
             static let feedSystem = JsonOrGUIKey(jsonKey: "feed_system", guiKey: "Feed system")
             
@@ -159,14 +169,9 @@ struct Key {
     }
 }
 
-struct RowElement {
-    let rowKey: String
-    let rowValue: String
-}
-
 func convertOptionalToString<T>(_ value: T?) -> String {
     if let unwrapVal = value {
         return "\(unwrapVal)"
     }
-    return "N/A"
+    return "---"
 }

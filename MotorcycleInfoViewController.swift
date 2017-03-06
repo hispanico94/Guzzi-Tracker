@@ -1,41 +1,40 @@
 //
-//  MotorcyclesViewController.swift
+//  MotorcycleInfoViewController.swift
 //  Guzzi Tracker
 //
-//  Created by Paolo Rocca on 24/02/17.
+//  Created by Paolo Rocca on 06/03/17.
 //  Copyright © 2017 PaoloRocca. All rights reserved.
 //
 
 import UIKit
 
-class MotorcyclesViewController: UITableViewController {
+class MotorcycleInfoViewController: UITableViewController {
+    let motorcycleArray: [SectionData]
     
-    private var motorcycleList: [Motorcycle]
-    private var motorcycleListToShow: [Motorcycle]
     
-    override init(nibName: String?, bundle: Bundle?) {
-        do {
-            motorcycleList = try getMotorcycleListFromJson()
-            motorcycleListToShow = motorcycleList
-        } catch {
-            print("\(error)")
-            motorcycleList = []
-            motorcycleListToShow = []
-        }
+    
+    init(selectedMotorcycle motorcycle: Motorcycle, nibName: String?, bundle: Bundle?) {
+        motorcycleArray = motorcycle.createArrayfromStruct()
         super.init(nibName: nibName, bundle: bundle)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "MotorcycleCell", bundle: nil), forCellReuseIdentifier: MotorcycleCell.defaultIdentifier)
+        tableView.register(UINib(nibName: "MotorcycleInfoCell", bundle: nil), forCellReuseIdentifier: MotorcycleInfoCell.defaultIdentifier)
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = CGFloat(200)
         
+        navigationItem.title = motorcycleArray[0].sectionElements[1].rowValue
+        
+        
+        //tableView.allowsSelection = false
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,20 +42,29 @@ class MotorcyclesViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return motorcycleArray.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return motorcycleArray[section].sectionName
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return motorcycleListToShow.count
+        return motorcycleArray[section].sectionElements.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MotorcycleCell.defaultIdentifier, for: indexPath) as! MotorcycleCell
-        return cell.set(withMotorcycleData: motorcycleListToShow[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: MotorcycleInfoCell.defaultIdentifier, for: indexPath) as! MotorcycleInfoCell
+        
+        return cell.set(withRowElement: motorcycleArray[indexPath.section].sectionElements[indexPath.row])
     }
 
     /*
@@ -93,17 +101,7 @@ class MotorcyclesViewController: UITableViewController {
         return true
     }
     */
-    
-    // MARK: - Table view delegate
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedMotorcycle = motorcycleListToShow[indexPath.row]
-        navigationController?.pushViewController(MotorcycleInfoViewController(selectedMotorcycle: selectedMotorcycle,
-                                                                              nibName: "MotorcycleInfoViewController",
-                                                                              bundle: nil),
-                                                                              animated: true)
-    }
-    
     /*
     // MARK: - Navigation
 

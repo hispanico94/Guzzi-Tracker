@@ -15,9 +15,11 @@ class MotorcycleCell: UITableViewCell {
     func set(withMotorcycleData motorcycleData: Motorcycle) -> MotorcycleCell{
         textLabel?.text = motorcycleData.generalInfo.name
         
-        var detailText = "From " + String(motorcycleData.generalInfo.firstYear)
+        var detailText: String = ""
         if let lastYear = motorcycleData.generalInfo.lastYear {
-            detailText += " to " + String(lastYear)
+            detailText = String(motorcycleData.generalInfo.firstYear) + " - " + String(lastYear)
+        } else {
+            detailText = "From " + String(motorcycleData.generalInfo.firstYear)
         }
         
         detailTextLabel?.text = detailText
