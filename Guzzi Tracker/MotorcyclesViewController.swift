@@ -34,7 +34,6 @@ class MotorcyclesViewController: UITableViewController {
         
         tableView.register(UINib(nibName: "MotorcycleCell", bundle: nil), forCellReuseIdentifier: MotorcycleCell.defaultIdentifier)
         
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -94,11 +93,9 @@ class MotorcyclesViewController: UITableViewController {
     */
     
     // MARK: - Table view delegate
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
 
+    
+    
     /*
     // MARK: - Navigation
 
