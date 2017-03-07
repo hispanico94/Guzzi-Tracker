@@ -9,11 +9,13 @@
 import UIKit
 
 class MotorcycleInfoViewController: UITableViewController {
+    let motorcycle: Motorcycle
     let motorcycleArray: [SectionData]
     
     
     
     init(selectedMotorcycle motorcycle: Motorcycle, nibName: String?, bundle: Bundle?) {
+        self.motorcycle = motorcycle
         motorcycleArray = motorcycle.createArrayfromStruct()
         super.init(nibName: nibName, bundle: bundle)
     }
@@ -25,13 +27,14 @@ class MotorcycleInfoViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "MotorcycleInfoCell", bundle: nil), forCellReuseIdentifier: MotorcycleInfoCell.defaultIdentifier)
+        //tableView.register(UINib(nibName: "MotorcycleInfoCell", bundle: nil), forCellReuseIdentifier: MotorcycleInfoCell.defaultIdentifier)
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = CGFloat(200)
         
-        navigationItem.title = motorcycleArray[0].sectionElements[1].rowValue
+        //navigationItem.title = motorcycleArray[0].sectionElements[1].rowValue
         
+        navigationItem.title = motorcycle.generalInfo.name
         
         //tableView.allowsSelection = false
 
@@ -62,9 +65,7 @@ class MotorcycleInfoViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MotorcycleInfoCell.defaultIdentifier, for: indexPath) as! MotorcycleInfoCell
-        
-        return cell.set(withRowElement: motorcycleArray[indexPath.section].sectionElements[indexPath.row])
+        return motorcycleArray[indexPath.section].sectionElements[indexPath.row].makeTableViewCell(forTableView: tableView)
     }
 
     /*

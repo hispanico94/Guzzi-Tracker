@@ -37,10 +37,8 @@
 				"max_speed": 85,
 				"fuel_consumption": 3.5
 			},
-			"other": {
-				"notes": "The Normale is the first bike ever produced by Moto Guzzi",
-				"images": null
-			}
+            "notes": "The Normale is the first bike ever produced by Moto Guzzi",
+            "images": null
 		},
 		{
 			"id": 2,
@@ -77,10 +75,8 @@
 				"max_speed": 100,
 				"fuel_consumption": 3.5
 			},
-			"other": {
-				"notes": "The Sport uses the longer and lighter frame from te C 2V competition bike. The engine comes from the Normale but it's more refined. Some of the 4107 Sport manufactured have front brake.",
-				"images": null
-			}
+            "notes": "The Sport uses the longer and lighter frame from te C 2V competition bike. The engine comes from the Normale but it's more refined. Some of the 4107 Sport manufactured have front brake.",
+            "images": null
 		},
 		{
 			"id": 3,
@@ -117,10 +113,8 @@
 				"max_speed": 100,
 				"fuel_consumption": 3.4
 			},
-			"other": {
-				"notes": "The G.T. (also known as 'G.T. Norge') is the first Guzzi with a rear suspension. The solution adopted definitely increased comfort without decreasing the torsional strenght of the frame, essential to the handling of the bike. This excellent solution was later used in competition bikes",
-				"images": null
-			}
+            "notes": "The G.T. (also known as 'G.T. Norge') is the first Guzzi with a rear suspension. The solution adopted definitely increased comfort without decreasing the torsional strenght of the frame, essential to the handling of the bike. This excellent solution was later used in competition bikes",
+            "images": null
 		},
 		{
 			"id": 4,
@@ -157,10 +151,8 @@
 				"max_speed": 135,
 				"fuel_consumption": 4.5
 			},
-			"other": {
-				"notes": "The Falcone is the most famous Moto Guzzi bike of the 1950s and one of the most famous ever. It was sold in two versions: Turismo and Sport. The Falcone was also extensively use by the Italian police and army.",
-				"images": null
-			}
+            "notes": "The Falcone is the most famous Moto Guzzi bike of the 1950s and one of the most famous ever. It was sold in two versions: Turismo and Sport. The Falcone was also extensively use by the Italian police and army.",
+            "images": null
 		},
 		{
 			"id": 5,
@@ -197,10 +189,8 @@
 				"max_speed": 80,
 				"fuel_consumption": 2.6
 			},
-			"other": {
-				"notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc).",
-				"images": null
-			}
+            "notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc).",
+            "images": null
 		},
 		{
 			"id": 6,
@@ -237,10 +227,8 @@
 				"max_speed": 85,
 				"fuel_consumption": null
 			},
-			"other": {
-				"notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc).",
-				"images": null
-			}
+            "notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc).",
+            "images": null
 		},
 		{
 			"id": 7,
@@ -277,10 +265,8 @@
 				"max_speed": 85,
 				"fuel_consumption": null
 			},
-			"other": {
-				"notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc). The 192cc model is the most refined. In 1961 was also introduced the electric starter and the friction damper was replaced by a idraulic damper.",
-				"images": null
-			}
+            "notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc). The 192cc model is the most refined. In 1961 was also introduced the electric starter and the friction damper was replaced by a idraulic damper.",
+            "images": null
 		},
 		{
 			"id": 8,
@@ -317,10 +303,11 @@
 				"max_speed": 200,
 				"fuel_consumption": 8.5
 			},
-			"other": {
-				"notes": "The V7 Sport is one of the most famous motorcycles manufactured by Moto Guzzi.",
-				"images": null
-			}
+            "notes": "The V7 Sport is one of the most famous motorcycles manufactured by Moto Guzzi.",
+            "images": [
+                       "https://upload.wikimedia.org/wikipedia/commons/1/11/Moto_Guzzi_V_7_Sport_1972.jpg",
+                       "https://upload.wikimedia.org/wikipedia/it/e/e9/MotoGuzziV7Sport.jpg"
+                       ]
 		},
 		{
 			"id": 9,
@@ -357,10 +344,8 @@
 				"max_speed": 275,
 				"fuel_consumption": null
 			},
-			"other": {
-				"notes": "The Otto Cilindri ('Eight Cylinders') is the most famous competition bike manufactured by Moto Guzzi and one of the most famous in the history of motorcycle competitions. In the 1950s the characteristics of the Otto Cilindri were unique, so its performance. In 1957 the refined engine was capable of 72 hp at 12000 rpm, incredible numbers at that time.",
-				"images": null
-			}
+            "notes": "The Otto Cilindri ('Eight Cylinders') is the most famous competition bike manufactured by Moto Guzzi and one of the most famous in the history of motorcycle competitions. In the 1950s the characteristics of the Otto Cilindri were unique, so its performance. In 1957 the refined engine was capable of 72 hp at 12000 rpm, incredible numbers at that time.",
+            "images": null
 		},
 		{
 			"id": 10,
@@ -397,10 +382,8 @@
 				"max_speed": 230,
 				"fuel_consumption": 5.7
 			},
-			"other": {
-				"notes": null,
-				"images": null
-			}
+            "notes": null,
+            "images": ["http://images.moto.it/images/298922/HOR_STD/1000x/swap.jpg"]
 		}
 	]
 }

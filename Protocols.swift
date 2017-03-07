@@ -6,8 +6,12 @@
 //  Copyright © 2017 PaoloRocca. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol CellRepresentable {
+    func makeTableViewCell(forTableView tableView: UITableView) -> UITableViewCell
+}
 
 protocol ArrayConvertible {
-    func convertToArray() -> [RowElement]
+    func convertToArray() -> [CellRepresentable]
 }

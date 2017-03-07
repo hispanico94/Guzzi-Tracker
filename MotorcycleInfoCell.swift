@@ -14,6 +14,11 @@ class MotorcycleInfoCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    static func getCell() -> MotorcycleInfoCell {
+        return UINib(nibName: "MotorcycleInfoCell", bundle: nil).instantiate(withOwner: nil, options: nil)
+                                                                .first as! MotorcycleInfoCell
+    }
+    
     func set(withRowElement rowElement: RowElement) -> MotorcycleInfoCell {
         titleLabel.text = rowElement.rowKey + ":"
         descriptionLabel.text = rowElement.rowValue

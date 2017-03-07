@@ -14,7 +14,8 @@ struct Motorcycle {
     let engine: Engine
     let frame: Frame
     let capacitiesAndPerformance: CapacitiesAndPerformance
-    let otherInfo: Other
+    let notes: String?
+    let images: [URL]?
     
     struct GeneralInfo {
         let family: String?
@@ -62,11 +63,6 @@ struct Motorcycle {
         let maxSpeed: Int?
         let fuelConsumption: Double?
     }
-    
-    struct Other {
-        let notes: String?
-        let images: [URL]?
-    }
 }
 
 struct JsonFile {
@@ -82,17 +78,39 @@ struct RowElement {
 
 struct SectionData {
     let sectionName: String
-    let sectionElements: [RowElement]
+    let sectionElements: [CellRepresentable]
+}
+
+// DA TOGLIERE???
+//struct MotorcycleInfo {
+//    let rowKey: String
+//    let rowValue: String
+//    
+//    init(rowKey: String, rowValue: String?) {
+//        self.rowKey = rowKey
+//        if let rv = rowValue {
+//            self.rowValue = rv
+//        } else {
+//            self.rowValue = "---"
+//        }
+//    }
+//}
+
+struct RowNote {
+    let note: String
+}
+
+struct RowImage {
+    let urls: [URL]
 }
 
 struct Key {
     
     struct Motorcycle {
         static let id = JsonOrGUIKey(jsonKey: "id", guiKey: "")
-        let generalInfo: GeneralInfo
-        let engine: Engine
-        let frame: Frame
-        let capacitiesAndPerformance: CapacitiesAndPerformance
+        static let notes = JsonOrGUIKey(jsonKey: "notes", guiKey: "Notes")
+        static let images = JsonOrGUIKey(jsonKey: "images", guiKey: "Images")
+        
         
         struct GeneralInfo {
             static let jsonKey = "general_info"
@@ -148,13 +166,15 @@ struct Key {
             static let fuelConsumption = JsonOrGUIKey(jsonKey: "fuel_consumption", guiKey: "Fuel consumption")
         }
         
-        struct Other {
-            static let jsonKey = "other"
-            static let guiKey = "Other Info"
-            static let notes = JsonOrGUIKey(jsonKey: "notes", guiKey: "Notes")
-            static let images = JsonOrGUIKey(jsonKey: "images", guiKey: "Images")
+        struct RowNote {
+            static let jsonKey = "notes"
+            static let guiKey = "Notes"
         }
         
+        struct RowImage {
+            static let jsonKey = "images"
+            static let guiKey = "Images"
+        }
     }
     
     struct JsonFile {
