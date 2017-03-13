@@ -3,8 +3,8 @@
   "commitish" : "v4.1.2",
   "iOS" : [
     {
-      "name" : "Argo",
-      "md5" : "5578626adcbb8011de7114d3b44f03c9"
+      "hash" : "fe1a7d347e4df7c176e03a724cc9c5030858d29ed0e14abaa78630efd3014d84",
+      "name" : "Argo"
     }
   ]
 }

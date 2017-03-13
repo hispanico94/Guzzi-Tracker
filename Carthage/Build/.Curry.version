@@ -3,8 +3,8 @@
   "commitish" : "v3.0.0",
   "iOS" : [
     {
-      "name" : "Curry",
-      "md5" : "902fc4a3696641d1d935165c765627d4"
+      "hash" : "720b4384a6daa81c33c6161bd739e31e9aff93589b3d2d8ec7fb955872b523fa",
+      "name" : "Curry"
     }
   ]
 }

@@ -130,6 +130,14 @@ extension RowImage: CellRepresentable {
     }
 }
 
+extension URL: CellRepresentable {
+    func makeTableViewCell(forTableView tableView: UITableView) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ImageCell.defaultIdentifier)
+                            .getOrElse(ImageCell.getCell()) as! ImageCell
+        return cell.set(withImageURL: self)
+    }
+}
+
 // MARK: - Conforming to ArrayConvertible protocol
 
 extension Motorcycle.GeneralInfo: ArrayConvertible {

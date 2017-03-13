@@ -12,6 +12,9 @@ class MotorcycleInfoViewController: UITableViewController {
     let motorcycle: Motorcycle
     let motorcycleArray: [SectionData]
     
+    // Constants used for determine the selected cell (only the image cell can be selected)
+    let imageSection = 5
+    let imageRow = 0
     
     
     init(selectedMotorcycle motorcycle: Motorcycle, nibName: String?, bundle: Bundle?) {
@@ -32,9 +35,8 @@ class MotorcycleInfoViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = CGFloat(200)
         
-        //navigationItem.title = motorcycleArray[0].sectionElements[1].rowValue
-        
         navigationItem.title = motorcycle.generalInfo.name
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
         //tableView.allowsSelection = false
 
@@ -68,6 +70,16 @@ class MotorcycleInfoViewController: UITableViewController {
         return motorcycleArray[indexPath.section].sectionElements[indexPath.row].makeTableViewCell(forTableView: tableView)
     }
 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == imageSection, indexPath.row == imageRow else { return }
+        navigationController?.pushViewController(ImagesViewController(motorcycleName: motorcycle.generalInfo.name,
+                                                                      imagesUrls: motorcycleArray[imageSection].sectionElements[imageRow] as! RowImage,
+                                                                      nibName: "ImagesViewController",
+                                                                      bundle: nil),
+                                                 animated: true)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

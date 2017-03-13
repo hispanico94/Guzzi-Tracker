@@ -28,3 +28,7 @@ func getMotorcycleListFromJson() throws -> [Motorcycle] {
     return decodedMoto
 }
 
+func getDataFromUrl(_ url: URL, completionHandler: @escaping () ->() ) -> Data? {
+    return try? Data(contentsOf: url)
+}
+

@@ -3,8 +3,8 @@
   "commitish" : "v4.0.1",
   "iOS" : [
     {
-      "name" : "Runes",
-      "md5" : "a76cb702bfda71a6eccf793e4e2eb146"
+      "hash" : "a89b58d3ded2f2e66d1daebd0f013716ae70f2eae93b2a0231a5f6e7b4981cdc",
+      "name" : "Runes"
     }
   ]
 }

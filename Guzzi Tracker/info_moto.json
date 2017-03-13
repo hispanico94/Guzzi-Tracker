@@ -114,7 +114,7 @@
 				"fuel_consumption": 3.4
 			},
             "notes": "The G.T. (also known as 'G.T. Norge') is the first Guzzi with a rear suspension. The solution adopted definitely increased comfort without decreasing the torsional strenght of the frame, essential to the handling of the bike. This excellent solution was later used in competition bikes",
-            "images": null
+            "images": ["https://www.mgcn.nl/database/images/stories/gtnorge_500cc1928.jpg"]
 		},
 		{
 			"id": 4,
@@ -152,7 +152,10 @@
 				"fuel_consumption": 4.5
 			},
             "notes": "The Falcone is the most famous Moto Guzzi bike of the 1950s and one of the most famous ever. It was sold in two versions: Turismo and Sport. The Falcone was also extensively use by the Italian police and army.",
-            "images": null
+            "images": ["https://www.mgcn.nl/database/images/stories/falcone_500t_48.jpg",
+                       "https://www.mgcn.nl/database/images/stories/falcone.jpg",
+                       "https://www.mgcn.nl/database/images/stories/falconesport.jpg"
+                       ]
 		},
 		{
 			"id": 5,
@@ -190,7 +193,7 @@
 				"fuel_consumption": 2.6
 			},
             "notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc).",
-            "images": null
+            "images": ["https://www.mgcn.nl/database/images/stories/galetto160.jpg"]
 		},
 		{
 			"id": 6,
@@ -228,7 +231,9 @@
 				"fuel_consumption": null
 			},
             "notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc).",
-            "images": null
+            "images": ["https://www.mgcn.nl/database/images/stories/galletto175.jpg",
+                       "https://www.mgcn.nl/database/images/stories/galleto.jpg"
+                       ]
 		},
 		{
 			"id": 7,
@@ -306,7 +311,11 @@
             "notes": "The V7 Sport is one of the most famous motorcycles manufactured by Moto Guzzi.",
             "images": [
                        "https://upload.wikimedia.org/wikipedia/commons/1/11/Moto_Guzzi_V_7_Sport_1972.jpg",
-                       "https://upload.wikimedia.org/wikipedia/it/e/e9/MotoGuzziV7Sport.jpg"
+                       "https://upload.wikimedia.org/wikipedia/it/e/e9/MotoGuzziV7Sport.jpg",
+                       "http://www.motorcyclespecs.co.za/Gallery%20%20A/Moto%20GuzZi%20V7%20Sport%2071.jpg",
+                       "http://1.bp.blogspot.com/-PSi545Lg06k/TwCa1yYfUWI/AAAAAAAAP94/RpbS983rvcI/s1600/V7S.JPG",
+                       "http://www.carollomotoclassiche.it/images/gallerie/moto_vendute/Moto_Guzzi_V7Sport/Moto%20Guzzi%20V7%20Sport%20Sandro_48.jpg",
+                       "http://cdn.silodrome.com/wp-content/uploads/2016/04/Moto-Guzzi-V7-Sport-2.jpg"
                        ]
 		},
 		{
@@ -383,7 +392,9 @@
 				"fuel_consumption": 5.7
 			},
             "notes": null,
-            "images": ["http://images.moto.it/images/298922/HOR_STD/1000x/swap.jpg"]
+            "images": ["http://images.moto.it/images/298922/HOR_STD/1000x/swap.jpg",
+                       "https://www.mgcn.nl/database/images/stories/le%20mans_iii_81.jpg"
+                       ]
 		}
 	]
 }

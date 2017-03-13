@@ -21,6 +21,12 @@
 		CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */; };
 		CF419B021E6D692700EA7B74 /* MotorcycleInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF419B001E6D692700EA7B74 /* MotorcycleInfoCell.swift */; };
 		CF419B031E6D692700EA7B74 /* MotorcycleInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF419B011E6D692700EA7B74 /* MotorcycleInfoCell.xib */; };
+		CF55CABF1E76EEDB002275A0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF55CABD1E76EEDB002275A0 /* Alamofire.framework */; };
+		CF55CAC01E76EEDB002275A0 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */; };
+		CF690CA81E7150BF00523796 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF690CA61E7150BF00523796 /* ImageCell.swift */; };
+		CF690CA91E7150BF00523796 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF690CA71E7150BF00523796 /* ImageCell.xib */; };
+		CF690CAC1E7153AB00523796 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF690CAA1E7153AB00523796 /* ImagesViewController.swift */; };
+		CF690CAD1E7153AB00523796 /* ImagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF690CAB1E7153AB00523796 /* ImagesViewController.xib */; };
 		CF8CCE921E65CBB500F4A37E /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CCE901E65CBB500F4A37E /* Argo.framework */; };
 		CF8CCE931E65CBB500F4A37E /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CCE911E65CBB500F4A37E /* Runes.framework */; };
 		CF8CCE961E65CFFE00F4A37E /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CCE951E65CFFE00F4A37E /* Curry.framework */; };
@@ -52,6 +58,12 @@
 		CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleInfoViewController.xib; sourceTree = "<group>"; };
 		CF419B001E6D692700EA7B74 /* MotorcycleInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleInfoCell.swift; sourceTree = "<group>"; };
 		CF419B011E6D692700EA7B74 /* MotorcycleInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleInfoCell.xib; sourceTree = "<group>"; };
+		CF55CABD1E76EEDB002275A0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		CF690CA61E7150BF00523796 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		CF690CA71E7150BF00523796 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		CF690CAA1E7153AB00523796 /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		CF690CAB1E7153AB00523796 /* ImagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesViewController.xib; sourceTree = "<group>"; };
 		CF8CCE901E65CBB500F4A37E /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		CF8CCE911E65CBB500F4A37E /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		CF8CCE951E65CFFE00F4A37E /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
@@ -76,8 +88,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF8CCE931E65CBB500F4A37E /* Runes.framework in Frameworks */,
+				CF55CAC01E76EEDB002275A0 /* AlamofireImage.framework in Frameworks */,
 				CF8CCE921E65CBB500F4A37E /* Argo.framework in Frameworks */,
 				CF8CCE961E65CFFE00F4A37E /* Curry.framework in Frameworks */,
+				CF55CABF1E76EEDB002275A0 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +105,7 @@
 				CF1A41D81E6080B100E76F11 /* SearchViewController.swift */,
 				CF1A41DC1E6080E800E76F11 /* MyGarageViewController.swift */,
 				CF419AFC1E6D643300EA7B74 /* MotorcycleInfoViewController.swift */,
+				CF690CAA1E7153AB00523796 /* ImagesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -102,6 +117,7 @@
 				CF1A41D91E6080B100E76F11 /* SearchViewController.xib */,
 				CF1A41DD1E6080E800E76F11 /* MyGarageViewController.xib */,
 				CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */,
+				CF690CAB1E7153AB00523796 /* ImagesViewController.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -109,6 +125,8 @@
 		CF8CCE8F1E65CB9300F4A37E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CF55CABD1E76EEDB002275A0 /* Alamofire.framework */,
+				CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */,
 				CF8CCE951E65CFFE00F4A37E /* Curry.framework */,
 				CF8CCE901E65CBB500F4A37E /* Argo.framework */,
 				CF8CCE911E65CBB500F4A37E /* Runes.framework */,
@@ -172,6 +190,8 @@
 				CFE280A71E6F12830090AAA7 /* MotorcycleNotesCell.xib */,
 				CF0ED0811E6F15E8008BAB23 /* MotorcycleImagesCell.swift */,
 				CF0ED0821E6F15E8008BAB23 /* MotorcycleImagesCell.xib */,
+				CF690CA61E7150BF00523796 /* ImageCell.swift */,
+				CF690CA71E7150BF00523796 /* ImageCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -246,7 +266,9 @@
 				CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */,
 				CF094F711E66C1CA00D351E1 /* info_moto.json in Resources */,
 				CF1A41DB1E6080B100E76F11 /* SearchViewController.xib in Resources */,
+				CF690CA91E7150BF00523796 /* ImageCell.xib in Resources */,
 				CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */,
+				CF690CAD1E7153AB00523796 /* ImagesViewController.xib in Resources */,
 				CF1A41DF1E6080E800E76F11 /* MyGarageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +285,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
@@ -288,10 +312,12 @@
 				CF1A41E21E6081F000E76F11 /* ViewControllerAssembler.swift in Sources */,
 				CF419B021E6D692700EA7B74 /* MotorcycleInfoCell.swift in Sources */,
 				CFE280A81E6F12830090AAA7 /* MotorcycleNotesCell.swift in Sources */,
+				CF690CAC1E7153AB00523796 /* ImagesViewController.swift in Sources */,
 				CF1A41DE1E6080E800E76F11 /* MyGarageViewController.swift in Sources */,
 				CF8CCE9E1E65D8A300F4A37E /* Extensions.swift in Sources */,
 				CF0ED0831E6F15E8008BAB23 /* MotorcycleImagesCell.swift in Sources */,
 				CFD4E44F1E66DC8000EFAB57 /* Data.swift in Sources */,
+				CF690CA81E7150BF00523796 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
