@@ -1,0 +1,7 @@
+Small stuff to do later:
+
+1- in ImageCell.swift modify the motorcycleImageView.af_setImage(withURL: url) in set(_:) function for placing a motorcycle_image_placeholder while downloading the image
+
+2- implement "swipe down to dismiss" for SingleImageViewController.swift
+
+3- try to find a better implementation of tableView(_:, didSelectRowAt:) in ImagesViewController.swift

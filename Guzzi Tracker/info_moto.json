@@ -11,7 +11,7 @@
 				"last_year": 1924
 			},
 			"engine" : {
-				"configuration": "Horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
+				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
 				"stroke_cycle": 4,
 				"bore": 88,
 				"stroke": 82,
@@ -38,7 +38,10 @@
 				"fuel_consumption": 3.5
 			},
             "notes": "The Normale is the first bike ever produced by Moto Guzzi",
-            "images": null
+            "images": [
+            	"https://c1.staticflickr.com/3/2938/33398253256_87f8287304_o.jpg",
+							"https://c1.staticflickr.com/3/2817/32624882003_9f4a47da24_o.jpg"
+            ]
 		},
 		{
 			"id": 2,
@@ -49,7 +52,7 @@
 				"last_year": 1928
 			},
 			"engine": {
-				"configuration": "Horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
+				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
 				"stroke_cycle": 4,
 				"bore": 88,
 				"stroke": 82,
@@ -87,7 +90,7 @@
 				"last_year": 1930
 			},
 			"engine": {
-				"configuration": "Horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
+				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
 				"stroke_cycle": 4,
 				"bore": 88,
 				"stroke": 82,
@@ -114,7 +117,7 @@
 				"fuel_consumption": 3.4
 			},
             "notes": "The G.T. (also known as 'G.T. Norge') is the first Guzzi with a rear suspension. The solution adopted definitely increased comfort without decreasing the torsional strenght of the frame, essential to the handling of the bike. This excellent solution was later used in competition bikes",
-            "images": ["https://www.mgcn.nl/database/images/stories/gtnorge_500cc1928.jpg"]
+            "images": ["https://c2.staticflickr.com/4/3954/33398348576_f91d2614a3_o.jpg"]
 		},
 		{
 			"id": 4,
@@ -125,7 +128,7 @@
 				"last_year": 1967
 			},
 			"engine": {
-				"configuration": "Horizontal single cylinder, OHV 2 valves",
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
 				"stroke_cycle": 4,
 				"bore": 88,
 				"stroke": 82,
@@ -152,10 +155,10 @@
 				"fuel_consumption": 4.5
 			},
             "notes": "The Falcone is the most famous Moto Guzzi bike of the 1950s and one of the most famous ever. It was sold in two versions: Turismo and Sport. The Falcone was also extensively use by the Italian police and army.",
-            "images": ["https://www.mgcn.nl/database/images/stories/falcone_500t_48.jpg",
-                       "https://www.mgcn.nl/database/images/stories/falcone.jpg",
-                       "https://www.mgcn.nl/database/images/stories/falconesport.jpg"
-                       ]
+            "images": [
+							"https://c1.staticflickr.com/3/2946/32624824853_cfcb03f7ef_o.jpg",
+              "https://c1.staticflickr.com/1/682/32624824533_0a339326a6_o.jpg"
+              ]
 		},
 		{
 			"id": 5,
@@ -166,7 +169,7 @@
 				"last_year": 1952
 			},
 			"engine": {
-				"configuration": "Horizontal single cylinder, OHV 2 valves",
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
 				"stroke_cycle": 4,
 				"bore": 62,
 				"stroke": 53,
@@ -193,7 +196,7 @@
 				"fuel_consumption": 2.6
 			},
             "notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc).",
-            "images": ["https://www.mgcn.nl/database/images/stories/galetto160.jpg"]
+            "images": null
 		},
 		{
 			"id": 6,
@@ -204,7 +207,7 @@
 				"last_year": 1954
 			},
 			"engine": {
-				"configuration": "Horizontal single cylinder, OHV 2 valves",
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
 				"stroke_cycle": 4,
 				"bore": 65,
 				"stroke": 53,
@@ -231,9 +234,7 @@
 				"fuel_consumption": null
 			},
             "notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc).",
-            "images": ["https://www.mgcn.nl/database/images/stories/galletto175.jpg",
-                       "https://www.mgcn.nl/database/images/stories/galleto.jpg"
-                       ]
+            "images": null
 		},
 		{
 			"id": 7,
@@ -244,7 +245,7 @@
 				"last_year": 1966
 			},
 			"engine": {
-				"configuration": "Horizontal single cylinder, OHV 2 valves",
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
 				"stroke_cycle": 4,
 				"bore": 65,
 				"stroke": 58,
@@ -271,7 +272,7 @@
 				"fuel_consumption": null
 			},
             "notes": "The Galletto was designed to combine the advantages of the scooter with the advantages of the motorcycle. The Galletto was the first scooter with motorcycle-sized wheels and was produced form 1950 to 1966, with increasing engine displacement (160cc, 175cc, 192cc). The 192cc model is the most refined. In 1961 was also introduced the electric starter and the friction damper was replaced by a idraulic damper.",
-            "images": null
+            "images": ["https://c1.staticflickr.com/1/576/33283306922_4dc91c04fe_o.jpg"]
 		},
 		{
 			"id": 8,
@@ -282,7 +283,7 @@
 				"last_year": 1974
 			},
 			"engine": {
-				"configuration": "Transversal 90° V-twin, OHV 2 valves per cylinder",
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
 				"stroke_cycle": 4,
 				"bore": 82.5,
 				"stroke": 70,
@@ -310,12 +311,10 @@
 			},
             "notes": "The V7 Sport is one of the most famous motorcycles manufactured by Moto Guzzi.",
             "images": [
-                       "https://upload.wikimedia.org/wikipedia/commons/1/11/Moto_Guzzi_V_7_Sport_1972.jpg",
-                       "https://upload.wikimedia.org/wikipedia/it/e/e9/MotoGuzziV7Sport.jpg",
-                       "http://www.motorcyclespecs.co.za/Gallery%20%20A/Moto%20GuzZi%20V7%20Sport%2071.jpg",
-                       "http://1.bp.blogspot.com/-PSi545Lg06k/TwCa1yYfUWI/AAAAAAAAP94/RpbS983rvcI/s1600/V7S.JPG",
-                       "http://www.carollomotoclassiche.it/images/gallerie/moto_vendute/Moto_Guzzi_V7Sport/Moto%20Guzzi%20V7%20Sport%20Sandro_48.jpg",
-                       "http://cdn.silodrome.com/wp-content/uploads/2016/04/Moto-Guzzi-V7-Sport-2.jpg"
+                       "https://c1.staticflickr.com/1/678/32624895653_a3df86d35a_o.jpg",
+                       "https://c2.staticflickr.com/4/3708/33398261736_8efd143eae_o.jpg",
+                       "https://c2.staticflickr.com/4/3730/33310765811_baea3fb474_o.jpg",
+                       "https://c1.staticflickr.com/1/635/33310765591_708c477798_o.jpg"
                        ]
 		},
 		{
@@ -327,7 +326,7 @@
 				"last_year": 1957
 			},
 			"engine": {
-				"configuration": "Longitudinal 90° V8, DOHC 2 valves per cylinder",
+				"configuration": "4-stroke longitudinal 90° V8, DOHC 2 valves per cylinder",
 				"stroke_cycle": 4,
 				"bore": 44,
 				"stroke": 41,
@@ -354,7 +353,7 @@
 				"fuel_consumption": null
 			},
             "notes": "The Otto Cilindri ('Eight Cylinders') is the most famous competition bike manufactured by Moto Guzzi and one of the most famous in the history of motorcycle competitions. In the 1950s the characteristics of the Otto Cilindri were unique, so its performance. In 1957 the refined engine was capable of 72 hp at 12000 rpm, incredible numbers at that time.",
-            "images": null
+            "images": ["https://c2.staticflickr.com/4/3760/33438639725_6346d8277b_o.jpg"]
 		},
 		{
 			"id": 10,
@@ -365,7 +364,7 @@
 				"last_year": 1984
 			},
 			"engine": {
-				"configuration": "Transversal 90° V-twin, OHV 2 valves per cylinder",
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
 				"stroke_cycle": 4,
 				"bore": 83,
 				"stroke": 78,
@@ -392,9 +391,7 @@
 				"fuel_consumption": 5.7
 			},
             "notes": null,
-            "images": ["http://images.moto.it/images/298922/HOR_STD/1000x/swap.jpg",
-                       "https://www.mgcn.nl/database/images/stories/le%20mans_iii_81.jpg"
-                       ]
+            "images": ["https://c2.staticflickr.com/4/3680/33438717245_5603c37915_o.jpg"]
 		}
 	]
 }

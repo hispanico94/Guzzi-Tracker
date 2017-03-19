@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SingleImageViewController" customModule="Guzzi_Tracker" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="2z5-8J-8w5" id="ovj-RE-ZhO"/>
+                <outlet property="imageViewBottomConstraint" destination="CGe-ZJ-zt3" id="Mk3-qk-UKz"/>
+                <outlet property="imageViewLeadingConstraint" destination="S1t-Lf-C4P" id="rbZ-2a-0Z3"/>
+                <outlet property="imageViewTopConstraint" destination="3Rx-Kc-n3i" id="86c-e2-6UF"/>
+                <outlet property="imageViewTrailingConstraint" destination="nn2-CM-hc9" id="Dnm-Wq-CTN"/>
+                <outlet property="scrollView" destination="UxA-EA-d30" id="PwE-Q8-evx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxA-EA-d30">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2z5-8J-8w5">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                            <gestureRecognizers/>
+                        </imageView>
+                    </subviews>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="2z5-8J-8w5" firstAttribute="top" secondItem="UxA-EA-d30" secondAttribute="top" id="3Rx-Kc-n3i"/>
+                        <constraint firstAttribute="bottom" secondItem="2z5-8J-8w5" secondAttribute="bottom" id="CGe-ZJ-zt3"/>
+                        <constraint firstItem="2z5-8J-8w5" firstAttribute="leading" secondItem="UxA-EA-d30" secondAttribute="leading" id="S1t-Lf-C4P"/>
+                        <constraint firstAttribute="trailing" secondItem="2z5-8J-8w5" secondAttribute="trailing" id="nn2-CM-hc9"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="mhR-U6-oPm"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UxA-EA-d30" secondAttribute="bottom" id="ggX-OU-zm3"/>
+                <constraint firstAttribute="trailing" secondItem="UxA-EA-d30" secondAttribute="trailing" id="i37-ho-iVH"/>
+                <constraint firstItem="UxA-EA-d30" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ka1-Y7-0HH"/>
+                <constraint firstItem="UxA-EA-d30" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="u95-9F-bl8"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="YRc-2p-QSK" appends="YES" id="Zvj-6s-b25"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="YRc-2p-QSK">
+            <connections>
+                <action selector="userDidTap:" destination="-1" id="Eqm-Yo-Xvy"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

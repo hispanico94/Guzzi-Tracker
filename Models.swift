@@ -27,9 +27,9 @@ struct Motorcycle {
     struct Engine {
         let configuration: String
         let strokeCycle: StrokeCycle
-        let bore: Double
-        let stroke: Double
-        let displacement: Double
+        let bore: Measurement<UnitLength>
+        let stroke: Measurement<UnitLength>
+        let displacement: Measurement<UnitVolume>
         let compression: Double
         let power: Power?
         let feedSystem: String
@@ -52,16 +52,16 @@ struct Motorcycle {
         let type: String
         let frontSuspension: String
         let rearSuspension: String
-        let wheelbase: Int
+        let wheelbase: Measurement<UnitLength>
         let brakes: String
     }
     
     struct CapacitiesAndPerformance {
-        let fuelCapacity: Double?
-        let lubricantCapacity: Double?
-        let weight: Int
-        let maxSpeed: Int?
-        let fuelConsumption: Double?
+        let fuelCapacity: Measurement<UnitVolume>?
+        let lubricantCapacity: Measurement<UnitVolume>?
+        let weight: Measurement<UnitMass>
+        let maxSpeed: Measurement<UnitSpeed>?
+        let fuelConsumption: Measurement<UnitFuelEfficiency>?
     }
 }
 
@@ -81,21 +81,6 @@ struct SectionData {
     let sectionElements: [CellRepresentable]
 }
 
-// DA TOGLIERE???
-//struct MotorcycleInfo {
-//    let rowKey: String
-//    let rowValue: String
-//    
-//    init(rowKey: String, rowValue: String?) {
-//        self.rowKey = rowKey
-//        if let rv = rowValue {
-//            self.rowValue = rv
-//        } else {
-//            self.rowValue = "---"
-//        }
-//    }
-//}
-
 struct RowNote {
     let note: String
 }
@@ -103,6 +88,7 @@ struct RowNote {
 struct RowImage {
     let urls: [URL]
 }
+
 
 struct Key {
     
@@ -189,9 +175,4 @@ struct Key {
     }
 }
 
-func convertOptionalToString<T>(_ value: T?) -> String {
-    if let unwrapVal = value {
-        return "\(unwrapVal)"
-    }
-    return "---"
-}
+
