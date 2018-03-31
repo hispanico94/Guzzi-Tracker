@@ -9,9 +9,35 @@
 import UIKit
 
 class FiltersViewController: UITableViewController {
-        
+    
+    private var filterProviders: [FilterId:FilterProvider] {
+        didSet {
+            orderedFilterIds = filterProviders.keys.sorted()
+            filterStorage?.value = filterProviders.map { $0.value.getFilter() }
+        }
+    }
+    private var orderedFilterIds: [FilterId] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    private weak var filterStorage: Ref<Array<Filter>>?
+    
+    init(filterStorage: Ref<Array<Filter>>) {
+        filterProviders = [.minMaxYear : MinMaxYear()]
+        orderedFilterIds = filterProviders.keys.sorted()
+        self.filterStorage = filterStorage
+        super.init(style: .plain)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,24 +54,34 @@ class FiltersViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return orderedFilterIds.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "reuseIdentifier")
+        let filterId = orderedFilterIds[indexPath.row]
+        let filter = filterProviders[filterId]?.getFilter()
+        
+        cell.textLabel?.text = filter?.title
+        cell.detailTextLabel?.text = filter?.caption
+        
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        defer {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        let filterId = orderedFilterIds[indexPath.row]
+        guard var filterProvider = filterProviders[filterId] else { return }
+        filterProvider.isActive = filterProvider.isActive == false
+        filterProviders[filterId] = filterProvider
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

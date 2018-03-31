@@ -1,9 +1,15 @@
-//
-//  Predicate.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 31/03/18.
-//  Copyright © 2018 PaoloRocca. All rights reserved.
-//
-
 import Foundation
+
+typealias Predicate<T> = (T) -> Bool
+
+precedencegroup Composition {
+    associativity: left
+}
+
+infix operator <> : Composition
+
+func <> <T> (lhs: @escaping Predicate<T>, rhs: @escaping Predicate<T>) -> Predicate<T> {
+    return { value in
+        lhs(value) && rhs(value)
+    }
+}

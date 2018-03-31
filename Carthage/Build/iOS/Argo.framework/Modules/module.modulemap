@@ -7,4 +7,5 @@ framework module Argo {
 
 module Argo.Swift {
     header "Argo-Swift.h"
+    requires objc
 }

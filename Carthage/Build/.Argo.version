@@ -1,10 +1,9 @@
 {
-  "xcodeVersion" : "Xcode 8.2.1\nBuild version 8C1002",
   "commitish" : "v4.1.2",
   "iOS" : [
     {
-      "hash" : "fe1a7d347e4df7c176e03a724cc9c5030858d29ed0e14abaa78630efd3014d84",
-      "name" : "Argo"
+      "name" : "Argo",
+      "hash" : "268d86e76caf396edbde2d9bc0700374b8fc2dbd641176c1fc68edaeca3f523a"
     }
   ]
 }

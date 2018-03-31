@@ -13,7 +13,7 @@ import Curry
 
 // MARK: - Conforming to Decodable protocol
 
-extension Motorcycle: Decodable {
+extension Motorcycle: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle> {
         return curry(Motorcycle.init)
             <^> json <| Key.Motorcycle.id.jsonKey
@@ -26,7 +26,7 @@ extension Motorcycle: Decodable {
     }
 }
 
-extension Motorcycle.GeneralInfo: Decodable {
+extension Motorcycle.GeneralInfo: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.GeneralInfo> {
         return curry(Motorcycle.GeneralInfo.init)
             <^> json <|? Key.Motorcycle.GeneralInfo.family.jsonKey
@@ -36,7 +36,7 @@ extension Motorcycle.GeneralInfo: Decodable {
     }
 }
 
-extension Motorcycle.Engine: Decodable {
+extension Motorcycle.Engine: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.Engine> {
         let configuration: Decoded<String> = json <| Key.Motorcycle.Engine.configuration.jsonKey
         let strokeCycle: Decoded<StrokeCycle> = json <| Key.Motorcycle.Engine.strokeCycle.jsonKey
@@ -63,9 +63,9 @@ extension Motorcycle.Engine: Decodable {
     }
 }
 
-extension Motorcycle.Engine.StrokeCycle: Decodable { }
+extension Motorcycle.Engine.StrokeCycle: Argo.Decodable { }
 
-extension Motorcycle.Engine.Power: Decodable {
+extension Motorcycle.Engine.Power: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.Engine.Power> {
         return curry(Motorcycle.Engine.Power.init)
             <^> json <| Key.Motorcycle.Engine.Power.peak.jsonKey
@@ -73,7 +73,7 @@ extension Motorcycle.Engine.Power: Decodable {
     }
 }
 
-extension Motorcycle.Frame: Decodable {
+extension Motorcycle.Frame: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.Frame> {
         let type: Decoded<String> = json <| Key.Motorcycle.Frame.type.jsonKey
         let frontSuspension: Decoded<String> = json <| Key.Motorcycle.Frame.frontSuspension.jsonKey
@@ -92,7 +92,7 @@ extension Motorcycle.Frame: Decodable {
     }
 }
 
-extension Motorcycle.CapacitiesAndPerformance: Decodable {
+extension Motorcycle.CapacitiesAndPerformance: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.CapacitiesAndPerformance> {
         let fuelCapacityDouble: Decoded<Double?> = json <|? Key.Motorcycle.CapacitiesAndPerformance.fuelCapacity.jsonKey
         let lubricantCapacityDouble: Decoded<Double?> = json <|? Key.Motorcycle.CapacitiesAndPerformance.lubricantCapacity.jsonKey
@@ -116,7 +116,7 @@ extension Motorcycle.CapacitiesAndPerformance: Decodable {
 }
 
 
-extension URL: Decodable {
+extension URL: Argo.Decodable {
     public static func decode(_ json: JSON) -> Decoded<URL> {
         guard case .string(let path) = json else {
             return Decoded.failure(.typeMismatch(expected: "String", actual: "\(json)"))
@@ -128,7 +128,7 @@ extension URL: Decodable {
     }
 }
 
-extension JsonFile: Decodable {
+extension JsonFile: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<JsonFile> {
         return curry(JsonFile.init)
             <^> json <| Key.JsonFile.version
@@ -171,20 +171,20 @@ extension URL: CellRepresentable {
     }
 }
 
-// MARK: - Methods for getting the specs strings for MotorcycleInfoCell
+// MARK: - Getting the specs strings for MotorcycleInfoCell
 
 extension Motorcycle.GeneralInfo {
-    func getFamilyString() -> String { return family ?? "---" }
-    func getNameString() -> String { return name }
-    func getFirstYearString() -> String { return firstYear.description }
-    func getLastYearString() -> String { return lastYear?.description ?? "..." }
+    var getFamilyString: String { return family ?? "---" }
+    var getNameString: String { return name }
+    var getFirstYearString: String { return firstYear.description }
+    var getLastYearString: String { return lastYear?.description ?? "..." }
 }
 
 extension Motorcycle.Engine {
-    func getConfigurationString() -> String { return configuration }
-    func getCompressionString() -> String { return "\(compression) : 1" }
-    func getPowerString() -> String { return power?.formattedValue ?? "---" }
-    func getFeedSystemString() -> String { return feedSystem }
+    var getConfigurationString: String { return configuration }
+    var getCompressionString: String { return "\(compression) : 1" }
+    var getPowerString: String { return power?.formattedValue ?? "---" }
+    var getFeedSystemString: String { return feedSystem }
     
     func getBoreString() -> String {
         return bore.description
@@ -200,10 +200,10 @@ extension Motorcycle.Engine {
 }
 
 extension Motorcycle.Frame {
-    func getTypeString() -> String { return type }
-    func getFrontSuspensionString() -> String { return frontSuspension }
-    func getRearSuspensionString() -> String { return rearSuspension }
-    func getBrakesString() -> String { return brakes }
+    var getTypeString: String { return type }
+    var getFrontSuspensionString: String { return frontSuspension }
+    var getRearSuspensionString: String { return rearSuspension }
+    var getBrakesString: String { return brakes }
     
     func getWheelbaseString() -> String {
         return Int(wheelbase.value).description + " " + wheelbase.unit.symbol
@@ -239,13 +239,13 @@ extension Motorcycle.GeneralInfo: ArrayConvertible {
     func convertToArray() -> [CellRepresentable] {
         var elements: [RowElement] = []
         elements.append(RowElement(rowKey: Key.Motorcycle.GeneralInfo.family.guiKey,
-                                   rowValue: getFamilyString()))
+                                   rowValue: getFamilyString))
         elements.append(RowElement(rowKey: Key.Motorcycle.GeneralInfo.name.guiKey,
-                                   rowValue: getNameString()))
+                                   rowValue: getNameString))
         elements.append(RowElement(rowKey: Key.Motorcycle.GeneralInfo.firstYear.guiKey,
-                                   rowValue: getFirstYearString()))
+                                   rowValue: getFirstYearString))
         elements.append(RowElement(rowKey: Key.Motorcycle.GeneralInfo.lastYear.guiKey,
-                                   rowValue: getLastYearString()))
+                                   rowValue: getLastYearString))
         return elements
     }
 }
@@ -254,7 +254,7 @@ extension Motorcycle.Engine: ArrayConvertible {
     func convertToArray() -> [CellRepresentable] {
         var elements: [RowElement] = []
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.configuration.guiKey,
-                                   rowValue: getConfigurationString()))
+                                   rowValue: getConfigurationString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.bore.guiKey,
                                    rowValue: getBoreString()))
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.stroke.guiKey,
@@ -262,11 +262,11 @@ extension Motorcycle.Engine: ArrayConvertible {
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.displacement.guiKey,
                                    rowValue: getDisplacementString()))
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.compression.guiKey,
-                                   rowValue: getCompressionString()))
+                                   rowValue: getCompressionString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.Power.guiKey,
-                                   rowValue: getPowerString()))
+                                   rowValue: getPowerString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.feedSystem.guiKey,
-                                   rowValue: getFeedSystemString()))
+                                   rowValue: getFeedSystemString))
         return elements
     }
 }
@@ -275,15 +275,15 @@ extension Motorcycle.Frame: ArrayConvertible {
     func convertToArray() -> [CellRepresentable] {
         var elements: [RowElement] = []
         elements.append(RowElement(rowKey: Key.Motorcycle.Frame.type.guiKey,
-                                   rowValue: getTypeString()))
+                                   rowValue: getTypeString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Frame.frontSuspension.guiKey,
-                                   rowValue: getFrontSuspensionString()))
+                                   rowValue: getFrontSuspensionString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Frame.rearSuspension.guiKey,
-                                   rowValue: getRearSuspensionString()))
+                                   rowValue: getRearSuspensionString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Frame.wheelbase.guiKey,
                                    rowValue: getWheelbaseString()))
         elements.append(RowElement(rowKey: Key.Motorcycle.Frame.brakes.guiKey,
-                                   rowValue: getBrakesString()))
+                                   rowValue: getBrakesString))
         return elements
     }
 }
@@ -347,4 +347,23 @@ extension UnitVolume {
     static let engineCubicCentimeters = UnitVolume(symbol: "cc", converter: UnitConverterLinear(coefficient: 0.001))
     static let engineCubicInches = UnitVolume(symbol: "cu in", converter: UnitConverterLinear(coefficient: 0.016387064))
 }
+
+extension Motorcycle.Engine.StrokeCycle: Comparable {
+    static func <(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+    
+    static func <=(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
+        return lhs.rawValue <= rhs.rawValue
+    }
+    
+    static func >(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
+        return lhs.rawValue > rhs.rawValue
+    }
+    
+    static func >=(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
+        return lhs.rawValue >= rhs.rawValue
+    }
+}
+
 

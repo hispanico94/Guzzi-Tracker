@@ -15,3 +15,9 @@ protocol CellRepresentable {
 protocol ArrayConvertible {
     func convertToArray() -> [CellRepresentable]
 }
+
+protocol FilterProvider {
+    var isActive: Bool { get set }
+    // var filterId: FilterId { get }
+    func getFilter() -> Filter
+}

@@ -1,17 +1,15 @@
-//
-//  ViewControllerAssembler.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 24/02/17.
-//  Copyright © 2017 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class VCFactory {
     
+    let filterStorage: Ref<Array<Filter>>
+    
+    init(filterStorage: Ref<Array<Filter>>) {
+        self.filterStorage = filterStorage
+    }
+    
     func makeMotorcyclesVC() -> MotorcyclesViewController {
-        let motorcyclesVC = MotorcyclesViewController(nibName: "MotorcyclesViewController", bundle: nil)
+        let motorcyclesVC = MotorcyclesViewController(filterStorage: filterStorage, vcFactory: self)
         motorcyclesVC.title = "Motorcycles"
         motorcyclesVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: nil, action: nil)
         motorcyclesVC.tabBarItem = UITabBarItem(title: "Motorcycles", image: UIImage(named: "motorycles_tab_icon"), tag: 0)
@@ -31,5 +29,9 @@ class VCFactory {
         myGarageVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings_icon"), style: .plain, target: nil, action: nil)
         myGarageVC.tabBarItem = UITabBarItem(title: "My Garage", image: UIImage(named: "my_garage_tab_icon"), tag: 2)
         return myGarageVC
+    }
+    
+    func makeFiltersVC() -> FiltersViewController {
+        return FiltersViewController.init(filterStorage: filterStorage)
     }
 }

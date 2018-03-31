@@ -15,7 +15,7 @@
 				"stroke_cycle": 4,
 				"bore": 88,
 				"stroke": 82,
-				"displacement": 498,
+				"displacement": 498.4,
 				"compression": 4,
 				"power": {
 					"peak": 8.5,
@@ -56,7 +56,7 @@
 				"stroke_cycle": 4,
 				"bore": 88,
 				"stroke": 82,
-				"displacement": 498,
+				"displacement": 498.4,
 				"compression": 4.5,
 				"power": {
 					"peak": 13,
@@ -94,7 +94,7 @@
 				"stroke_cycle": 4,
 				"bore": 88,
 				"stroke": 82,
-				"displacement": 498,
+				"displacement": 498.4,
 				"compression": 4.5,
 				"power": {
 					"peak": 13,
@@ -132,7 +132,7 @@
 				"stroke_cycle": 4,
 				"bore": 88,
 				"stroke": 82,
-				"displacement": 498,
+				"displacement": 498.4,
 				"compression": 6.5,
 				"power": {
 					"peak": 23,
@@ -392,6 +392,120 @@
 			},
             "notes": null,
             "images": ["https://c2.staticflickr.com/4/3680/33438717245_5603c37915_o.jpg"]
+		},
+		{
+			"id": 11,
+			"general_info": {
+				"family": "Sport",
+				"name": "Sport 14",
+				"first_year": 1929,
+				"last_year": 1930
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 82,
+				"displacement": 498.4,
+				"compression": 4.5,
+				"power": {
+					"peak": 13.2,
+					"rpm": 3800
+				},
+				"feed_system": "Amac carburetor"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Rigid",
+				"wheelbase": 1430,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 11,
+				"lubricant_capacity": 3,
+				"weight": 130,
+				"max_speed": 100,
+				"fuel_consumption": 3.4
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 12,
+			"general_info": {
+				"family": "Sport",
+				"name": "Sport 15",
+				"first_year": 1931,
+				"last_year": 1939
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 82,
+				"displacement": 498.4,
+				"compression": 4.5,
+				"power": {
+					"peak": 13.2,
+					"rpm": 3800
+				},
+				"feed_system": "Carburetor, Amal type 6/142"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Rigid",
+				"wheelbase": 1430,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 11,
+				"lubricant_capacity": 3,
+				"weight": 150,
+				"max_speed": 100,
+				"fuel_consumption": 3.4
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 13,
+			"general_info": {
+				"family": null,
+				"name": "Tre Cilindri",
+				"first_year": 1932,
+				"last_year": 1933
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal three cylinders, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 56,
+				"stroke": 67,
+				"displacement": 494.8,
+				"compression": 4.9,
+				"power": {
+					"peak": 25,
+					"rpm": 5500
+				},
+				"feed_system": "Single Amal carburetor"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and friction dampers",
+				"wheelbase": 1440,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 11.5,
+				"lubricant_capacity": 3,
+				"weight": 160,
+				"max_speed": 130,
+				"fuel_consumption": null
+			},
+            "notes": "Few prototypes models were built of this very advance bike (at the time). Only one model remains today, it's in the Moto Guzzi Museum.",
+            "images": null
 		}
 	]
 }

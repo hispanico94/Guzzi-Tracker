@@ -1,10 +1,9 @@
 {
-  "xcodeVersion" : "Xcode 8.2.1\nBuild version 8C1002",
-  "commitish" : "v3.0.0",
+  "commitish" : "v4.0.0",
   "iOS" : [
     {
-      "hash" : "720b4384a6daa81c33c6161bd739e31e9aff93589b3d2d8ec7fb955872b523fa",
-      "name" : "Curry"
+      "name" : "Curry",
+      "hash" : "0b38bbb64dbb46067878e3ae6860f906d3804525b46e2540857b72c2b70e7cc6"
     }
   ]
 }

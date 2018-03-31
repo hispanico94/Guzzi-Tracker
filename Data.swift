@@ -28,7 +28,29 @@ func getMotorcycleListFromJson() throws -> [Motorcycle] {
     return decodedMoto
 }
 
-func getDataFromUrl(_ url: URL, completionHandler: @escaping () ->() ) -> Data? {
-    return try? Data(contentsOf: url)
+
+extension Array {
+    func appending (_ element: Element) -> Array {
+        var mutatingSelf = self
+        mutatingSelf.append(element)
+        return mutatingSelf
+    }
 }
+
+extension Array where Element: Comparable {
+    func removeDuplicates() -> Array {
+        return self
+            .sorted() { $0 < $1 }
+            .reduce([]) { (accumulator, element) in
+                if let last = accumulator.last, last == element {
+                    return accumulator
+                } else {
+                    return accumulator.appending(element)
+                }
+        }
+    }
+}
+
+
+
 

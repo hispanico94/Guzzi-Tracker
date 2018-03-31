@@ -11,9 +11,29 @@ import UIKit
 class MotorcyclesViewController: UITableViewController {
     
     private var motorcycleList: [Motorcycle]
-    private var motorcycleListToShow: [Motorcycle]
     
-    override init(nibName: String?, bundle: Bundle?) {
+    private var motorcycleListToShow: [Motorcycle] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    private var filters: Array<Filter> {
+        didSet {
+            let predicate = filters
+                .lazy
+                .map { $0.predicate }
+                .reduce({ _ in true }, <>)
+            
+            motorcycleListToShow = motorcycleList.filter(predicate)
+        }
+    }
+    
+    private weak var filterStorage: Ref<Array<Filter>>?
+    
+    private let vcFactory: VCFactory
+    
+    init(filterStorage: Ref<Array<Filter>>, vcFactory: VCFactory) {
         do {
             motorcycleList = try getMotorcycleListFromJson()
             motorcycleListToShow = motorcycleList
@@ -22,11 +42,23 @@ class MotorcyclesViewController: UITableViewController {
             motorcycleList = []
             motorcycleListToShow = []
         }
-        super.init(nibName: nibName, bundle: bundle)
+        filters = filterStorage.value
+        self.filterStorage = filterStorage
+        self.vcFactory = vcFactory
+        
+        super.init(nibName: "MotorcyclesViewController", bundle: nil)
+        
+        filterStorage.add(listener: "MotorcyclesViewController") { [weak self] newFilters in
+            self?.filters = newFilters
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        filterStorage?.remove(listener: "MotorcyclesViewController")
     }
     
     override func viewDidLoad() {
@@ -36,11 +68,28 @@ class MotorcyclesViewController: UITableViewController {
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
+        
+        let bores = MotorcycleElements.bores(motorcycleListToShow)
+        print("\(bores)")
+        let families = MotorcycleElements.families(motorcycleListToShow)
+        print("\(families)")
+        
+        motorcycleListToShow.sort(by: compressionAscending)
+        
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "filter_icon"),
+            style: .plain,
+            target: self,
+            action: #selector(didTapFilterButton(sender:)))
+    }
+    
+    @IBAction func didTapFilterButton(sender: UIBarButtonItem) {
+        navigationController?.pushViewController(vcFactory.makeFiltersVC(), animated: true)
     }
     
     // MARK: - Table view data source
@@ -58,41 +107,6 @@ class MotorcyclesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: MotorcycleCell.defaultIdentifier, for: indexPath) as! MotorcycleCell
         return cell.set(withMotorcycleData: motorcycleListToShow[indexPath.row])
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
     
     // MARK: - Table view delegate
 
@@ -103,15 +117,4 @@ class MotorcyclesViewController: UITableViewController {
                                                                               bundle: nil),
                                                                               animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
 }

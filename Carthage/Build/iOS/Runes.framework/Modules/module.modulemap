@@ -7,4 +7,5 @@ framework module Runes {
 
 module Runes.Swift {
     header "Runes-Swift.h"
+    requires objc
 }
