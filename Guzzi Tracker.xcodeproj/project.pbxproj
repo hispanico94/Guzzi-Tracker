@@ -42,6 +42,8 @@
 		CF8CCE961E65CFFE00F4A37E /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CCE951E65CFFE00F4A37E /* Curry.framework */; };
 		CF8CCE9A1E65D10400F4A37E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8CCE991E65D10400F4A37E /* Models.swift */; };
 		CF8CCE9E1E65D8A300F4A37E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */; };
+		CF9FD436207624A9003F66F4 /* MinMaxYearFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */; };
+		CF9FD437207624A9003F66F4 /* MinMaxYearFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */; };
 		CFA481801E82F3D700D101E0 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA4817F1E82F3D700D101E0 /* Typealiases.swift */; };
 		CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB03F11E60432E0032BD11 /* AppDelegate.swift */; };
 		CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAB03F81E60432E0032BD11 /* Assets.xcassets */; };
@@ -91,6 +93,8 @@
 		CF8CCE951E65CFFE00F4A37E /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		CF8CCE991E65D10400F4A37E /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinMaxYearFilterViewController.swift; sourceTree = "<group>"; };
+		CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MinMaxYearFilterViewController.xib; sourceTree = "<group>"; };
 		CFA4817F1E82F3D700D101E0 /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		CFAB03EE1E60432E0032BD11 /* Guzzi Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guzzi Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAB03F11E60432E0032BD11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				CF690CAA1E7153AB00523796 /* ImagesViewController.swift */,
 				CF0B83151E785D71001C4172 /* SingleImageViewController.swift */,
 				CF1CDB7E206FD465007BCE95 /* FiltersViewController.swift */,
+				CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				CF690CAB1E7153AB00523796 /* ImagesViewController.xib */,
 				CF0B83161E785D71001C4172 /* SingleImageViewController.xib */,
 				CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */,
+				CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -222,8 +228,8 @@
 			children = (
 				CFAB03F11E60432E0032BD11 /* AppDelegate.swift */,
 				CFAB03F81E60432E0032BD11 /* Assets.xcassets */,
-				CFAB03FA1E60432E0032BD11 /* LaunchScreen.storyboard */,
 				CFAB03FD1E60432E0032BD11 /* Info.plist */,
+				CFAB03FA1E60432E0032BD11 /* LaunchScreen.storyboard */,
 				CF1A41E11E6081F000E76F11 /* VCFactory.swift */,
 				CF094F701E66C1CA00D351E1 /* info_moto.json */,
 				CFC389341E7AE6EA00A0CEC2 /* ToDoList */,
@@ -337,6 +343,7 @@
 				CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */,
 				CF094F711E66C1CA00D351E1 /* info_moto.json in Resources */,
 				CF0B83181E785D71001C4172 /* SingleImageViewController.xib in Resources */,
+				CF9FD437207624A9003F66F4 /* MinMaxYearFilterViewController.xib in Resources */,
 				CF1A41DB1E6080B100E76F11 /* SearchViewController.xib in Resources */,
 				CF690CA91E7150BF00523796 /* ImageCell.xib in Resources */,
 				CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */,
@@ -385,6 +392,7 @@
 				CF1CDB7D206FCCBF007BCE95 /* Predicate.swift in Sources */,
 				CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */,
 				CF0B83171E785D71001C4172 /* SingleImageViewController.swift in Sources */,
+				CF9FD436207624A9003F66F4 /* MinMaxYearFilterViewController.swift in Sources */,
 				CF1A41E21E6081F000E76F11 /* VCFactory.swift in Sources */,
 				CF419B021E6D692700EA7B74 /* MotorcycleInfoCell.swift in Sources */,
 				CFE280A81E6F12830090AAA7 /* MotorcycleNotesCell.swift in Sources */,

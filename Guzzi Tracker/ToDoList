@@ -6,7 +6,7 @@ Small stuff to do later:
 
 3- try to find a better implementation of tableView(_:, didSelectRowAt:) in ImagesViewController.swift
 
-
+4- in MinMaxYear.swift, struct MinMaxYear change literal '2018' with current Date
 
 
 ----

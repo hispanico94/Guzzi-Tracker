@@ -13,18 +13,19 @@ class FiltersViewController: UITableViewController {
     private var filterProviders: [FilterId:FilterProvider] {
         didSet {
             orderedFilterIds = filterProviders.keys.sorted()
-            filterStorage?.value = filterProviders.map { $0.value.getFilter() }
+            filterStorage?.value = filterProviders.map { $0.value }
         }
     }
+    
     private var orderedFilterIds: [FilterId] = [] {
         didSet {
             tableView.reloadData()
         }
     }
     
-    private weak var filterStorage: Ref<Array<Filter>>?
+    private weak var filterStorage: Ref<Array<FilterProvider>>?
     
-    init(filterStorage: Ref<Array<Filter>>) {
+    init(filterStorage: Ref<Array<FilterProvider>>) {
         filterProviders = [.minMaxYear : MinMaxYear()]
         orderedFilterIds = filterProviders.keys.sorted()
         self.filterStorage = filterStorage
@@ -78,11 +79,13 @@ class FiltersViewController: UITableViewController {
         }
         let filterId = orderedFilterIds[indexPath.row]
         guard var filterProvider = filterProviders[filterId] else { return }
-        filterProvider.isActive = filterProvider.isActive == false
-        filterProviders[filterId] = filterProvider
+        //filterProvider.isActive = filterProvider.isActive == false
+        //filterProviders[filterId] = filterProvider
+        
+        navigationController?.pushViewController(filterProvider.getViewController(), animated: true)
     }
     
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

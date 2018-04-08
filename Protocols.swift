@@ -20,4 +20,5 @@ protocol FilterProvider {
     var isActive: Bool { get set }
     // var filterId: FilterId { get }
     func getFilter() -> Filter
+    func getViewController() -> UIViewController
 }

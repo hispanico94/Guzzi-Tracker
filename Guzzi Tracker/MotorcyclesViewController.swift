@@ -18,22 +18,22 @@ class MotorcyclesViewController: UITableViewController {
         }
     }
     
-    private var filters: Array<Filter> {
+    private var filters: Array<FilterProvider> {
         didSet {
             let predicate = filters
                 .lazy
-                .map { $0.predicate }
+                .map { $0.getFilter().predicate }
                 .reduce({ _ in true }, <>)
             
             motorcycleListToShow = motorcycleList.filter(predicate)
         }
     }
     
-    private weak var filterStorage: Ref<Array<Filter>>?
+    private weak var filterStorage: Ref<Array<FilterProvider>>?
     
     private let vcFactory: VCFactory
     
-    init(filterStorage: Ref<Array<Filter>>, vcFactory: VCFactory) {
+    init(filterStorage: Ref<Array<FilterProvider>>, vcFactory: VCFactory) {
         do {
             motorcycleList = try getMotorcycleListFromJson()
             motorcycleListToShow = motorcycleList

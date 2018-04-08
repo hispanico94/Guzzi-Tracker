@@ -2,9 +2,9 @@ import UIKit
 
 class VCFactory {
     
-    let filterStorage: Ref<Array<Filter>>
+    let filterStorage: Ref<Array<FilterProvider>>
     
-    init(filterStorage: Ref<Array<Filter>>) {
+    init(filterStorage: Ref<Array<FilterProvider>>) {
         self.filterStorage = filterStorage
     }
     

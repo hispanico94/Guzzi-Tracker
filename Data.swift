@@ -51,6 +51,6 @@ extension Array where Element: Comparable {
     }
 }
 
-
-
+func getFoundationYear() -> Int { return 1921 }
+func getCurrentYear() -> Int { return Calendar(identifier: .gregorian).component(.year, from: Date()) }
 

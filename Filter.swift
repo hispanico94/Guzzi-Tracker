@@ -11,6 +11,7 @@ extension FilterId: Comparable {
     }
 }
 
+
 struct Filter {
     var id: FilterId
     var title: String
