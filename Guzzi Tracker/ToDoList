@@ -6,12 +6,3 @@ Small stuff to do later:
 
 3- try to find a better implementation of tableView(_:, didSelectRowAt:) in ImagesViewController.swift
 
-4- in MinMaxYear.swift, struct MinMaxYear change literal '2018' with current Date
-
-
-----
-
-
-Ref<Array<FilterProvider>>
-FiltersViewController prende i filtri dal filterStorage
-i FilterProvider hanno un metodo che restituisce un view controller

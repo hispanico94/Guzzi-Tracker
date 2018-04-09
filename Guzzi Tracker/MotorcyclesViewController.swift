@@ -33,7 +33,16 @@ class MotorcyclesViewController: UITableViewController {
     
     private let vcFactory: VCFactory
     
-    init(filterStorage: Ref<Array<FilterProvider>>, vcFactory: VCFactory) {
+    init(motorcycleList: [Motorcycle]?, filterStorage: Ref<Array<FilterProvider>>, vcFactory: VCFactory) {
+        if let unwrapMotorcycleList = motorcycleList {
+            self.motorcycleList = unwrapMotorcycleList
+            self.motorcycleListToShow = unwrapMotorcycleList
+        } else {
+            self.motorcycleList = []
+            self.motorcycleListToShow = []
+        }
+        
+        /*
         do {
             motorcycleList = try getMotorcycleListFromJson()
             motorcycleListToShow = motorcycleList
@@ -42,6 +51,8 @@ class MotorcyclesViewController: UITableViewController {
             motorcycleList = []
             motorcycleListToShow = []
         }
+        */
+        
         filters = filterStorage.value
         self.filterStorage = filterStorage
         self.vcFactory = vcFactory
@@ -68,24 +79,29 @@ class MotorcyclesViewController: UITableViewController {
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
-        
+        // ----- LINE OUTPUT (to be removed) -----
         let bores = MotorcycleElements.bores(motorcycleListToShow)
         print("\(bores)")
         let families = MotorcycleElements.families(motorcycleListToShow)
         print("\(families)")
+        // -----
         
-        motorcycleListToShow.sort(by: compressionAscending)
-        
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "filter_icon"),
             style: .plain,
             target: self,
             action: #selector(didTapFilterButton(sender:)))
+        
+        if motorcycleList.isEmpty {
+            presentErrorMessage()
+        }
+    }
+    
+    func presentErrorMessage() {
+        let alert = UIAlertController(title: "Error", message: "An error occurred while retrieving data. Please try again later.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func didTapFilterButton(sender: UIBarButtonItem) {

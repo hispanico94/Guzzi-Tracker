@@ -9,7 +9,7 @@
 import Foundation
 import Argo
 
-func getMotorcycleListFromJson() throws -> [Motorcycle] {
+func getMotorcycleListFromJson() -> [Motorcycle]? {
     guard
         let jsonURL = Bundle.main.url(forResource: "info_moto", withExtension: "json"),
         let jsonData = try? Data(contentsOf: jsonURL),
@@ -23,7 +23,8 @@ func getMotorcycleListFromJson() throws -> [Motorcycle] {
     case .success(let decodedFile):
         decodedMoto = decodedFile.elements
     case .failure(let error):
-        throw error
+        print("\(error)")
+        return nil
     }
     return decodedMoto
 }

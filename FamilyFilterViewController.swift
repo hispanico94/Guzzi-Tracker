@@ -1,39 +1,21 @@
 //
-//  FiltersViewController.swift
+//  FamilyFilterViewController.swift
 //  Guzzi Tracker
 //
-//  Created by Paolo Rocca on 31/03/18.
+//  Created by Paolo Rocca on 09/04/18.
 //  Copyright © 2018 PaoloRocca. All rights reserved.
 //
 
 import UIKit
 
-class FiltersViewController: UITableViewController {
+class FamilyFilterViewController: UITableViewController {
     
-    private var filterProviders: [FilterId:FilterProvider] = [:] {
-        didSet {
-            orderedFilterIds = filterProviders.keys.sorted()
-            filterStorage?.value = filterProviders.map { $0.value }
-        }
-    }
+    private let families: [String]
+    private let selectedFamilies: [String] = []
     
-    private var orderedFilterIds: [FilterId] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
-    private weak var filterStorage: Ref<Array<FilterProvider>>?
-    
-    init(filterStorage: Ref<Array<FilterProvider>>) {
-        self.filterStorage = filterStorage
-        
-        for filter in filterStorage.value {
-            self.filterProviders[filter.filterId] = filter
-            self.orderedFilterIds.append(filter.filterId)
-        }
-        self.orderedFilterIds.sort()
-        
+    init(families: [String], selectedFamilies: [String]) {
+        self.families = families
+        self.selectedFamilies = selectedFamilies
         super.init(style: .plain)
     }
     
@@ -43,7 +25,6 @@ class FiltersViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -64,33 +45,19 @@ class FiltersViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orderedFilterIds.count
+        return families.count
     }
 
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "reuseIdentifier")
-        let filterId = orderedFilterIds[indexPath.row]
-        let filter = filterProviders[filterId]?.getFilter()
-        
-        cell.textLabel?.text = filter?.title
-        cell.detailTextLabel?.text = filter?.caption
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        defer {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
-        let filterId = orderedFilterIds[indexPath.row]
-        guard let filterProvider = filterProviders[filterId] else { return }
-        //filterProvider.isActive = filterProvider.isActive == false
-        //filterProviders[filterId] = filterProvider
-        
-        navigationController?.pushViewController(filterProvider.getViewController({ [weak self] newFilter in self?.filterProviders[filterId] = newFilter }), animated: true)
-    }
-    
-    
+    */
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

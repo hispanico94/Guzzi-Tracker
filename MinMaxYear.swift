@@ -1,8 +1,7 @@
 import UIKit
 
-class MinMaxYear {
-    var isActive: Bool = false
-    var minYear: Int = getFoundationYear() {
+struct MinMaxYear {
+    private var minYear: Int {
         didSet {
             let foundationYear = getFoundationYear()
             let currentYear = getCurrentYear()
@@ -16,7 +15,7 @@ class MinMaxYear {
             }
         }
     }
-    var maxYear: Int = getCurrentYear() {
+    private var maxYear: Int {
         didSet {
             let foundationYear = getFoundationYear()
             let currentYear = getCurrentYear()
@@ -30,30 +29,35 @@ class MinMaxYear {
             }
         }
     }
-    let title = "Years Interval"
-    var caption: String {
+    private let title = "Years Interval"
+    private var caption: String {
         get {
             return "From \(minYear) To \(maxYear)"
         }
     }
-    var yearRange = CountableClosedRange(getFoundationYear()...getCurrentYear())
+    
+    init(minYear: Int = getFoundationYear(), maxYear: Int = getCurrentYear()) {
+        self.minYear = minYear
+        self.maxYear = maxYear
+    }
 }
 
 extension MinMaxYear: FilterProvider {
-    func getViewController() -> UIViewController {
-        return MinMaxYearFilterViewController(minMaxYear: self)
+    var filterId: FilterId {
+        return .minMaxYear
     }
     
+    func getViewController(_ callback: @escaping (FilterProvider) -> ()) -> UIViewController {
+        return MinMaxYearFilterViewController(minYear: self.minYear, maxYear: self.maxYear, callback)
+    }
+
     func getFilter() -> Filter {
-        if isActive {
-            return Filter(id: .minMaxYear, title: self.title, caption: self.caption, predicate: { motorcycle in
-                let lastYear = motorcycle.generalInfo.lastYear ?? getCurrentYear()
-                return lastYear >= self.minYear && motorcycle.generalInfo.firstYear <= self.maxYear
-            })
-        }
-        return Filter(id: .minMaxYear, title: self.title, caption: "From 1921 to 2018", predicate: { _ in
-            return true
+        return Filter(id: .minMaxYear,
+                      title: self.title,
+                      caption: self.caption,
+                      predicate: { motorcycle in
+                        let lastYear = motorcycle.generalInfo.lastYear ?? getCurrentYear()
+                        return lastYear >= self.minYear && motorcycle.generalInfo.firstYear <= self.maxYear
         })
     }
-    
 }

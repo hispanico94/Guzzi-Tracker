@@ -45,6 +45,7 @@
 		CF9FD436207624A9003F66F4 /* MinMaxYearFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */; };
 		CF9FD437207624A9003F66F4 /* MinMaxYearFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */; };
 		CFA481801E82F3D700D101E0 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA4817F1E82F3D700D101E0 /* Typealiases.swift */; };
+		CFA60557207B541500F6AF27 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA60556207B541500F6AF27 /* Family.swift */; };
 		CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB03F11E60432E0032BD11 /* AppDelegate.swift */; };
 		CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAB03F81E60432E0032BD11 /* Assets.xcassets */; };
 		CFAB03FC1E60432E0032BD11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAB03FA1E60432E0032BD11 /* LaunchScreen.storyboard */; };
@@ -54,6 +55,8 @@
 		CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */; };
 		CFE280A81E6F12830090AAA7 /* MotorcycleNotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE280A61E6F12830090AAA7 /* MotorcycleNotesCell.swift */; };
 		CFE280A91E6F12830090AAA7 /* MotorcycleNotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE280A71E6F12830090AAA7 /* MotorcycleNotesCell.xib */; };
+		CFE400D2207B703E001F9E1A /* FamilyFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */; };
+		CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */; };
 		CFF259571E6C73FC0092A005 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF259561E6C73FC0092A005 /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +99,7 @@
 		CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinMaxYearFilterViewController.swift; sourceTree = "<group>"; };
 		CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MinMaxYearFilterViewController.xib; sourceTree = "<group>"; };
 		CFA4817F1E82F3D700D101E0 /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		CFA60556207B541500F6AF27 /* Family.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
 		CFAB03EE1E60432E0032BD11 /* Guzzi Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guzzi Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAB03F11E60432E0032BD11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFAB03F81E60432E0032BD11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 		CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleCell.xib; sourceTree = "<group>"; };
 		CFE280A61E6F12830090AAA7 /* MotorcycleNotesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleNotesCell.swift; sourceTree = "<group>"; };
 		CFE280A71E6F12830090AAA7 /* MotorcycleNotesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleNotesCell.xib; sourceTree = "<group>"; };
+		CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyFilterViewController.swift; sourceTree = "<group>"; };
+		CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyFilterViewController.xib; sourceTree = "<group>"; };
 		CFF259561E6C73FC0092A005 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */,
+				CFA60556207B541500F6AF27 /* Family.swift */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -159,6 +166,7 @@
 				CF0B83151E785D71001C4172 /* SingleImageViewController.swift */,
 				CF1CDB7E206FD465007BCE95 /* FiltersViewController.swift */,
 				CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */,
+				CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 				CF0B83161E785D71001C4172 /* SingleImageViewController.xib */,
 				CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */,
 				CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */,
+				CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -340,6 +349,7 @@
 				CF0ED0841E6F15E8008BAB23 /* MotorcycleImagesCell.xib in Resources */,
 				CF1A41D71E60808C00E76F11 /* MotorcyclesViewController.xib in Resources */,
 				CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */,
+				CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */,
 				CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */,
 				CF094F711E66C1CA00D351E1 /* info_moto.json in Resources */,
 				CF0B83181E785D71001C4172 /* SingleImageViewController.xib in Resources */,
@@ -381,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE400D2207B703E001F9E1A /* FamilyFilterViewController.swift in Sources */,
 				CF8CCE9A1E65D10400F4A37E /* Models.swift in Sources */,
 				CFD4E4521E67355900EFAB57 /* MotorcycleCell.swift in Sources */,
 				CF419AFE1E6D643300EA7B74 /* MotorcycleInfoViewController.swift in Sources */,
@@ -392,6 +403,7 @@
 				CF1CDB7D206FCCBF007BCE95 /* Predicate.swift in Sources */,
 				CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */,
 				CF0B83171E785D71001C4172 /* SingleImageViewController.swift in Sources */,
+				CFA60557207B541500F6AF27 /* Family.swift in Sources */,
 				CF9FD436207624A9003F66F4 /* MinMaxYearFilterViewController.swift in Sources */,
 				CF1A41E21E6081F000E76F11 /* VCFactory.swift in Sources */,
 				CF419B021E6D692700EA7B74 /* MotorcycleInfoCell.swift in Sources */,

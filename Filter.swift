@@ -3,6 +3,7 @@ import Foundation
 enum FilterId: Int {
     case none
     case minMaxYear
+    case families
 }
 
 extension FilterId: Comparable {

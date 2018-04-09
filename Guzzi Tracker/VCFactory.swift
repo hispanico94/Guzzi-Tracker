@@ -3,13 +3,16 @@ import UIKit
 class VCFactory {
     
     let filterStorage: Ref<Array<FilterProvider>>
+    let motorcycleList: [Motorcycle]?
     
-    init(filterStorage: Ref<Array<FilterProvider>>) {
+    
+    init(motorcycleList: [Motorcycle]?, filterStorage: Ref<Array<FilterProvider>>) {
+        self.motorcycleList = motorcycleList
         self.filterStorage = filterStorage
     }
     
     func makeMotorcyclesVC() -> MotorcyclesViewController {
-        let motorcyclesVC = MotorcyclesViewController(filterStorage: filterStorage, vcFactory: self)
+        let motorcyclesVC = MotorcyclesViewController(motorcycleList: motorcycleList, filterStorage: filterStorage, vcFactory: self)
         motorcyclesVC.title = "Motorcycles"
         motorcyclesVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: nil, action: nil)
         motorcyclesVC.tabBarItem = UITabBarItem(title: "Motorcycles", image: UIImage(named: "motorycles_tab_icon"), tag: 0)
@@ -32,6 +35,8 @@ class VCFactory {
     }
     
     func makeFiltersVC() -> FiltersViewController {
-        return FiltersViewController.init(filterStorage: filterStorage)
+        let filterVC = FiltersViewController(filterStorage: filterStorage)
+        filterVC.title = "Filter & Order"
+        return filterVC
     }
 }

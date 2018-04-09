@@ -5,8 +5,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let filterStorage = Ref<Array<FilterProvider>>.init([])
-    lazy var vcFactory: VCFactory = VCFactory.init(filterStorage: self.filterStorage)
+    let motorcycleList = getMotorcycleListFromJson()
+    
+    let filterStorage = Ref<Array<FilterProvider>>.init([MinMaxYear()])
+    lazy var vcFactory: VCFactory = VCFactory.init(motorcycleList: motorcycleList, filterStorage: self.filterStorage)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)

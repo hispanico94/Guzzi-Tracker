@@ -17,8 +17,7 @@ protocol ArrayConvertible {
 }
 
 protocol FilterProvider {
-    var isActive: Bool { get set }
-    // var filterId: FilterId { get }
+    var filterId: FilterId { get }
+    func getViewController(_ callback: @escaping (FilterProvider) -> ()) -> UIViewController
     func getFilter() -> Filter
-    func getViewController() -> UIViewController
 }
