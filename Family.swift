@@ -32,7 +32,7 @@ extension Family: FilterProvider {
     }
     
     func getViewController(_ callback: @escaping (FilterProvider) -> ()) -> UIViewController {
-        <#code#>
+        return FamilyFilterViewController(filter: self, callback: callback)
     }
     
     func getFilter() -> Filter {
@@ -40,6 +40,7 @@ extension Family: FilterProvider {
                       title: self.title,
                       caption: self.caption,
                       predicate: { motorcycle in
+                        guard !self.selectedFamilies.isEmpty else { return true }
                         guard let family = motorcycle.generalInfo.family else { return false }
                         return self.selectedFamilies.contains(family)
         })

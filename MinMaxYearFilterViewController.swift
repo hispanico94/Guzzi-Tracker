@@ -1,24 +1,16 @@
-//
-//  MinMaxYearFilterViewController.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 05/04/18.
-//  Copyright © 2018 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     private let minYearPickerComponent = 0
     private let maxYearPickerComponent = 1
-    private let yearRange = Array(getFoundationYear()...getCurrentYear())
+    private let yearsArray = Array(getFoundationYear()...getCurrentYear())
     private let callback: (MinMaxYear) -> ()
     
     private var selectedMinYear: Int {
         didSet {
             if (selectedMinYear > selectedMaxYear) {
-                let row = yearRange.index(of: selectedMinYear) ?? (yearRange.count - 1)
+                let row = yearsArray.index(of: selectedMinYear) ?? (yearsArray.count - 1)
                 yearPicker.selectRow(row, inComponent: maxYearPickerComponent, animated: true)
             }
         }
@@ -27,7 +19,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
     private var selectedMaxYear: Int {
         didSet {
             if (selectedMaxYear < selectedMinYear) {
-                let row = yearRange.index(of: selectedMaxYear) ?? 0
+                let row = yearsArray.index(of: selectedMaxYear) ?? 0
                 yearPicker.selectRow(row, inComponent: minYearPickerComponent, animated: true)
             }
         }
@@ -39,7 +31,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
         self.callback = callback
         selectedMinYear = minYear
         selectedMaxYear = maxYear
-        super.init(nibName: "MinMaxYearFilterViewController", bundle: nil)
+        super.init(nibName: /*"MinMaxYearFilterViewController"*/ nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,8 +40,8 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let minYearRow = yearRange.index(of: selectedMinYear) ?? 0
-        let maxYearRow = yearRange.index(of: selectedMaxYear) ?? (yearRange.count - 1)
+        let minYearRow = yearsArray.index(of: selectedMinYear) ?? 0
+        let maxYearRow = yearsArray.index(of: selectedMaxYear) ?? (yearsArray.count - 1)
         yearPicker.selectRow(minYearRow, inComponent: minYearPickerComponent, animated: true)
         yearPicker.selectRow(maxYearRow, inComponent: maxYearPickerComponent, animated: true)
     }
@@ -57,26 +49,31 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
     override func viewWillDisappear(_ animated: Bool) {
         let filter = MinMaxYear.init(minYear: selectedMinYear, maxYear: selectedMaxYear)
         callback(filter)
+        super.viewWillDisappear(animated)
     }
+    
+    // MARK: - UIPickerView Data Source
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return yearRange.count
+        return yearsArray.count
     }
     
+    // MARK: - UIPickerView Delegate
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(yearRange[row])
+        return String(yearsArray[row])
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch component {
-        case 0:
-            selectedMinYear = yearRange[row]
-        case 1:
-            selectedMaxYear = yearRange[row]
+        case minYearPickerComponent:
+            selectedMinYear = yearsArray[row]
+        case maxYearPickerComponent:
+            selectedMaxYear = yearsArray[row]
         default:
             return
         }

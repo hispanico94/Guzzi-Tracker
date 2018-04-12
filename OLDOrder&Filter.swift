@@ -19,6 +19,7 @@ struct MotorcycleElements {
     static let powers = elementsFromMotorcycles { $0.engine.power?.peak }
     static let wheelbases = elementsFromMotorcycles { $0.frame.wheelbase }
     static let fuelCapacities = elementsFromMotorcycles { $0.capacitiesAndPerformance.fuelCapacity }
+    static let weights = elementsFromMotorcycles { $0.capacitiesAndPerformance.weight }
 }
 
 func elementsFromMotorcycles <T: Comparable> (_ binding: @escaping (Motorcycle) -> T?) -> ([Motorcycle]) -> [T] {

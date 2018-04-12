@@ -58,6 +58,9 @@
 		CFE400D2207B703E001F9E1A /* FamilyFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */; };
 		CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */; };
 		CFF259571E6C73FC0092A005 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF259561E6C73FC0092A005 /* Protocols.swift */; };
+		CFF7C68A207CB30F001A7B90 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7C689207CB30F001A7B90 /* Weight.swift */; };
+		CFF7C68D207CBA26001A7B90 /* WeightFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */; };
+		CFF7C68E207CBA26001A7B90 /* WeightFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFF7C68C207CBA26001A7B90 /* WeightFilterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +117,9 @@
 		CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyFilterViewController.swift; sourceTree = "<group>"; };
 		CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyFilterViewController.xib; sourceTree = "<group>"; };
 		CFF259561E6C73FC0092A005 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		CFF7C689207CB30F001A7B90 /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightFilterViewController.swift; sourceTree = "<group>"; };
+		CFF7C68C207CBA26001A7B90 /* WeightFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeightFilterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,7 @@
 			children = (
 				CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */,
 				CFA60556207B541500F6AF27 /* Family.swift */,
+				CFF7C689207CB30F001A7B90 /* Weight.swift */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -167,6 +174,7 @@
 				CF1CDB7E206FD465007BCE95 /* FiltersViewController.swift */,
 				CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */,
 				CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */,
+				CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +191,7 @@
 				CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */,
 				CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */,
 				CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */,
+				CFF7C68C207CBA26001A7B90 /* WeightFilterViewController.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -341,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF7C68E207CBA26001A7B90 /* WeightFilterViewController.xib in Resources */,
 				CFE280A91E6F12830090AAA7 /* MotorcycleNotesCell.xib in Resources */,
 				CF419B031E6D692700EA7B74 /* MotorcycleInfoCell.xib in Resources */,
 				CF1CDB81206FD465007BCE95 /* FiltersViewController.xib in Resources */,
@@ -400,12 +410,14 @@
 				CFF259571E6C73FC0092A005 /* Protocols.swift in Sources */,
 				CF1A41DA1E6080B100E76F11 /* SearchViewController.swift in Sources */,
 				CF8C6283206FC629002B8CF6 /* Filter.swift in Sources */,
+				CFF7C68A207CB30F001A7B90 /* Weight.swift in Sources */,
 				CF1CDB7D206FCCBF007BCE95 /* Predicate.swift in Sources */,
 				CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */,
 				CF0B83171E785D71001C4172 /* SingleImageViewController.swift in Sources */,
 				CFA60557207B541500F6AF27 /* Family.swift in Sources */,
 				CF9FD436207624A9003F66F4 /* MinMaxYearFilterViewController.swift in Sources */,
 				CF1A41E21E6081F000E76F11 /* VCFactory.swift in Sources */,
+				CFF7C68D207CBA26001A7B90 /* WeightFilterViewController.swift in Sources */,
 				CF419B021E6D692700EA7B74 /* MotorcycleInfoCell.swift in Sources */,
 				CFE280A81E6F12830090AAA7 /* MotorcycleNotesCell.swift in Sources */,
 				CFA481801E82F3D700D101E0 /* Typealiases.swift in Sources */,

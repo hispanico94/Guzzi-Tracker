@@ -7,7 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let motorcycleList = getMotorcycleListFromJson()
     
-    let filterStorage = Ref<Array<FilterProvider>>.init([MinMaxYear()])
+    lazy var filterStorage = Ref<Array<FilterProvider>>.init([MinMaxYear(), Family(motorcycleList: self.motorcycleList), Weight(motorcycleList: self.motorcycleList)])
     lazy var vcFactory: VCFactory = VCFactory.init(motorcycleList: motorcycleList, filterStorage: self.filterStorage)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

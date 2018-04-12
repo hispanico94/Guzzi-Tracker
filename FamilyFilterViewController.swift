@@ -1,21 +1,17 @@
-//
-//  FamilyFilterViewController.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 09/04/18.
-//  Copyright © 2018 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class FamilyFilterViewController: UITableViewController {
     
+    private var familyFilter: Family
     private let families: [String]
-    private let selectedFamilies: [String] = []
+    private var selectedFamilies: [String] = []
+    private let callback: (Family) -> ()
     
-    init(families: [String], selectedFamilies: [String]) {
-        self.families = families
-        self.selectedFamilies = selectedFamilies
+    init(filter familyFilter: Family, callback: @escaping (Family) -> ()) {
+        self.familyFilter = familyFilter
+        self.families = familyFilter.families
+        self.selectedFamilies = familyFilter.selectedFamilies
+        self.callback = callback
         super.init(style: .plain)
     }
     
@@ -32,10 +28,10 @@ class FamilyFilterViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        familyFilter.selectedFamilies = selectedFamilies
+        callback(familyFilter)
     }
 
     // MARK: - Table view data source
@@ -48,42 +44,36 @@ class FamilyFilterViewController: UITableViewController {
         return families.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "reuseIdentifier")
 
-        // Configure the cell...
+        cell.textLabel?.text = families[indexPath.row]
+        
+        if selectedFamilies.contains(families[indexPath.row]) {
+            cell.accessoryType = .checkmark
+        }
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        defer {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
+        if let i = selectedFamilies.index(of: families[indexPath.row]) {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                cell.accessoryType = .none
+                selectedFamilies.remove(at: i)
+            }
+        } else {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                cell.accessoryType = .checkmark
+                selectedFamilies.append(families[indexPath.row])
+            }
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
 
     /*
     // Override to support conditional rearranging of the table view.
