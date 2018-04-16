@@ -20,7 +20,7 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     private var selectedMaxWeight: Int {
         didSet {
             if (selectedMaxWeight < selectedMinWeight) {
-                let row = weightsArray.index(of: selectedMaxWeight) ?? (weightsArray.count - 1)
+                let row = weightsArray.index(of: selectedMaxWeight) ?? 0
                 weightPicker.selectRow(row, inComponent: minWeightPickerComponent, animated: true)
             }
         }

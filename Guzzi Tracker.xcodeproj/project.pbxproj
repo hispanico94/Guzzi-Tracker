@@ -42,6 +42,9 @@
 		CF8CCE961E65CFFE00F4A37E /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CCE951E65CFFE00F4A37E /* Curry.framework */; };
 		CF8CCE9A1E65D10400F4A37E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8CCE991E65D10400F4A37E /* Models.swift */; };
 		CF8CCE9E1E65D8A300F4A37E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */; };
+		CF98DB1C20849A44002EFC9B /* Displacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF98DB1B20849A44002EFC9B /* Displacement.swift */; };
+		CF98DB1F20849F68002EFC9B /* DisplacementFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF98DB1D20849F68002EFC9B /* DisplacementFilterViewController.swift */; };
+		CF98DB2020849F68002EFC9B /* DisplacementFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */; };
 		CF9FD436207624A9003F66F4 /* MinMaxYearFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */; };
 		CF9FD437207624A9003F66F4 /* MinMaxYearFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */; };
 		CFA481801E82F3D700D101E0 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA4817F1E82F3D700D101E0 /* Typealiases.swift */; };
@@ -99,6 +102,9 @@
 		CF8CCE951E65CFFE00F4A37E /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		CF8CCE991E65D10400F4A37E /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CF98DB1B20849A44002EFC9B /* Displacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displacement.swift; sourceTree = "<group>"; };
+		CF98DB1D20849F68002EFC9B /* DisplacementFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplacementFilterViewController.swift; sourceTree = "<group>"; };
+		CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplacementFilterViewController.xib; sourceTree = "<group>"; };
 		CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinMaxYearFilterViewController.swift; sourceTree = "<group>"; };
 		CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MinMaxYearFilterViewController.xib; sourceTree = "<group>"; };
 		CFA4817F1E82F3D700D101E0 /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 				CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */,
 				CFA60556207B541500F6AF27 /* Family.swift */,
 				CFF7C689207CB30F001A7B90 /* Weight.swift */,
+				CF98DB1B20849A44002EFC9B /* Displacement.swift */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 				CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */,
 				CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */,
 				CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */,
+				CF98DB1D20849F68002EFC9B /* DisplacementFilterViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 				CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */,
 				CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */,
 				CFF7C68C207CBA26001A7B90 /* WeightFilterViewController.xib */,
+				CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -361,6 +370,7 @@
 				CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */,
 				CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */,
 				CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */,
+				CF98DB2020849F68002EFC9B /* DisplacementFilterViewController.xib in Resources */,
 				CF094F711E66C1CA00D351E1 /* info_moto.json in Resources */,
 				CF0B83181E785D71001C4172 /* SingleImageViewController.xib in Resources */,
 				CF9FD437207624A9003F66F4 /* MinMaxYearFilterViewController.xib in Resources */,
@@ -404,6 +414,7 @@
 				CFE400D2207B703E001F9E1A /* FamilyFilterViewController.swift in Sources */,
 				CF8CCE9A1E65D10400F4A37E /* Models.swift in Sources */,
 				CFD4E4521E67355900EFAB57 /* MotorcycleCell.swift in Sources */,
+				CF98DB1C20849A44002EFC9B /* Displacement.swift in Sources */,
 				CF419AFE1E6D643300EA7B74 /* MotorcycleInfoViewController.swift in Sources */,
 				CF0F546C1E81A06A0059650F /* OLDOrder&Filter.swift in Sources */,
 				CF1A41D61E60808C00E76F11 /* MotorcyclesViewController.swift in Sources */,
@@ -431,6 +442,7 @@
 				CFD4E44F1E66DC8000EFAB57 /* Data.swift in Sources */,
 				CF1CDB80206FD465007BCE95 /* FiltersViewController.swift in Sources */,
 				CF690CA81E7150BF00523796 /* ImageCell.swift in Sources */,
+				CF98DB1F20849F68002EFC9B /* DisplacementFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

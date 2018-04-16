@@ -5,6 +5,7 @@ enum FilterId: Int {
     case minMaxYear
     case families
     case weight
+    case displacement
 }
 
 extension FilterId: Comparable {
