@@ -29,7 +29,7 @@ struct Weight {
     }
     private let title = "Weight"
     private var caption: String {
-        return "From \(minWeight) To \(maxWeight)"
+        return "from \(minWeight) to \(maxWeight)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

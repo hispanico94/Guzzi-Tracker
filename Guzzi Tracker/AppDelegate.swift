@@ -10,7 +10,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var filterStorage = Ref<Array<FilterProvider>>.init([MinMaxYear(),
                                                               Family(motorcycleList: self.motorcycleList),
                                                               Weight(motorcycleList: self.motorcycleList),
-                                                              Displacement(motorcycleList: self.motorcycleList)])
+                                                              Displacement(motorcycleList: self.motorcycleList),
+                                                              Bore(motorcycleList: self.motorcycleList),
+                                                              Stroke(motorcycleList: self.motorcycleList),
+                                                              Power(motorcycleList: self.motorcycleList)])
     
     lazy var vcFactory: VCFactory = VCFactory.init(motorcycleList: motorcycleList, filterStorage: self.filterStorage)
     

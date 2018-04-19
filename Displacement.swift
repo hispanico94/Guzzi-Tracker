@@ -29,7 +29,7 @@ struct Displacement {
     }
     private let title = "Displacement"
     private var caption: String {
-        return "From \(minDisplacement) To \(maxDisplacement)"
+        return "from \(minDisplacement) to \(maxDisplacement)"
     }
     
     init(motorcycleList: [Motorcycle]?) {
@@ -69,7 +69,7 @@ extension Displacement: FilterProvider {
                       predicate: { motorcycle in
                         let displacement = motorcycle.engine.displacement
                         return displacement >= self.minDisplacement && displacement <= self.maxDisplacement
-                        })
+        })
     }
 }
 

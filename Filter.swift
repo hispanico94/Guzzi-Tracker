@@ -6,6 +6,9 @@ enum FilterId: Int {
     case families
     case weight
     case displacement
+    case bore
+    case stroke
+    case power
 }
 
 extension FilterId: Comparable {

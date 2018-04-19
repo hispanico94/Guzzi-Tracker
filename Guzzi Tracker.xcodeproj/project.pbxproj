@@ -35,6 +35,15 @@
 		CF690CA91E7150BF00523796 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF690CA71E7150BF00523796 /* ImageCell.xib */; };
 		CF690CAC1E7153AB00523796 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF690CAA1E7153AB00523796 /* ImagesViewController.swift */; };
 		CF690CAD1E7153AB00523796 /* ImagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF690CAB1E7153AB00523796 /* ImagesViewController.xib */; };
+		CF8306532087342000570E60 /* Bore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8306522087342000570E60 /* Bore.swift */; };
+		CF830656208736F600570E60 /* BoreFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF830654208736F600570E60 /* BoreFilterViewController.swift */; };
+		CF830657208736F600570E60 /* BoreFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF830655208736F600570E60 /* BoreFilterViewController.xib */; };
+		CF83065920873EEB00570E60 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83065820873EEB00570E60 /* Stroke.swift */; };
+		CF83065C20873FC300570E60 /* StrokeFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83065A20873FC300570E60 /* StrokeFilterViewController.swift */; };
+		CF83065D20873FC300570E60 /* StrokeFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF83065B20873FC300570E60 /* StrokeFilterViewController.xib */; };
+		CF83065F208744BD00570E60 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83065E208744BD00570E60 /* Power.swift */; };
+		CF8306622087499700570E60 /* PowerFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8306602087499700570E60 /* PowerFilterViewController.swift */; };
+		CF8306632087499700570E60 /* PowerFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8306612087499700570E60 /* PowerFilterViewController.xib */; };
 		CF8C6283206FC629002B8CF6 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8C6282206FC629002B8CF6 /* Filter.swift */; };
 		CF8C6285206FC7DD002B8CF6 /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8C6284206FC7DD002B8CF6 /* Ref.swift */; };
 		CF8CCE921E65CBB500F4A37E /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CCE901E65CBB500F4A37E /* Argo.framework */; };
@@ -95,6 +104,15 @@
 		CF690CA71E7150BF00523796 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		CF690CAA1E7153AB00523796 /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		CF690CAB1E7153AB00523796 /* ImagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesViewController.xib; sourceTree = "<group>"; };
+		CF8306522087342000570E60 /* Bore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bore.swift; sourceTree = "<group>"; };
+		CF830654208736F600570E60 /* BoreFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoreFilterViewController.swift; sourceTree = "<group>"; };
+		CF830655208736F600570E60 /* BoreFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoreFilterViewController.xib; sourceTree = "<group>"; };
+		CF83065820873EEB00570E60 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		CF83065A20873FC300570E60 /* StrokeFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeFilterViewController.swift; sourceTree = "<group>"; };
+		CF83065B20873FC300570E60 /* StrokeFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeFilterViewController.xib; sourceTree = "<group>"; };
+		CF83065E208744BD00570E60 /* Power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
+		CF8306602087499700570E60 /* PowerFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerFilterViewController.swift; sourceTree = "<group>"; };
+		CF8306612087499700570E60 /* PowerFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PowerFilterViewController.xib; sourceTree = "<group>"; };
 		CF8C6282206FC629002B8CF6 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		CF8C6284206FC7DD002B8CF6 /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
 		CF8CCE901E65CBB500F4A37E /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
@@ -165,6 +183,9 @@
 				CFA60556207B541500F6AF27 /* Family.swift */,
 				CFF7C689207CB30F001A7B90 /* Weight.swift */,
 				CF98DB1B20849A44002EFC9B /* Displacement.swift */,
+				CF8306522087342000570E60 /* Bore.swift */,
+				CF83065820873EEB00570E60 /* Stroke.swift */,
+				CF83065E208744BD00570E60 /* Power.swift */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -183,6 +204,9 @@
 				CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */,
 				CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */,
 				CF98DB1D20849F68002EFC9B /* DisplacementFilterViewController.swift */,
+				CF830654208736F600570E60 /* BoreFilterViewController.swift */,
+				CF83065A20873FC300570E60 /* StrokeFilterViewController.swift */,
+				CF8306602087499700570E60 /* PowerFilterViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -201,6 +225,9 @@
 				CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */,
 				CFF7C68C207CBA26001A7B90 /* WeightFilterViewController.xib */,
 				CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */,
+				CF830655208736F600570E60 /* BoreFilterViewController.xib */,
+				CF83065B20873FC300570E60 /* StrokeFilterViewController.xib */,
+				CF8306612087499700570E60 /* PowerFilterViewController.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -362,14 +389,17 @@
 				CFF7C68E207CBA26001A7B90 /* WeightFilterViewController.xib in Resources */,
 				CFE280A91E6F12830090AAA7 /* MotorcycleNotesCell.xib in Resources */,
 				CF419B031E6D692700EA7B74 /* MotorcycleInfoCell.xib in Resources */,
+				CF830657208736F600570E60 /* BoreFilterViewController.xib in Resources */,
 				CF1CDB81206FD465007BCE95 /* FiltersViewController.xib in Resources */,
 				CFC389351E7AE6EA00A0CEC2 /* ToDoList in Resources */,
 				CFAB03FC1E60432E0032BD11 /* LaunchScreen.storyboard in Resources */,
 				CF0ED0841E6F15E8008BAB23 /* MotorcycleImagesCell.xib in Resources */,
 				CF1A41D71E60808C00E76F11 /* MotorcyclesViewController.xib in Resources */,
 				CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */,
+				CF8306632087499700570E60 /* PowerFilterViewController.xib in Resources */,
 				CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */,
 				CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */,
+				CF83065D20873FC300570E60 /* StrokeFilterViewController.xib in Resources */,
 				CF98DB2020849F68002EFC9B /* DisplacementFilterViewController.xib in Resources */,
 				CF094F711E66C1CA00D351E1 /* info_moto.json in Resources */,
 				CF0B83181E785D71001C4172 /* SingleImageViewController.xib in Resources */,
@@ -411,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8306622087499700570E60 /* PowerFilterViewController.swift in Sources */,
 				CFE400D2207B703E001F9E1A /* FamilyFilterViewController.swift in Sources */,
 				CF8CCE9A1E65D10400F4A37E /* Models.swift in Sources */,
 				CFD4E4521E67355900EFAB57 /* MotorcycleCell.swift in Sources */,
@@ -419,6 +450,7 @@
 				CF0F546C1E81A06A0059650F /* OLDOrder&Filter.swift in Sources */,
 				CF1A41D61E60808C00E76F11 /* MotorcyclesViewController.swift in Sources */,
 				CFF259571E6C73FC0092A005 /* Protocols.swift in Sources */,
+				CF83065F208744BD00570E60 /* Power.swift in Sources */,
 				CF1A41DA1E6080B100E76F11 /* SearchViewController.swift in Sources */,
 				CF8C6283206FC629002B8CF6 /* Filter.swift in Sources */,
 				CFF7C68A207CB30F001A7B90 /* Weight.swift in Sources */,
@@ -427,15 +459,19 @@
 				CF0B83171E785D71001C4172 /* SingleImageViewController.swift in Sources */,
 				CFA60557207B541500F6AF27 /* Family.swift in Sources */,
 				CF9FD436207624A9003F66F4 /* MinMaxYearFilterViewController.swift in Sources */,
+				CF83065C20873FC300570E60 /* StrokeFilterViewController.swift in Sources */,
 				CF1A41E21E6081F000E76F11 /* VCFactory.swift in Sources */,
 				CFF7C68D207CBA26001A7B90 /* WeightFilterViewController.swift in Sources */,
 				CF419B021E6D692700EA7B74 /* MotorcycleInfoCell.swift in Sources */,
 				CFE280A81E6F12830090AAA7 /* MotorcycleNotesCell.swift in Sources */,
+				CF8306532087342000570E60 /* Bore.swift in Sources */,
 				CFA481801E82F3D700D101E0 /* Typealiases.swift in Sources */,
 				CF0F546A1E819FEC0059650F /* Key.swift in Sources */,
 				CF8C6285206FC7DD002B8CF6 /* Ref.swift in Sources */,
 				CF690CAC1E7153AB00523796 /* ImagesViewController.swift in Sources */,
 				CF1A41DE1E6080E800E76F11 /* MyGarageViewController.swift in Sources */,
+				CF830656208736F600570E60 /* BoreFilterViewController.swift in Sources */,
+				CF83065920873EEB00570E60 /* Stroke.swift in Sources */,
 				CF8CCE9E1E65D8A300F4A37E /* Extensions.swift in Sources */,
 				CF1CDB84206FD5AF007BCE95 /* MinMaxYear.swift in Sources */,
 				CF0ED0831E6F15E8008BAB23 /* MotorcycleImagesCell.swift in Sources */,
