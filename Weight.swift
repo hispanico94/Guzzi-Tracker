@@ -1,6 +1,7 @@
 import UIKit
 
 struct Weight {
+    let weights: [Measurement<UnitMass>]
     let lightestWeight: Measurement<UnitMass>
     let heaviestWeight: Measurement<UnitMass>
     var minWeight: Measurement<UnitMass> {
@@ -27,16 +28,17 @@ struct Weight {
             }
         }
     }
-    private let title = "Weight"
+    let title = "Weights"
     private var caption: String {
-        return "from \(minWeight) to \(maxWeight)"
+        return "from \(minWeight.descriptionWithDecimalsIfPresent) to \(maxWeight.descriptionWithDecimalsIfPresent)"
     }
     
     init(motorcycleList: [Motorcycle]?) {
         let safeLightest = Measurement<UnitMass>(value: Double(0), unit: .kilograms)
-        let safeHeaviest = Measurement<UnitMass>(value: Double(500), unit: .kilograms)
+        let safeHeaviest = Measurement<UnitMass>(value: Double(400), unit: .kilograms)
         
         guard let unwrapMotorcycleList = motorcycleList else {
+            self.weights = []
             self.lightestWeight = safeLightest
             self.heaviestWeight = safeHeaviest
             self.minWeight = self.lightestWeight
@@ -44,10 +46,10 @@ struct Weight {
             return
         }
         
-        let weights = MotorcycleElements.weights(unwrapMotorcycleList)
+        self.weights = MotorcycleElements.weights(unwrapMotorcycleList)
         
-        self.lightestWeight = weights.min() ?? safeLightest
-        self.heaviestWeight = weights.max() ?? safeHeaviest
+        self.lightestWeight = self.weights.min() ?? safeLightest
+        self.heaviestWeight = self.weights.max() ?? safeHeaviest
         self.minWeight = self.lightestWeight
         self.maxWeight = self.heaviestWeight
     }

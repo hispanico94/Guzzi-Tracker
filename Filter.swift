@@ -9,6 +9,8 @@ enum FilterId: Int {
     case bore
     case stroke
     case power
+    case wheelbase
+    case strokeCycle
 }
 
 extension FilterId: Comparable {

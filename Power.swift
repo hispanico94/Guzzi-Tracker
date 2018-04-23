@@ -1,9 +1,10 @@
 import UIKit
 
 struct Power {
-    let smallestPower: Double   //Measurement<UnitPower>
-    let biggestPower: Double    //Measurement<UnitPower>
-    var minPower: Double /*Measurement<UnitPower>*/ {
+    let powers: [Measurement<UnitPower>]
+    let smallestPower: Measurement<UnitPower>
+    let biggestPower: Measurement<UnitPower>
+    var minPower: Measurement<UnitPower> {
         didSet {
             if (minPower < smallestPower) {
                 minPower = smallestPower
@@ -15,7 +16,7 @@ struct Power {
             }
         }
     }
-    var maxPower: Double /*Measurement<UnitPower>*/ {
+    var maxPower: Measurement<UnitPower> {
         didSet {
             if (maxPower < smallestPower) {
                 maxPower = smallestPower
@@ -27,16 +28,17 @@ struct Power {
             }
         }
     }
-    private let title = "Power"
+    let title = "Horsepowers"
     private var caption: String {
-        return "from \(minPower) to \(maxPower)"
+        return "from \(minPower.descriptionWithDecimalsIfPresent) to \(maxPower.descriptionWithDecimalsIfPresent)"
     }
     
     init(motorcycleList: [Motorcycle]?) {
-        let safeSmallest = Double(0)    //Measurement<UnitPower>(value: Double(0), unit: .horsepower)
-        let safeBiggest = Double(150)   //Measurement<UnitPower>(value: Double(150), unit: .horsepower)
+        let safeSmallest = Measurement<UnitPower>(value: Double(0), unit: .horsepower)
+        let safeBiggest = Measurement<UnitPower>(value: Double(150), unit: .horsepower)
         
         guard let unwrapMotorcycleList = motorcycleList else {
+            self.powers = []
             self.smallestPower = safeSmallest
             self.biggestPower = safeBiggest
             self.minPower = self.smallestPower
@@ -44,10 +46,10 @@ struct Power {
             return
         }
         
-        let powers = MotorcycleElements.powers(unwrapMotorcycleList)
+        self.powers = MotorcycleElements.powers(unwrapMotorcycleList)
         
-        self.smallestPower = powers.min() ?? safeSmallest
-        self.biggestPower = powers.max() ?? safeBiggest
+        self.smallestPower = self.powers.min() ?? safeSmallest
+        self.biggestPower = self.powers.max() ?? safeBiggest
         self.minPower = self.smallestPower
         self.maxPower = self.biggestPower
     }
@@ -71,6 +73,4 @@ extension Power: FilterProvider {
                         return power >= self.minPower && power <= self.maxPower
         })
     }
-    
-    
 }

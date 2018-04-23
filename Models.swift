@@ -42,10 +42,10 @@ struct Motorcycle {
         }
         
         struct Power {
-            let peak: Double
+            let peak: Measurement<UnitPower>
             let rpm: Int
             var formattedValue: String {
-                return "\(peak) hp at \(rpm) rpm"
+                return "\(peak.descriptionWithDecimalsIfPresent) at \(rpm) rpm"
             }
         }
     }

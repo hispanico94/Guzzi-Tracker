@@ -2,25 +2,27 @@ import UIKit
 
 class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    private let boreFilter: Bore
+    private var filter: Bore
     private let minBorePickerComponent = 0
     private let maxBorePickerComponent = 1
-    private let boresArray: [Int]
+    private let bores: [Measurement<UnitLength>]
     private let callback: (Bore) -> ()
     
-    private var selectedMinBore: Int {
+    private var selectedMinBore: Measurement<UnitLength> {
         didSet {
             if (selectedMinBore > selectedMaxBore) {
-                let row = boresArray.index(of: selectedMinBore) ?? (boresArray.count - 1)
+                selectedMaxBore = selectedMinBore
+                let row = bores.index(of: selectedMinBore) ?? (bores.count - 1)
                 borePicker.selectRow(row, inComponent: maxBorePickerComponent, animated: true)
             }
         }
     }
 
-    private var selectedMaxBore: Int {
+    private var selectedMaxBore: Measurement<UnitLength> {
         didSet {
             if (selectedMaxBore < selectedMinBore) {
-                let row = boresArray.index(of: selectedMaxBore) ?? 0
+                selectedMinBore = selectedMaxBore
+                let row = bores.index(of: selectedMaxBore) ?? 0
                 borePicker.selectRow(row, inComponent: minBorePickerComponent, animated: true)
             }
         }
@@ -28,11 +30,11 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     @IBOutlet weak var borePicker: UIPickerView!
     
-    init(filter boreFilter: Bore, _ callback: @escaping (Bore) -> ()) {
-        self.boreFilter = boreFilter
-        self.selectedMinBore = Int(boreFilter.minBore.value)
-        self.selectedMaxBore = Int(boreFilter.maxBore.value)
-        self.boresArray = Array(Int(boreFilter.smallestBore.value.rounded(.down))...Int(boreFilter.biggestBore.value.rounded(.up)))
+    init(filter: Bore, _ callback: @escaping (Bore) -> ()) {
+        self.filter = filter
+        self.selectedMinBore = filter.minBore
+        self.selectedMaxBore = filter.maxBore
+        self.bores = filter.bores
         self.callback = callback
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,17 +45,17 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let minBoreRow = boresArray.index(of: selectedMinBore) ?? 0
-        let maxBoreRow = boresArray.index(of: selectedMaxBore) ?? (boresArray.count - 1)
+        self.title = filter.title
+        let minBoreRow = bores.index(of: selectedMinBore) ?? 0
+        let maxBoreRow = bores.index(of: selectedMaxBore) ?? (bores.count - 1)
         borePicker.selectRow(minBoreRow, inComponent: minBorePickerComponent, animated: true)
         borePicker.selectRow(maxBoreRow, inComponent: maxBorePickerComponent, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        var newFilter = boreFilter
-        newFilter.minBore = Measurement(value: Double(selectedMinBore), unit: .millimeters)
-        newFilter.maxBore = Measurement(value: Double(selectedMaxBore), unit: .millimeters)
-        callback(newFilter)
+        filter.minBore = selectedMinBore
+        filter.maxBore = selectedMinBore
+        callback(filter)
         super.viewWillDisappear(animated)
     }
     
@@ -64,21 +66,21 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return boresArray.count
+        return bores.count
     }
     
     // MARK: - UIPickerView Delegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(boresArray[row])
+        return bores[row].value.descriptionWithDecimalsIfPresent
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch component {
         case minBorePickerComponent:
-            selectedMinBore = boresArray[row]
+            selectedMinBore = bores[row]
         case maxBorePickerComponent:
-            selectedMaxBore = boresArray[row]
+            selectedMaxBore = bores[row]
         default:
             return
         }

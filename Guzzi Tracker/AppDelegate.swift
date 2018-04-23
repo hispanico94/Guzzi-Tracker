@@ -13,7 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                               Displacement(motorcycleList: self.motorcycleList),
                                                               Bore(motorcycleList: self.motorcycleList),
                                                               Stroke(motorcycleList: self.motorcycleList),
-                                                              Power(motorcycleList: self.motorcycleList)])
+                                                              Power(motorcycleList: self.motorcycleList),
+                                                              Wheelbase(motorcycleList: self.motorcycleList),
+                                                              StrokeCycle()])
     
     lazy var vcFactory: VCFactory = VCFactory.init(motorcycleList: motorcycleList, filterStorage: self.filterStorage)
     

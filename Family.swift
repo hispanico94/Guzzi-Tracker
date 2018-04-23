@@ -3,17 +3,15 @@ import UIKit
 struct Family {
     let families: [String]
     var selectedFamilies: [String] = []
-    private let title = "Families"
+    let title = "Families"
     private var caption: String {
-        get {
-            let n = selectedFamilies.count
-            if n > 1 {
-                return "\(n) families selected"
-            } else if n == 1 {
-                return "1 family selected"
-            } else {
-                return ""
-            }
+        let n = selectedFamilies.count
+        if n > 1 {
+            return "\(n) families selected"
+        } else if n == 1 {
+            return "1 family selected"
+        } else {
+            return ""
         }
     }
     

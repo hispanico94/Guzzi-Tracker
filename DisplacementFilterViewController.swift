@@ -2,25 +2,27 @@ import UIKit
 
 class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
-    private let displacementFilter: Displacement
+    private var filter: Displacement
     private let minDisplacementPickerComponent = 0
     private let maxDisplacementPickerComponent = 1
-    private let displacementsArray: [Int]
+    private let displacements: [Measurement<UnitVolume>]
     private let callback: (Displacement) -> ()
     
-    private var selectedMinDisplacement: Int {
+    private var selectedMinDisplacement: Measurement<UnitVolume> {
         didSet {
             if (selectedMinDisplacement > selectedMaxDisplacement) {
-                let row = displacementsArray.index(of: selectedMinDisplacement) ?? (displacementsArray.count - 1)
+                selectedMaxDisplacement = selectedMinDisplacement
+                let row = displacements.index(of: selectedMinDisplacement) ?? (displacements.count - 1)
                 displacementPicker.selectRow(row, inComponent: maxDisplacementPickerComponent, animated: true)
             }
         }
     }
     
-    private var selectedMaxDisplacement: Int {
+    private var selectedMaxDisplacement: Measurement<UnitVolume> {
         didSet {
             if (selectedMaxDisplacement < selectedMinDisplacement) {
-                let row = displacementsArray.index(of: selectedMaxDisplacement) ?? 0
+                selectedMinDisplacement = selectedMaxDisplacement
+                let row = displacements.index(of: selectedMaxDisplacement) ?? 0
                 displacementPicker.selectRow(row, inComponent: minDisplacementPickerComponent, animated: true)
             }
         }
@@ -29,11 +31,11 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
     
     @IBOutlet weak var displacementPicker: UIPickerView!
     
-    init(filter displacementFilter: Displacement, _ callback: @escaping (Displacement) -> ()) {
-        self.displacementFilter = displacementFilter
-        self.selectedMinDisplacement = Int(displacementFilter.minDisplacement.value)
-        self.selectedMaxDisplacement = Int(displacementFilter.maxDisplacement.value)
-        self.displacementsArray = Array(Int(displacementFilter.smallestDisplacement.value)...Int(displacementFilter.biggestDisplacement.value))
+    init(filter: Displacement, _ callback: @escaping (Displacement) -> ()) {
+        self.filter = filter
+        self.selectedMinDisplacement = filter.minDisplacement
+        self.selectedMaxDisplacement = filter.maxDisplacement
+        self.displacements = filter.displacements
         self.callback = callback
         super.init(nibName: nil, bundle: nil)
     }
@@ -44,17 +46,17 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let minDisplacementRow = displacementsArray.index(of: selectedMinDisplacement) ?? 0
-        let maxDisplacementRow = displacementsArray.index(of: selectedMaxDisplacement) ?? (displacementsArray.count - 1)
+        self.title = filter.title
+        let minDisplacementRow = displacements.index(of: selectedMinDisplacement) ?? 0
+        let maxDisplacementRow = displacements.index(of: selectedMaxDisplacement) ?? (displacements.count - 1)
         displacementPicker.selectRow(minDisplacementRow, inComponent: minDisplacementPickerComponent, animated: true)
         displacementPicker.selectRow(maxDisplacementRow, inComponent: maxDisplacementPickerComponent, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        var newFilter = displacementFilter
-        newFilter.minDisplacement = Measurement(value: Double(selectedMinDisplacement), unit: .engineCubicCentimeters)
-        newFilter.maxDisplacement = Measurement(value: Double(selectedMaxDisplacement), unit: .engineCubicCentimeters)
-        callback(newFilter)
+        filter.minDisplacement = selectedMinDisplacement
+        filter.maxDisplacement = selectedMaxDisplacement
+        callback(filter)
         super.viewWillDisappear(animated)
     }
 
@@ -65,21 +67,21 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return displacementsArray.count
+        return displacements.count
     }
     
     // MARK: - UIPickerView Delegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(displacementsArray[row])
+        return displacements[row].value.descriptionWithDecimalsIfPresent
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch component {
         case minDisplacementPickerComponent:
-            selectedMinDisplacement = displacementsArray[row]
+            selectedMinDisplacement = displacements[row]
         case maxDisplacementPickerComponent:
-            selectedMaxDisplacement = displacementsArray[row]
+            selectedMaxDisplacement = displacements[row]
         default:
             return
         }

@@ -1,6 +1,7 @@
 import UIKit
 
 struct Displacement {
+    let displacements: [Measurement<UnitVolume>]
     let smallestDisplacement: Measurement<UnitVolume>
     let biggestDisplacement: Measurement<UnitVolume>
     var minDisplacement: Measurement<UnitVolume> {
@@ -27,9 +28,9 @@ struct Displacement {
             }
         }
     }
-    private let title = "Displacement"
+    let title = "Displacements"
     private var caption: String {
-        return "from \(minDisplacement) to \(maxDisplacement)"
+        return "from \(minDisplacement.descriptionWithDecimalsIfPresent) to \(maxDisplacement.descriptionWithDecimalsIfPresent)"
     }
     
     init(motorcycleList: [Motorcycle]?) {
@@ -37,6 +38,7 @@ struct Displacement {
         let safeBiggest = Measurement<UnitVolume>(value: Double(2000), unit: .engineCubicCentimeters)
         
         guard let unwrapMotorcycleList = motorcycleList else {
+            self.displacements = []
             self.smallestDisplacement = safeSmallest
             self.biggestDisplacement = safeBiggest
             self.minDisplacement = self.smallestDisplacement
@@ -44,10 +46,10 @@ struct Displacement {
             return
         }
         
-        let displacements = MotorcycleElements.displacements(unwrapMotorcycleList)
+        self.displacements = MotorcycleElements.displacements(unwrapMotorcycleList)
         
-        self.smallestDisplacement = displacements.min() ?? safeSmallest
-        self.biggestDisplacement = displacements.max() ?? safeBiggest
+        self.smallestDisplacement = self.displacements.min() ?? safeSmallest
+        self.biggestDisplacement = self.displacements.max() ?? safeBiggest
         self.minDisplacement = self.smallestDisplacement
         self.maxDisplacement = self.biggestDisplacement
     }

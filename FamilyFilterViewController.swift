@@ -2,15 +2,15 @@ import UIKit
 
 class FamilyFilterViewController: UITableViewController {
     
-    private var familyFilter: Family
+    private var filter: Family
     private let families: [String]
     private var selectedFamilies: [String] = []
     private let callback: (Family) -> ()
     
-    init(filter familyFilter: Family, callback: @escaping (Family) -> ()) {
-        self.familyFilter = familyFilter
-        self.families = familyFilter.families
-        self.selectedFamilies = familyFilter.selectedFamilies
+    init(filter: Family, callback: @escaping (Family) -> ()) {
+        self.filter = filter
+        self.families = filter.families
+        self.selectedFamilies = filter.selectedFamilies
         self.callback = callback
         super.init(style: .plain)
     }
@@ -21,7 +21,9 @@ class FamilyFilterViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = filter.title
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,8 +32,8 @@ class FamilyFilterViewController: UITableViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        familyFilter.selectedFamilies = selectedFamilies
-        callback(familyFilter)
+        filter.selectedFamilies = selectedFamilies
+        callback(filter)
     }
 
     // MARK: - Table view data source
@@ -74,23 +76,4 @@ class FamilyFilterViewController: UITableViewController {
             }
         }
     }
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
 }

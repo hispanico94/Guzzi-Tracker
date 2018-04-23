@@ -1,34 +1,28 @@
-//
-//  PowerFilterViewController.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 18/04/18.
-//  Copyright © 2018 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    private let powerFilter: Power
+    private var filter: Power
     private let minPowerPickerComponent = 0
     private let maxPowerPickerComponent = 1
-    private let powersArray: [Int]
+    private let powers: [Measurement<UnitPower>]
     private let callback: (Power) -> ()
     
-    private var selectedMinPower: Int {
+    private var selectedMinPower: Measurement<UnitPower> {
         didSet {
             if (selectedMinPower > selectedMaxPower) {
-                let row = powersArray.index(of: selectedMinPower) ?? (powersArray.count - 1)
+                selectedMaxPower = selectedMinPower
+                let row = powers.index(of: selectedMinPower) ?? (powers.count - 1)
                 powerPicker.selectRow(row, inComponent: maxPowerPickerComponent, animated: true)
             }
         }
     }
     
-    private var selectedMaxPower: Int {
+    private var selectedMaxPower: Measurement<UnitPower> {
         didSet {
             if (selectedMaxPower < selectedMinPower) {
-                let row = powersArray.index(of: selectedMaxPower) ?? 0
+                selectedMinPower = selectedMaxPower
+                let row = powers.index(of: selectedMaxPower) ?? 0
                 powerPicker.selectRow(row, inComponent: minPowerPickerComponent, animated: true)
             }
         }
@@ -36,11 +30,11 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
     
     @IBOutlet weak var powerPicker: UIPickerView!
     
-    init(filter powerFilter: Power, _ callback: @escaping (Power) -> ()) {
-        self.powerFilter = powerFilter
-        self.selectedMinPower = Int(powerFilter.minPower)
-        self.selectedMaxPower = Int(powerFilter.maxPower)
-        self.powersArray = Array(Int(powerFilter.smallestPower.rounded(.up))...Int(powerFilter.biggestPower.rounded(.up)))
+    init(filter: Power, _ callback: @escaping (Power) -> ()) {
+        self.filter = filter
+        self.selectedMinPower = filter.minPower
+        self.selectedMaxPower = filter.maxPower
+        self.powers = filter.powers
         self.callback = callback
         super.init(nibName: nil, bundle: nil)
     }
@@ -51,17 +45,17 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let minPowerRow = powersArray.index(of: selectedMinPower) ?? 0
-        let maxPowerRow = powersArray.index(of: selectedMaxPower) ?? (powersArray.count - 1)
+        self.title = filter.title
+        let minPowerRow = powers.index(of: selectedMinPower) ?? 0
+        let maxPowerRow = powers.index(of: selectedMaxPower) ?? (powers.count - 1)
         powerPicker.selectRow(minPowerRow, inComponent: minPowerPickerComponent, animated: true)
         powerPicker.selectRow(maxPowerRow, inComponent: maxPowerPickerComponent, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        var newFilter = powerFilter
-        newFilter.minPower = Double(selectedMinPower)
-        newFilter.maxPower = Double(selectedMaxPower)
-        callback(newFilter)
+        filter.minPower = selectedMinPower
+        filter.maxPower = selectedMaxPower
+        callback(filter)
         super.viewWillDisappear(animated)
     }
     
@@ -72,21 +66,21 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return powersArray.count
+        return powers.count
     }
     
-    // MARK: UIPickerView Delegate
+    // MARK: - UIPickerView Delegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(powersArray[row])
+        return powers[row].value.descriptionWithDecimalsIfPresent
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch component {
         case minPowerPickerComponent:
-            selectedMinPower = powersArray[row]
+            selectedMinPower = powers[row]
         case maxPowerPickerComponent:
-            selectedMaxPower = powersArray[row]
+            selectedMaxPower = powers[row]
         default:
             return
         }

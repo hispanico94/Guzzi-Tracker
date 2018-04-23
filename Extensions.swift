@@ -67,9 +67,15 @@ extension Motorcycle.Engine.StrokeCycle: Argo.Decodable { }
 
 extension Motorcycle.Engine.Power: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.Engine.Power> {
+        
+        let powerDouble: Decoded<Double> = json <| Key.Motorcycle.Engine.Power.peak.jsonKey
+        let rpm: Decoded<Int> = json <| Key.Motorcycle.Engine.Power.rpm.jsonKey
+        
+        let power = powerDouble.map { Measurement<UnitPower>(value: $0, unit: .horsepower) }
+        
         return curry(Motorcycle.Engine.Power.init)
-            <^> json <| Key.Motorcycle.Engine.Power.peak.jsonKey
-            <*> json <| Key.Motorcycle.Engine.Power.rpm.jsonKey
+            <^> power
+            <*> rpm
     }
 }
 
@@ -346,6 +352,22 @@ extension Optional {
 extension UnitVolume {
     static let engineCubicCentimeters = UnitVolume(symbol: "cc", converter: UnitConverterLinear(coefficient: 0.001))
     static let engineCubicInches = UnitVolume(symbol: "cu in", converter: UnitConverterLinear(coefficient: 0.016387064))
+}
+
+extension Measurement {    
+    var descriptionWithDecimalsIfPresent: String {
+        let roundedValue = self.value.rounded(.down)
+        guard (self.value - roundedValue).isZero else { return description }
+        return String(format: "%.0f", self.value) + " " + self.unit.symbol
+    }
+}
+
+extension Double {
+    var descriptionWithDecimalsIfPresent: String {
+        let roundedValue = self.rounded(.down)
+        guard (self - roundedValue).isZero else { return description }
+        return String(format: "%.0f", self)
+    }
 }
 
 extension Motorcycle.Engine.StrokeCycle: Comparable {

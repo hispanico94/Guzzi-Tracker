@@ -29,7 +29,7 @@ struct MinMaxYear {
             }
         }
     }
-    private let title = "Years Interval"
+    let title = "Years interval"
     private var caption: String {
         get {
             return "from \(minYear) to \(maxYear)"

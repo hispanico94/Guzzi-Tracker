@@ -2,25 +2,27 @@ import UIKit
 
 class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
-    private let weightFilter: Weight
+    private var filter: Weight
     private let minWeightPickerComponent = 0
     private let maxWeightPickerComponent = 1
-    private let weightsArray: [Int]
+    private let weights: [Measurement<UnitMass>]
     private let callback: (Weight) -> ()
     
-    private var selectedMinWeight: Int {
+    private var selectedMinWeight: Measurement<UnitMass> {
         didSet {
             if (selectedMinWeight > selectedMaxWeight) {
-                let row = weightsArray.index(of: selectedMinWeight) ?? (weightsArray.count - 1)
+                selectedMaxWeight = selectedMinWeight
+                let row = weights.index(of: selectedMinWeight) ?? (weights.count - 1)
                 weightPicker.selectRow(row, inComponent: maxWeightPickerComponent, animated: true)
             }
         }
     }
     
-    private var selectedMaxWeight: Int {
+    private var selectedMaxWeight: Measurement<UnitMass> {
         didSet {
             if (selectedMaxWeight < selectedMinWeight) {
-                let row = weightsArray.index(of: selectedMaxWeight) ?? 0
+                selectedMinWeight = selectedMaxWeight
+                let row = weights.index(of: selectedMaxWeight) ?? 0
                 weightPicker.selectRow(row, inComponent: minWeightPickerComponent, animated: true)
             }
         }
@@ -28,11 +30,11 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     @IBOutlet weak var weightPicker: UIPickerView!
     
-    init(filter weightFilter: Weight, _ callback: @escaping (Weight) -> ()) {
-        self.weightFilter = weightFilter
-        self.selectedMinWeight = Int(weightFilter.minWeight.value)
-        self.selectedMaxWeight = Int(weightFilter.maxWeight.value)
-        self.weightsArray = Array(Int(weightFilter.lightestWeight.value)...Int(weightFilter.heaviestWeight.value))
+    init(filter: Weight, _ callback: @escaping (Weight) -> ()) {
+        self.filter = filter
+        self.selectedMinWeight = filter.minWeight
+        self.selectedMaxWeight = filter.maxWeight
+        self.weights = filter.weights
         self.callback = callback
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,17 +45,17 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let minWeightRow = weightsArray.index(of: selectedMinWeight) ?? 0
-        let maxWeightRow = weightsArray.index(of: selectedMaxWeight) ?? (weightsArray.count - 1)
+        self.title = filter.title
+        let minWeightRow = weights.index(of: selectedMinWeight) ?? 0
+        let maxWeightRow = weights.index(of: selectedMaxWeight) ?? (weights.count - 1)
         weightPicker.selectRow(minWeightRow, inComponent: minWeightPickerComponent, animated: true)
         weightPicker.selectRow(maxWeightRow, inComponent: maxWeightPickerComponent, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        var newFilter = weightFilter
-        newFilter.minWeight = Measurement(value: Double(selectedMinWeight), unit: .kilograms)
-        newFilter.maxWeight = Measurement(value: Double(selectedMaxWeight), unit: .kilograms)
-        callback(newFilter)
+        filter.minWeight = selectedMinWeight
+        filter.maxWeight = selectedMaxWeight
+        callback(filter)
         super.viewWillDisappear(animated)
     }
     
@@ -64,23 +66,21 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return weightsArray.count
+        return weights.count
     }
     
     // MARK: - UIPickerView Delegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        let weight = Measurement(value: Double(weightsArray[row]), unit: UnitMass.kilograms)
-//        return weight.description
-        return String(weightsArray[row])
+        return String(format: "%.0f", weights[row].value)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch component {
         case minWeightPickerComponent:
-            selectedMinWeight = weightsArray[row]
+            selectedMinWeight = weights[row]
         case maxWeightPickerComponent:
-            selectedMaxWeight = weightsArray[row]
+            selectedMaxWeight = weights[row]
         default:
             return
         }

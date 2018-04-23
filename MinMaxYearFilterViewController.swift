@@ -10,6 +10,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
     private var selectedMinYear: Int {
         didSet {
             if (selectedMinYear > selectedMaxYear) {
+                selectedMaxYear = selectedMinYear
                 let row = yearsArray.index(of: selectedMinYear) ?? (yearsArray.count - 1)
                 yearPicker.selectRow(row, inComponent: maxYearPickerComponent, animated: true)
             }
@@ -19,6 +20,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
     private var selectedMaxYear: Int {
         didSet {
             if (selectedMaxYear < selectedMinYear) {
+                selectedMinYear = selectedMaxYear
                 let row = yearsArray.index(of: selectedMaxYear) ?? 0
                 yearPicker.selectRow(row, inComponent: minYearPickerComponent, animated: true)
             }
@@ -31,7 +33,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
         self.callback = callback
         selectedMinYear = minYear
         selectedMaxYear = maxYear
-        super.init(nibName: /*"MinMaxYearFilterViewController"*/ nil, bundle: nil)
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,6 +42,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Years interval"
         let minYearRow = yearsArray.index(of: selectedMinYear) ?? 0
         let maxYearRow = yearsArray.index(of: selectedMaxYear) ?? (yearsArray.count - 1)
         yearPicker.selectRow(minYearRow, inComponent: minYearPickerComponent, animated: true)

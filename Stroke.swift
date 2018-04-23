@@ -1,6 +1,7 @@
 import UIKit
 
 struct Stroke {
+    let strokes: [Measurement<UnitLength>]
     let smallestStroke: Measurement<UnitLength>
     let biggestStroke: Measurement<UnitLength>
     var minStroke: Measurement<UnitLength> {
@@ -27,9 +28,9 @@ struct Stroke {
             }
         }
     }
-    private let title = "Stroke"
+    let title = "Strokes"
     private var caption: String {
-        return "from \(minStroke) to \(maxStroke)"
+        return "from \(minStroke.descriptionWithDecimalsIfPresent) to \(maxStroke.descriptionWithDecimalsIfPresent)"
     }
     
     init(motorcycleList: [Motorcycle]?) {
@@ -37,6 +38,7 @@ struct Stroke {
         let safeBiggest = Measurement<UnitLength>(value: Double(150), unit: .millimeters)
         
         guard let unwrapMotorcycleList = motorcycleList else {
+            self.strokes = []
             self.smallestStroke = safeSmallest
             self.biggestStroke = safeBiggest
             self.minStroke = self.smallestStroke
@@ -44,10 +46,10 @@ struct Stroke {
             return
         }
         
-        let strokes = MotorcycleElements.strokes(unwrapMotorcycleList)
+        self.strokes = MotorcycleElements.strokes(unwrapMotorcycleList)
         
-        self.smallestStroke = strokes.min() ?? safeSmallest
-        self.biggestStroke = strokes.max() ?? safeBiggest
+        self.smallestStroke = self.strokes.min() ?? safeSmallest
+        self.biggestStroke = self.strokes.max() ?? safeBiggest
         self.minStroke = self.smallestStroke
         self.maxStroke = self.biggestStroke
     }

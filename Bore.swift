@@ -1,6 +1,7 @@
 import UIKit
 
 struct Bore {
+    let bores: [Measurement<UnitLength>]
     let smallestBore: Measurement<UnitLength>
     let biggestBore: Measurement<UnitLength>
     var minBore: Measurement<UnitLength> {
@@ -27,9 +28,9 @@ struct Bore {
             }
         }
     }
-    private let title = "Bore"
+    let title = "Bores"
     private var caption: String {
-        return "from \(minBore) to \(maxBore)"
+        return "from \(minBore.descriptionWithDecimalsIfPresent) to \(maxBore.descriptionWithDecimalsIfPresent)"
     }
     
     init(motorcycleList: [Motorcycle]?) {
@@ -37,6 +38,7 @@ struct Bore {
         let safeBiggest = Measurement<UnitLength>(value: Double(150), unit: .millimeters)
         
         guard let unwrapMotorcycleList = motorcycleList else {
+            self.bores = []
             self.smallestBore = safeSmallest
             self.biggestBore = safeBiggest
             self.minBore = self.smallestBore
@@ -44,10 +46,10 @@ struct Bore {
             return
         }
         
-        let bores = MotorcycleElements.bores(unwrapMotorcycleList)
+        self.bores = MotorcycleElements.bores(unwrapMotorcycleList)
         
-        self.smallestBore = bores.min() ?? safeSmallest
-        self.biggestBore = bores.max() ?? safeBiggest
+        self.smallestBore = self.bores.min() ?? safeSmallest
+        self.biggestBore = self.bores.max() ?? safeBiggest
         self.minBore = self.smallestBore
         self.maxBore = self.biggestBore
     }
