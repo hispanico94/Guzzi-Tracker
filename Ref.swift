@@ -1,5 +1,3 @@
-
-
 public final class Ref<T> {
     public var value: T {
         didSet {

@@ -177,13 +177,13 @@
 		CF0F54681E819FD00059650F /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				CF1CDB82206FD598007BCE95 /* Filters */,
 				CF8CCE991E65D10400F4A37E /* Models.swift */,
 				CF0F54691E819FEC0059650F /* Key.swift */,
 				CF0F546B1E81A06A0059650F /* OLDOrder&Filter.swift */,
 				CF8C6282206FC629002B8CF6 /* Filter.swift */,
 				CF8C6284206FC7DD002B8CF6 /* Ref.swift */,
 				CF1CDB7C206FCCBF007BCE95 /* Predicate.swift */,
+				CF1CDB82206FD598007BCE95 /* Filters */,
 			);
 			name = Structs;
 			sourceTree = "<group>";
@@ -223,7 +223,6 @@
 		CF8CCE8B1E65CAEA00F4A37E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CF31C9B3208DC72800D4B3BD /* Filters */,
 				CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */,
 				CF1A41D81E6080B100E76F11 /* SearchViewController.swift */,
 				CF1A41DC1E6080E800E76F11 /* MyGarageViewController.swift */,
@@ -231,6 +230,7 @@
 				CF690CAA1E7153AB00523796 /* ImagesViewController.swift */,
 				CF0B83151E785D71001C4172 /* SingleImageViewController.swift */,
 				CF1CDB7E206FD465007BCE95 /* FiltersViewController.swift */,
+				CF31C9B3208DC72800D4B3BD /* Filters */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -245,15 +245,7 @@
 				CF690CAB1E7153AB00523796 /* ImagesViewController.xib */,
 				CF0B83161E785D71001C4172 /* SingleImageViewController.xib */,
 				CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */,
-				CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */,
-				CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */,
-				CFF7C68C207CBA26001A7B90 /* WeightFilterViewController.xib */,
-				CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */,
-				CF830655208736F600570E60 /* BoreFilterViewController.xib */,
-				CF83065B20873FC300570E60 /* StrokeFilterViewController.xib */,
-				CF8306612087499700570E60 /* PowerFilterViewController.xib */,
-				CF466A0F208B212800E44BF2 /* WheelbaseFilterViewController.xib */,
-				CF466A15208B364700E44BF2 /* StrokeCycleFilterTableViewController.xib */,
+				CF96C5762090693500340C76 /* Filters */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -273,13 +265,29 @@
 		CF8CCE981E65D0F200F4A37E /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				CF0F54681E819FD00059650F /* Structs */,
 				CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */,
 				CFD4E44E1E66DC8000EFAB57 /* Data.swift */,
 				CFF259561E6C73FC0092A005 /* Protocols.swift */,
 				CFA4817F1E82F3D700D101E0 /* Typealiases.swift */,
+				CF0F54681E819FD00059650F /* Structs */,
 			);
 			name = Elements;
+			sourceTree = "<group>";
+		};
+		CF96C5762090693500340C76 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */,
+				CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */,
+				CFF7C68C207CBA26001A7B90 /* WeightFilterViewController.xib */,
+				CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */,
+				CF830655208736F600570E60 /* BoreFilterViewController.xib */,
+				CF83065B20873FC300570E60 /* StrokeFilterViewController.xib */,
+				CF8306612087499700570E60 /* PowerFilterViewController.xib */,
+				CF466A0F208B212800E44BF2 /* WheelbaseFilterViewController.xib */,
+				CF466A15208B364700E44BF2 /* StrokeCycleFilterTableViewController.xib */,
+			);
+			name = Filters;
 			sourceTree = "<group>";
 		};
 		CFAB03E51E60432D0032BD11 = {

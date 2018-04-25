@@ -79,13 +79,6 @@ class MotorcyclesViewController: UITableViewController {
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
-        // ----- LINE OUTPUT (to be removed) -----
-        let bores = MotorcycleElements.bores(motorcycleListToShow)
-        print("\(bores)")
-        let families = MotorcycleElements.families(motorcycleListToShow)
-        print("\(families)")
-        // -----
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "filter_icon"),
             style: .plain,

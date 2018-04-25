@@ -1,5 +1,3 @@
-import Foundation
-
 enum FilterId: Int {
     case none
     case minMaxYear
@@ -18,7 +16,6 @@ extension FilterId: Comparable {
         return lhs.rawValue < rhs.rawValue
     }
 }
-
 
 struct Filter {
     var id: FilterId

@@ -1,11 +1,3 @@
-//
-//  Extensions.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 28/02/17.
-//  Copyright © 2017 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 import Argo
 import Runes
@@ -336,6 +328,26 @@ extension Motorcycle {
     }
 }
 
+// MARK: - Conforming Motorcycle.Engine.StrokeCycle to Comparable protocol
+
+extension Motorcycle.Engine.StrokeCycle: Comparable {
+    static func <(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+    
+    static func <=(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
+        return lhs.rawValue <= rhs.rawValue
+    }
+    
+    static func >(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
+        return lhs.rawValue > rhs.rawValue
+    }
+    
+    static func >=(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
+        return lhs.rawValue >= rhs.rawValue
+    }
+}
+
 // MARK: - utility extensions
 
 extension Optional {
@@ -369,23 +381,3 @@ extension Double {
         return String(format: "%.0f", self)
     }
 }
-
-extension Motorcycle.Engine.StrokeCycle: Comparable {
-    static func <(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
-        return lhs.rawValue < rhs.rawValue
-    }
-    
-    static func <=(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
-        return lhs.rawValue <= rhs.rawValue
-    }
-    
-    static func >(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
-        return lhs.rawValue > rhs.rawValue
-    }
-    
-    static func >=(lhs: Motorcycle.Engine.StrokeCycle, rhs: Motorcycle.Engine.StrokeCycle) -> Bool {
-        return lhs.rawValue >= rhs.rawValue
-    }
-}
-
-
