@@ -41,6 +41,10 @@
 		CF690CA91E7150BF00523796 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF690CA71E7150BF00523796 /* ImageCell.xib */; };
 		CF690CAC1E7153AB00523796 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF690CAA1E7153AB00523796 /* ImagesViewController.swift */; };
 		CF690CAD1E7153AB00523796 /* ImagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF690CAB1E7153AB00523796 /* ImagesViewController.xib */; };
+		CF73C441209315F200596118 /* Ordering.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73C440209315F200596118 /* Ordering.swift */; };
+		CF73C4442093188A00596118 /* ComparatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73C4422093188A00596118 /* ComparatorsViewController.swift */; };
+		CF73C4452093188A00596118 /* ComparatorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF73C4432093188A00596118 /* ComparatorsViewController.xib */; };
+		CF73C44720931E5B00596118 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73C44620931E5B00596118 /* Function.swift */; };
 		CF8306532087342000570E60 /* Bore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8306522087342000570E60 /* Bore.swift */; };
 		CF830656208736F600570E60 /* BoreFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF830654208736F600570E60 /* BoreFilterViewController.swift */; };
 		CF830657208736F600570E60 /* BoreFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF830655208736F600570E60 /* BoreFilterViewController.xib */; };
@@ -116,6 +120,10 @@
 		CF690CA71E7150BF00523796 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		CF690CAA1E7153AB00523796 /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		CF690CAB1E7153AB00523796 /* ImagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesViewController.xib; sourceTree = "<group>"; };
+		CF73C440209315F200596118 /* Ordering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ordering.swift; sourceTree = "<group>"; };
+		CF73C4422093188A00596118 /* ComparatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparatorsViewController.swift; sourceTree = "<group>"; };
+		CF73C4432093188A00596118 /* ComparatorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComparatorsViewController.xib; sourceTree = "<group>"; };
+		CF73C44620931E5B00596118 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		CF8306522087342000570E60 /* Bore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bore.swift; sourceTree = "<group>"; };
 		CF830654208736F600570E60 /* BoreFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoreFilterViewController.swift; sourceTree = "<group>"; };
 		CF830655208736F600570E60 /* BoreFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoreFilterViewController.xib; sourceTree = "<group>"; };
@@ -183,6 +191,8 @@
 				CF8C6282206FC629002B8CF6 /* Filter.swift */,
 				CF8C6284206FC7DD002B8CF6 /* Ref.swift */,
 				CF1CDB7C206FCCBF007BCE95 /* Predicate.swift */,
+				CF73C44620931E5B00596118 /* Function.swift */,
+				CF73C440209315F200596118 /* Ordering.swift */,
 				CF1CDB82206FD598007BCE95 /* Filters */,
 			);
 			name = Structs;
@@ -230,6 +240,7 @@
 				CF690CAA1E7153AB00523796 /* ImagesViewController.swift */,
 				CF0B83151E785D71001C4172 /* SingleImageViewController.swift */,
 				CF1CDB7E206FD465007BCE95 /* FiltersViewController.swift */,
+				CF73C4422093188A00596118 /* ComparatorsViewController.swift */,
 				CF31C9B3208DC72800D4B3BD /* Filters */,
 			);
 			name = ViewControllers;
@@ -245,6 +256,7 @@
 				CF690CAB1E7153AB00523796 /* ImagesViewController.xib */,
 				CF0B83161E785D71001C4172 /* SingleImageViewController.xib */,
 				CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */,
+				CF73C4432093188A00596118 /* ComparatorsViewController.xib */,
 				CF96C5762090693500340C76 /* Filters */,
 			);
 			name = Xib;
@@ -386,7 +398,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = PaoloRocca;
 				TargetAttributes = {
 					CFAB03ED1E60432D0032BD11 = {
@@ -434,6 +446,7 @@
 				CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */,
 				CF8306632087499700570E60 /* PowerFilterViewController.xib in Resources */,
 				CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */,
+				CF73C4452093188A00596118 /* ComparatorsViewController.xib in Resources */,
 				CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */,
 				CF83065D20873FC300570E60 /* StrokeFilterViewController.xib in Resources */,
 				CF98DB2020849F68002EFC9B /* DisplacementFilterViewController.xib in Resources */,
@@ -486,6 +499,7 @@
 				CF98DB1C20849A44002EFC9B /* Displacement.swift in Sources */,
 				CF419AFE1E6D643300EA7B74 /* MotorcycleInfoViewController.swift in Sources */,
 				CF0F546C1E81A06A0059650F /* OLDOrder&Filter.swift in Sources */,
+				CF73C44720931E5B00596118 /* Function.swift in Sources */,
 				CF1A41D61E60808C00E76F11 /* MotorcyclesViewController.swift in Sources */,
 				CFF259571E6C73FC0092A005 /* Protocols.swift in Sources */,
 				CF83065F208744BD00570E60 /* Power.swift in Sources */,
@@ -505,6 +519,7 @@
 				CF419B021E6D692700EA7B74 /* MotorcycleInfoCell.swift in Sources */,
 				CFE280A81E6F12830090AAA7 /* MotorcycleNotesCell.swift in Sources */,
 				CF8306532087342000570E60 /* Bore.swift in Sources */,
+				CF73C4442093188A00596118 /* ComparatorsViewController.swift in Sources */,
 				CFA481801E82F3D700D101E0 /* Typealiases.swift in Sources */,
 				CF0F546A1E819FEC0059650F /* Key.swift in Sources */,
 				CF8C6285206FC7DD002B8CF6 /* Ref.swift in Sources */,
@@ -515,6 +530,7 @@
 				CF8CCE9E1E65D8A300F4A37E /* Extensions.swift in Sources */,
 				CF1CDB84206FD5AF007BCE95 /* MinMaxYear.swift in Sources */,
 				CF0ED0831E6F15E8008BAB23 /* MotorcycleImagesCell.swift in Sources */,
+				CF73C441209315F200596118 /* Ordering.swift in Sources */,
 				CFD4E44F1E66DC8000EFAB57 /* Data.swift in Sources */,
 				CF1CDB80206FD465007BCE95 /* FiltersViewController.swift in Sources */,
 				CF690CA81E7150BF00523796 /* ImageCell.swift in Sources */,
@@ -549,6 +565,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -556,6 +573,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -607,6 +625,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -614,6 +633,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

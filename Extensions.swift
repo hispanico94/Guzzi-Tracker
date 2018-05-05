@@ -348,7 +348,22 @@ extension Motorcycle.Engine.StrokeCycle: Comparable {
     }
 }
 
-// MARK: - utility extensions
+// MARK: - Motorcycle Comparators
+
+// TO BE ERASED
+//let yearComparator = Comparator<Motorcycle> {
+//    return Int.comparator().call(($0.0.generalInfo.firstYear, $0.1.generalInfo.firstYear))
+//}
+//
+//let familyComparator = Comparator<Motorcycle> {
+//    return Optional<String>.comparator().call(($0.0.generalInfo.family, $0.1.generalInfo.family))
+//}
+//
+//let yearComparator2 = Comparator<Motorcycle>.getOn { $0.generalInfo.firstYear }
+//let familyComparator2 = Comparator<Motorcycle>.getOn { $0.generalInfo.family }
+
+
+// MARK: - Utility extensions
 
 extension Optional {
     func getOrElse(_ elseValue: @autoclosure () -> Wrapped ) -> Wrapped {
@@ -379,5 +394,69 @@ extension Double {
         let roundedValue = self.rounded(.down)
         guard (self - roundedValue).isZero else { return description }
         return String(format: "%.0f", self)
+    }
+}
+
+// MARK: - Comparator extensions
+
+// Extending Comparable to implement Comparator
+extension Comparable {
+    static func comparator(ascending: Bool = true) -> Comparator<Self> {
+        return Comparator.init { lhs, rhs in
+            if ascending { return lhs < rhs ? .lt : lhs > rhs ? .gt : .eq }
+            return lhs < rhs ? .gt : lhs > rhs ? .lt : .eq
+        }
+    }
+}
+
+// Extending Optional to implement Comparator
+// Necessary for optional properties
+// nil elements are moved at the end of the list
+extension Optional where Wrapped: Comparable {
+    
+    /// Returns a comparator where nil elements are moved at the end of the list
+    static func comparator(ascending: Bool = true) -> Comparator<Optional> {
+        return Comparator.init { lhs, rhs in
+            switch (lhs, rhs) {
+            case (.none, _):
+                return .gt
+            case (_, .none):
+                return .lt
+            case (let left?, let right?):
+                if ascending { return left < right ? .lt : left > right ? .gt : .eq }
+                return left < right ? .gt : left > right ? .lt : .eq
+            }
+        }
+    }
+}
+
+extension Collection where Element: Equatable {
+    
+    /// Check if `self` and `array` have at least one element in common and
+    /// returns the index of the first common element in `self`, `nil` if no
+    /// common elements are found.
+    /// - parameter array: The array to be compared to `self`.
+    /// - returns: the index of the first common element in `self`, `nil` if
+    /// no common elements are found.
+    func index(fromFirstMatch array: [Element]) -> Index? {
+        for element in array {
+            if let index = index(of: element) {
+                return index
+            }
+        }
+        return nil
+    }
+}
+
+extension Array {
+    
+    /// Replace the element at index `index` with `newElement` and returns the old element.
+    /// - parameter newElement: the element that replaces the old one
+    /// - parameter index: the index locating the old element
+    /// - returns: the old element
+    mutating func replaceElement(with newElement: Element, at index: Index) -> Element {
+        let oldElement = remove(at: index)
+        insert(newElement, at: index)
+        return oldElement
     }
 }

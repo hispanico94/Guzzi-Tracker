@@ -1,3 +1,5 @@
+// MARK: - enum FilterId
+
 enum FilterId: Int {
     case none
     case minMaxYear
@@ -16,6 +18,8 @@ extension FilterId: Comparable {
         return lhs.rawValue < rhs.rawValue
     }
 }
+
+// MARK: - struct Filter
 
 struct Filter {
     var id: FilterId

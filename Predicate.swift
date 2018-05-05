@@ -1,5 +1,3 @@
-import Foundation
-
 typealias Predicate<T> = (T) -> Bool
 
 precedencegroup Composition {

@@ -13,3 +13,8 @@ protocol FilterProvider {
     func getViewController(_ callback: @escaping (FilterProvider) -> ()) -> UIViewController
     func getFilter() -> Filter
 }
+
+protocol Monoid {
+    static func <> (lhs: Self, rhs: Self) -> Self
+    static var empty: Self { get }
+}
