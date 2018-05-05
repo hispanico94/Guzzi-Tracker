@@ -34,8 +34,8 @@ class VCFactory {
         return myGarageVC
     }
     
-    func makeFiltersVC() -> FiltersViewController {
-        let filterVC = FiltersViewController(filterStorage: filterStorage)
+    func makeFiltersVC(orderStorage: Ref<Array<Order>>) -> FiltersViewController {
+        let filterVC = FiltersViewController(filterStorage: filterStorage, orderStorage: orderStorage)
         filterVC.title = "Filter & Order"
         return filterVC
     }

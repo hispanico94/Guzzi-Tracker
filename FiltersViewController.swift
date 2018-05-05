@@ -25,7 +25,9 @@ class FiltersViewController: UITableViewController {
     
     private weak var filterStorage: Ref<Array<FilterProvider>>?
     
-    init(filterStorage: Ref<Array<FilterProvider>>) {
+    private weak var orderStorage: Ref<Array<Order>>?
+    
+    init(filterStorage: Ref<Array<FilterProvider>>, orderStorage: Ref<Array<Order>>) {
         self.filterStorage = filterStorage
         
         for filter in filterStorage.value {
@@ -33,6 +35,8 @@ class FiltersViewController: UITableViewController {
             self.orderedFilterIds.append(filter.filterId)
         }
         self.orderedFilterIds.sort()
+        
+        self.orderStorage = orderStorage
         
         super.init(style: .plain)
     }
@@ -79,7 +83,7 @@ class FiltersViewController: UITableViewController {
         case 0:
             return "Filters"
         case 1:
-            return "List Ordering"
+            return "List Sorting"
         default:
             return nil
         }
@@ -88,7 +92,7 @@ class FiltersViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard indexPath.section == 0 else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "reuseIdentifier")
-            cell.textLabel?.text = "----TEST----"
+            cell.textLabel?.text = orderCellCaption()
             cell.accessoryType = .disclosureIndicator
             return cell
         }
@@ -118,13 +122,22 @@ class FiltersViewController: UITableViewController {
             guard let filterProvider = filterProviders[filterId] else { return }
             navigationController?.pushViewController(filterProvider.getViewController({ [weak self] newFilter in self?.filterProviders[filterId] = newFilter }), animated: true)
         case 1:
-            navigationController?.pushViewController(ComparatorsViewController(nibName: nil, bundle: nil), animated: true)
+            navigationController?.pushViewController(ComparatorsViewController(orders: orderStorage?.value, { [weak self] newOrders in self?.orderStorage?.value = newOrders }), animated: true)
         default:
             return
         }
     }
     
     
-
+    private func orderCellCaption() -> String? {
+        let orderCount = orderStorage?.value.count
+        guard let unwrapCount = orderCount else { return nil }
+        
+        if unwrapCount <= 1 {
+            return "\(unwrapCount) sort selected"
+        }
+        
+        return "\(unwrapCount) sorts selected"
+    }
     
 }

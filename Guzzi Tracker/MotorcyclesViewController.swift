@@ -32,6 +32,22 @@ class MotorcyclesViewController: UITableViewController {
     private weak var filterStorage: Ref<Array<FilterProvider>>?
     
     private let vcFactory: VCFactory
+
+    
+    private var orders: Array<Order> {
+        didSet {
+            let comparators = orders
+                .lazy
+                .map { $0.comparator }
+                .reduce(Comparator.empty, <>)
+            
+            let internalComparator = MotorcycleComparator.name
+            
+            motorcycleListToShow.sort(by: comparators <> internalComparator)
+        }
+    }
+    
+    var orderStorage = Ref<Array<Order>>.init([Order.init(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)])
     
     init(motorcycleList: [Motorcycle]?, filterStorage: Ref<Array<FilterProvider>>, vcFactory: VCFactory) {
         if let unwrapMotorcycleList = motorcycleList {
@@ -55,12 +71,19 @@ class MotorcyclesViewController: UITableViewController {
         
         filters = filterStorage.value
         self.filterStorage = filterStorage
+        
+        orders = orderStorage.value
+        
         self.vcFactory = vcFactory
         
         super.init(nibName: "MotorcyclesViewController", bundle: nil)
         
         filterStorage.add(listener: "MotorcyclesViewController") { [weak self] newFilters in
             self?.filters = newFilters
+        }
+        
+        orderStorage.add(listener: "MotorcyclesViewController") { [weak self] newOrders in
+            self?.orders = newOrders
         }
     }
     
@@ -70,6 +93,7 @@ class MotorcyclesViewController: UITableViewController {
     
     deinit {
         filterStorage?.remove(listener: "MotorcyclesViewController")
+        orderStorage.remove(listener: "MotorcyclesViewController")
     }
     
     override func viewDidLoad() {
@@ -98,7 +122,7 @@ class MotorcyclesViewController: UITableViewController {
     }
     
     @IBAction func didTapFilterButton(sender: UIBarButtonItem) {
-        navigationController?.pushViewController(vcFactory.makeFiltersVC(), animated: true)
+        navigationController?.pushViewController(vcFactory.makeFiltersVC(orderStorage: orderStorage), animated: true)
     }
     
     // MARK: - Table view data source

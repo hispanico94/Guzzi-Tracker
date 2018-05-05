@@ -460,3 +460,12 @@ extension Array {
         return oldElement
     }
 }
+
+extension Array {
+    
+    /// Sort the elements in place using `comparator` as the comparing function.
+    /// - parameter comparator: the `Comparator<Element>` that handles the comparison
+    mutating func sort(by comparator: Comparator<Element>) {
+        self.sort { comparator.call(($0, $1)) == .lt }
+    }
+}

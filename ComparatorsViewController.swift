@@ -10,7 +10,7 @@ import UIKit
 
 class ComparatorsViewController: UITableViewController {
     
-    let orders: [[Order]] = [
+    private let orders: [[Order]] = [
         [Order(id: .family, title: "Families", comparator: MotorcycleComparator.family)],
         
         [Order(id: .yearAscending,  title: "Year ascending",  comparator: MotorcycleComparator.yearAscending),
@@ -35,8 +35,20 @@ class ComparatorsViewController: UITableViewController {
          Order(id: .weightDescending, title: "Weight descending", comparator: MotorcycleComparator.weightDescending)]
     ]
     
-    var selectedOrders: [Order] = []
-    var selectedIndexPaths: [OrderId: IndexPath] = [:]
+    private var selectedOrders: [Order] = []
+    private var selectedIndexPaths: [OrderId: IndexPath] = [:]
+    private let callback: ([Order]) -> ()
+    
+    init(orders: [Order]?, _ callback: @escaping ([Order]) -> ()) {
+        self.selectedOrders = orders ?? [Order(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)]
+        self.callback = callback
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +57,9 @@ class ComparatorsViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearAllSelections))
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillDisappear(_ animated: Bool) {
+        callback(selectedOrders)
+        super.viewWillDisappear(animated)
     }
 
     // MARK: - Table view data source
@@ -103,7 +115,7 @@ class ComparatorsViewController: UITableViewController {
             return
         }
         
-        // If the `if` scope is not executed it means that selectedOrders does not contains
+        // If the first if scope is not executed it means that selectedOrders does not contains
         // the selected order. Next step is to check if selectedOrders contains another element
         // from the same section (for every section only one selection is possible)
         
