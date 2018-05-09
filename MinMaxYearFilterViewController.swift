@@ -43,6 +43,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Years interval"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
         let minYearRow = yearsArray.index(of: selectedMinYear) ?? 0
         let maxYearRow = yearsArray.index(of: selectedMaxYear) ?? (yearsArray.count - 1)
         yearPicker.selectRow(minYearRow, inComponent: minYearPickerComponent, animated: true)
@@ -50,7 +51,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        let filter = MinMaxYear.init(minYear: selectedMinYear, maxYear: selectedMaxYear)
+        let filter = MinMaxYear(minYear: selectedMinYear, maxYear: selectedMaxYear)
         callback(filter)
         super.viewWillDisappear(animated)
     }
@@ -80,5 +81,14 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
         default:
             return
         }
+    }
+    
+    @objc private func clearSelection() {
+        selectedMinYear = yearsArray.first!
+        selectedMaxYear = yearsArray.last!
+        let minYearRow = 0
+        let maxYearRow = yearsArray.count - 1
+        yearPicker.selectRow(minYearRow, inComponent: minYearPickerComponent, animated: true)
+        yearPicker.selectRow(maxYearRow, inComponent: maxYearPickerComponent, animated: true)
     }
 }

@@ -46,6 +46,7 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
         let minPowerRow = powers.index(of: selectedMinPower) ?? 0
         let maxPowerRow = powers.index(of: selectedMaxPower) ?? (powers.count - 1)
         powerPicker.selectRow(minPowerRow, inComponent: minPowerPickerComponent, animated: true)
@@ -84,6 +85,15 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
         default:
             return
         }
+    }
+    
+    @objc private func clearSelection() {
+        selectedMinPower = powers.first!
+        selectedMaxPower = powers.last!
+        let minPowerRow = 0
+        let maxPowerRow = powers.count - 1
+        powerPicker.selectRow(minPowerRow, inComponent: minPowerPickerComponent, animated: true)
+        powerPicker.selectRow(maxPowerRow, inComponent: maxPowerPickerComponent, animated: true)
     }
 }
 

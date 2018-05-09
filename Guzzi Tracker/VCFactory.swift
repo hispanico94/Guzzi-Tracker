@@ -2,17 +2,35 @@ import UIKit
 
 class VCFactory {
     
-    let filterStorage: Ref<Array<FilterProvider>>
     let motorcycleList: [Motorcycle]?
     
+    let filterProviders: [FilterProvider]
     
-    init(motorcycleList: [Motorcycle]?, filterStorage: Ref<Array<FilterProvider>>) {
+    let filterStorage: Ref<Array<FilterProvider>>
+    let orderStorage: Ref<Array<Order>>
+    
+    
+    init(motorcycleList: [Motorcycle]?) {
+        
         self.motorcycleList = motorcycleList
-        self.filterStorage = filterStorage
+        
+        self.filterProviders = [MinMaxYear(),
+                                Family(motorcycleList: self.motorcycleList),
+                                Weight(motorcycleList: self.motorcycleList),
+                                Displacement(motorcycleList: self.motorcycleList),
+                                Bore(motorcycleList: self.motorcycleList),
+                                Stroke(motorcycleList: self.motorcycleList),
+                                Power(motorcycleList: self.motorcycleList),
+                                Wheelbase(motorcycleList: self.motorcycleList),
+                                StrokeCycle()]
+        
+        self.filterStorage = Ref<Array<FilterProvider>>.init(self.filterProviders)
+        
+        self.orderStorage = Ref<Array<Order>>.init([Order.init(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)])
     }
     
     func makeMotorcyclesVC() -> MotorcyclesViewController {
-        let motorcyclesVC = MotorcyclesViewController(motorcycleList: motorcycleList, filterStorage: filterStorage, vcFactory: self)
+        let motorcyclesVC = MotorcyclesViewController(motorcycleList: motorcycleList, vcFactory: self)
         motorcyclesVC.title = "Motorcycles"
         motorcyclesVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: nil, action: nil)
         motorcyclesVC.tabBarItem = UITabBarItem(title: "Motorcycles", image: UIImage(named: "motorycles_tab_icon"), tag: 0)
@@ -34,8 +52,8 @@ class VCFactory {
         return myGarageVC
     }
     
-    func makeFiltersVC(orderStorage: Ref<Array<Order>>) -> FiltersViewController {
-        let filterVC = FiltersViewController(filterStorage: filterStorage, orderStorage: orderStorage)
+    func makeFiltersVC(motorcyclesDisplayed: Ref<Int>) -> FiltersViewController {
+        let filterVC = FiltersViewController(filterProviders: filterProviders, filterStorage: filterStorage, orderStorage: orderStorage, motorcyclesDisplayed: motorcyclesDisplayed)
         filterVC.title = "Filter & Order"
         return filterVC
     }

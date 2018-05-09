@@ -26,7 +26,7 @@
 			"frame": {
 				"type": "Closed double cradle",
 				"front_suspension": "Girder fork",
-				"rear_suspension": "Rigid",
+				"rear_suspension": "Fixed",
 				"wheelbase": 1380,
 				"brakes": "Rear drum brake only"
 			},
@@ -67,7 +67,7 @@
 			"frame": {
 				"type": "Closed double cradle",
 				"front_suspension": "Girder fork",
-				"rear_suspension": "Rigid",
+				"rear_suspension": "Fixed",
 				"wheelbase": 1430,
 				"brakes": "Rear drum brake only"
 			},
@@ -85,9 +85,9 @@
 			"id": 3,
 			"general_info": {
 				"family": "G.T.",
-				"name": "G.T.",
+				"name": "G.T. - G.T. 16",
 				"first_year": 1928,
-				"last_year": 1930
+				"last_year": 1934
 			},
 			"engine": {
 				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
@@ -97,7 +97,7 @@
 				"displacement": 498.4,
 				"compression": 4.5,
 				"power": {
-					"peak": 13,
+					"peak": 13.2,
 					"rpm": 3800
 				},
 				"feed_system": "Carburetor, Amac 15 PSY"
@@ -116,11 +116,277 @@
 				"max_speed": 100,
 				"fuel_consumption": 3.4
 			},
-            "notes": "The G.T. (also known as 'G.T. Norge') is the first Guzzi with a rear suspension. The solution adopted definitely increased comfort without decreasing the torsional strenght of the frame, essential to the handling of the bike. This excellent solution was later used in competition bikes",
+            "notes": "The G.T. (also known as 'G.T. Norge') is the first Guzzi with a rear suspension. The solution adopted definitely increased comfort without decreasing the torsional strenght of the frame, essential to the handling of the bike. This excellent solution was later used in competition bikes The original G.T. sold 78 units from 1928 to 1930, it was replaced by the G.T. 16, with engine and frame derived from the Sport 15. 754 G.T. 16 were built. [Data refers to the G.T. 16]",
             "images": ["https://c2.staticflickr.com/4/3954/33398348576_f91d2614a3_o.jpg"]
 		},
 		{
 			"id": 4,
+			"general_info": {
+				"family": "Sport",
+				"name": "Sport 14",
+				"first_year": 1929,
+				"last_year": 1930
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 82,
+				"displacement": 498.4,
+				"compression": 4.5,
+				"power": {
+					"peak": 13.2,
+					"rpm": 3800
+				},
+				"feed_system": "Carburetor, Amac"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Fixed",
+				"wheelbase": 1430,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 11,
+				"lubricant_capacity": 3,
+				"weight": 130,
+				"max_speed": 100,
+				"fuel_consumption": 3.4
+			},
+            "notes": "The Sport 14, compared to the original Sport, has bigger cooling fins on the cylinder and head on the engine, new front suspension with different steering geometry, better brakes and dynamo. 4285 Sport 14 were built.",
+            "images": null
+		},
+		{
+			"id": 5,
+			"general_info": {
+				"family": "Sport",
+				"name": "Sport 15",
+				"first_year": 1931,
+				"last_year": 1939
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 82,
+				"displacement": 498.4,
+				"compression": 4.5,
+				"power": {
+					"peak": 13.2,
+					"rpm": 3800
+				},
+				"feed_system": "Carburetor, Amal 6/142"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Fixed",
+				"wheelbase": 1430,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 11,
+				"lubricant_capacity": 3,
+				"weight": 150,
+				"max_speed": 100,
+				"fuel_consumption": 3.4
+			},
+            "notes": "The Sport 15 introduces the over-the-frame fuel tank, an innovation initially introduced in british bikes only few years before. In addition to the new tank the Sport 15 has, compared to the Sport 14, a more rigid frame and other small improvements. 5979 Sport 15 were built.",
+            "images": null
+		},
+		{
+			"id": 6,
+			"general_info": {
+				"family": null,
+				"name": "Tre Cilindri",
+				"first_year": 1932,
+				"last_year": 1933
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal three cylinders, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 56,
+				"stroke": 67,
+				"displacement": 494.8,
+				"compression": 4.9,
+				"power": {
+					"peak": 25,
+					"rpm": 5500
+				},
+				"feed_system": "Single Amal carburetor"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and friction dampers",
+				"wheelbase": 1440,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 11.5,
+				"lubricant_capacity": 3,
+				"weight": 160,
+				"max_speed": 130,
+				"fuel_consumption": null
+			},
+            "notes": "Few prototypes models were built of this very advance bike (at the time). Only one model remains today (displayed in the Moto Guzzi Museum)",
+            "images": null
+		},
+		{
+			"id": 8,
+			"general_info": {
+				"family": "P",
+				"name": "P 175",
+				"first_year": 1932,
+				"last_year": 1937
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 59,
+				"stroke": 63.7,
+				"displacement": 174,
+				"compression": 6,
+				"power": {
+					"peak": 7,
+					"rpm": 5000
+				},
+				"feed_system": "Carburetor, Dell'Orto SB 20mm"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Fixed",
+				"wheelbase": 1320,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 10,
+				"lubricant_capacity": 2,
+				"weight": 115,
+				"max_speed": 90,
+				"fuel_consumption": 2.9
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 9,
+			"general_info": {
+				"family": "P",
+				"name": "P 250",
+				"first_year": 1934,
+				"last_year": 1939
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 68,
+				"stroke": 64,
+				"displacement": 232.3,
+				"compression": 6,
+				"power": {
+					"peak": 9,
+					"rpm": 5500
+				},
+				"feed_system": "Carburetor, Dell'Orto SB 22mm"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Fixed",
+				"wheelbase": 1320,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 10,
+				"lubricant_capacity": 2,
+				"weight": 115,
+				"max_speed": 100,
+				"fuel_consumption": 2.9
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 10,
+			"general_info": {
+				"family": "V",
+				"name": "V",
+				"first_year": 1934,
+				"last_year": 1940
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 82,
+				"displacement": 498.4,
+				"compression": 5.5,
+				"power": {
+					"peak": 18.9,
+					"rpm": 4300
+				},
+				"feed_system": "Carburetor, Dell'Orto MD 27 or Amal 27mm"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Fixed",
+				"wheelbase": 1400,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 12,
+				"lubricant_capacity": 2.5,
+				"weight": 160,
+				"max_speed": 120,
+				"fuel_consumption": 4.5
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 11,
+			"general_info": {
+				"family": "V",
+				"name": "G.T.V.",
+				"first_year": 1934,
+				"last_year": 1949
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 82,
+				"displacement": 498.4,
+				"compression": 5.5,
+				"power": {
+					"peak": 18.9,
+					"rpm": 4300
+				},
+				"feed_system": "Carburetor, Dell'Orto MD 27"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and friction dampers",
+				"wheelbase": 1475,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 13.5,
+				"lubricant_capacity": 3,
+				"weight": 180,
+				"max_speed": 120,
+				"fuel_consumption": 2.9
+			},
+            "notes": "The only difference between the V and the G.T.V. is the rear suspension with the adoption of the G.T.'s swingarm. In 1947 the G.T.V. was updated with the adoption of a upside-down telescopic fork.",
+            "images": null
+		},
+		{
+			"id": 12,
 			"general_info": {
 				"family": "Falcone",
 				"name": "Falcone",
@@ -161,7 +427,7 @@
               ]
 		},
 		{
-			"id": 5,
+			"id": 13,
 			"general_info": {
 				"family": "Galletto",
 				"name": "Galletto 160",
@@ -199,7 +465,7 @@
             "images": null
 		},
 		{
-			"id": 6,
+			"id": 14,
 			"general_info": {
 				"family": "Galletto",
 				"name": "Galletto 175",
@@ -237,7 +503,7 @@
             "images": null
 		},
 		{
-			"id": 7,
+			"id": 15,
 			"general_info": {
 				"family": "Galletto",
 				"name": "Galletto 192",
@@ -275,7 +541,7 @@
             "images": ["https://c1.staticflickr.com/1/576/33283306922_4dc91c04fe_o.jpg"]
 		},
 		{
-			"id": 8,
+			"id": 16,
 			"general_info": {
 				"family": "V7 (old)",
 				"name": "V7 Sport",
@@ -318,7 +584,7 @@
                        ]
 		},
 		{
-			"id": 9,
+			"id": 17,
 			"general_info": {
 				"family": "Racing Bikes",
 				"name": "8 cilindri",
@@ -356,7 +622,7 @@
             "images": ["https://c2.staticflickr.com/4/3760/33438639725_6346d8277b_o.jpg"]
 		},
 		{
-			"id": 10,
+			"id": 18,
 			"general_info": {
 				"family": "Le Mans",
 				"name": "850 Le Mans III",
@@ -392,120 +658,6 @@
 			},
             "notes": null,
             "images": ["https://c2.staticflickr.com/4/3680/33438717245_5603c37915_o.jpg"]
-		},
-		{
-			"id": 11,
-			"general_info": {
-				"family": "Sport",
-				"name": "Sport 14",
-				"first_year": 1929,
-				"last_year": 1930
-			},
-			"engine": {
-				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
-				"stroke_cycle": 4,
-				"bore": 88,
-				"stroke": 82,
-				"displacement": 498.4,
-				"compression": 4.5,
-				"power": {
-					"peak": 13.2,
-					"rpm": 3800
-				},
-				"feed_system": "Amac carburetor"
-			},
-			"frame": {
-				"type": "Closed double cradle",
-				"front_suspension": "Girder fork with friction dampers",
-				"rear_suspension": "Rigid",
-				"wheelbase": 1430,
-				"brakes": "Rear and front drum brake"
-			},
-			"capacities_performances": {
-				"fuel_capacity": 11,
-				"lubricant_capacity": 3,
-				"weight": 130,
-				"max_speed": 100,
-				"fuel_consumption": 3.4
-			},
-            "notes": null,
-            "images": null
-		},
-		{
-			"id": 12,
-			"general_info": {
-				"family": "Sport",
-				"name": "Sport 15",
-				"first_year": 1931,
-				"last_year": 1939
-			},
-			"engine": {
-				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
-				"stroke_cycle": 4,
-				"bore": 88,
-				"stroke": 82,
-				"displacement": 498.4,
-				"compression": 4.5,
-				"power": {
-					"peak": 13.2,
-					"rpm": 3800
-				},
-				"feed_system": "Carburetor, Amal type 6/142"
-			},
-			"frame": {
-				"type": "Closed double cradle",
-				"front_suspension": "Girder fork with friction dampers",
-				"rear_suspension": "Rigid",
-				"wheelbase": 1430,
-				"brakes": "Rear and front drum brake"
-			},
-			"capacities_performances": {
-				"fuel_capacity": 11,
-				"lubricant_capacity": 3,
-				"weight": 150,
-				"max_speed": 100,
-				"fuel_consumption": 3.4
-			},
-            "notes": null,
-            "images": null
-		},
-		{
-			"id": 13,
-			"general_info": {
-				"family": null,
-				"name": "Tre Cilindri",
-				"first_year": 1932,
-				"last_year": 1933
-			},
-			"engine": {
-				"configuration": "4-stroke horizontal three cylinders, OHV 2 valves per cylinder",
-				"stroke_cycle": 4,
-				"bore": 56,
-				"stroke": 67,
-				"displacement": 494.8,
-				"compression": 4.9,
-				"power": {
-					"peak": 25,
-					"rpm": 5500
-				},
-				"feed_system": "Single Amal carburetor"
-			},
-			"frame": {
-				"type": "Closed double cradle",
-				"front_suspension": "Girder fork with friction dampers",
-				"rear_suspension": "Swingarm with horizontal springs under the engine and friction dampers",
-				"wheelbase": 1440,
-				"brakes": "Rear and front drum brake"
-			},
-			"capacities_performances": {
-				"fuel_capacity": 11.5,
-				"lubricant_capacity": 3,
-				"weight": 160,
-				"max_speed": 130,
-				"fuel_consumption": null
-			},
-            "notes": "Few prototypes models were built of this very advance bike (at the time). Only one model remains today, it's in the Moto Guzzi Museum.",
-            "images": null
 		}
 	]
 }

@@ -46,6 +46,7 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
         let minWeightRow = weights.index(of: selectedMinWeight) ?? 0
         let maxWeightRow = weights.index(of: selectedMaxWeight) ?? (weights.count - 1)
         weightPicker.selectRow(minWeightRow, inComponent: minWeightPickerComponent, animated: true)
@@ -84,5 +85,14 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         default:
             return
         }
+    }
+    
+    @objc private func clearSelection() {
+        selectedMinWeight = weights.first!
+        selectedMaxWeight = weights.last!
+        let minWeightRow = 0
+        let maxWeightRow = weights.count - 1
+        weightPicker.selectRow(minWeightRow, inComponent: minWeightPickerComponent, animated: true)
+        weightPicker.selectRow(maxWeightRow, inComponent: maxWeightPickerComponent, animated: true)
     }
 }

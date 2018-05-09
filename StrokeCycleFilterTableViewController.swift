@@ -22,12 +22,7 @@ class StrokeCycleFilterTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,6 +44,7 @@ class StrokeCycleFilterTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: .default, reuseIdentifier: "reuseIdentifier")
         
         cell.textLabel?.text = cases[indexPath.row].1
+        cell.accessoryType = .none
         
         if selectedStrokeCycle == cases[indexPath.row].0 {
             cell.accessoryType = .checkmark
@@ -84,5 +80,11 @@ class StrokeCycleFilterTableViewController: UITableViewController {
             selectedIndexPath = indexPath
             selectedStrokeCycle = cases[indexPath.row].0
         }
+    }
+    
+    @objc private func clearSelection() {
+        selectedStrokeCycle = nil
+        selectedIndexPath = nil
+        tableView.reloadData()
     }
 }

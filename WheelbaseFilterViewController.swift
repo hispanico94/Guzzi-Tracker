@@ -46,6 +46,7 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
         let minWheelbaseRow = wheelbases.index(of: selectedMinWheelbase) ?? 0
         let maxWheelbaseRow = wheelbases.index(of: selectedMaxWheelbase) ?? (wheelbases.count - 1)
         wheelbasePicker.selectRow(minWheelbaseRow, inComponent: minWheelbasePickerComponent, animated: true)
@@ -84,5 +85,14 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
         default:
             return
         }
+    }
+    
+    @objc private func clearSelection() {
+        selectedMinWheelbase = wheelbases.first!
+        selectedMaxWheelbase = wheelbases.last!
+        let minWheelbaseRow = 0
+        let maxWheelbaseRow = wheelbases.count - 1
+        wheelbasePicker.selectRow(minWheelbaseRow, inComponent: minWheelbasePickerComponent, animated: true)
+        wheelbasePicker.selectRow(maxWheelbaseRow, inComponent: maxWheelbasePickerComponent, animated: true)
     }
 }

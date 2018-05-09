@@ -46,6 +46,7 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
         let minBoreRow = bores.index(of: selectedMinBore) ?? 0
         let maxBoreRow = bores.index(of: selectedMaxBore) ?? (bores.count - 1)
         borePicker.selectRow(minBoreRow, inComponent: minBorePickerComponent, animated: true)
@@ -84,5 +85,14 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
         default:
             return
         }
+    }
+    
+    @objc private func clearSelection() {
+        selectedMinBore = bores.first!
+        selectedMaxBore = bores.last!
+        let minBoreRow = 0
+        let maxBoreRow = bores.count - 1
+        borePicker.selectRow(minBoreRow, inComponent: minBorePickerComponent, animated: true)
+        borePicker.selectRow(maxBoreRow, inComponent: maxBorePickerComponent, animated: true)
     }
 }

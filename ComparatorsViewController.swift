@@ -58,7 +58,14 @@ class ComparatorsViewController: UITableViewController {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        callback(selectedOrders)
+        
+        if selectedOrders.isEmpty {
+            selectedOrders = [orders[1][1]] // assign the default "yearDescending" order to selectedOrders
+            callback(selectedOrders)
+        } else {
+            callback(selectedOrders)
+        }
+        
         super.viewWillDisappear(animated)
     }
 

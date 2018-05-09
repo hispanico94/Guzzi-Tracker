@@ -21,14 +21,8 @@ class FamilyFilterViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = filter.title
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -51,6 +45,7 @@ class FamilyFilterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "reuseIdentifier")
 
         cell.textLabel?.text = families[indexPath.row]
+        cell.accessoryType = .none
         
         if selectedFamilies.contains(families[indexPath.row]) {
             cell.accessoryType = .checkmark
@@ -58,6 +53,8 @@ class FamilyFilterViewController: UITableViewController {
 
         return cell
     }
+    
+    // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defer {
@@ -75,5 +72,10 @@ class FamilyFilterViewController: UITableViewController {
                 selectedFamilies.append(families[indexPath.row])
             }
         }
+    }
+    
+    @objc private func clearSelection() {
+        selectedFamilies.removeAll()
+        tableView.reloadData()
     }
 }

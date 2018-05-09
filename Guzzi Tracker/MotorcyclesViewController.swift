@@ -12,8 +12,11 @@ class MotorcyclesViewController: UITableViewController {
     
     private var motorcycleList: [Motorcycle]
     
+    private let motorcyclesDisplayed: Ref<Int>
+    
     private var motorcycleListToShow: [Motorcycle] {
         didSet {
+            motorcyclesDisplayed.value = motorcycleListToShow.count
             tableView.reloadData()
         }
     }
@@ -29,11 +32,6 @@ class MotorcyclesViewController: UITableViewController {
         }
     }
     
-    private weak var filterStorage: Ref<Array<FilterProvider>>?
-    
-    private let vcFactory: VCFactory
-
-    
     private var orders: Array<Order> {
         didSet {
             let comparators = orders
@@ -47,15 +45,23 @@ class MotorcyclesViewController: UITableViewController {
         }
     }
     
-    var orderStorage = Ref<Array<Order>>.init([Order.init(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)])
+    private weak var filterStorage: Ref<Array<FilterProvider>>?
     
-    init(motorcycleList: [Motorcycle]?, filterStorage: Ref<Array<FilterProvider>>, vcFactory: VCFactory) {
+    private weak var orderStorage: Ref<Array<Order>>?
+    
+    private let vcFactory: VCFactory
+
+    
+    init(motorcycleList: [Motorcycle]?, vcFactory: VCFactory) {
         if let unwrapMotorcycleList = motorcycleList {
             self.motorcycleList = unwrapMotorcycleList
             self.motorcycleListToShow = unwrapMotorcycleList
+            self.motorcyclesDisplayed = Ref<Int>.init(unwrapMotorcycleList.count)
+            
         } else {
             self.motorcycleList = []
             self.motorcycleListToShow = []
+            self.motorcyclesDisplayed = Ref<Int>.init(0)
         }
         
         /*
@@ -69,20 +75,25 @@ class MotorcyclesViewController: UITableViewController {
         }
         */
         
-        filters = filterStorage.value
-        self.filterStorage = filterStorage
-        
-        orders = orderStorage.value
-        
         self.vcFactory = vcFactory
+        
+        self.filterStorage = vcFactory.filterStorage
+        self.filters = vcFactory.filterStorage.value
+        
+        self.orderStorage = vcFactory.orderStorage
+        
+        // self.orders is initialized empty and in viewDidLoad() gets the
+        // value from orderStorage in order to call its didSet observer
+        self.orders = []
+        
         
         super.init(nibName: "MotorcyclesViewController", bundle: nil)
         
-        filterStorage.add(listener: "MotorcyclesViewController") { [weak self] newFilters in
+        self.filterStorage?.add(listener: "MotorcyclesViewController") { [weak self] newFilters in
             self?.filters = newFilters
         }
         
-        orderStorage.add(listener: "MotorcyclesViewController") { [weak self] newOrders in
+        self.orderStorage?.add(listener: "MotorcyclesViewController") { [weak self] newOrders in
             self?.orders = newOrders
         }
     }
@@ -93,11 +104,14 @@ class MotorcyclesViewController: UITableViewController {
     
     deinit {
         filterStorage?.remove(listener: "MotorcyclesViewController")
-        orderStorage.remove(listener: "MotorcyclesViewController")
+        orderStorage?.remove(listener: "MotorcyclesViewController")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // the orders' didSet observer is called
+        orders = orderStorage?.value ?? []
         
         tableView.register(UINib(nibName: "MotorcycleCell", bundle: nil), forCellReuseIdentifier: MotorcycleCell.defaultIdentifier)
         
@@ -122,7 +136,7 @@ class MotorcyclesViewController: UITableViewController {
     }
     
     @IBAction func didTapFilterButton(sender: UIBarButtonItem) {
-        navigationController?.pushViewController(vcFactory.makeFiltersVC(orderStorage: orderStorage), animated: true)
+        navigationController?.pushViewController(vcFactory.makeFiltersVC(motorcyclesDisplayed: motorcyclesDisplayed), animated: true)
     }
     
     // MARK: - Table view data source

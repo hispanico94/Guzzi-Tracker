@@ -54,6 +54,7 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
         let minStrokeRow = strokes.index(of: selectedMinStroke) ?? 0
         let maxStrokeRow = strokes.index(of: selectedMaxStroke) ?? (strokes.count - 1)
         strokePicker.selectRow(minStrokeRow, inComponent: minStrokePickerComponent, animated: true)
@@ -92,5 +93,14 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         default:
             return
         }
+    }
+    
+    @objc private func clearSelection() {
+        selectedMinStroke = strokes.first!
+        selectedMaxStroke = strokes.last!
+        let minStrokeRow = 0
+        let maxStrokeRow = strokes.count - 1
+        strokePicker.selectRow(minStrokeRow, inComponent: minStrokePickerComponent, animated: true)
+        strokePicker.selectRow(maxStrokeRow, inComponent: maxStrokePickerComponent, animated: true)
     }
 }

@@ -10,6 +10,11 @@ import UIKit
 
 class FiltersViewController: UITableViewController {
     
+    private let filterSection = 0
+    private let orderSection = 1
+    
+    private let originalFilterProviders: [FilterProvider]
+    
     private var filterProviders: [FilterId:FilterProvider] = [:] {
         didSet {
             orderedFilterIds = filterProviders.keys.sorted()
@@ -25,9 +30,22 @@ class FiltersViewController: UITableViewController {
     
     private weak var filterStorage: Ref<Array<FilterProvider>>?
     
+    // used for reloading the data of the tableView (otherwise after selecting
+    // the orders the filters page will display the old number of orders selected)
+    private var orders: [Order] {
+        didSet {
+            orderStorage?.value = orders
+            tableView.reloadData()
+        }
+    }
+    
     private weak var orderStorage: Ref<Array<Order>>?
     
-    init(filterStorage: Ref<Array<FilterProvider>>, orderStorage: Ref<Array<Order>>) {
+    private weak var motorcyclesDisplayed: Ref<Int>?
+    
+    init(filterProviders: [FilterProvider], filterStorage: Ref<Array<FilterProvider>>, orderStorage: Ref<Array<Order>>, motorcyclesDisplayed: Ref<Int>) {
+        self.originalFilterProviders = filterProviders
+        
         self.filterStorage = filterStorage
         
         for filter in filterStorage.value {
@@ -36,31 +54,42 @@ class FiltersViewController: UITableViewController {
         }
         self.orderedFilterIds.sort()
         
+        self.orders = orderStorage.value
         self.orderStorage = orderStorage
         
+        self.motorcyclesDisplayed = motorcyclesDisplayed
+        
         super.init(style: .plain)
+        
+        self.motorcyclesDisplayed?.add(listener: "FiltersViewController") { [weak self] newValue in
+            self?.displayMotorcycleCount(value: newValue)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        self.motorcyclesDisplayed?.remove(listener: "FiltersViewController")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearAllSelections))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setToolbarHidden(false, animated: true)
+        displayMotorcycleCount(value: motorcyclesDisplayed?.value)
+        super.viewWillAppear(animated)
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setToolbarHidden(true, animated: true)
+        super.viewWillDisappear(animated)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,9 +98,9 @@ class FiltersViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0:
+        case filterSection:
             return orderedFilterIds.count
-        case 1:
+        case orderSection:
             return 1
         default:
             return 0
@@ -80,9 +109,9 @@ class FiltersViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0:
+        case filterSection:
             return "Filters"
-        case 1:
+        case orderSection:
             return "List Sorting"
         default:
             return nil
@@ -90,7 +119,7 @@ class FiltersViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard indexPath.section == 0 else {
+        guard indexPath.section == filterSection else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "reuseIdentifier")
             cell.textLabel?.text = orderCellCaption()
             cell.accessoryType = .disclosureIndicator
@@ -122,22 +151,54 @@ class FiltersViewController: UITableViewController {
             guard let filterProvider = filterProviders[filterId] else { return }
             navigationController?.pushViewController(filterProvider.getViewController({ [weak self] newFilter in self?.filterProviders[filterId] = newFilter }), animated: true)
         case 1:
-            navigationController?.pushViewController(ComparatorsViewController(orders: orderStorage?.value, { [weak self] newOrders in self?.orderStorage?.value = newOrders }), animated: true)
+            navigationController?.pushViewController(ComparatorsViewController(orders: orders, { [weak self] newOrders in self?.orders = newOrders }), animated: true)
         default:
             return
         }
     }
     
     
-    private func orderCellCaption() -> String? {
-        let orderCount = orderStorage?.value.count
-        guard let unwrapCount = orderCount else { return nil }
-        
-        if unwrapCount <= 1 {
-            return "\(unwrapCount) sort selected"
+    @objc private func clearAllSelections() {
+        filterStorage?.value = originalFilterProviders
+        for filter in originalFilterProviders {
+            filterProviders[filter.filterId] = filter
         }
         
-        return "\(unwrapCount) sorts selected"
+        orders = [Order.init(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)]
+        orderStorage?.value = orders
+        
+        tableView.reloadData()
     }
     
+    private func displayMotorcycleCount(value: Int?) {
+        
+        guard let unwrapValue = value else { return }
+        
+        let toolbarLabel = UILabel()
+        toolbarLabel.textAlignment = .center
+        toolbarLabel.textColor = .black
+        
+        switch value {
+        case 0:
+            toolbarLabel.text = "\(unwrapValue) results"
+            toolbarLabel.textColor = .red
+        case 1:
+            toolbarLabel.text = "\(unwrapValue) result"
+        default:
+            toolbarLabel.text = "\(unwrapValue) results"
+        }
+        
+        let toolbarButtonItem = UIBarButtonItem(customView: toolbarLabel)
+        setToolbarItems([toolbarButtonItem], animated: true)
+    }
+    
+    private func orderCellCaption() -> String? {
+        let orderCount = orders.count
+        
+        if orderCount <= 1 {
+            return "\(orderCount) sort selected"
+        }
+        
+        return "\(orderCount) sorts selected"
+    }
 }

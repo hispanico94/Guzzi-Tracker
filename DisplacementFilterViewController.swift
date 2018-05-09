@@ -47,6 +47,7 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
         let minDisplacementRow = displacements.index(of: selectedMinDisplacement) ?? 0
         let maxDisplacementRow = displacements.index(of: selectedMaxDisplacement) ?? (displacements.count - 1)
         displacementPicker.selectRow(minDisplacementRow, inComponent: minDisplacementPickerComponent, animated: true)
@@ -85,5 +86,14 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
         default:
             return
         }
+    }
+    
+    @objc private func clearSelection() {
+        selectedMinDisplacement = displacements.first!
+        selectedMaxDisplacement = displacements.last!
+        let minDisplacementRow = 0
+        let maxDisplacementRow = displacements.count - 1
+        displacementPicker.selectRow(minDisplacementRow, inComponent: minDisplacementPickerComponent, animated: true)
+        displacementPicker.selectRow(maxDisplacementRow, inComponent: maxDisplacementPickerComponent, animated: true)
     }
 }

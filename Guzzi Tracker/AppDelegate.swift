@@ -7,17 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let motorcycleList = getMotorcycleListFromJson()
     
-    lazy var filterStorage = Ref<Array<FilterProvider>>.init([MinMaxYear(),
-                                                              Family(motorcycleList: self.motorcycleList),
-                                                              Weight(motorcycleList: self.motorcycleList),
-                                                              Displacement(motorcycleList: self.motorcycleList),
-                                                              Bore(motorcycleList: self.motorcycleList),
-                                                              Stroke(motorcycleList: self.motorcycleList),
-                                                              Power(motorcycleList: self.motorcycleList),
-                                                              Wheelbase(motorcycleList: self.motorcycleList),
-                                                              StrokeCycle()])
-    
-    lazy var vcFactory: VCFactory = VCFactory.init(motorcycleList: motorcycleList, filterStorage: self.filterStorage)
+    lazy var vcFactory: VCFactory = VCFactory.init(motorcycleList: motorcycleList)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
