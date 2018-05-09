@@ -13,6 +13,8 @@ class FiltersViewController: UITableViewController {
     private let filterSection = 0
     private let orderSection = 1
     
+    private let resultCountLabel = UILabel()
+    
     private let originalFilterProviders: [FilterProvider]
     
     private var filterProviders: [FilterId:FilterProvider] = [:] {
@@ -62,7 +64,7 @@ class FiltersViewController: UITableViewController {
         super.init(style: .plain)
         
         self.motorcyclesDisplayed?.add(listener: "FiltersViewController") { [weak self] newValue in
-            self?.displayMotorcycleCount(value: newValue)
+            self?.setLabelText(withValue: newValue)
         }
     }
     
@@ -76,12 +78,18 @@ class FiltersViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        resultCountLabel.textAlignment = .center
+        let toolbarItem = UIBarButtonItem(customView: resultCountLabel)
+        setToolbarItems([toolbarItem], animated: true)
+        
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearAllSelections))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setToolbarHidden(false, animated: true)
-        displayMotorcycleCount(value: motorcyclesDisplayed?.value)
+        setLabelText(withValue: motorcyclesDisplayed?.value)
         super.viewWillAppear(animated)
     }
     
@@ -170,26 +178,19 @@ class FiltersViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    private func displayMotorcycleCount(value: Int?) {
-        
+    private func setLabelText(withValue value: Int?) {
         guard let unwrapValue = value else { return }
-        
-        let toolbarLabel = UILabel()
-        toolbarLabel.textAlignment = .center
-        toolbarLabel.textColor = .black
+        resultCountLabel.textColor = .black
         
         switch value {
         case 0:
-            toolbarLabel.text = "\(unwrapValue) results"
-            toolbarLabel.textColor = .red
+            resultCountLabel.text = "No results"
+            resultCountLabel.textColor = .red
         case 1:
-            toolbarLabel.text = "\(unwrapValue) result"
+            resultCountLabel.text = "\(unwrapValue) result"
         default:
-            toolbarLabel.text = "\(unwrapValue) results"
+            resultCountLabel.text = "\(unwrapValue) results"
         }
-        
-        let toolbarButtonItem = UIBarButtonItem(customView: toolbarLabel)
-        setToolbarItems([toolbarButtonItem], animated: true)
     }
     
     private func orderCellCaption() -> String? {
