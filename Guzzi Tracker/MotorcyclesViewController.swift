@@ -10,7 +10,7 @@ import UIKit
 
 class MotorcyclesViewController: UITableViewController {
     
-    private var motorcycleList: [Motorcycle]
+    private let motorcycleList: [Motorcycle]
     
     private let motorcyclesDisplayed: Ref<Int>
     
@@ -162,6 +162,6 @@ class MotorcyclesViewController: UITableViewController {
         navigationController?.pushViewController(MotorcycleInfoViewController(selectedMotorcycle: selectedMotorcycle,
                                                                               nibName: "MotorcycleInfoViewController",
                                                                               bundle: nil),
-                                                                              animated: true)
+                                                 animated: true)
     }
 }

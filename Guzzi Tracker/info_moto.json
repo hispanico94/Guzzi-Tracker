@@ -380,7 +380,7 @@
 				"lubricant_capacity": 3,
 				"weight": 180,
 				"max_speed": 120,
-				"fuel_consumption": 2.9
+				"fuel_consumption": 4.5
 			},
             "notes": "The only difference between the V and the G.T.V. is the rear suspension with the adoption of the G.T.'s swingarm. In 1947 the G.T.V. was updated with the adoption of a upside-down telescopic fork.",
             "images": null
@@ -388,9 +388,506 @@
 		{
 			"id": 12,
 			"general_info": {
+				"family": "S",
+				"name": "S",
+				"first_year": 1934,
+				"last_year": 1940
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, 2 valves opposing each other (overhead exhaust valve, side intake valve)",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 82,
+				"displacement": 498.4,
+				"compression": 4.6,
+				"power": {
+					"peak": 13.2,
+					"rpm": 4000
+				},
+				"feed_system": "Carburetor, Amal type 6/142 or Dell'Orto MCS 25"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Fixed",
+				"wheelbase": 1400,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 12,
+				"lubricant_capacity": 2.5,
+				"weight": 147,
+				"max_speed": 105,
+				"fuel_consumption": 3.4
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 13,
+			"general_info": {
+				"family": "Airone",
+				"name": "Airone",
+				"first_year": 1939,
+				"last_year": 1946
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 70,
+				"stroke": 64,
+				"displacement": 246,
+				"compression": 6,
+				"power": {
+					"peak": 9.5,
+					"rpm": 4800
+				},
+				"feed_system": "Carburetor, Dell'Orto SBF 22"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Girder fork with friction dampers",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and friction dampers",
+				"wheelbase": 1370,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 10.5,
+				"lubricant_capacity": 2.5,
+				"weight": 135,
+				"max_speed": 95,
+				"fuel_consumption": 3.3
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 14,
+			"general_info": {
+				"family": "Airone",
+				"name": "Airone",
+				"first_year": 1947,
+				"last_year": 1948
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 70,
+				"stroke": 64,
+				"displacement": 246,
+				"compression": 6,
+				"power": {
+					"peak": 9.5,
+					"rpm": 4800
+				},
+				"feed_system": "Carburetor, Dell'Orto SBF 22"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and hydraulic dampers",
+				"wheelbase": 1365,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 11,
+				"lubricant_capacity": 2,
+				"weight": 158,
+				"max_speed": 95,
+				"fuel_consumption": 3.3
+			},
+            "notes": "This version introduces telescopic front fork and hydraulic dampers on the rear swingarm.",
+            "images": null
+		},
+		{
+			"id": 15,
+			"general_info": {
+				"family": "Airone",
+				"name": "Airone",
+				"first_year": 1948,
+				"last_year": 1948
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 70,
+				"stroke": 64,
+				"displacement": 246,
+				"compression": 6,
+				"power": {
+					"peak": 9.5,
+					"rpm": 4800
+				},
+				"feed_system": "Carburetor, Dell'Orto SBF 22"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and hydraulic dampers",
+				"wheelbase": 1365,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 11,
+				"lubricant_capacity": 2,
+				"weight": 158,
+				"max_speed": 95,
+				"fuel_consumption": 3.3
+			},
+            "notes": "This version introduces new engine's cylinder and head with valve covers.",
+            "images": null
+		},
+		{
+			"id": 16,
+			"general_info": {
+				"family": "Airone",
+				"name": "Airone Sport",
+				"first_year": 1948,
+				"last_year": 1951
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 70,
+				"stroke": 64,
+				"displacement": 246,
+				"compression": 7,
+				"power": {
+					"peak": 13.5,
+					"rpm": 6000
+				},
+				"feed_system": "Carburetor, Dell'Orto SSF 25"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and friction dampers",
+				"wheelbase": 1365,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 12.5,
+				"lubricant_capacity": 2,
+				"weight": 137,
+				"max_speed": 118,
+				"fuel_consumption": null
+			},
+            "notes": "Better and more powerful engine. Friction dampers returns to the rear suspension.",
+            "images": null
+		},
+		{
+			"id": 17,
+			"general_info": {
+				"family": "Airone",
+				"name": "Airone Sport",
+				"first_year": 1952,
+				"last_year": 1956
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 70,
+				"stroke": 64,
+				"displacement": 246,
+				"compression": 7,
+				"power": {
+					"peak": 12,
+					"rpm": 5200
+				},
+				"feed_system": "Carburetor, Dell'Orto SSF 25A"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and friction dampers",
+				"wheelbase": 1370,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 13.5,
+				"lubricant_capacity": 2,
+				"weight": 140,
+				"max_speed": 117,
+				"fuel_consumption": null
+			},
+            "notes": "Last version of the Airone Sport",
+            "images": null
+		},
+		{
+			"id": 18,
+			"general_info": {
+				"family": "Airone",
+				"name": "Airone Turismo",
+				"first_year": 1952,
+				"last_year": 1957
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 70,
+				"stroke": 64,
+				"displacement": 246,
+				"compression": 6,
+				"power": {
+					"peak": 9.5,
+					"rpm": 4800
+				},
+				"feed_system": "Carburetor, Dell'Orto SBF 22"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and friction dampers",
+				"wheelbase": 1370,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 13.5,
+				"lubricant_capacity": 2,
+				"weight": 140,
+				"max_speed": 94,
+				"fuel_consumption": 3.2
+			},
+            "notes": "Elegant version with smoother engine compared to the Sport version.",
+            "images": null
+		},
+		{
+			"id": 19,
+			"general_info": {
+				"family": null,
+				"name": "Motoleggera 65",
+				"first_year": 1946,
+				"last_year": 1954
+			},
+			"engine": {
+				"configuration": "2-stroke inclined single cylinder",
+				"stroke_cycle": 2,
+				"bore": 42,
+				"stroke": 46,
+				"displacement": 64,
+				"compression": 5.5,
+				"power": {
+					"peak": 2,
+					"rpm": 5000
+				},
+				"feed_system": "Carburetor, Dell'Orto MA 13"
+			},
+			"frame": {
+				"type": "Tube backbone",
+				"front_suspension": "Girder fork",
+				"rear_suspension": "Swingarm with horizontal springs",
+				"wheelbase": 1200,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 6.5,
+				"lubricant_capacity": null,
+				"weight": 45,
+				"max_speed": 50,
+				"fuel_consumption": 2
+			},
+            "notes": "Cheap and simple moped born right after the WW2.",
+            "images": null
+		},
+		{
+			"id": 20,
+			"general_info": {
+				"family": "Cardellino",
+				"name": "Cardellino",
+				"first_year": 1954,
+				"last_year": 1956
+			},
+			"engine": {
+				"configuration": "2-stroke inclined single cylinder",
+				"stroke_cycle": 2,
+				"bore": 42,
+				"stroke": 46,
+				"displacement": 64,
+				"compression": 5.5,
+				"power": {
+					"peak": 2,
+					"rpm": 5000
+				},
+				"feed_system": "Carburetor, Dell'Orto MU 14 B2"
+			},
+			"frame": {
+				"type": "Tube backbone",
+				"front_suspension": "Girder fork",
+				"rear_suspension": "Swingarm with horizontal springs and friction dampers",
+				"wheelbase": 1200,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 6.5,
+				"lubricant_capacity": null,
+				"weight": 55,
+				"max_speed": 55,
+				"fuel_consumption": 2
+			},
+            "notes": "Evolution of the Motoleggera 65. At the end of 1956 it was updated both esthetically (with new fenders and tank) and mechanically (with the introduction of a upside-down telescopic fork and better brakes)",
+            "images": null
+		},
+		{
+			"id": 21,
+			"general_info": {
+				"family": "Cardellino",
+				"name": "Cardellino 73",
+				"first_year": 1957,
+				"last_year": 1962
+			},
+			"engine": {
+				"configuration": "2-stroke inclined single cylinder",
+				"stroke_cycle": 2,
+				"bore": 45,
+				"stroke": 46,
+				"displacement": 73,
+				"compression": 7,
+				"power": {
+					"peak": 2.6,
+					"rpm": 5200
+				},
+				"feed_system": "Carburetor, Dell'Orto MU 14 B3"
+			},
+			"frame": {
+				"type": "Tube backbone",
+				"front_suspension": "Girder fork",
+				"rear_suspension": "Swingarm with horizontal springs and friction dampers",
+				"wheelbase": 1200,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 8.5,
+				"lubricant_capacity": null,
+				"weight": 58,
+				"max_speed": 60,
+				"fuel_consumption": 1.65
+			},
+            "notes": "New engine and new style. It was sold in two variants: \"Lusso\" and \"Turismo\"",
+            "images": null
+		},
+		{
+			"id": 22,
+			"general_info": {
+				"family": "Cardellino",
+				"name": "Cardellino 83",
+				"first_year": 1962,
+				"last_year": 1965
+			},
+			"engine": {
+				"configuration": "2-stroke inclined single cylinder",
+				"stroke_cycle": 2,
+				"bore": 48,
+				"stroke": 46,
+				"displacement": 83,
+				"compression": 7,
+				"power": {
+					"peak": 3.3,
+					"rpm": 5200
+				},
+				"feed_system": "Carburetor, Dell'Orto MU 14 B3"
+			},
+			"frame": {
+				"type": "Tube backbone",
+				"front_suspension": "Girder fork",
+				"rear_suspension": "Swingarm with horizontal springs and rubber dampers",
+				"wheelbase": 1200,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 9,
+				"lubricant_capacity": null,
+				"weight": 58,
+				"max_speed": 62,
+				"fuel_consumption": 1.7
+			},
+            "notes": "Last version of the Cardellino.",
+            "images": null
+		},
+		{
+			"id": 23,
+			"general_info": {
+				"family": null,
+				"name": "Astore",
+				"first_year": 1949,
+				"last_year": 1953
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 82,
+				"displacement": 498.4,
+				"compression": 5.5,
+				"power": {
+					"peak": 18.9,
+					"rpm": 4500
+				},
+				"feed_system": "Carburetor, Dell'Orto MD 27 F"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and hydraulic dampers",
+				"wheelbase": 1475,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 13.5,
+				"lubricant_capacity": 3,
+				"weight": 180,
+				"max_speed": 120,
+				"fuel_consumption": 4.5
+			},
+            "notes": "Evolution of the G.T.V. It was considered the quintessential touring bike, with very soft suspensions and torquey engine. In 1953 it was replaced by the Falcone Turismo",
+            "images": null
+		},
+		{
+			"id": 24,
+			"general_info": {
 				"family": "Falcone",
 				"name": "Falcone",
 				"first_year": 1950,
+				"last_year": 1952
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 82,
+				"displacement": 498.4,
+				"compression": 6.5,
+				"power": {
+					"peak": 23,
+					"rpm": 4500
+				},
+				"feed_system": "Carburetor, Dell'Orto SS 29 A"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and friction dampers",
+				"wheelbase": 1500,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 17.5,
+				"lubricant_capacity": 3,
+				"weight": 170,
+				"max_speed": 135,
+				"fuel_consumption": null
+			},
+            "notes": "The Falcone is the most famous Moto Guzzi bike of the 1950s and one of the most famous ever. From 1953 the Falcone was sold in two versions: \"Sport\" and \"Turismo\" (the latter replaces the Astore). The Falcone was also extensively use by the Italian police and army.",
+            "images": [
+							"https://c1.staticflickr.com/3/2946/32624824853_cfcb03f7ef_o.jpg",
+              "https://c1.staticflickr.com/1/682/32624824533_0a339326a6_o.jpg"
+              ]
+		},
+		{
+			"id": 24,
+			"general_info": {
+				"family": "Falcone",
+				"name": "Falcone Sport",
+				"first_year": 1953,
 				"last_year": 1967
 			},
 			"engine": {
@@ -404,7 +901,7 @@
 					"peak": 23,
 					"rpm": 4500
 				},
-				"feed_system": "Carburetor, Dell'Orto SS29A"
+				"feed_system": "Carburetor, Dell'Orto SS 29 A"
 			},
 			"frame": {
 				"type": "Closed double cradle",
@@ -416,18 +913,59 @@
 			"capacities_performances": {
 				"fuel_capacity": 17.5,
 				"lubricant_capacity": 3,
-				"weight": 167,
+				"weight": 170,
 				"max_speed": 135,
-				"fuel_consumption": 4.5
+				"fuel_consumption": null
 			},
-            "notes": "The Falcone is the most famous Moto Guzzi bike of the 1950s and one of the most famous ever. It was sold in two versions: Turismo and Sport. The Falcone was also extensively use by the Italian police and army.",
+            "notes": "Technical data is the same of the original Falcone (1950 - 1952). Over the years minor changes were introduced (both esthetically and mechanically).",
             "images": [
 							"https://c1.staticflickr.com/3/2946/32624824853_cfcb03f7ef_o.jpg",
               "https://c1.staticflickr.com/1/682/32624824533_0a339326a6_o.jpg"
               ]
 		},
 		{
-			"id": 13,
+			"id": 25,
+			"general_info": {
+				"family": "Falcone",
+				"name": "Falcone Turismo",
+				"first_year": 1953,
+				"last_year": 1967
+			},
+			"engine": {
+				"configuration": "4-stroke horizontal single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 82,
+				"displacement": 498.4,
+				"compression": 5.5,
+				"power": {
+					"peak": 18.9,
+					"rpm": 4300
+				},
+				"feed_system": "Carburetor, Dell'Orto MD 27 F"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with horizontal springs under the engine and friction dampers",
+				"wheelbase": 1500,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 17.5,
+				"lubricant_capacity": 3,
+				"weight": 176,
+				"max_speed": 120,
+				"fuel_consumption": 4.5
+			},
+            "notes": "The engine is the same of the Astore, the differences from the \"Sport\" engine are:\n- Carburetor;\n- Compression ratio;\n- Camshaft;\n- Exhaust valve;\n- Connecting rod.",
+            "images": [
+							"https://c1.staticflickr.com/3/2946/32624824853_cfcb03f7ef_o.jpg",
+              "https://c1.staticflickr.com/1/682/32624824533_0a339326a6_o.jpg"
+              ]
+		},
+		{
+			"id": 26,
 			"general_info": {
 				"family": "Galletto",
 				"name": "Galletto 160",
@@ -465,7 +1003,7 @@
             "images": null
 		},
 		{
-			"id": 14,
+			"id": 27,
 			"general_info": {
 				"family": "Galletto",
 				"name": "Galletto 175",
@@ -503,7 +1041,7 @@
             "images": null
 		},
 		{
-			"id": 15,
+			"id": 28,
 			"general_info": {
 				"family": "Galletto",
 				"name": "Galletto 192",
@@ -541,7 +1079,86 @@
             "images": ["https://c1.staticflickr.com/1/576/33283306922_4dc91c04fe_o.jpg"]
 		},
 		{
-			"id": 16,
+			"id": 29,
+			"general_info": {
+				"family": "Zigolo",
+				"name": "Zigolo 98",
+				"first_year": 1953,
+				"last_year": 1959
+			},
+			"engine": {
+				"configuration": "2-stroke horizontal single cylinder",
+				"stroke_cycle": 2,
+				"bore": 50,
+				"stroke": 50,
+				"displacement": 98,
+				"compression": 6,
+				"power": {
+					"peak": 4,
+					"rpm": 5200
+				},
+				"feed_system": "Carburetor, Dell'Orto MAF 15 B 1"
+			},
+			"frame": {
+				"type": "Semi-monocoque with tube backbone",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with rubber pad acting as a spring and friction dampers",
+				"wheelbase": 1240,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 13.5,
+				"lubricant_capacity": null,
+				"weight": 78,
+				"max_speed": 76,
+				"fuel_consumption": 2.2
+			},
+            "notes": "The first version was later called \"Turismo\" and in 1954 a \"Lusso\" version was introduced with different paint job and 17\" wheels instead of the 19\" of the original/Turismo version. From 1956 to 1959 only the Lusso version was manufactured.",
+            "images": null
+		},
+		{
+			"id": 30,
+			"general_info": {
+				"family": "Zigolo",
+				"name": "Zigolo 110",
+				"first_year": 1959,
+				"last_year": 1966
+			},
+			"engine": {
+				"configuration": "2-stroke horizontal single cylinder",
+				"stroke_cycle": 2,
+				"bore": 52,
+				"stroke": 52,
+				"displacement": 110,
+				"compression": 7.5,
+				"power": {
+					"peak": 4.2,
+					"rpm": 5200
+				},
+				"feed_system": "Carburetor, Dell'Orto MAF 18 B 1"
+			},
+			"frame": {
+				"type": "Semi-monocoque with tube backbone",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with rubber pad acting as a spring and hydraulic dampers",
+				"wheelbase": 1250,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 12,
+				"lubricant_capacity": null,
+				"weight": 78,
+				"max_speed": 80,
+				"fuel_consumption": 2.2
+			},
+            "notes": "Evolution of the Zigolo 98.",
+            "images": null
+		},
+
+
+
+		{
+			"id": 31,
 			"general_info": {
 				"family": "V7 (old)",
 				"name": "V7 Sport",
@@ -584,7 +1201,7 @@
                        ]
 		},
 		{
-			"id": 17,
+			"id": 32,
 			"general_info": {
 				"family": "Racing Bikes",
 				"name": "8 cilindri",
@@ -622,7 +1239,7 @@
             "images": ["https://c2.staticflickr.com/4/3760/33438639725_6346d8277b_o.jpg"]
 		},
 		{
-			"id": 18,
+			"id": 33,
 			"general_info": {
 				"family": "Le Mans",
 				"name": "850 Le Mans III",

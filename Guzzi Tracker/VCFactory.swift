@@ -38,7 +38,7 @@ class VCFactory {
     }
     
     func makeSearchVC() -> SearchViewController {
-        let searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        let searchVC = SearchViewController(motorcycleList: motorcycleList)
         searchVC.title = "Search"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         return searchVC
