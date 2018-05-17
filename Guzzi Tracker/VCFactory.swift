@@ -33,7 +33,7 @@ class VCFactory {
         let motorcyclesVC = MotorcyclesViewController(motorcycleList: motorcycleList, vcFactory: self)
         motorcyclesVC.title = "Motorcycles"
         motorcyclesVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: nil, action: nil)
-        motorcyclesVC.tabBarItem = UITabBarItem(title: "Motorcycles", image: UIImage(named: "motorycles_tab_icon"), tag: 0)
+        motorcyclesVC.tabBarItem = UITabBarItem(title: "Motorcycles", image: UIImage(named: "motorcycle_regular_tab_icon"), tag: 0)
         return motorcyclesVC
     }
     
@@ -48,7 +48,7 @@ class VCFactory {
         let myGarageVC = MyGarageViewController(motorcycleList: motorcycleList)
         myGarageVC.title = "My Garage"
         myGarageVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings_icon"), style: .plain, target: nil, action: nil)
-        myGarageVC.tabBarItem = UITabBarItem(title: "My Garage", image: UIImage(named: "my_garage_tab_icon"), tag: 2)
+        myGarageVC.tabBarItem = UITabBarItem(title: "My Garage", image: UIImage(named: "my_garage_regular_tab_icon"), tag: 2)
         return myGarageVC
     }
     
