@@ -1,14 +1,8 @@
-//
-//  MotorcyclesViewController.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 24/02/17.
-//  Copyright © 2017 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class MotorcyclesViewController: UITableViewController {
+    
+    // MARK: - Properties
     
     private let motorcycleList: [Motorcycle]
     
@@ -51,6 +45,7 @@ class MotorcyclesViewController: UITableViewController {
     
     private let vcFactory: VCFactory
 
+    // MARK: - Initialization
     
     init(motorcycleList: [Motorcycle]?, vcFactory: VCFactory) {
         if let unwrapMotorcycleList = motorcycleList {
@@ -63,17 +58,6 @@ class MotorcyclesViewController: UITableViewController {
             self.motorcycleListToShow = []
             self.motorcyclesDisplayed = Ref<Int>.init(0)
         }
-        
-        /*
-        do {
-            motorcycleList = try getMotorcycleListFromJson()
-            motorcycleListToShow = motorcycleList
-        } catch {
-            print("\(error)")
-            motorcycleList = []
-            motorcycleListToShow = []
-        }
-        */
         
         self.vcFactory = vcFactory
         
@@ -121,19 +105,15 @@ class MotorcyclesViewController: UITableViewController {
             image: UIImage(named: "filter_icon"),
             style: .plain,
             target: self,
-            action: #selector(didTapFilterButton(sender:)))
+            action: #selector(didTapFilterButton(sender:))
+        )
         
         if motorcycleList.isEmpty {
             presentErrorMessage()
         }
     }
     
-    func presentErrorMessage() {
-        let alert = UIAlertController(title: "Error", message: "An error occurred while retrieving data. Please try again later.", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-    }
+    // MARK: - Interface Builder methods
     
     @IBAction func didTapFilterButton(sender: UIBarButtonItem) {
         navigationController?.pushViewController(vcFactory.makeFiltersVC(motorcyclesDisplayed: motorcyclesDisplayed), animated: true)
@@ -163,5 +143,14 @@ class MotorcyclesViewController: UITableViewController {
                                                                               nibName: "MotorcycleInfoViewController",
                                                                               bundle: nil),
                                                  animated: true)
+    }
+    
+    // MARK: - Private instance methods
+    
+    private func presentErrorMessage() {
+        let alert = UIAlertController(title: "Error", message: "An error occurred while retrieving data. Please try again later.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 }

@@ -1,15 +1,10 @@
-//
-//  ImagesViewController.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 09/03/17.
-//  Copyright © 2017 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 import AlamofireImage
 
 class ImagesViewController: UITableViewController {
+    
+    // MARK: - Properties
+    
     private let imageAspectRatio = CGFloat(1.77778)
     private let pinnedDistanceImageViewInCell = CGFloat(4)
     
@@ -22,6 +17,8 @@ class ImagesViewController: UITableViewController {
         }
         return imageUrlRequests
     }
+    
+    // MARK: - Initialization
     
     init(motorcycleName name: String, imagesUrls urls: RowImage, nibName: String?, bundle: Bundle?) {
         motorcycleName = name
@@ -41,12 +38,10 @@ class ImagesViewController: UITableViewController {
         tableView.rowHeight = calculateRowHeight(withWidth: view.bounds.width)
     }
 
+    // MARK: - View transition
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         tableView.rowHeight = calculateRowHeight(withWidth: size.width)
-    }
-
-    private func calculateRowHeight(withWidth width: CGFloat) -> CGFloat {
-        return (width / imageAspectRatio) + pinnedDistanceImageViewInCell
     }
     
     // MARK: - Table view data source
@@ -75,5 +70,11 @@ class ImagesViewController: UITableViewController {
         present(SingleImageViewController(imageToBeDisplayed: image), animated: true, completion: nil)
         
         //navigationController?.pushViewController(SingleImageViewController(imageToBeDisplayed: image), animated: false)
+    }
+    
+    // MARK: - Private instance methods
+    
+    private func calculateRowHeight(withWidth width: CGFloat) -> CGFloat {
+        return (width / imageAspectRatio) + pinnedDistanceImageViewInCell
     }
 }

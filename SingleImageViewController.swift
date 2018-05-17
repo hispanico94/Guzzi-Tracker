@@ -1,15 +1,9 @@
-//
-//  SingleImageViewController.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 14/03/17.
-//  Copyright © 2017 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 import AlamofireImage
 
 class SingleImageViewController: UIViewController {
+    
+    // MARK: - Properties
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -25,6 +19,8 @@ class SingleImageViewController: UIViewController {
     @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
+    // MARK: - Initialization
+    
     init(imageToBeDisplayed image: UIImage) {
         self.image = image
         super.init(nibName: "SingleImageViewController", bundle: nil)
@@ -39,6 +35,8 @@ class SingleImageViewController: UIViewController {
         imageView.image = image
         imageView.sizeToFit()
     }
+    
+    // MARK: -
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

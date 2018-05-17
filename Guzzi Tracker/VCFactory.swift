@@ -45,7 +45,7 @@ class VCFactory {
     }
     
     func makeMyGarageVC() -> MyGarageViewController {
-        let myGarageVC = MyGarageViewController(nibName: "MyGarageViewController", bundle: nil)
+        let myGarageVC = MyGarageViewController(motorcycleList: motorcycleList)
         myGarageVC.title = "My Garage"
         myGarageVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings_icon"), style: .plain, target: nil, action: nil)
         myGarageVC.tabBarItem = UITabBarItem(title: "My Garage", image: UIImage(named: "my_garage_tab_icon"), tag: 2)

@@ -1,14 +1,8 @@
-//
-//  SearchViewController.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 12/05/18.
-//  Copyright © 2018 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class SearchViewController: UIViewController {
+    
+    // MARK: - Properties
     
     private let motorcycleList: [Motorcycle]
     
@@ -22,6 +16,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var detailLabel: UILabel!
     
+    // MARK: - Initialization
     
     init(motorcycleList: [Motorcycle]?) {
         self.motorcycleList = motorcycleList ?? []
@@ -52,8 +47,6 @@ class SearchViewController: UIViewController {
         navigationItem.searchController = searchController
         
         definesPresentationContext = true
-        
-        
         
         headerLabel.text = "Search Motorcycles"
         detailLabel.text = "Tap the search bar above to search motorcycles"

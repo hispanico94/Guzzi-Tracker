@@ -1,14 +1,8 @@
-//
-//  ComparatorsViewController.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 27/04/18.
-//  Copyright © 2018 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class ComparatorsViewController: UITableViewController {
+    
+    // MARK: - Properties
     
     private let orders: [[Order]] = [
         [Order(id: .family, title: "Families", comparator: MotorcycleComparator.family)],
@@ -39,6 +33,8 @@ class ComparatorsViewController: UITableViewController {
     private var selectedIndexPaths: [OrderId: IndexPath] = [:]
     private let callback: ([Order]) -> ()
     
+    // MARK: - Intialization
+    
     init(orders: [Order]?, _ callback: @escaping ([Order]) -> ()) {
         self.selectedOrders = orders ?? [Order(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)]
         self.callback = callback
@@ -57,6 +53,8 @@ class ComparatorsViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearAllSelections))
     }
 
+    // MARK: - View transition
+    
     override func viewWillDisappear(_ animated: Bool) {
         
         if selectedOrders.isEmpty {
@@ -154,6 +152,8 @@ class ComparatorsViewController: UITableViewController {
         
         cell.detailTextLabel?.text = String(selectedOrders.count)
     }
+    
+    // MARK: - Private instance methods
     
     @objc private func clearAllSelections() {
         selectedOrders.removeAll()

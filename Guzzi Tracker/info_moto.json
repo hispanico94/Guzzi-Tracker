@@ -1154,11 +1154,350 @@
             "notes": "Evolution of the Zigolo 98.",
             "images": null
 		},
-
-
-
 		{
 			"id": 31,
+			"general_info": {
+				"family": "Lodola",
+				"name": "Lodola Sport",
+				"first_year": 1956,
+				"last_year": 1958
+			},
+			"engine": {
+				"configuration": "4-stroke inclined single cylinder, SOHC 2 valves",
+				"stroke_cycle": 4,
+				"bore": 62,
+				"stroke": 57.8,
+				"displacement": 174,
+				"compression": 9,
+				"power": {
+					"peak": 11,
+					"rpm": 6000
+				},
+				"feed_system": "Carburetor, Dell'Orto UB 22 BS 2"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1314,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 15,
+				"lubricant_capacity": 2.5,
+				"weight": 111,
+				"max_speed": 120,
+				"fuel_consumption": 2.7
+			},
+            "notes": "Also known as \"Lodola 175\", this bike was the Moto Guzzi's answer to the trend of the 175 cc sport bikes of the mid 1950s.",
+            "images": null
+		},
+		{
+			"id": 32,
+			"general_info": {
+				"family": "Lodola",
+				"name": "Lodola Gran Turismo",
+				"first_year": 1959,
+				"last_year": 1966
+			},
+			"engine": {
+				"configuration": "4-stroke inclined single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 68,
+				"stroke": 64,
+				"displacement": 235,
+				"compression": 7.5,
+				"power": {
+					"peak": 11,
+					"rpm": 6500
+				},
+				"feed_system": "Carburetor, Dell'Orto UB 22 BS 2A"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Upside-down telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1314,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 15,
+				"lubricant_capacity": 2.5,
+				"weight": 115,
+				"max_speed": 110,
+				"fuel_consumption": 2.7
+			},
+            "notes": "Also known as \"Lodola 235\", this bike replaces the Lodola Sport with a bigger but simpler engine (switching back from SOHC configuration to a pushrod OHV)",
+            "images": null
+		},
+		{
+			"id": 33,
+			"general_info": {
+				"family": "Stornello",
+				"name": "Stornello 125 c.c.",
+				"first_year": 1960,
+				"last_year": 1968
+			},
+			"engine": {
+				"configuration": "4-stroke inclined single cylinder, OHV with parallel valves",
+				"stroke_cycle": 4,
+				"bore": 52,
+				"stroke": 58,
+				"displacement": 123.1,
+				"compression": 8,
+				"power": {
+					"peak": 7,
+					"rpm": 7200
+				},
+				"feed_system": "Carburetor, Dell'Orto ME 18 BS"
+			},
+			"frame": {
+				"type": "Double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1250,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 12.5,
+				"lubricant_capacity": 1.9,
+				"weight": 85,
+				"max_speed": 100,
+				"fuel_consumption": 2.3
+			},
+            "notes": "After the introduction of the Stornello Sport in 1961 this version was called \"Turismo\".",
+            "images": null
+		},
+		{
+			"id": 34,
+			"general_info": {
+				"family": "Stornello",
+				"name": "Stornello Sport",
+				"first_year": 1961,
+				"last_year": 1967
+			},
+			"engine": {
+				"configuration": "4-stroke inclined single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 52,
+				"stroke": 58,
+				"displacement": 123.1,
+				"compression": 9.8,
+				"power": {
+					"peak": 8.5,
+					"rpm": 7400
+				},
+				"feed_system": "Carburetor, Dell'Orto ME 18 BS"
+			},
+			"frame": {
+				"type": "Double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1250,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 12.5,
+				"lubricant_capacity": 1.9,
+				"weight": 88,
+				"max_speed": 100,
+				"fuel_consumption": 2.7
+			},
+            "notes": "The engine of this Stornello version switched back to inclined valves.",
+            "images": null
+		},
+		{
+			"id": 35,
+			"general_info": {
+				"family": "Stornello",
+				"name": "Stornello 125",
+				"first_year": 1967,
+				"last_year": 1975
+			},
+			"engine": {
+				"configuration": "4-stroke inclined single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 52,
+				"stroke": 58,
+				"displacement": 123.1,
+				"compression": 9.6,
+				"power": {
+					"peak": 8.5,
+					"rpm": 7400
+				},
+				"feed_system": "Carburetor, Dell'Orto VHB 22 BS"
+			},
+			"frame": {
+				"type": "Double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1255,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 13.5,
+				"lubricant_capacity": 1.7,
+				"weight": 113,
+				"max_speed": 116,
+				"fuel_consumption": 3.7
+			},
+            "notes": "Between 1967 and 1969 it was sold under the name \"Stornello America\" with body style similar to the original Stornello. In 1971 a completely new redesign was introduce and the engine was updated with a 5-speed transmission instead of the 4-speed transmission of the previous models.",
+            "images": null
+		},
+		{
+			"id": 36,
+			"general_info": {
+				"family": "Stornello",
+				"name": "Stornello 160",
+				"first_year": 1968,
+				"last_year": 1975
+			},
+			"engine": {
+				"configuration": "4-stroke inclined single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 58,
+				"stroke": 58,
+				"displacement": 152.2,
+				"compression": 9.5,
+				"power": {
+					"peak": 13.4,
+					"rpm": 7400
+				},
+				"feed_system": "Carburetor, Dell'Orto VHB 22 BS"
+			},
+			"frame": {
+				"type": "Double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1255,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 13.5,
+				"lubricant_capacity": 1.7,
+				"weight": 113,
+				"max_speed": 122,
+				"fuel_consumption": 3.8
+			},
+            "notes": "In 1971 receives the same body style of the 125 model and here also the engine was updated with a 5-speed transmission.",
+            "images": null
+		},
+		{
+			"id": 37,
+			"general_info": {
+				"family": "Stornello",
+				"name": "Stornello Scrambler",
+				"first_year": 1971,
+				"last_year": 1975
+			},
+			"engine": {
+				"configuration": "4-stroke inclined single cylinder, OHV 2 valves",
+				"stroke_cycle": 4,
+				"bore": 52,
+				"stroke": 58,
+				"displacement": 123.1,
+				"compression": 9.6,
+				"power": {
+					"peak": 8.5,
+					"rpm": 7400
+				},
+				"feed_system": "Carburetor, Dell'Orto VHB 22 BS"
+			},
+			"frame": {
+				"type": "Double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1255,
+				"brakes": "Rear and front drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 13.5,
+				"lubricant_capacity": 1.7,
+				"weight": 117,
+				"max_speed": 98,
+				"fuel_consumption": 3.96
+			},
+            "notes": "Together with the newly redesigned 125 and 160 models the Scrambler was introduced. It was also called \"Stornello Regolarità\".",
+            "images": null
+		},
+		{
+			"id": 38,
+			"general_info": {
+				"family": "V7 (old)",
+				"name": "V7 700",
+				"first_year": 1967,
+				"last_year": 1976
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 80,
+				"stroke": 70,
+				"displacement": 703.7,
+				"compression": 9,
+				"power": {
+					"peak": 40,
+					"rpm": 5000
+				},
+				"feed_system": "Carburetors, Dell'Orto SSI 29 D"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1445,
+				"brakes": "Rear drum brake, front duplex drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 20,
+				"lubricant_capacity": 3,
+				"weight": 243,
+				"max_speed": 170,
+				"fuel_consumption": 6.5
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 39,
+			"general_info": {
+				"family": "V7 (old)",
+				"name": "V7 Special",
+				"first_year": 1969,
+				"last_year": 1971
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 70,
+				"displacement": 757.5,
+				"compression": 9,
+				"power": {
+					"peak": 45,
+					"rpm": 6000
+				},
+				"feed_system": "Carburetors, Dell'Orto VHB 29 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1445,
+				"brakes": "Rear drum brake, front duplex drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 22.5,
+				"lubricant_capacity": 3,
+				"weight": 228,
+				"max_speed": 185,
+				"fuel_consumption": 6.5
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 40,
 			"general_info": {
 				"family": "V7 (old)",
 				"name": "V7 Sport",
@@ -1176,7 +1515,50 @@
 					"peak": 52,
 					"rpm": 6300
 				},
-				"feed_system": "Carburetors, Dell'Orto VHB30CD, VHB30CS"
+				"feed_system": "Carburetors, Dell'Orto VHB 30 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1470,
+				"brakes": "Rear drum brake, front twin duplex drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 19,
+				"lubricant_capacity": 3.5,
+				"weight": 206,
+				"max_speed": 208,
+				"fuel_consumption": 8.5
+			},
+            "notes": "The V7 Sport is one of the most famous motorcycles manufactured by Moto Guzzi. First bike to use the \"Tonti\" frame.",
+            "images": [
+                       "https://c1.staticflickr.com/1/678/32624895653_a3df86d35a_o.jpg",
+                       "https://c2.staticflickr.com/4/3708/33398261736_8efd143eae_o.jpg",
+                       "https://c2.staticflickr.com/4/3730/33310765811_baea3fb474_o.jpg",
+                       "https://c1.staticflickr.com/1/635/33310765591_708c477798_o.jpg"
+                       ]
+		},
+		{
+			"id": 41,
+			"general_info": {
+				"family": "V7 (old)",
+				"name": "V 850 GT",
+				"first_year": 1972,
+				"last_year": 1974
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 78,
+				"displacement": 844,
+				"compression": 9.2,
+				"power": {
+					"peak": 51,
+					"rpm": 6000
+				},
+				"feed_system": "Carburetors, Dell'Orto VHB 29 C"
 			},
 			"frame": {
 				"type": "Closed double cradle",
@@ -1187,21 +1569,475 @@
 			},
 			"capacities_performances": {
 				"fuel_capacity": 22.5,
-				"lubricant_capacity": 3.5,
-				"weight": 206,
-				"max_speed": 200,
-				"fuel_consumption": 8.5
+				"lubricant_capacity": 3,
+				"weight": 249,
+				"max_speed": 193,
+				"fuel_consumption": 6.5
 			},
-            "notes": "The V7 Sport is one of the most famous motorcycles manufactured by Moto Guzzi.",
-            "images": [
-                       "https://c1.staticflickr.com/1/678/32624895653_a3df86d35a_o.jpg",
-                       "https://c2.staticflickr.com/4/3708/33398261736_8efd143eae_o.jpg",
-                       "https://c2.staticflickr.com/4/3730/33310765811_baea3fb474_o.jpg",
-                       "https://c1.staticflickr.com/1/635/33310765591_708c477798_o.jpg"
-                       ]
+            "notes": "First models had the front brake of the V7 Special",
+            "images": null
 		},
 		{
-			"id": 32,
+			"id": 42,
+			"general_info": {
+				"family": "V7 (old)",
+				"name": "750 S",
+				"first_year": 1974,
+				"last_year": 1975
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 82.5,
+				"stroke": 70,
+				"displacement": 748,
+				"compression": 9.8,
+				"power": {
+					"peak": 53,
+					"rpm": 6300
+				},
+				"feed_system": "Carburetors, Dell'Orto VHB 30 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1470,
+				"brakes": "Rear drum brake, front twin disk brakes"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 19,
+				"lubricant_capacity": 3.5,
+				"weight": 225,
+				"max_speed": 206,
+				"fuel_consumption": 8.5
+			},
+            "notes": "The 750 S introduces a new style to the V7 Sport and also introduces the front twin disk brakes.",
+            "images": null
+		},
+		{
+			"id": 43,
+			"general_info": {
+				"family": "V7 (old)",
+				"name": "750 S3",
+				"first_year": 1975,
+				"last_year": 1976
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 82.5,
+				"stroke": 70,
+				"displacement": 748,
+				"compression": 9.8,
+				"power": {
+					"peak": 53,
+					"rpm": 6300
+				},
+				"feed_system": "Carburetors, Dell'Orto VHB 30 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1470,
+				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 19,
+				"lubricant_capacity": 3.5,
+				"weight": 230,
+				"max_speed": 206,
+				"fuel_consumption": 8.5
+			},
+            "notes": "The 750 S3 introduces a new style to the V7 Sport and also introduces the front twin disk brakes.",
+            "images": null
+		},
+		{
+			"id": 44,
+			"general_info": {
+				"family": "California",
+				"name": "V 850 California",
+				"first_year": 1972,
+				"last_year": 1974
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 78,
+				"displacement": 844,
+				"compression": 9.2,
+				"power": {
+					"peak": 51,
+					"rpm": 6000
+				},
+				"feed_system": "Carburetors, Dell'Orto VHB 29 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1470,
+				"brakes": "Rear drum brake, front twin duplex drum brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 22.5,
+				"lubricant_capacity": 3,
+				"weight": 260,
+				"max_speed": 180,
+				"fuel_consumption": 6.5
+			},
+            "notes": "First models were built using V7 Special engine and 4-speed transmission.",
+            "images": null
+		},
+		{
+			"id": 45,
+			"general_info": {
+				"family": "California",
+				"name": "850 T3 California",
+				"first_year": 1975,
+				"last_year": 1983
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 78,
+				"displacement": 844,
+				"compression": 9.5,
+				"power": {
+					"peak": 59,
+					"rpm": 6800
+				},
+				"feed_system": "Carburetors, Dell'Orto VHB 30 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1470,
+				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 24,
+				"lubricant_capacity": 3,
+				"weight": 225,
+				"max_speed": 190,
+				"fuel_consumption": 6
+			},
+            "notes": "First models were built using V7 Special engine and 4-speed transmission.",
+            "images": null
+		},
+		{
+			"id": 46,
+			"general_info": {
+				"family": "California",
+				"name": "California II",
+				"first_year": 1982,
+				"last_year": 1986
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 78,
+				"displacement": 948.8,
+				"compression": 9.2,
+				"power": {
+					"peak": 65,
+					"rpm": 6750
+				},
+				"feed_system": "Carburetors, Dell'Orto VHB 30 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1565,
+				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 25,
+				"lubricant_capacity": 3,
+				"weight": 250,
+				"max_speed": 190,
+				"fuel_consumption": 5.8
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 47,
+			"general_info": {
+				"family": "California",
+				"name": "California III",
+				"first_year": 1987,
+				"last_year": 1991
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 78,
+				"displacement": 948.8,
+				"compression": 9.2,
+				"power": {
+					"peak": 65,
+					"rpm": 6750
+				},
+				"feed_system": "Carburetors, Dell'Orto PHF 30 D"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1550,
+				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 25,
+				"lubricant_capacity": 3,
+				"weight": 272,
+				"max_speed": 190,
+				"fuel_consumption": 6.5
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 48,
+			"general_info": {
+				"family": "California",
+				"name": "California 1100",
+				"first_year": 1994,
+				"last_year": 1996
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 92,
+				"stroke": 80,
+				"displacement": 1064,
+				"compression": 9.5,
+				"power": {
+					"peak": 75,
+					"rpm": 6400
+				},
+				"feed_system": "Carburetors, Dell'Orto PHF 36 D"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1560,
+				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 22.5,
+				"lubricant_capacity": 3,
+				"weight": 245,
+				"max_speed": 190,
+				"fuel_consumption": 5.4
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 49,
+			"general_info": {
+				"family": "California",
+				"name": "California 1100 i",
+				"first_year": 1994,
+				"last_year": 1996
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 92,
+				"stroke": 80,
+				"displacement": 1064,
+				"compression": 9.5,
+				"power": {
+					"peak": 75,
+					"rpm": 6400
+				},
+				"feed_system": "Electronic injection, Weber IAW with 40 mm throttle bodies"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1560,
+				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 22.5,
+				"lubricant_capacity": 3,
+				"weight": 245,
+				"max_speed": 200,
+				"fuel_consumption": 5
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 50,
+			"general_info": {
+				"family": "California",
+				"name": "California EV PI",
+				"first_year": 2003,
+				"last_year": 2006
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder with hydraulic lifters",
+				"stroke_cycle": 4,
+				"bore": 92,
+				"stroke": 80,
+				"displacement": 1064,
+				"compression": 9.8,
+				"power": {
+					"peak": 74.8,
+					"rpm": 7000
+				},
+				"feed_system": "Electronic injection, Magneti Marelli IAW 15M with 40 mm throttle bodies"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1560,
+				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 19,
+				"lubricant_capacity": 3,
+				"weight": 251,
+				"max_speed": 200,
+				"fuel_consumption": null
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 51,
+			"general_info": {
+				"family": "California",
+				"name": "California Classic",
+				"first_year": 2006,
+				"last_year": 2011
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 92,
+				"stroke": 80,
+				"displacement": 1064,
+				"compression": 9.8,
+				"power": {
+					"peak": 73,
+					"rpm": 6400
+				},
+				"feed_system": "Electronic injection, Magneti Marelli IAW with 40 mm throttle bodies"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1560,
+				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 19,
+				"lubricant_capacity": 3,
+				"weight": 251,
+				"max_speed": null,
+				"fuel_consumption": null
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 52,
+			"general_info": {
+				"family": "California",
+				"name": "California Vintage",
+				"first_year": 2006,
+				"last_year": 2011
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 92,
+				"stroke": 80,
+				"displacement": 1064,
+				"compression": 9.8,
+				"power": {
+					"peak": 73,
+					"rpm": 6400
+				},
+				"feed_system": "Electronic injection, Magneti Marelli IAW with 40 mm throttle bodies"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1560,
+				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 19,
+				"lubricant_capacity": 3,
+				"weight": 263,
+				"max_speed": null,
+				"fuel_consumption": null
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 53,
+			"general_info": {
+				"family": "California",
+				"name": "California 1400 Custom",
+				"first_year": 2012,
+				"last_year": 2016
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 104,
+				"stroke": 81.2,
+				"displacement": 1380,
+				"compression": 10.5,
+				"power": {
+					"peak": 96,
+					"rpm": 6500
+				},
+				"feed_system": "Electronic injection, Magneti Marelli IAW with 52 mm single throttle body, ride by wire"
+			},
+			"frame": {
+				"type": "Closed double cradle with elastic engine mounting system",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1685,
+				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 20.5,
+				"lubricant_capacity": 4.01,
+				"weight": 318,
+				"max_speed": 203,
+				"fuel_consumption": 8.3
+			},
+            "notes": null,
+            "images": null
+		},
+
+		
+
+		{
+			"id": 54,
 			"general_info": {
 				"family": "Racing Bikes",
 				"name": "8 cilindri",
@@ -1239,7 +2075,7 @@
             "images": ["https://c2.staticflickr.com/4/3760/33438639725_6346d8277b_o.jpg"]
 		},
 		{
-			"id": 33,
+			"id": 55,
 			"general_info": {
 				"family": "Le Mans",
 				"name": "850 Le Mans III",

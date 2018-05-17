@@ -1,14 +1,8 @@
-//
-//  FiltersViewController.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 31/03/18.
-//  Copyright © 2018 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class FiltersViewController: UITableViewController {
+    
+    // MARK: - Properties
     
     private let filterSection = 0
     private let orderSection = 1
@@ -44,6 +38,8 @@ class FiltersViewController: UITableViewController {
     private weak var orderStorage: Ref<Array<Order>>?
     
     private weak var motorcyclesDisplayed: Ref<Int>?
+    
+    // MARK: - Initialization
     
     init(filterProviders: [FilterProvider], filterStorage: Ref<Array<FilterProvider>>, orderStorage: Ref<Array<Order>>, motorcyclesDisplayed: Ref<Int>) {
         self.originalFilterProviders = filterProviders
@@ -86,6 +82,8 @@ class FiltersViewController: UITableViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearAllSelections))
     }
+    
+    // MARK: - View transition
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setToolbarHidden(false, animated: true)
@@ -165,6 +163,7 @@ class FiltersViewController: UITableViewController {
         }
     }
     
+    // MARK: - Private instance methods
     
     @objc private func clearAllSelections() {
         filterStorage?.value = originalFilterProviders

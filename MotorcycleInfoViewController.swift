@@ -9,13 +9,23 @@
 import UIKit
 
 class MotorcycleInfoViewController: UITableViewController {
-    let motorcycle: Motorcycle
-    let motorcycleArray: [SectionData]
+    
+    // MARK: - Properties
+    
+    private let motorcycle: Motorcycle
+    private let motorcycleArray: [SectionData]
+    
+    private let favoriteList = FavoritesList.sharedFavoritesList
+    
+    private let favoriteIcon = UIImage(named: "favorite_icon")
+    private let selectedFavoriteIcon = UIImage(named: "selected_favorite_icon")
+    
     
     // Constants used for determine the selected cell (only the image cell can be selected)
     let imageSection = 5
     let imageRow = 0
     
+    // MARK: - Initialization
     
     init(selectedMotorcycle motorcycle: Motorcycle, nibName: String?, bundle: Bundle?) {
         self.motorcycle = motorcycle
@@ -38,18 +48,19 @@ class MotorcycleInfoViewController: UITableViewController {
         navigationItem.title = motorcycle.generalInfo.name
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
-        //tableView.allowsSelection = false
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: nil,
+            style: .plain,
+            target: self,
+            action: #selector(didTapFavoriteButton)
+        )
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - View transition
+    
+    override func viewWillAppear(_ animated: Bool) {
+        toggleIcon(on: favoriteList.contains(motorcycle.id))
+        super.viewWillAppear(animated)
     }
 
     // MARK: - Table view data source
@@ -70,6 +81,7 @@ class MotorcycleInfoViewController: UITableViewController {
         return motorcycleArray[indexPath.section].sectionElements[indexPath.row].makeTableViewCell(forTableView: tableView)
     }
 
+    // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.section == imageSection, indexPath.row == imageRow else { return }
@@ -80,49 +92,25 @@ class MotorcycleInfoViewController: UITableViewController {
                                                  animated: true)
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    // MARK: - Private instance methods
+    
+    @objc private func didTapFavoriteButton() {
+        if favoriteList.contains(motorcycle.id) {
+            favoriteList.remove(motorcycle.id)
+            toggleIcon(on: false)
+        } else {
+            favoriteList.add(motorcycle.id)
+            toggleIcon(on: true)
+        }
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    private func toggleIcon(on: Bool) {
+        if on {
+            navigationItem.rightBarButtonItem?.image = selectedFavoriteIcon
+        } else {
+            navigationItem.rightBarButtonItem?.image = favoriteIcon
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
 }
