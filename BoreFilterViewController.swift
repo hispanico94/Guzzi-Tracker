@@ -55,7 +55,7 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     override func viewWillDisappear(_ animated: Bool) {
         filter.minBore = selectedMinBore
-        filter.maxBore = selectedMinBore
+        filter.maxBore = selectedMaxBore
         callback(filter)
         super.viewWillDisappear(animated)
     }

@@ -37,6 +37,7 @@
 		CF466A17208B364700E44BF2 /* StrokeCycleFilterTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF466A15208B364700E44BF2 /* StrokeCycleFilterTableViewController.xib */; };
 		CF55CABF1E76EEDB002275A0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF55CABD1E76EEDB002275A0 /* Alamofire.framework */; };
 		CF55CAC01E76EEDB002275A0 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */; };
+		CF56823B20B6A3ED00B52AEB /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56823A20B6A3ED00B52AEB /* FilterButton.swift */; };
 		CF690CA81E7150BF00523796 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF690CA61E7150BF00523796 /* ImageCell.swift */; };
 		CF690CA91E7150BF00523796 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF690CA71E7150BF00523796 /* ImageCell.xib */; };
 		CF690CAC1E7153AB00523796 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF690CAA1E7153AB00523796 /* ImagesViewController.swift */; };
@@ -119,6 +120,7 @@
 		CF466A15208B364700E44BF2 /* StrokeCycleFilterTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeCycleFilterTableViewController.xib; sourceTree = "<group>"; };
 		CF55CABD1E76EEDB002275A0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		CF56823A20B6A3ED00B52AEB /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		CF690CA61E7150BF00523796 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		CF690CA71E7150BF00523796 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		CF690CAA1E7153AB00523796 /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				CF1CDB7C206FCCBF007BCE95 /* Predicate.swift */,
 				CF73C44620931E5B00596118 /* Function.swift */,
 				CF73C440209315F200596118 /* Ordering.swift */,
+				CF56823A20B6A3ED00B52AEB /* FilterButton.swift */,
 				CF1CDB82206FD598007BCE95 /* Filters */,
 			);
 			name = Structs;
@@ -531,6 +534,7 @@
 				CFE280A81E6F12830090AAA7 /* MotorcycleNotesCell.swift in Sources */,
 				CF8306532087342000570E60 /* Bore.swift in Sources */,
 				CF73C4442093188A00596118 /* ComparatorsViewController.swift in Sources */,
+				CF56823B20B6A3ED00B52AEB /* FilterButton.swift in Sources */,
 				CFA481801E82F3D700D101E0 /* Typealiases.swift in Sources */,
 				CF41DEC020A6D6EA00F4A508 /* SearchViewController.swift in Sources */,
 				CF0F546A1E819FEC0059650F /* Key.swift in Sources */,

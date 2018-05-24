@@ -7,9 +7,14 @@ class FiltersViewController: UITableViewController {
     private let filterSection = 0
     private let orderSection = 1
     
-    private let resultCountLabel = UILabel()
+    private let filterButton = FilterButton()
     
     private let originalFilterProviders: [FilterProvider]
+    
+    // used for storing the old active filters. of the user tap "Cancel" this
+    // variable is copied in filterProviders restoring the original state prior
+    // to the presentation of FiltersViewController.
+    private var oldFilterProviders: [FilterId:FilterProvider]
     
     private var filterProviders: [FilterId:FilterProvider] = [:] {
         didSet {
@@ -25,6 +30,11 @@ class FiltersViewController: UITableViewController {
     }
     
     private weak var filterStorage: Ref<Array<FilterProvider>>?
+    
+    // used for storing the old active orders. of the user tap "Cancel" this
+    // variable is copied in orders restoring the original state prior
+    // to the presentation of FiltersViewController.
+    private var oldOrders: [Order]
     
     // used for reloading the data of the tableView (otherwise after selecting
     // the orders the filters page will display the old number of orders selected)
@@ -50,9 +60,13 @@ class FiltersViewController: UITableViewController {
             self.filterProviders[filter.filterId] = filter
             self.orderedFilterIds.append(filter.filterId)
         }
+        
+        self.oldFilterProviders = self.filterProviders
+        
         self.orderedFilterIds.sort()
         
         self.orders = orderStorage.value
+        self.oldOrders = orderStorage.value
         self.orderStorage = orderStorage
         
         self.motorcyclesDisplayed = motorcyclesDisplayed
@@ -60,7 +74,7 @@ class FiltersViewController: UITableViewController {
         super.init(style: .plain)
         
         self.motorcyclesDisplayed?.add(listener: "FiltersViewController") { [weak self] newValue in
-            self?.setLabelText(withValue: newValue)
+            self?.filterButton.setTitle(withValue: newValue)
         }
     }
     
@@ -75,19 +89,20 @@ class FiltersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        resultCountLabel.textAlignment = .center
-        let toolbarItem = UIBarButtonItem(customView: resultCountLabel)
+        filterButton.setDefaultColor(self.view.tintColor)
+        filterButton.addTarget(self, action: #selector(applyAndDismiss), for: UIControlEvents.touchUpInside)
+        let toolbarItem = UIBarButtonItem(customView: filterButton.button)
         setToolbarItems([toolbarItem], animated: true)
         
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearAllSelections))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAndDismiss))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearFiltersAndOrders))
     }
     
     // MARK: - View transition
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setToolbarHidden(false, animated: true)
-        setLabelText(withValue: motorcyclesDisplayed?.value)
+        filterButton.setTitle(withValue: motorcyclesDisplayed?.value)
         super.viewWillAppear(animated)
     }
     
@@ -165,7 +180,7 @@ class FiltersViewController: UITableViewController {
     
     // MARK: - Private instance methods
     
-    @objc private func clearAllSelections() {
+    @objc private func clearFiltersAndOrders() {
         filterStorage?.value = originalFilterProviders
         for filter in originalFilterProviders {
             filterProviders[filter.filterId] = filter
@@ -177,19 +192,14 @@ class FiltersViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    private func setLabelText(withValue value: Int?) {
-        guard let unwrapValue = value else { return }
-        resultCountLabel.textColor = .black
-        
-        switch value {
-        case 0:
-            resultCountLabel.text = "No results"
-            resultCountLabel.textColor = .red
-        case 1:
-            resultCountLabel.text = "\(unwrapValue) result"
-        default:
-            resultCountLabel.text = "\(unwrapValue) results"
-        }
+    @objc private func cancelAndDismiss() {
+        filterProviders = oldFilterProviders
+        orders = oldOrders
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func applyAndDismiss() {
+        dismiss(animated: true, completion: nil)
     }
     
     private func orderCellCaption() -> String? {

@@ -1,11 +1,3 @@
-//
-//  StrokeFilterViewController.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 18/04/18.
-//  Copyright © 2018 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {

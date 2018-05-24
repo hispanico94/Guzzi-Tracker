@@ -54,7 +54,7 @@ class VCFactory {
     
     func makeFiltersVC(motorcyclesDisplayed: Ref<Int>) -> FiltersViewController {
         let filterVC = FiltersViewController(filterProviders: filterProviders, filterStorage: filterStorage, orderStorage: orderStorage, motorcyclesDisplayed: motorcyclesDisplayed)
-        filterVC.title = "Filter & Order"
+        filterVC.title = "Filter & Sort"
         return filterVC
     }
 }

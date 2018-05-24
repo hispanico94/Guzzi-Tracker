@@ -50,7 +50,7 @@ class ComparatorsViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "List Ordering"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearAllSelections))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearOrders))
     }
 
     // MARK: - View transition
@@ -155,7 +155,7 @@ class ComparatorsViewController: UITableViewController {
     
     // MARK: - Private instance methods
     
-    @objc private func clearAllSelections() {
+    @objc private func clearOrders() {
         selectedOrders.removeAll()
         selectedIndexPaths.removeAll()
         tableView.reloadData()

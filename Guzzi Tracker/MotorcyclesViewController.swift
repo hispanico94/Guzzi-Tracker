@@ -23,19 +23,13 @@ class MotorcyclesViewController: UITableViewController {
                 .reduce({ _ in true }, <>)
             
             motorcycleListToShow = motorcycleList.filter(predicate)
+            sortMotorcycleList()
         }
     }
     
     private var orders: Array<Order> {
         didSet {
-            let comparators = orders
-                .lazy
-                .map { $0.comparator }
-                .reduce(Comparator.empty, <>)
-            
-            let internalComparator = MotorcycleComparator.name
-            
-            motorcycleListToShow.sort(by: comparators <> internalComparator)
+            sortMotorcycleList()
         }
     }
     
@@ -116,7 +110,9 @@ class MotorcyclesViewController: UITableViewController {
     // MARK: - Interface Builder methods
     
     @IBAction func didTapFilterButton(sender: UIBarButtonItem) {
-        navigationController?.pushViewController(vcFactory.makeFiltersVC(motorcyclesDisplayed: motorcyclesDisplayed), animated: true)
+        //navigationController?.pushViewController(vcFactory.makeFiltersVC(motorcyclesDisplayed: motorcyclesDisplayed), animated: true)
+        let navigationVC = UINavigationController(rootViewController: vcFactory.makeFiltersVC(motorcyclesDisplayed: motorcyclesDisplayed))
+        present(navigationVC, animated: true, completion: nil)
     }
     
     // MARK: - Table view data source
@@ -152,5 +148,17 @@ class MotorcyclesViewController: UITableViewController {
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func sortMotorcycleList() {
+        let comparators = orders
+            .lazy
+            .map { $0.comparator }
+            .reduce(Comparator.empty, <>)
+        
+        // used as a final sort rule
+        let internalComparator = MotorcycleComparator.name
+        
+        motorcycleListToShow.sort(by: comparators <> internalComparator)
     }
 }

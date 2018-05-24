@@ -2021,23 +2021,364 @@
 				"front_suspension": "Telescopic fork",
 				"rear_suspension": "Swingarm with twin shock absorbers",
 				"wheelbase": 1685,
-				"brakes": "Integral braking system with rear disk brake and front left disk brake actuated by pedal, front right disk brake actuated by hand lever"
+				"brakes": "Disk brakes, rear 282 mm, front twin 320mm. ABS comes standard"
 			},
 			"capacities_performances": {
 				"fuel_capacity": 20.5,
 				"lubricant_capacity": 4.01,
 				"weight": 318,
-				"max_speed": 203,
+				"max_speed": 200,
 				"fuel_consumption": 8.3
 			},
             "notes": null,
             "images": null
 		},
-
+		{
+			"id": 54,
+			"general_info": {
+				"family": "California",
+				"name": "California 1400 Touring",
+				"first_year": 2012,
+				"last_year": 2016
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 104,
+				"stroke": 81.2,
+				"displacement": 1380,
+				"compression": 10.5,
+				"power": {
+					"peak": 96,
+					"rpm": 6500
+				},
+				"feed_system": "Electronic injection, Magneti Marelli IAW with 52 mm single throttle body, ride by wire"
+			},
+			"frame": {
+				"type": "Closed double cradle with elastic engine mounting system",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1685,
+				"brakes": "Disk brakes, rear 282 mm, front twin 320 mm. ABS comes standard"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 20.5,
+				"lubricant_capacity": 4.01,
+				"weight": 337,
+				"max_speed": 200,
+				"fuel_consumption": 8.3
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 55,
+			"general_info": {
+				"family": "850 T",
+				"name": "850 T",
+				"first_year": 1974,
+				"last_year": 1975
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 78,
+				"displacement": 844,
+				"compression": 9.5,
+				"power": {
+					"peak": 53,
+					"rpm": 6300
+				},
+				"feed_system": "Carburetors, Dell'Orto VHB 30 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1470,
+				"brakes": "Rear 220x25 mm drum brake, front single 300 mm disk brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 25,
+				"lubricant_capacity": 3.5,
+				"weight": 235,
+				"max_speed": 202,
+				"fuel_consumption": 7.2
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 56,
+			"general_info": {
+				"family": "850 T",
+				"name": "850 T3",
+				"first_year": 1975,
+				"last_year": 1979
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 78,
+				"displacement": 844,
+				"compression": 9.5,
+				"power": {
+					"peak": 59,
+					"rpm": 6800
+				},
+				"feed_system": "Carburetors, Dell'Orto VHB 30 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1470,
+				"brakes": "Rear 242 mm disk brake, front twin 300 mm disk brake"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 24,
+				"lubricant_capacity": 3,
+				"weight": 243,
+				"max_speed": 195,
+				"fuel_consumption": 6
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 57,
+			"general_info": {
+				"family": "850 T",
+				"name": "850 T4",
+				"first_year": 1980,
+				"last_year": 1982
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 78,
+				"displacement": 844,
+				"compression": 9.5,
+				"power": {
+					"peak": 59,
+					"rpm": 6800
+				},
+				"feed_system": "Carburetors, Dell'Orto VHB 30 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1470,
+				"brakes": "Rear 242 mm disk brake, front twin 300 mm disk brake. Integral braking."
+			},
+			"capacities_performances": {
+				"fuel_capacity": 24,
+				"lubricant_capacity": 3,
+				"weight": 243,
+				"max_speed": 195,
+				"fuel_consumption": 6
+			},
+            "notes": "The differences with the T3 are the alloy wheel instead of spokes wheel and the front fairing from the 1000 SP",
+            "images": null
+		},
+		{
+			"id": 58,
+			"general_info": {
+				"family": "850 T",
+				"name": "850 T5",
+				"first_year": 1984,
+				"last_year": 1989
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 78,
+				"displacement": 844,
+				"compression": 9.5,
+				"power": {
+					"peak": 67,
+					"rpm": 7000
+				},
+				"feed_system": "Carburetors, Dell'Orto VHBT 30 C"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1505,
+				"brakes": "Rear 270 mm disk brake, front twin 270 mm disk brake. Integral braking."
+			},
+			"capacities_performances": {
+				"fuel_capacity": 23,
+				"lubricant_capacity": 3,
+				"weight": 220,
+				"max_speed": 200,
+				"fuel_consumption": 5.4
+			},
+            "notes": "Completely new design with the \"square heads\" engine.",
+            "images": null
+		},
+		{
+			"id": 59,
+			"general_info": {
+				"family": "Le Mans",
+				"name": "850 Le Mans",
+				"first_year": 1975,
+				"last_year": 1978
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 78,
+				"displacement": 844,
+				"compression": 10.2,
+				"power": {
+					"peak": 80,
+					"rpm": 7300
+				},
+				"feed_system": "Carburetors, Dell'Orto PHF 36 B"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1470,
+				"brakes": "Rear 242 mm disk brake, front twin 300 mm disk brake. Integral braking."
+			},
+			"capacities_performances": {
+				"fuel_capacity": 22.5,
+				"lubricant_capacity": 3,
+				"weight": 198,
+				"max_speed": 210,
+				"fuel_consumption": 8
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 60,
+			"general_info": {
+				"family": "Le Mans",
+				"name": "850 Le Mans II",
+				"first_year": 1978,
+				"last_year": 1981
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 78,
+				"displacement": 844,
+				"compression": 10.2,
+				"power": {
+					"peak": 80,
+					"rpm": 7300
+				},
+				"feed_system": "Carburetors, Dell'Orto PHF 36 B"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1470,
+				"brakes": "Rear 242 mm disk brake, front twin 300 mm disk brake. Integral braking."
+			},
+			"capacities_performances": {
+				"fuel_capacity": 22.5,
+				"lubricant_capacity": 3,
+				"weight": 228,
+				"max_speed": 210,
+				"fuel_consumption": null
+			},
+            "notes": null,
+            "images": null
+		},
+		{
+			"id": 61,
+			"general_info": {
+				"family": "Le Mans",
+				"name": "850 Le Mans III",
+				"first_year": 1981,
+				"last_year": 1985
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 83,
+				"stroke": 78,
+				"displacement": 844,
+				"compression": 9.8,
+				"power": {
+					"peak": 74,
+					"rpm": 7700
+				},
+				"feed_system": "Carburetors, Dell'Orto PHF 36 B"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1505,
+				"brakes": "Rear 242 mm disk brake, front twin 300 mm disk brake. Integral braking."
+			},
+			"capacities_performances": {
+				"fuel_capacity": 25,
+				"lubricant_capacity": 3,
+				"weight": 206,
+				"max_speed": 230,
+				"fuel_consumption": 5.7
+			},
+            "notes": null,
+            "images": ["https://c2.staticflickr.com/4/3680/33438717245_5603c37915_o.jpg"]
+		},
+		{
+			"id": 62,
+			"general_info": {
+				"family": "Le Mans",
+				"name": "Le Mans 1000",
+				"first_year": 1985,
+				"last_year": 1993
+			},
+			"engine": {
+				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
+				"stroke_cycle": 4,
+				"bore": 88,
+				"stroke": 78,
+				"displacement": 948.8,
+				"compression": 10,
+				"power": {
+					"peak": 81,
+					"rpm": 7000
+				},
+				"feed_system": "Carburetors, Dell'Orto PHM 40 N"
+			},
+			"frame": {
+				"type": "Closed double cradle",
+				"front_suspension": "Telescopic fork",
+				"rear_suspension": "Swingarm with twin shock absorbers",
+				"wheelbase": 1514,
+				"brakes": "Rear 242 mm disk brake, front twin 300 mm disk brake. Integral braking."
+			},
+			"capacities_performances": {
+				"fuel_capacity": 24,
+				"lubricant_capacity": 3,
+				"weight": 215,
+				"max_speed": 230,
+				"fuel_consumption": 5.4
+			},
+            "notes": "Available initially only with a 16\" front wheel. The 16\" front wheel made the bike very stable but not agile. In 1987 an upgrade was introduced that brought back the 18\" front wheel and introduced a new front fairing.",
+            "images": null
+		},
 		
 
 		{
-			"id": 54,
+			"id": 63,
 			"general_info": {
 				"family": "Racing Bikes",
 				"name": "8 cilindri",
@@ -2073,44 +2414,6 @@
 			},
             "notes": "The Otto Cilindri ('Eight Cylinders') is the most famous competition bike manufactured by Moto Guzzi and one of the most famous in the history of motorcycle competitions. In the 1950s the characteristics of the Otto Cilindri were unique, so its performance. In 1957 the refined engine was capable of 72 hp at 12000 rpm, incredible numbers at that time.",
             "images": ["https://c2.staticflickr.com/4/3760/33438639725_6346d8277b_o.jpg"]
-		},
-		{
-			"id": 55,
-			"general_info": {
-				"family": "Le Mans",
-				"name": "850 Le Mans III",
-				"first_year": 1981,
-				"last_year": 1984
-			},
-			"engine": {
-				"configuration": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder",
-				"stroke_cycle": 4,
-				"bore": 83,
-				"stroke": 78,
-				"displacement": 844,
-				"compression": 9.8,
-				"power": {
-					"peak": 74,
-					"rpm": 7700
-				},
-				"feed_system": "Carburetors, Dell'Orto PHF36BD, PHF36BS"
-			},
-			"frame": {
-				"type": "Closed double cradle",
-				"front_suspension": "Telescopic fork",
-				"rear_suspension": "Swingarm with twin shock absorbers",
-				"wheelbase": 1505,
-				"brakes": "Front double disk, rear single disk, integral braking system"
-			},
-			"capacities_performances": {
-				"fuel_capacity": 25,
-				"lubricant_capacity": 3,
-				"weight": 206,
-				"max_speed": 230,
-				"fuel_consumption": 5.7
-			},
-            "notes": null,
-            "images": ["https://c2.staticflickr.com/4/3680/33438717245_5603c37915_o.jpg"]
 		}
 	]
 }
