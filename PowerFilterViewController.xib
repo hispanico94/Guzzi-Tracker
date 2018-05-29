@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PowerFilterViewController" customModule="Guzzi_Tracker" customModuleProvider="target">
             <connections>
+                <outlet property="captionLabel" destination="IB4-1j-iyG" id="Ome-yz-wfV"/>
                 <outlet property="powerPicker" destination="vYO-kj-8hU" id="36T-u6-CbB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,15 +29,52 @@
                         <outlet property="delegate" destination="-1" id="Wmx-cF-1vw"/>
                     </connections>
                 </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgN-Da-1C0">
+                    <rect key="frame" x="187.5" y="216" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASp-Rf-ZI2">
+                    <rect key="frame" x="16" y="187" width="155.5" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ut0-jo-oak">
+                    <rect key="frame" x="207.5" y="187" width="151.5" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="captionLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB4-1j-iyG">
+                    <rect key="frame" x="16" y="472" width="343" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="XgN-Da-1C0" firstAttribute="leading" secondItem="ASp-Rf-ZI2" secondAttribute="trailing" constant="16" id="0ig-F3-a8Q"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vYO-kj-8hU" secondAttribute="trailing" id="4YS-Ea-Nve"/>
+                <constraint firstItem="IB4-1j-iyG" firstAttribute="centerX" secondItem="vYO-kj-8hU" secondAttribute="centerX" id="93Z-Bs-xhs"/>
+                <constraint firstItem="ut0-jo-oak" firstAttribute="leading" secondItem="XgN-Da-1C0" secondAttribute="trailing" constant="20" id="GMm-68-8vS"/>
+                <constraint firstItem="vYO-kj-8hU" firstAttribute="top" secondItem="XgN-Da-1C0" secondAttribute="bottom" constant="20" id="I5w-59-Qcx"/>
+                <constraint firstItem="XgN-Da-1C0" firstAttribute="centerX" secondItem="vYO-kj-8hU" secondAttribute="centerX" id="K10-cE-TdL"/>
+                <constraint firstItem="vYO-kj-8hU" firstAttribute="top" secondItem="ASp-Rf-ZI2" secondAttribute="bottom" constant="20" id="KA8-nO-ZaF"/>
                 <constraint firstItem="vYO-kj-8hU" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Le6-ZU-Mr9"/>
+                <constraint firstItem="IB4-1j-iyG" firstAttribute="top" secondItem="vYO-kj-8hU" secondAttribute="bottom" constant="20" id="NAm-C9-gKf"/>
                 <constraint firstItem="vYO-kj-8hU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nqu-yG-sQg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IB4-1j-iyG" secondAttribute="trailing" constant="16" id="OEE-1Z-FB2"/>
+                <constraint firstItem="IB4-1j-iyG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="QEF-Gd-OtG"/>
                 <constraint firstItem="vYO-kj-8hU" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="eRe-6T-I2y"/>
+                <constraint firstItem="ASp-Rf-ZI2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="qIT-1n-P2X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ut0-jo-oak" secondAttribute="trailing" constant="16" id="txP-ox-d41"/>
+                <constraint firstItem="vYO-kj-8hU" firstAttribute="top" secondItem="ut0-jo-oak" secondAttribute="bottom" constant="20" id="xAE-If-kvd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
 </document>

@@ -110,7 +110,6 @@ class MotorcyclesViewController: UITableViewController {
     // MARK: - Interface Builder methods
     
     @IBAction func didTapFilterButton(sender: UIBarButtonItem) {
-        //navigationController?.pushViewController(vcFactory.makeFiltersVC(motorcyclesDisplayed: motorcyclesDisplayed), animated: true)
         let navigationVC = UINavigationController(rootViewController: vcFactory.makeFiltersVC(motorcyclesDisplayed: motorcyclesDisplayed))
         present(navigationVC, animated: true, completion: nil)
     }

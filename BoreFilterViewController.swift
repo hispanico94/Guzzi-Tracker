@@ -15,6 +15,7 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
                 let row = bores.index(of: selectedMinBore) ?? (bores.count - 1)
                 borePicker.selectRow(row, inComponent: maxBorePickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
 
@@ -25,10 +26,12 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
                 let row = bores.index(of: selectedMaxBore) ?? 0
                 borePicker.selectRow(row, inComponent: minBorePickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
     @IBOutlet weak var borePicker: UIPickerView!
+    @IBOutlet weak var captionLabel: UILabel!
     
     init(filter: Bore, _ callback: @escaping (Bore) -> ()) {
         self.filter = filter
@@ -51,6 +54,7 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
         let maxBoreRow = bores.index(of: selectedMaxBore) ?? (bores.count - 1)
         borePicker.selectRow(minBoreRow, inComponent: minBorePickerComponent, animated: true)
         borePicker.selectRow(maxBoreRow, inComponent: maxBorePickerComponent, animated: true)
+        updateCaptionLabel()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,6 +91,8 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
         }
     }
     
+    // MARK: - Private instance methods
+    
     @objc private func clearSelection() {
         selectedMinBore = bores.first!
         selectedMaxBore = bores.last!
@@ -94,5 +100,9 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
         let maxBoreRow = bores.count - 1
         borePicker.selectRow(minBoreRow, inComponent: minBorePickerComponent, animated: true)
         borePicker.selectRow(maxBoreRow, inComponent: maxBorePickerComponent, animated: true)
+    }
+    
+    private func updateCaptionLabel() {
+        captionLabel.text = "Filter all motorcycles with bore between \(selectedMinBore.descriptionWithDecimalsIfPresent) and \(selectedMaxBore.descriptionWithDecimalsIfPresent)"
     }
 }

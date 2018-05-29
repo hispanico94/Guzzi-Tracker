@@ -15,6 +15,7 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
                 let row = strokes.index(of: selectedMinStroke) ?? (strokes.count - 1)
                 strokePicker.selectRow(row, inComponent: maxStrokePickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
@@ -25,10 +26,12 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
                 let row = strokes.index(of: selectedMaxStroke) ?? 0
                 strokePicker.selectRow(row, inComponent: minStrokePickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
     @IBOutlet weak var strokePicker: UIPickerView!
+    @IBOutlet weak var captionLabel: UILabel!
     
     init(filter: Stroke, _ callback: @escaping (Stroke) -> ()) {
         self.filter = filter
@@ -51,6 +54,7 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         let maxStrokeRow = strokes.index(of: selectedMaxStroke) ?? (strokes.count - 1)
         strokePicker.selectRow(minStrokeRow, inComponent: minStrokePickerComponent, animated: true)
         strokePicker.selectRow(maxStrokeRow, inComponent: maxStrokePickerComponent, animated: true)
+        updateCaptionLabel()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,6 +91,8 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         }
     }
     
+    // MARK: - Private instance methods
+    
     @objc private func clearSelection() {
         selectedMinStroke = strokes.first!
         selectedMaxStroke = strokes.last!
@@ -94,5 +100,9 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         let maxStrokeRow = strokes.count - 1
         strokePicker.selectRow(minStrokeRow, inComponent: minStrokePickerComponent, animated: true)
         strokePicker.selectRow(maxStrokeRow, inComponent: maxStrokePickerComponent, animated: true)
+    }
+    
+    private func updateCaptionLabel() {
+        captionLabel.text = "Filter all motorcycles with stroke between \(selectedMinStroke.descriptionWithDecimalsIfPresent) and \(selectedMaxStroke.descriptionWithDecimalsIfPresent)"
     }
 }

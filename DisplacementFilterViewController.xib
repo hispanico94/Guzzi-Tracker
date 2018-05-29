@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DisplacementFilterViewController" customModule="Guzzi_Tracker" customModuleProvider="target">
             <connections>
+                <outlet property="captionLabel" destination="jfa-bz-rfu" id="FUs-D7-93l"/>
                 <outlet property="displacementPicker" destination="Je3-pm-eTy" id="xqN-up-fMm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,22 +22,59 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Je3-pm-eTy">
-                    <rect key="frame" x="0.0" y="252" width="375" height="162"/>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Je3-pm-eTy">
+                    <rect key="frame" x="0.0" y="235.5" width="375" height="216"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="844-Kg-MvT"/>
                         <outlet property="delegate" destination="-1" id="VfO-JM-iqS"/>
                     </connections>
                 </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnR-Va-HC2">
+                    <rect key="frame" x="187.5" y="215.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3Q-GD-nQu">
+                    <rect key="frame" x="16" y="186" width="155.5" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHd-Nx-Lbu">
+                    <rect key="frame" x="203.5" y="186" width="155.5" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="captionLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfa-bz-rfu">
+                    <rect key="frame" x="16" y="472" width="343" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Je3-pm-eTy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="41S-y4-Lx6"/>
+                <constraint firstItem="TnR-Va-HC2" firstAttribute="centerX" secondItem="Je3-pm-eTy" secondAttribute="centerX" id="538-Bo-Plt"/>
+                <constraint firstItem="Je3-pm-eTy" firstAttribute="top" secondItem="WHd-Nx-Lbu" secondAttribute="bottom" constant="20" id="5x1-AA-3fh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Je3-pm-eTy" secondAttribute="trailing" id="71m-5H-Jfx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WHd-Nx-Lbu" secondAttribute="trailing" constant="16" id="8jC-tC-fN6"/>
+                <constraint firstItem="l3Q-GD-nQu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Dqy-9l-p1H"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jfa-bz-rfu" secondAttribute="trailing" constant="16" id="Gtg-X9-A8f"/>
                 <constraint firstItem="Je3-pm-eTy" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="KA2-eB-FeV"/>
                 <constraint firstItem="Je3-pm-eTy" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="MWY-Y9-0JH"/>
+                <constraint firstItem="jfa-bz-rfu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="W43-Td-KPg"/>
+                <constraint firstItem="Je3-pm-eTy" firstAttribute="top" secondItem="TnR-Va-HC2" secondAttribute="bottom" constant="20" id="Zyy-6o-Iac"/>
+                <constraint firstItem="jfa-bz-rfu" firstAttribute="top" secondItem="Je3-pm-eTy" secondAttribute="bottom" constant="20" id="i6n-lW-jXs"/>
+                <constraint firstItem="jfa-bz-rfu" firstAttribute="centerX" secondItem="Je3-pm-eTy" secondAttribute="centerX" id="mk2-oy-0SW"/>
+                <constraint firstItem="WHd-Nx-Lbu" firstAttribute="leading" secondItem="TnR-Va-HC2" secondAttribute="trailing" constant="16" id="oDG-tV-omH"/>
+                <constraint firstItem="Je3-pm-eTy" firstAttribute="top" secondItem="l3Q-GD-nQu" secondAttribute="bottom" constant="20" id="sxw-vG-Lgt"/>
+                <constraint firstItem="TnR-Va-HC2" firstAttribute="leading" secondItem="l3Q-GD-nQu" secondAttribute="trailing" constant="16" id="vfT-j1-2al"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
 </document>

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MinMaxYearFilterViewController" customModule="Guzzi_Tracker" customModuleProvider="target">
             <connections>
+                <outlet property="captionLabel" destination="beJ-J3-qyT" id="htI-f5-T8m"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="yearPicker" destination="Kf1-MN-E1a" id="PrI-zW-pAB"/>
             </connections>
@@ -22,21 +23,58 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kf1-MN-E1a">
-                    <rect key="frame" x="0.0" y="225" width="375" height="216"/>
+                    <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="7se-BI-Rma"/>
                         <outlet property="delegate" destination="-1" id="RMT-af-0ox"/>
                     </connections>
                 </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrE-7u-aTp">
+                    <rect key="frame" x="16" y="176.5" width="155.5" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuL-Rx-8mO">
+                    <rect key="frame" x="203" y="176.5" width="156" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGA-yo-Tvf">
+                    <rect key="frame" x="187.5" y="205.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-J3-qyT">
+                    <rect key="frame" x="16" y="462" width="343" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="beJ-J3-qyT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="49E-u4-X5G"/>
+                <constraint firstItem="beJ-J3-qyT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5gs-I8-d2A"/>
+                <constraint firstItem="Kf1-MN-E1a" firstAttribute="top" secondItem="GrE-7u-aTp" secondAttribute="bottom" constant="20" id="9mU-49-0Ub"/>
+                <constraint firstItem="JuL-Rx-8mO" firstAttribute="leading" secondItem="gGA-yo-Tvf" secondAttribute="trailing" constant="16" id="IMe-pe-fWw"/>
                 <constraint firstItem="Kf1-MN-E1a" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="L8k-Ij-asb"/>
                 <constraint firstItem="Kf1-MN-E1a" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Lqp-Xd-rl6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kf1-MN-E1a" secondAttribute="trailing" id="bLj-eH-hDB"/>
+                <constraint firstItem="Kf1-MN-E1a" firstAttribute="top" secondItem="gGA-yo-Tvf" secondAttribute="bottom" constant="20" id="d6U-4q-szT"/>
+                <constraint firstItem="Kf1-MN-E1a" firstAttribute="top" secondItem="JuL-Rx-8mO" secondAttribute="bottom" constant="20" id="fPI-ug-4gb"/>
+                <constraint firstItem="gGA-yo-Tvf" firstAttribute="leading" secondItem="GrE-7u-aTp" secondAttribute="trailing" constant="16" id="hyy-e9-Qdz"/>
+                <constraint firstItem="GrE-7u-aTp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="iHP-lF-Den"/>
+                <constraint firstItem="beJ-J3-qyT" firstAttribute="top" secondItem="Kf1-MN-E1a" secondAttribute="bottom" constant="20" id="mhD-dF-u81"/>
                 <constraint firstItem="Kf1-MN-E1a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sow-a4-Vhy"/>
+                <constraint firstItem="gGA-yo-Tvf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tlE-OS-XlP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="beJ-J3-qyT" secondAttribute="trailing" constant="16" id="wwn-gF-vxC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JuL-Rx-8mO" secondAttribute="trailing" constant="16" id="xta-rY-yg0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
 </document>

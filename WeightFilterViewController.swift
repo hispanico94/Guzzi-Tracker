@@ -15,6 +15,7 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
                 let row = weights.index(of: selectedMinWeight) ?? (weights.count - 1)
                 weightPicker.selectRow(row, inComponent: maxWeightPickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
@@ -25,10 +26,12 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
                 let row = weights.index(of: selectedMaxWeight) ?? 0
                 weightPicker.selectRow(row, inComponent: minWeightPickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
     @IBOutlet weak var weightPicker: UIPickerView!
+    @IBOutlet weak var captionLabel: UILabel!
     
     init(filter: Weight, _ callback: @escaping (Weight) -> ()) {
         self.filter = filter
@@ -51,6 +54,7 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         let maxWeightRow = weights.index(of: selectedMaxWeight) ?? (weights.count - 1)
         weightPicker.selectRow(minWeightRow, inComponent: minWeightPickerComponent, animated: true)
         weightPicker.selectRow(maxWeightRow, inComponent: maxWeightPickerComponent, animated: true)
+        updateCaptionLabel()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,6 +91,8 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         }
     }
     
+    // MARK: - Private instance methods
+    
     @objc private func clearSelection() {
         selectedMinWeight = weights.first!
         selectedMaxWeight = weights.last!
@@ -94,5 +100,9 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         let maxWeightRow = weights.count - 1
         weightPicker.selectRow(minWeightRow, inComponent: minWeightPickerComponent, animated: true)
         weightPicker.selectRow(maxWeightRow, inComponent: maxWeightPickerComponent, animated: true)
+    }
+    
+    private func updateCaptionLabel() {
+        captionLabel.text = "Filter all motorcycles with weight between \(selectedMinWeight.descriptionWithDecimalsIfPresent) and \(selectedMaxWeight.descriptionWithDecimalsIfPresent)"
     }
 }

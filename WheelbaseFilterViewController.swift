@@ -15,6 +15,7 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
                 let row = wheelbases.index(of: selectedMinWheelbase) ?? (wheelbases.count - 1)
                 wheelbasePicker.selectRow(row, inComponent: maxWheelbasePickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
@@ -25,10 +26,12 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
                 let row = wheelbases.index(of: selectedMaxWheelbase) ?? 0
                 wheelbasePicker.selectRow(row, inComponent: minWheelbasePickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
     @IBOutlet weak var wheelbasePicker: UIPickerView!
+    @IBOutlet weak var captionLabel: UILabel!
     
     init(filter: Wheelbase, _ callback: @escaping (Wheelbase) -> ()) {
         self.filter = filter
@@ -51,6 +54,7 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
         let maxWheelbaseRow = wheelbases.index(of: selectedMaxWheelbase) ?? (wheelbases.count - 1)
         wheelbasePicker.selectRow(minWheelbaseRow, inComponent: minWheelbasePickerComponent, animated: true)
         wheelbasePicker.selectRow(maxWheelbaseRow, inComponent: maxWheelbasePickerComponent, animated: true)
+        updateCaptionLabel()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,6 +91,8 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
         }
     }
     
+    // MARK: - Private instance methods
+    
     @objc private func clearSelection() {
         selectedMinWheelbase = wheelbases.first!
         selectedMaxWheelbase = wheelbases.last!
@@ -94,5 +100,9 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
         let maxWheelbaseRow = wheelbases.count - 1
         wheelbasePicker.selectRow(minWheelbaseRow, inComponent: minWheelbasePickerComponent, animated: true)
         wheelbasePicker.selectRow(maxWheelbaseRow, inComponent: maxWheelbasePickerComponent, animated: true)
+    }
+    
+    private func updateCaptionLabel() {
+        captionLabel.text = "Filter all motorcycles with wheelbase between \(selectedMinWheelbase.descriptionWithDecimalsIfPresent) and \(selectedMaxWheelbase.descriptionWithDecimalsIfPresent)"
     }
 }

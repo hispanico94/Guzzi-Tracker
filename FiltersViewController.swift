@@ -9,13 +9,18 @@ class FiltersViewController: UITableViewController {
     
     private let filterButton = FilterButton()
     
+    // used for storing the filterProviders array in VCFactory. if the user tap
+    // "Clear" this variable is copied in filterProviders restoring the original state prior
+    // to the presentation of FiltersViewController.
     private let originalFilterProviders: [FilterProvider]
     
-    // used for storing the old active filters. of the user tap "Cancel" this
-    // variable is copied in filterProviders restoring the original state prior
-    // to the presentation of FiltersViewController.
+    // used for storing the old active filters. If the user tap "Cancel" this
+    // variable is copied in filterProviders and filterStorage.value restoring
+    // the default state (no bikes are filtered).
     private var oldFilterProviders: [FilterId:FilterProvider]
     
+    // stores the filters with their own filterId as keys. When the user selects
+    // or modify a filter the new and modified filter is stored under their filterId
     private var filterProviders: [FilterId:FilterProvider] = [:] {
         didSet {
             orderedFilterIds = filterProviders.keys.sorted()
@@ -23,12 +28,17 @@ class FiltersViewController: UITableViewController {
         }
     }
     
+    // because dictionaries (filterProviders) are unordered, the order of the filters
+    // is given by this property. The order is important in the tableview. FilterId is
+    // an enum with integers as rawValues.
     private var orderedFilterIds: [FilterId] = [] {
         didSet {
             tableView.reloadData()
         }
     }
     
+    // used for passing the filters to MotorcyclesViewController.
+    // MotorcyclesViewController listen for changes in filterStorage
     private weak var filterStorage: Ref<Array<FilterProvider>>?
     
     // used for storing the old active orders. of the user tap "Cancel" this
@@ -45,8 +55,13 @@ class FiltersViewController: UITableViewController {
         }
     }
     
+    // used for passing the comparators to MotorcyclesViewController.
+    // MotorcyclesViewController listen for changes in orderStorage
     private weak var orderStorage: Ref<Array<Order>>?
     
+    // used for updating the number of motorcycles displayed in MotorcyclesViewController
+    // after the filtering. It stores the result of count on motorcycleListToShow.
+    // Self listen for changes in this variable
     private weak var motorcyclesDisplayed: Ref<Int>?
     
     // MARK: - Initialization

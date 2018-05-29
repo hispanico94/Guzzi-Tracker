@@ -15,6 +15,7 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
                 let row = displacements.index(of: selectedMinDisplacement) ?? (displacements.count - 1)
                 displacementPicker.selectRow(row, inComponent: maxDisplacementPickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
@@ -25,11 +26,13 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
                 let row = displacements.index(of: selectedMaxDisplacement) ?? 0
                 displacementPicker.selectRow(row, inComponent: minDisplacementPickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
     
     @IBOutlet weak var displacementPicker: UIPickerView!
+    @IBOutlet weak var captionLabel: UILabel!
     
     init(filter: Displacement, _ callback: @escaping (Displacement) -> ()) {
         self.filter = filter
@@ -52,6 +55,7 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
         let maxDisplacementRow = displacements.index(of: selectedMaxDisplacement) ?? (displacements.count - 1)
         displacementPicker.selectRow(minDisplacementRow, inComponent: minDisplacementPickerComponent, animated: true)
         displacementPicker.selectRow(maxDisplacementRow, inComponent: maxDisplacementPickerComponent, animated: true)
+        updateCaptionLabel()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -88,6 +92,8 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
         }
     }
     
+    // MARK: - Private instance methods
+    
     @objc private func clearSelection() {
         selectedMinDisplacement = displacements.first!
         selectedMaxDisplacement = displacements.last!
@@ -95,5 +101,9 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
         let maxDisplacementRow = displacements.count - 1
         displacementPicker.selectRow(minDisplacementRow, inComponent: minDisplacementPickerComponent, animated: true)
         displacementPicker.selectRow(maxDisplacementRow, inComponent: maxDisplacementPickerComponent, animated: true)
+    }
+    
+    private func updateCaptionLabel() {
+        captionLabel.text = "Filter all motorcycles with displacement between \(selectedMinDisplacement.descriptionWithDecimalsIfPresent) and \(selectedMaxDisplacement.descriptionWithDecimalsIfPresent)"
     }
 }

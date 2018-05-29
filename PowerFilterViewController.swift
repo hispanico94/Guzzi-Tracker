@@ -15,6 +15,7 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
                 let row = powers.index(of: selectedMinPower) ?? (powers.count - 1)
                 powerPicker.selectRow(row, inComponent: maxPowerPickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
@@ -25,10 +26,12 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
                 let row = powers.index(of: selectedMaxPower) ?? 0
                 powerPicker.selectRow(row, inComponent: minPowerPickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
     @IBOutlet weak var powerPicker: UIPickerView!
+    @IBOutlet weak var captionLabel: UILabel!
     
     init(filter: Power, _ callback: @escaping (Power) -> ()) {
         self.filter = filter
@@ -51,6 +54,7 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
         let maxPowerRow = powers.index(of: selectedMaxPower) ?? (powers.count - 1)
         powerPicker.selectRow(minPowerRow, inComponent: minPowerPickerComponent, animated: true)
         powerPicker.selectRow(maxPowerRow, inComponent: maxPowerPickerComponent, animated: true)
+        updateCaptionLabel()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,6 +91,8 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
         }
     }
     
+    // MARK: - Private instance methods
+    
     @objc private func clearSelection() {
         selectedMinPower = powers.first!
         selectedMaxPower = powers.last!
@@ -94,6 +100,10 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
         let maxPowerRow = powers.count - 1
         powerPicker.selectRow(minPowerRow, inComponent: minPowerPickerComponent, animated: true)
         powerPicker.selectRow(maxPowerRow, inComponent: maxPowerPickerComponent, animated: true)
+    }
+    
+    private func updateCaptionLabel() {
+        captionLabel.text = "Filter all motorcycles with power between \(selectedMinPower.descriptionWithDecimalsIfPresent) and \(selectedMaxPower.descriptionWithDecimalsIfPresent)"
     }
 }
 

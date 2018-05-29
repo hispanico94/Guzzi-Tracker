@@ -14,6 +14,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
                 let row = yearsArray.index(of: selectedMinYear) ?? (yearsArray.count - 1)
                 yearPicker.selectRow(row, inComponent: maxYearPickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
 
@@ -24,10 +25,12 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
                 let row = yearsArray.index(of: selectedMaxYear) ?? 0
                 yearPicker.selectRow(row, inComponent: minYearPickerComponent, animated: true)
             }
+            updateCaptionLabel()
         }
     }
     
     @IBOutlet weak var yearPicker: UIPickerView!
+    @IBOutlet weak var captionLabel: UILabel!
     
     init(minYear: Int, maxYear: Int, _ callback: @escaping (MinMaxYear) -> ()) {
         self.callback = callback
@@ -48,6 +51,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
         let maxYearRow = yearsArray.index(of: selectedMaxYear) ?? (yearsArray.count - 1)
         yearPicker.selectRow(minYearRow, inComponent: minYearPickerComponent, animated: true)
         yearPicker.selectRow(maxYearRow, inComponent: maxYearPickerComponent, animated: true)
+        updateCaptionLabel()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,6 +87,8 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
         }
     }
     
+    // MARK: - Private instance methods
+    
     @objc private func clearSelection() {
         selectedMinYear = yearsArray.first!
         selectedMaxYear = yearsArray.last!
@@ -90,5 +96,9 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
         let maxYearRow = yearsArray.count - 1
         yearPicker.selectRow(minYearRow, inComponent: minYearPickerComponent, animated: true)
         yearPicker.selectRow(maxYearRow, inComponent: maxYearPickerComponent, animated: true)
+    }
+    
+    private func updateCaptionLabel() {
+        captionLabel.text = "Filter all motorcycles built from \(selectedMinYear) to \(selectedMaxYear)"
     }
 }
