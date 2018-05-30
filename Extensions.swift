@@ -469,3 +469,111 @@ extension Array {
         self.sort { comparator.call(($0, $1)) == .lt }
     }
 }
+
+// MARK: - UIColor extension
+
+// Colors used in the app
+extension UIColor {
+    static let legnanoGreen = UIColor(displayP3Red: 181.0/255.0, green: 208.0/255.0, blue: 81.0/255.0, alpha: 1.0)
+    static let guzziRed = UIColor(displayP3Red: 195.0/255.0, green: 21.0/255.0, blue: 26.0/255.0, alpha: 1.0)
+}
+
+// MARK: - UISearchBar text field appearance customization methods
+
+extension UISearchBar {
+    
+    private func getViewElement<T>(type: T.Type) -> T? {
+        let svs = subviews.flatMap { $0.subviews }
+        guard let element = (svs.filter { $0 is T }).first as? T else { return nil }
+        return element
+    }
+    
+    /// Returns the text field of the search bar
+    func getTextField() -> UITextField? {
+        return getViewElement(type: UITextField.self)
+    }
+    
+    /// Set the placeholder text and text color
+    /// - parameter text: the text for the placeholder
+    /// - parameter color: the color for the placeholder text
+    func setPlaceholderText(_ text: String, withColor color: UIColor) {
+        if let textField = getTextField() {
+            textField.attributedPlaceholder = NSAttributedString(
+                string: text,
+                attributes: [.foregroundColor: color]
+            )
+        }
+    }
+    
+    /// Set the search icon color in the search bar's text field
+    /// - parameter color: the new color for the search icon
+    func setIconColor(_ color: UIColor) {
+        if let imageView = getTextField()?.leftView as? UIImageView,
+            let newImage = imageView.image?.transform(withNewColor: color) {
+            imageView.image = newImage
+        }
+    }
+    
+    func setClearButtonColor(_ color: UIColor) {
+        if let textField = getTextField(),
+            let button = textField.value(forKey: "clearButton") as? UIButton,
+            let image = button.imageView?.image {
+            button.setImage(image.transform(withNewColor: color), for: .normal)
+        }
+        
+//        if let textField = getTextField(),
+//            let button = textField.value(forKey: "clearButton") as? UIButton {
+//            let templateImage = button.imageView?.image?.withRenderingMode(.alwaysTemplate)
+//            button.setImage(templateImage, for: .normal)
+//            button.tintColor = color
+//        }
+    }
+}
+
+extension UIImage {
+    
+    /// Change the color of self
+    /// - parameter color: the new color for self
+    /// - returns: a new instance of self with the new color, nil if the transformation fails.
+    func transform(withNewColor color: UIColor) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        context.translateBy(x: 0, y: size.height)
+        context.scaleBy(x: 1.0, y: -1.0)
+        context.setBlendMode(.normal)
+        
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        context.clip(to: rect, mask: cgImage!)
+        
+        color.setFill()
+        context.fill(rect)
+        
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

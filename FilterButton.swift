@@ -6,12 +6,9 @@ struct FilterButton {
     
     init() {
         button = UIButton()
-        button.setTitleColor(.red, for: .disabled)
+        button.setTitleColor(.guzziRed, for: .normal)
+        button.setTitleColor(.gray, for: .disabled)
         button.setTitle("No results", for: .disabled)
-    }
-    
-    func setDefaultColor(_ color: UIColor) {
-        button.setTitleColor(color, for: .normal)
     }
     
     func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControlEvents) {

@@ -104,7 +104,6 @@ class FiltersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        filterButton.setDefaultColor(self.view.tintColor)
         filterButton.addTarget(self, action: #selector(applyAndDismiss), for: UIControlEvents.touchUpInside)
         let toolbarItem = UIBarButtonItem(customView: filterButton.button)
         setToolbarItems([toolbarItem], animated: true)

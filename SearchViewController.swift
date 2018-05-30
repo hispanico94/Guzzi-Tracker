@@ -43,12 +43,18 @@ class SearchViewController: UIViewController {
         }
         
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Motorcycles"
+        
         navigationItem.searchController = searchController
         
         definesPresentationContext = true
         
         headerLabel.text = "Search Motorcycles"
         detailLabel.text = "Tap the search bar above to search motorcycles"
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.searchController.searchBar.setPlaceholderText("Search Motorcycles", withColor: .gray)
+        self.searchController.searchBar.setIconColor(.gray)
     }
 }
