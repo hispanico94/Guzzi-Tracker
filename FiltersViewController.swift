@@ -176,6 +176,12 @@ class FiltersViewController: UITableViewController {
         return CGFloat(50)
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.backgroundView?.backgroundColor = UIColor.lightLegnanoGreen
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defer {
             tableView.deselectRow(at: indexPath, animated: true)

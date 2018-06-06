@@ -83,6 +83,12 @@ class MotorcycleInfoViewController: UITableViewController {
 
     // MARK: - Table view delegate
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.backgroundView?.backgroundColor = UIColor.lightLegnanoGreen
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.section == imageSection, indexPath.row == imageRow else { return }
         navigationController?.pushViewController(ImagesViewController(motorcycleName: motorcycle.generalInfo.name,

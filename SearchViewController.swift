@@ -48,6 +48,11 @@ class SearchViewController: UIViewController {
         
         definesPresentationContext = true
         
+        view.backgroundColor = UIColor.lightLegnanoGreen
+        
+        headerLabel.textColor = UIColor.gray
+        headerLabel.textColor = UIColor.gray
+        
         headerLabel.text = "Search Motorcycles"
         detailLabel.text = "Tap the search bar above to search motorcycles"
     }
