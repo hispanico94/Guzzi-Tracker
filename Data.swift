@@ -9,12 +9,16 @@
 import Foundation
 import Argo
 
+/// Creates and returns the motorcycle list from the json in the library directory
+/// - returns: An array of Motorcycle, nil if the data acquisition or the parsing fail
 func getMotorcycleListFromJson() -> [Motorcycle]? {
+    let libraryUrls = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)
+    
     guard
-        let jsonURL = Bundle.main.url(forResource: "info_moto", withExtension: "json"),
-        let jsonData = try? Data(contentsOf: jsonURL),
+        let infoMotoJsonUrl = libraryUrls.first?.appendingPathComponent("info_moto.json"),
+        let jsonData = try? Data(contentsOf: infoMotoJsonUrl),
         let json = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
-    else { return [] }
+    else { return nil }
     
     let file: Decoded<JsonFile> = decode(json)
     var decodedMoto: [Motorcycle]
@@ -29,6 +33,18 @@ func getMotorcycleListFromJson() -> [Motorcycle]? {
     return decodedMoto
 }
 
+/// Save the bundle's info_moto.json in the library directory if it doesn't already exists.
+func saveMotorcycleJsonToLibrary() {
+    let libraryUrls = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)
+    let infoMotoJsonUrl = libraryUrls.first!.appendingPathComponent("info_moto.json")
+    
+    let jsonBundleUrl = Bundle.main.url(forResource: "info_moto", withExtension: "json")
+    let jsonData = try! Data(contentsOf: jsonBundleUrl!)
+    
+    if !FileManager().fileExists(atPath: infoMotoJsonUrl.path) {
+        try! jsonData.write(to: infoMotoJsonUrl, options: .atomic)
+    }
+}
 
 extension Array {
     func appending (_ element: Element) -> Array {
