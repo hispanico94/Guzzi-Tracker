@@ -4,7 +4,9 @@ class SearchResultsViewController: UITableViewController {
     
     // MARK: - Properties
     
-    private let motorcycleList: [Motorcycle]
+    private weak var motorcycleStorage: Ref<Array<Motorcycle>>?
+    
+    private var motorcycleList: [Motorcycle]
     private var filteredMotorcycleList: [Motorcycle] = []
     
     // callback gets assigned in SearchViewController's viewDidLoad()
@@ -24,13 +26,24 @@ class SearchResultsViewController: UITableViewController {
     
     // MARK: - Initialization
     
-    init(motorcycleList: [Motorcycle]?) {
-        self.motorcycleList = motorcycleList ?? []
+    init(motorcycleStorage: Ref<Array<Motorcycle>>) {
+        self.motorcycleStorage = motorcycleStorage
+        self.motorcycleList = motorcycleStorage.value
+        
         super.init(nibName: nil, bundle: nil)
+        
+        self.motorcycleStorage?.add(listener: "SearchResultsViewController") { [weak self] newMotorcycles in
+            self?.motorcycleList = newMotorcycles
+            self?.searchText = self?.searchText
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        motorcycleStorage?.remove(listener: "SearchResultsViewController")
     }
     
     override func viewDidLoad() {

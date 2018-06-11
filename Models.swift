@@ -69,7 +69,6 @@ struct Motorcycle {
 
 struct JsonFile {
     let version: Int
-    let totalElements: Int
     let elements: [Motorcycle]
 }
 

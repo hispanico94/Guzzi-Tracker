@@ -130,7 +130,6 @@ extension JsonFile: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<JsonFile> {
         return curry(JsonFile.init)
             <^> json <| Key.JsonFile.version
-            <*> json <| Key.JsonFile.totalElements
             <*> json <|| Key.JsonFile.elements
     }
 }
@@ -348,21 +347,6 @@ extension Motorcycle.Engine.StrokeCycle: Comparable {
     }
 }
 
-// MARK: - Motorcycle Comparators
-
-// TO BE ERASED
-//let yearComparator = Comparator<Motorcycle> {
-//    return Int.comparator().call(($0.0.generalInfo.firstYear, $0.1.generalInfo.firstYear))
-//}
-//
-//let familyComparator = Comparator<Motorcycle> {
-//    return Optional<String>.comparator().call(($0.0.generalInfo.family, $0.1.generalInfo.family))
-//}
-//
-//let yearComparator2 = Comparator<Motorcycle>.getOn { $0.generalInfo.firstYear }
-//let familyComparator2 = Comparator<Motorcycle>.getOn { $0.generalInfo.family }
-
-
 // MARK: - Utility extensions
 
 extension Optional {
@@ -467,6 +451,35 @@ extension Array {
     /// - parameter comparator: the `Comparator<Element>` that handles the comparison
     mutating func sort(by comparator: Comparator<Element>) {
         self.sort { comparator.call(($0, $1)) == .lt }
+    }
+}
+
+extension Array {
+    
+    /// returns `self` with the new element appended at the end
+    /// - parameter element: the element to be appended
+    /// - returns: `self` with `element` appended at the end
+    func appending (_ element: Element) -> Array {
+        var mutatingSelf = self
+        mutatingSelf.append(element)
+        return mutatingSelf
+    }
+}
+
+extension Array where Element: Comparable {
+    
+    /// Sort the elements and remove duplicates.
+    /// - returns: the array sorted and without duplicates
+    func removeDuplicates() -> Array {
+        return self
+            .sorted() { $0 < $1 }
+            .reduce([]) { (accumulator, element) in
+                if let last = accumulator.last, last == element {
+                    return accumulator
+                } else {
+                    return accumulator.appending(element)
+                }
+        }
     }
 }
 

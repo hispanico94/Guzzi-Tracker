@@ -6,6 +6,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var vcFactory: VCFactory?
+    var motorcycleData: MotorcycleData?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -19,9 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Data and vcFactory initialization
         
-        saveMotorcycleJsonToLibrary()
-        let motorcycleList = getMotorcycleListFromJson()
-        vcFactory = VCFactory(motorcycleList: motorcycleList)
+        motorcycleData = MotorcycleData()
+        motorcycleData?.updateJson()
+        
+        vcFactory = VCFactory(motorcycleData: motorcycleData!)
+        
+//        saveMotorcycleJsonToLibrary()
+//        let motorcycleList = getMotorcycleListFromJson()
+//        vcFactory = VCFactory(motorcycleList: motorcycleList)
         
         // View controllers initialization
         

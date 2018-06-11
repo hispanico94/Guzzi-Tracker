@@ -12,4 +12,4 @@ Small stuff to do later:
 
 6- In BoreFilterViewController same as 5- and 4-
 
-7- In Models.swift rewrite Power.peak as Measurement<UnitPower> and update Power.swift and PowerFilterViewController accordingly
+

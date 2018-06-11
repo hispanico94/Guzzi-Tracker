@@ -4,7 +4,9 @@ class SearchViewController: UIViewController {
     
     // MARK: - Properties
     
-    private let motorcycleList: [Motorcycle]
+    private weak var motorcycleStorage: Ref<Array<Motorcycle>>?
+    
+    private var motorcycleList: [Motorcycle]
     
     private let searchController: UISearchController
     
@@ -18,18 +20,28 @@ class SearchViewController: UIViewController {
     
     // MARK: - Initialization
     
-    init(motorcycleList: [Motorcycle]?) {
-        self.motorcycleList = motorcycleList ?? []
+    init(motorcycleStorage: Ref<Array<Motorcycle>>) {
+        self.motorcycleStorage = motorcycleStorage
         
-        self.searchResultsViewController = SearchResultsViewController(motorcycleList: motorcycleList)
+        self.motorcycleList = motorcycleStorage.value
+        
+        self.searchResultsViewController = SearchResultsViewController(motorcycleStorage: motorcycleStorage)
         self.searchController = UISearchController(searchResultsController: self.searchResultsViewController)
         self.searchController.searchResultsUpdater = searchResultsViewController
         
         super.init(nibName: nil, bundle: nil)
+        
+        self.motorcycleStorage?.add(listener: "SearchViewController") { [weak self] newMotorcycles in
+            self?.motorcycleList = newMotorcycles
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        motorcycleStorage?.remove(listener: "SearchViewController")
     }
     
     override func viewDidLoad() {

@@ -4,7 +4,12 @@ class MotorcyclesViewController: UITableViewController {
     
     // MARK: - Properties
     
-    private let motorcycleList: [Motorcycle]
+    private var motorcycleList: [Motorcycle] {
+        didSet {
+            motorcycleListToShow = motorcycleList
+            sortMotorcycleList()
+        }
+    }
     
     private let motorcyclesDisplayed: Ref<Int>
     
@@ -33,6 +38,8 @@ class MotorcyclesViewController: UITableViewController {
         }
     }
     
+    private weak var motorcycleStorage: Ref<Array<Motorcycle>>?
+    
     private weak var filterStorage: Ref<Array<FilterProvider>>?
     
     private weak var orderStorage: Ref<Array<Order>>?
@@ -41,31 +48,25 @@ class MotorcyclesViewController: UITableViewController {
 
     // MARK: - Initialization
     
-    init(motorcycleList: [Motorcycle]?, vcFactory: VCFactory) {
-        if let unwrapMotorcycleList = motorcycleList {
-            self.motorcycleList = unwrapMotorcycleList
-            self.motorcycleListToShow = unwrapMotorcycleList
-            self.motorcyclesDisplayed = Ref<Int>.init(unwrapMotorcycleList.count)
-            
-        } else {
-            self.motorcycleList = []
-            self.motorcycleListToShow = []
-            self.motorcyclesDisplayed = Ref<Int>.init(0)
-        }
-        
+    init(vcFactory: VCFactory) {
         self.vcFactory = vcFactory
         
-        self.filterStorage = vcFactory.filterStorage
-        self.filters = vcFactory.filterStorage.value
+        self.motorcycleStorage = vcFactory.motorcycleData.motorcycleStorage
+        self.filterStorage = vcFactory.motorcycleData.filterStorage
+        self.orderStorage = vcFactory.motorcycleData.orderStorage
         
-        self.orderStorage = vcFactory.orderStorage
+        self.motorcycleList = vcFactory.motorcycleData.motorcycleStorage.value
+        self.filters = vcFactory.motorcycleData.filterStorage.value
+        
+        self.motorcycleListToShow = self.motorcycleList
+        
+        self.motorcyclesDisplayed = Ref<Int>.init(self.motorcycleList.count)
         
         // self.orders is initialized empty and in viewDidLoad() gets the
         // value from orderStorage in order to call its didSet observer
         self.orders = []
         
-        
-        super.init(nibName: "MotorcyclesViewController", bundle: nil)
+        super.init(nibName: nil, bundle: nil)
         
         self.filterStorage?.add(listener: "MotorcyclesViewController") { [weak self] newFilters in
             self?.filters = newFilters
@@ -73,6 +74,10 @@ class MotorcyclesViewController: UITableViewController {
         
         self.orderStorage?.add(listener: "MotorcyclesViewController") { [weak self] newOrders in
             self?.orders = newOrders
+        }
+        
+        self.motorcycleStorage?.add(listener: "MotorcyclesViewController") { [weak self] newMotorcycles in
+            self?.motorcycleList = newMotorcycles
         }
     }
     
@@ -83,6 +88,7 @@ class MotorcyclesViewController: UITableViewController {
     deinit {
         filterStorage?.remove(listener: "MotorcyclesViewController")
         orderStorage?.remove(listener: "MotorcyclesViewController")
+        motorcycleStorage?.remove(listener: "MotorcyclesViewController")
     }
     
     override func viewDidLoad() {

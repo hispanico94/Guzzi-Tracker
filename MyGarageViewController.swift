@@ -4,23 +4,31 @@ class MyGarageViewController: UITableViewController {
     
     // MARK: - Properties
     
-    private let motorcycleList: [Motorcycle]
+    private weak var motorcycleStorage: Ref<Array<Motorcycle>>?
+    
+    private var motorcycleList: [Motorcycle]
     private var favoritesMotorcyles: [Motorcycle] = []
     private let favoriteList = FavoritesList.sharedFavoritesList
     
     // MARK: - Initialization
     
-    init(motorcycleList: [Motorcycle]?) {
-        if let unwrapMotorcycleList = motorcycleList {
-            self.motorcycleList = unwrapMotorcycleList
-        } else {
-            self.motorcycleList = []
-        }
+    init(motorcycleStorage: Ref<Array<Motorcycle>>) {
+        self.motorcycleStorage = motorcycleStorage
+        self.motorcycleList = motorcycleStorage.value
+        
         super.init(style: .plain)
+        
+        self.motorcycleStorage?.add(listener: "MyGarageViewController") { [weak self] newMotorcycles in
+            self?.motorcycleList = newMotorcycles
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        motorcycleStorage?.remove(listener: "MyGarageViewController")
     }
     
     override func viewDidLoad() {
