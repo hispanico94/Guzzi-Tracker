@@ -1,11 +1,3 @@
-//
-//  Models.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 28/02/17.
-//  Copyright © 2017 PaoloRocca. All rights reserved.
-//
-
 import Foundation
 
 // MARK: - Model Structs

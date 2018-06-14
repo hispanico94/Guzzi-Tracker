@@ -1,4 +1,4 @@
-public final class Ref<T> {
+final class Ref<T> {
     public var value: T {
         didSet {
             notify()

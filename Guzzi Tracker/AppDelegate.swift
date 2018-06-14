@@ -25,10 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         vcFactory = VCFactory(motorcycleData: motorcycleData!)
         
-//        saveMotorcycleJsonToLibrary()
-//        let motorcycleList = getMotorcycleListFromJson()
-//        vcFactory = VCFactory(motorcycleList: motorcycleList)
-        
         // View controllers initialization
         
         let firstVC = UINavigationController(rootViewController: vcFactory!.makeMotorcyclesVC())

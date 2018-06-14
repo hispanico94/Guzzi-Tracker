@@ -13,7 +13,7 @@
 		CF0ED0831E6F15E8008BAB23 /* MotorcycleImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0ED0811E6F15E8008BAB23 /* MotorcycleImagesCell.swift */; };
 		CF0ED0841E6F15E8008BAB23 /* MotorcycleImagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0ED0821E6F15E8008BAB23 /* MotorcycleImagesCell.xib */; };
 		CF0F546A1E819FEC0059650F /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F54691E819FEC0059650F /* Key.swift */; };
-		CF0F546C1E81A06A0059650F /* OLDOrder&Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F546B1E81A06A0059650F /* OLDOrder&Filter.swift */; };
+		CF0F546C1E81A06A0059650F /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F546B1E81A06A0059650F /* Elements.swift */; };
 		CF1A41D61E60808C00E76F11 /* MotorcyclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */; };
 		CF1A41D71E60808C00E76F11 /* MotorcyclesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */; };
 		CF1A41E21E6081F000E76F11 /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A41E11E6081F000E76F11 /* VCFactory.swift */; };
@@ -67,7 +67,6 @@
 		CF98DB2020849F68002EFC9B /* DisplacementFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */; };
 		CF9FD436207624A9003F66F4 /* MinMaxYearFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */; };
 		CF9FD437207624A9003F66F4 /* MinMaxYearFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */; };
-		CFA481801E82F3D700D101E0 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA4817F1E82F3D700D101E0 /* Typealiases.swift */; };
 		CFA60557207B541500F6AF27 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA60556207B541500F6AF27 /* Family.swift */; };
 		CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB03F11E60432E0032BD11 /* AppDelegate.swift */; };
 		CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAB03F81E60432E0032BD11 /* Assets.xcassets */; };
@@ -96,7 +95,7 @@
 		CF0ED0811E6F15E8008BAB23 /* MotorcycleImagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleImagesCell.swift; sourceTree = "<group>"; };
 		CF0ED0821E6F15E8008BAB23 /* MotorcycleImagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleImagesCell.xib; sourceTree = "<group>"; };
 		CF0F54691E819FEC0059650F /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		CF0F546B1E81A06A0059650F /* OLDOrder&Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OLDOrder&Filter.swift"; sourceTree = "<group>"; };
+		CF0F546B1E81A06A0059650F /* Elements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 		CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotorcyclesViewController.swift; path = "Guzzi Tracker/MotorcyclesViewController.swift"; sourceTree = "<group>"; };
 		CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MotorcyclesViewController.xib; path = "Guzzi Tracker/MotorcyclesViewController.xib"; sourceTree = "<group>"; };
 		CF1A41E11E6081F000E76F11 /* VCFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCFactory.swift; sourceTree = "<group>"; };
@@ -150,7 +149,6 @@
 		CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplacementFilterViewController.xib; sourceTree = "<group>"; };
 		CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinMaxYearFilterViewController.swift; sourceTree = "<group>"; };
 		CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MinMaxYearFilterViewController.xib; sourceTree = "<group>"; };
-		CFA4817F1E82F3D700D101E0 /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		CFA60556207B541500F6AF27 /* Family.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
 		CFAB03EE1E60432E0032BD11 /* Guzzi Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guzzi Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAB03F11E60432E0032BD11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,10 +193,8 @@
 			children = (
 				CF8CCE991E65D10400F4A37E /* Models.swift */,
 				CF0F54691E819FEC0059650F /* Key.swift */,
-				CFAC091C20AC1C7300689C5A /* FavoritesList.swift */,
-				CF0F546B1E81A06A0059650F /* OLDOrder&Filter.swift */,
+				CF0F546B1E81A06A0059650F /* Elements.swift */,
 				CF8C6282206FC629002B8CF6 /* Filter.swift */,
-				CF8C6284206FC7DD002B8CF6 /* Ref.swift */,
 				CF1CDB7C206FCCBF007BCE95 /* Predicate.swift */,
 				CF73C44620931E5B00596118 /* Function.swift */,
 				CF73C440209315F200596118 /* Ordering.swift */,
@@ -238,6 +234,16 @@
 				CF466A14208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift */,
 			);
 			name = Filters;
+			sourceTree = "<group>";
+		};
+		CF8713D920D2617B00765C94 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CFD4E44E1E66DC8000EFAB57 /* Data.swift */,
+				CFAC091C20AC1C7300689C5A /* FavoritesList.swift */,
+				CF8C6284206FC7DD002B8CF6 /* Ref.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		CF8CCE8B1E65CAEA00F4A37E /* ViewControllers */ = {
@@ -290,9 +296,8 @@
 			isa = PBXGroup;
 			children = (
 				CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */,
-				CFD4E44E1E66DC8000EFAB57 /* Data.swift */,
 				CFF259561E6C73FC0092A005 /* Protocols.swift */,
-				CFA4817F1E82F3D700D101E0 /* Typealiases.swift */,
+				CF8713D920D2617B00765C94 /* Classes */,
 				CF0F54681E819FD00059650F /* Structs */,
 			);
 			name = Elements;
@@ -512,7 +517,7 @@
 				CF98DB1C20849A44002EFC9B /* Displacement.swift in Sources */,
 				CF419AFE1E6D643300EA7B74 /* MotorcycleInfoViewController.swift in Sources */,
 				CFAC091D20AC1C7300689C5A /* FavoritesList.swift in Sources */,
-				CF0F546C1E81A06A0059650F /* OLDOrder&Filter.swift in Sources */,
+				CF0F546C1E81A06A0059650F /* Elements.swift in Sources */,
 				CF73C44720931E5B00596118 /* Function.swift in Sources */,
 				CF1A41D61E60808C00E76F11 /* MotorcyclesViewController.swift in Sources */,
 				CFF259571E6C73FC0092A005 /* Protocols.swift in Sources */,
@@ -535,7 +540,6 @@
 				CF8306532087342000570E60 /* Bore.swift in Sources */,
 				CF73C4442093188A00596118 /* ComparatorsViewController.swift in Sources */,
 				CF56823B20B6A3ED00B52AEB /* FilterButton.swift in Sources */,
-				CFA481801E82F3D700D101E0 /* Typealiases.swift in Sources */,
 				CF41DEC020A6D6EA00F4A508 /* SearchViewController.swift in Sources */,
 				CF0F546A1E819FEC0059650F /* Key.swift in Sources */,
 				CF8C6285206FC7DD002B8CF6 /* Ref.swift in Sources */,

@@ -68,8 +68,6 @@ class ImagesViewController: UITableViewController {
         else { return }
         
         present(SingleImageViewController(imageToBeDisplayed: image), animated: true, completion: nil)
-        
-        //navigationController?.pushViewController(SingleImageViewController(imageToBeDisplayed: image), animated: false)
     }
     
     // MARK: - Private instance methods

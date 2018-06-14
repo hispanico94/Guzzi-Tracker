@@ -1,6 +1,6 @@
 import Foundation
 
-public final class FavoritesList {
+final class FavoritesList {
     static let sharedFavoritesList = FavoritesList()
     private(set) var favorites: [Int]
     
