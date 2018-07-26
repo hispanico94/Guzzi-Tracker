@@ -1,10 +1,6 @@
-Small stuff to do later:
-
 1- in ImageCell.swift modify the motorcycleImageView.af_setImage(withURL: url) in set(_:) function for placing a motorcycle_image_placeholder while downloading the image
 
 2- implement "swipe down to dismiss" for SingleImageViewController.swift
-
-3- try to find a better implementation of tableView(_:, didSelectRowAt:) in ImagesViewController.swift
 
 4- In WeightFilterViewController make weights in picker by step of ten kilograms (rounding the lightest weight to next lower value divisible by 10 and the heaviest weight to next higher value divisible by 10). The min weight picker cannot go to heaviest weight (one step down) and max weight picker cannot go to lightest weight (one step up). When min weight goes over the max weight the latter goes automatically one step up the min weight. When max weight goes under the min weight the latter goes automatically one step down the max weight
 

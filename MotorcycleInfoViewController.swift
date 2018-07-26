@@ -22,8 +22,8 @@ class MotorcycleInfoViewController: UITableViewController {
     
     
     // Constants used for determine the selected cell (only the image cell can be selected)
-    let imageSection = 5
-    let imageRow = 0
+//    let imageSection = 5
+//    let imageRow = 0
     
     // MARK: - Initialization
     
@@ -90,12 +90,8 @@ class MotorcycleInfoViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard indexPath.section == imageSection, indexPath.row == imageRow else { return }
-        navigationController?.pushViewController(ImagesViewController(motorcycleName: motorcycle.generalInfo.name,
-                                                                      imagesUrls: motorcycleArray[imageSection].sectionElements[imageRow] as! RowImage,
-                                                                      nibName: "ImagesViewController",
-                                                                      bundle: nil),
-                                                 animated: true)
+        let selectedCell = motorcycleArray[indexPath.section].sectionElements[indexPath.row]
+        handle(cellSelection: selectedCell.selectionBehavior, nextViewControllerTitle: motorcycle.generalInfo.name)
     }
     
     // MARK: - Private instance methods

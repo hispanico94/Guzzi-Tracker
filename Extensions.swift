@@ -158,6 +158,10 @@ extension RowImage: CellRepresentable {
                             .getOrElse(MotorcycleImagesCell.getCell()) as! MotorcycleImagesCell
         return cell.setText(withElementNumber: self.urls.count)
     }
+    
+    var selectionBehavior: CellSelection {
+        return .showImages(imageURLs: urls)
+    }
 }
 
 extension URL: CellRepresentable {
@@ -571,6 +575,21 @@ extension UIImage {
 
 
 
+
+extension UIViewController {
+    func handle(cellSelection: CellSelection, nextViewControllerTitle: String) {
+        switch cellSelection {
+        case .ignored:
+            break
+        case let .showImages(imageURLs):
+            navigationController?.pushViewController(ImagesViewController(motorcycleName: nextViewControllerTitle,
+                                                                          imagesUrls: imageURLs,
+                                                                          nibName: "ImagesViewController",
+                                                                          bundle: nil),
+                                                     animated: true)
+        }
+    }
+}
 
 
 
