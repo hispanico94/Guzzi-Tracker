@@ -2,6 +2,13 @@ import UIKit
 
 protocol CellRepresentable {
     func makeTableViewCell(forTableView tableView: UITableView) -> UITableViewCell
+    var selectionBehavior: CellSelection { get }
+}
+
+extension CellRepresentable {
+    var selectionBehavior: CellSelection {
+        return .ignored
+    }
 }
 
 protocol ArrayConvertible {
@@ -17,4 +24,11 @@ protocol FilterProvider {
 protocol Monoid {
     static func <> (lhs: Self, rhs: Self) -> Self
     static var empty: Self { get }
+}
+
+
+
+enum CellSelection {
+    case ignored
+    case showImages(imageURLs: [URL])
 }

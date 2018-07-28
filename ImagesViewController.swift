@@ -20,9 +20,9 @@ class ImagesViewController: UITableViewController {
     
     // MARK: - Initialization
     
-    init(motorcycleName name: String, imagesUrls urls: RowImage, nibName: String?, bundle: Bundle?) {
+    init(motorcycleName name: String, imagesUrls urls: [URL], nibName: String?, bundle: Bundle?) {
         motorcycleName = name
-        imageUrls = urls.urls
+        imageUrls = urls
         super.init(nibName: nibName, bundle: bundle)
     }
     
