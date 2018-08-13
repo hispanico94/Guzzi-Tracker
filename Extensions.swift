@@ -3,6 +3,16 @@ import Argo
 import Runes
 import Curry
 
+extension Decoded {
+    static func pure (_ value: T) -> Decoded<T> {
+        return .success(value)
+    }
+    
+    func call <A, B> (_ value: Decoded<A>) -> Decoded<B> where T == (A) -> B {
+        return value.apply(self)
+    }
+}
+
 // MARK: - Conforming to Decodable protocol
 
 extension Motorcycle: Argo.Decodable {
@@ -20,11 +30,11 @@ extension Motorcycle: Argo.Decodable {
 
 extension Motorcycle.GeneralInfo: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.GeneralInfo> {
-        return curry(Motorcycle.GeneralInfo.init)
-            <^> json <|? Key.Motorcycle.GeneralInfo.family.jsonKey
-            <*> json <| Key.Motorcycle.GeneralInfo.name.jsonKey
-            <*> json <| Key.Motorcycle.GeneralInfo.firstYear.jsonKey
-            <*> json <|? Key.Motorcycle.GeneralInfo.lastYear.jsonKey
+        return Decoded.pure(curry(Motorcycle.GeneralInfo.init))
+            .call(json <|? Key.Motorcycle.GeneralInfo.family.jsonKey)
+            .call(json <| Key.Motorcycle.GeneralInfo.name.jsonKey)
+            .call(json <| Key.Motorcycle.GeneralInfo.firstYear.jsonKey)
+            .call(json <|? Key.Motorcycle.GeneralInfo.lastYear.jsonKey)
     }
 }
 
