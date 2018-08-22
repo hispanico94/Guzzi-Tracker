@@ -10,22 +10,52 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     private var selectedMinWeight: Measurement<UnitMass> {
         didSet {
-            if (selectedMinWeight > selectedMaxWeight) {
-                selectedMaxWeight = selectedMinWeight
-                let row = weights.index(of: selectedMinWeight) ?? (weights.count - 1)
-                weightPicker.selectRow(row, inComponent: maxWeightPickerComponent, animated: true)
+            let lastIndex = weights.count - 1
+            guard let row = weights.index(of: selectedMinWeight) else {
+                clearSelection()
+                return
             }
+            
+            if row == lastIndex {
+                
+                selectedMaxWeight = weights[row]
+                weightPicker.selectRow(row, inComponent: maxWeightPickerComponent, animated: true)
+                
+                selectedMinWeight = weights[row - 1]
+                weightPicker.selectRow(row - 1, inComponent: minWeightPickerComponent, animated: true)
+                
+            } else if selectedMinWeight >= selectedMaxWeight {
+                
+                selectedMaxWeight = weights[row + 1]
+                weightPicker.selectRow(row + 1, inComponent: maxWeightPickerComponent, animated: true)
+            }
+            
             updateCaptionLabel()
         }
     }
     
     private var selectedMaxWeight: Measurement<UnitMass> {
         didSet {
-            if (selectedMaxWeight < selectedMinWeight) {
-                selectedMinWeight = selectedMaxWeight
-                let row = weights.index(of: selectedMaxWeight) ?? 0
-                weightPicker.selectRow(row, inComponent: minWeightPickerComponent, animated: true)
+            let firstIndex = 0
+            guard let row = weights.index(of: selectedMaxWeight) else {
+                clearSelection()
+                return
             }
+            
+            if row == firstIndex {
+                
+                selectedMinWeight = weights[row]
+                weightPicker.selectRow(row, inComponent: minWeightPickerComponent, animated: true)
+                
+                selectedMaxWeight = weights[row + 1]
+                weightPicker.selectRow(row + 1 , inComponent: maxWeightPickerComponent, animated: true)
+                
+            } else if selectedMaxWeight <= selectedMinWeight {
+                
+                selectedMinWeight = weights[row - 1]
+                weightPicker.selectRow(row - 1, inComponent: minWeightPickerComponent, animated: true)
+            }
+            
             updateCaptionLabel()
         }
     }
