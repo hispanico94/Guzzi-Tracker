@@ -28,7 +28,7 @@ struct Weight {
             }
         }
     }
-    let title = "Weights"
+    let title = "Weight"
     private var caption: String {
         return "from \(minWeight.descriptionWithDecimalsIfPresent) to \(maxWeight.descriptionWithDecimalsIfPresent)"
     }
@@ -46,12 +46,23 @@ struct Weight {
             return
         }
         
-        self.weights = MotorcycleElements.weights(unwrapMotorcycleList)
+//        self.weights = MotorcycleElements.weights(unwrapMotorcycleList)
         
-        self.lightestWeight = self.weights.min() ?? safeLightest
-        self.heaviestWeight = self.weights.max() ?? safeHeaviest
-        self.minWeight = self.lightestWeight
-        self.maxWeight = self.heaviestWeight
+        let motorcycleWeights = MotorcycleElements.weights(unwrapMotorcycleList)
+        
+        self.lightestWeight = motorcycleWeights.min() ?? safeLightest
+        self.heaviestWeight = motorcycleWeights.max() ?? safeHeaviest
+        
+        let minValue = (Int(self.lightestWeight.value) / 10) * 10
+        let maxValue = ((Int(self.heaviestWeight.value) / 10) + 1) * 10
+        
+        self.minWeight = Measurement<UnitMass>(value: Double(minValue), unit: .kilograms)
+        self.maxWeight = Measurement<UnitMass>(value: Double(maxValue), unit: .kilograms)
+        
+        self.weights = Array(stride(from: minValue, through: maxValue, by: 10)).map { Measurement<UnitMass>(value: Double($0), unit: .kilograms) }
+        
+//        self.minWeight = self.lightestWeight
+//        self.maxWeight = self.heaviestWeight
     }
 }
 
