@@ -82,8 +82,8 @@ struct MotorcycleComparator {
     static let yearAscending = Comparator<Motorcycle>.getOn { $0.generalInfo.firstYear }
     static let yearDescending = Comparator<Motorcycle>.getOn(ascending: false) { $0.generalInfo.firstYear }
     
-    static let displacementAscending = Comparator<Motorcycle>.getOn { $0.engine.displacement }
-    static let displacementDescending = Comparator<Motorcycle>.getOn(ascending: false) { $0.engine.displacement }
+    static let displacementAscending = Comparator<Motorcycle>.getOn { $0.engine.displacement.real }
+    static let displacementDescending = Comparator<Motorcycle>.getOn(ascending: false) { $0.engine.displacement.real }
     
     static let boreAscending = Comparator<Motorcycle>.getOn { $0.engine.bore }
     static let boreDescending = Comparator<Motorcycle>.getOn(ascending: false) { $0.engine.bore }

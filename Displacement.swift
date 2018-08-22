@@ -69,7 +69,7 @@ extension Displacement: FilterProvider {
                       title: self.title,
                       caption: self.caption,
                       predicate: { motorcycle in
-                        let displacement = motorcycle.engine.displacement
+                        let displacement = motorcycle.engine.displacement.nominal
                         return displacement >= self.minDisplacement && displacement <= self.maxDisplacement
         })
     }

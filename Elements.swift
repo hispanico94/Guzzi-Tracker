@@ -4,7 +4,7 @@ struct MotorcycleElements {
     static let strokeCycles = elementsFromMotorcycles { $0.engine.strokeCycle }
     static let bores = elementsFromMotorcycles { $0.engine.bore }
     static let strokes = elementsFromMotorcycles { $0.engine.stroke }
-    static let displacements = elementsFromMotorcycles { $0.engine.displacement }
+    static let displacements = elementsFromMotorcycles { $0.engine.displacement.nominal }
     static let compressions = elementsFromMotorcycles { $0.engine.compression }
     static let powers = elementsFromMotorcycles { $0.engine.power?.peak }
     static let wheelbases = elementsFromMotorcycles { $0.frame.wheelbase }

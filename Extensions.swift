@@ -13,55 +13,103 @@ extension Decoded {
     }
 }
 
+extension JSON {
+    func get <A> (at key: String) -> Decoded<A> where A: Argo.Decodable, A == A.DecodedType {
+        return self <| key
+    }
+    
+    func get <A> (at keys: [String]) -> Decoded<A> where A: Argo.Decodable, A == A.DecodedType {
+        return self <| keys
+    }
+}
+
 // MARK: - Conforming to Decodable protocol
 
 extension Motorcycle: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle> {
-        return curry(Motorcycle.init)
-            <^> json <| Key.Motorcycle.id.jsonKey
-            <*> json <| Key.Motorcycle.GeneralInfo.jsonKey
-            <*> json <| Key.Motorcycle.Engine.jsonKey
-            <*> json <| Key.Motorcycle.Frame.jsonKey
-            <*> json <| Key.Motorcycle.CapacitiesAndPerformance.jsonKey
-            <*> json <|? Key.Motorcycle.notes.jsonKey
-            <*> json <||? Key.Motorcycle.images.jsonKey
+        
+        let id: Decoded<Int> = json.get(at: Key.Motorcycle.id.jsonKey)
+        let generalInfo: Decoded<Motorcycle.GeneralInfo> = json.get(at: Key.Motorcycle.GeneralInfo.jsonKey)
+        let engine: Decoded<Motorcycle.Engine> = json.get(at: Key.Motorcycle.Engine.jsonKey)
+        let transmission: Decoded<Motorcycle.Transmission> = json.get(at: Key.Motorcycle.Transmission.jsonKey)
+        let frame: Decoded<Motorcycle.Frame> = json.get(at: Key.Motorcycle.Frame.jsonKey)
+        let brakes: Decoded<Motorcycle.Brakes> = json.get(at: Key.Motorcycle.Brakes.jsonKey)
+        let capacities: Decoded<Motorcycle.CapacitiesAndPerformance> = json.get(at: Key.Motorcycle.CapacitiesAndPerformance.jsonKey)
+        let images: Decoded<[URL]?> = json.get(at: Key.Motorcycle.images.jsonKey).orNil()
+        
+        return Decoded.pure(curry(Motorcycle.init))
+            .call(id)
+            .call(generalInfo)
+            .call(engine)
+            .call(transmission)
+            .call(frame)
+            .call(brakes)
+            .call(capacities)
+            .call(Decoded.pure(nil)) //notes
+            .call(images)
     }
 }
 
 extension Motorcycle.GeneralInfo: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.GeneralInfo> {
+        
+        let family: Decoded<String?> = json.get(at: Key.Motorcycle.GeneralInfo.family.jsonKey).orNil()
+        let name: Decoded<String> = json.get(at: Key.Motorcycle.GeneralInfo.name.jsonKey)
+        let firstYear: Decoded<Int> = json.get(at: Key.Motorcycle.GeneralInfo.firstYear.jsonKey)
+        let lastYear: Decoded<Int?> = json.get(at: Key.Motorcycle.GeneralInfo.lastYear.jsonKey).orNil()
+        
         return Decoded.pure(curry(Motorcycle.GeneralInfo.init))
-            .call(json <|? Key.Motorcycle.GeneralInfo.family.jsonKey)
-            .call(json <| Key.Motorcycle.GeneralInfo.name.jsonKey)
-            .call(json <| Key.Motorcycle.GeneralInfo.firstYear.jsonKey)
-            .call(json <|? Key.Motorcycle.GeneralInfo.lastYear.jsonKey)
+            .call(family)
+            .call(name)
+            .call(firstYear)
+            .call(lastYear)
     }
 }
 
 extension Motorcycle.Engine: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.Engine> {
-        let configuration: Decoded<String> = json <| Key.Motorcycle.Engine.configuration.jsonKey
-        let strokeCycle: Decoded<StrokeCycle> = json <| Key.Motorcycle.Engine.strokeCycle.jsonKey
-        let boreDouble: Decoded<Double> = json <| Key.Motorcycle.Engine.bore.jsonKey
-        let strokeDouble: Decoded<Double> = json <| Key.Motorcycle.Engine.stroke.jsonKey
-        let displacementDouble: Decoded<Double> = json <| Key.Motorcycle.Engine.displacement.jsonKey
-        let compression: Decoded<Double> = json <| Key.Motorcycle.Engine.compression.jsonKey
-        let power: Decoded<Power?> = json <|? Key.Motorcycle.Engine.Power.jsonKey
-        let feedSystem: Decoded<String> = json <| Key.Motorcycle.Engine.feedSystem.jsonKey
         
-        let bore = boreDouble.map { Measurement<UnitLength>(value: $0, unit: .millimeters) }
-        let stroke = strokeDouble.map { Measurement<UnitLength>(value: $0, unit: .millimeters) }
-        let displacement = displacementDouble.map { Measurement<UnitVolume>(value: $0, unit: .engineCubicCentimeters) }
+        let strokeCycle: Decoded<StrokeCycle> = json.get(at: Key.Motorcycle.Engine.strokeCycle.jsonKey)
         
-        return curry(Motorcycle.Engine.init)
-            <^> configuration
-            <*> strokeCycle
-            <*> bore
-            <*> stroke
-            <*> displacement
-            <*> compression
-            <*> power
-            <*> feedSystem
+        let bore: Decoded<Measurement<UnitLength>> = json
+            .get(at: Key.Motorcycle.Engine.bore.jsonKey)
+            .map { Measurement<UnitLength>(value: $0, unit: .millimeters) }
+        
+        let stroke: Decoded<Measurement<UnitLength>> = json
+            .get(at: Key.Motorcycle.Engine.stroke.jsonKey)
+            .map { Measurement<UnitLength>(value: $0, unit: .millimeters) }
+        
+        let displacement: Decoded<Displacement> = json.get(at: Key.Motorcycle.Engine.Displacement.jsonKey)
+        let compression: Decoded<Double> = json.get(at: Key.Motorcycle.Engine.compression.jsonKey)
+        let power: Decoded<Power?> = json.get(at: Key.Motorcycle.Engine.Power.jsonKey).orNil()
+        
+        return Decoded.pure(curry(Motorcycle.Engine.init))
+            .call(Decoded.pure(nil)) //configuration
+            .call(strokeCycle)
+            .call(bore)
+            .call(stroke)
+            .call(displacement)
+            .call(compression)
+            .call(power)
+            .call(Decoded.pure(nil)) //feed
+            .call(Decoded.pure(nil)) //ignition
+    }
+}
+
+extension Motorcycle.Engine.Displacement: Argo.Decodable {
+    static func decode(_ json: JSON) -> Decoded<Motorcycle.Engine.Displacement> {
+        
+        let realDisplacement: Decoded<Measurement<UnitVolume>> = json
+            .get(at: Key.Motorcycle.Engine.Displacement.real.jsonKey)
+            .map { Measurement<UnitVolume>(value: $0, unit: .engineCubicCentimeters) }
+        
+        let nominalDisplacement: Decoded<Measurement<UnitVolume>> = json
+            .get(at: Key.Motorcycle.Engine.Displacement.nominal.jsonKey)
+            .map { Measurement<UnitVolume>(value: $0, unit: .engineCubicCentimeters) }
+        
+        return Decoded.pure(curry(Motorcycle.Engine.Displacement.init))
+            .call(realDisplacement)
+            .call(nominalDisplacement)
     }
 }
 
@@ -70,59 +118,153 @@ extension Motorcycle.Engine.StrokeCycle: Argo.Decodable { }
 extension Motorcycle.Engine.Power: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.Engine.Power> {
         
-        let powerDouble: Decoded<Double> = json <| Key.Motorcycle.Engine.Power.peak.jsonKey
-        let rpm: Decoded<Int> = json <| Key.Motorcycle.Engine.Power.rpm.jsonKey
+        let power: Decoded<Measurement<UnitPower>> = json
+            .get(at: Key.Motorcycle.Engine.Power.peak.jsonKey)
+            .map { Measurement<UnitPower>(value: $0, unit: .horsepower) }
         
-        let power = powerDouble.map { Measurement<UnitPower>(value: $0, unit: .horsepower) }
+        let rpm: Decoded<Int> = json.get(at: Key.Motorcycle.Engine.Power.rpm.jsonKey)
         
-        return curry(Motorcycle.Engine.Power.init)
-            <^> power
-            <*> rpm
+        return Decoded.pure(curry(Motorcycle.Engine.Power.init))
+            .call(power)
+            .call(rpm)
+    }
+}
+
+extension Motorcycle.Transmission: Argo.Decodable {
+    static func decode(_ json: JSON) -> Decoded<Motorcycle.Transmission> {
+        return Decoded.pure(curry(Motorcycle.Transmission.init))
+            .call(.pure(nil)) //gearbox
+            .call(.pure(nil)) //clutch
+            .call(.pure(nil)) //finalDrive
     }
 }
 
 extension Motorcycle.Frame: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Motorcycle.Frame> {
-        let type: Decoded<String> = json <| Key.Motorcycle.Frame.type.jsonKey
-        let frontSuspension: Decoded<String> = json <| Key.Motorcycle.Frame.frontSuspension.jsonKey
-        let rearSuspension: Decoded<String> = json <| Key.Motorcycle.Frame.rearSuspension.jsonKey
-        let wheelbaseDouble: Decoded<Double> = json <| Key.Motorcycle.Frame.wheelbase.jsonKey
-        let brakes: Decoded<String> = json <| Key.Motorcycle.Frame.brakes.jsonKey
         
-        let wheelbase = wheelbaseDouble.map { Measurement<UnitLength>(value: $0, unit: .millimeters) }
+        let wheelbase: Decoded<Measurement<UnitLength>> = json
+            .get(at: Key.Motorcycle.Frame.wheelbase.jsonKey)
+            .map { Measurement<UnitLength>(value: $0, unit: .millimeters) }
         
-        return curry(Motorcycle.Frame.init)
-            <^> type
-            <*> frontSuspension
-            <*> rearSuspension
-            <*> wheelbase
-            <*> brakes
+        let wheels: Decoded<String> = json.get(at: Key.Motorcycle.Frame.wheels.jsonKey)
+        let tyres: Decoded<String> = json.get(at: Key.Motorcycle.Frame.tyres.jsonKey)
+        
+        return Decoded.pure(curry(Motorcycle.Frame.init))
+            .call(.pure(nil)) //type
+            .call(.pure(nil)) //frontSuspension
+            .call(.pure(nil)) //rearSuspension
+            .call(wheelbase)
+            .call(wheels)
+            .call(tyres)
+    }
+}
+
+extension Motorcycle.Brakes: Argo.Decodable {
+    static func decode(_ json: JSON) -> Decoded<Motorcycle.Brakes> {
+        
+        let frontSize: Decoded<Measurement<UnitLength>?> = json
+            .get(at: Key.Motorcycle.Brakes.frontSize.jsonKey)
+            .orNil()
+            .map { $0.map { Measurement<UnitLength>(value: $0, unit: .millimeters) } }
+        
+        let rearSize: Decoded<Measurement<UnitLength>?> = json
+            .get(at: Key.Motorcycle.Brakes.rearSize.jsonKey)
+            .orNil()
+            .map { $0.map { Measurement<UnitLength>(value: $0, unit: .millimeters) } }
+        
+        return Decoded.pure(curry(Motorcycle.Brakes.init))
+            .call(.pure(nil)) //type
+            .call(frontSize)
+            .call(rearSize)
+            .call(.pure(nil)) //notes
     }
 }
 
 extension Motorcycle.CapacitiesAndPerformance: Argo.Decodable {
+    
     static func decode(_ json: JSON) -> Decoded<Motorcycle.CapacitiesAndPerformance> {
-        let fuelCapacityDouble: Decoded<Double?> = json <|? Key.Motorcycle.CapacitiesAndPerformance.fuelCapacity.jsonKey
-        let lubricantCapacityDouble: Decoded<Double?> = json <|? Key.Motorcycle.CapacitiesAndPerformance.lubricantCapacity.jsonKey
-        let weightDouble: Decoded<Double> = json <| Key.Motorcycle.CapacitiesAndPerformance.weight.jsonKey
-        let maxSpeedDouble: Decoded<Double?> = json <|? Key.Motorcycle.CapacitiesAndPerformance.maxSpeed.jsonKey
-        let fuelConsumptionDouble: Decoded<Double?> = json <|? Key.Motorcycle.CapacitiesAndPerformance.fuelConsumption.jsonKey
+        let fuelCapacity: Decoded<Measurement<UnitVolume>?> = json
+            .get(at: Key.Motorcycle.CapacitiesAndPerformance.fuelCapacity.jsonKey)
+            .orNil()
+            .map { $0.map { Measurement<UnitVolume>(value: $0, unit: .liters) } }
         
-        let fuelCapacity = fuelCapacityDouble.map { $0.map { Measurement<UnitVolume>(value: $0, unit: .liters) } }
-        let lubricantCapacity = lubricantCapacityDouble.map { $0.map { Measurement<UnitVolume>(value: $0, unit: .liters) } }
-        let weight = weightDouble.map { Measurement<UnitMass>(value: $0, unit: .kilograms) }
-        let maxSpeed = maxSpeedDouble.map { $0.map { Measurement<UnitSpeed>(value: $0, unit: .kilometersPerHour) } }
-        let fuelConsumption = fuelConsumptionDouble.map { $0.map { Measurement<UnitFuelEfficiency>(value: $0, unit: .litersPer100Kilometers) } }
+        let lubricantCapacity: Decoded<Measurement<UnitVolume>?> = json
+            .get(at: Key.Motorcycle.CapacitiesAndPerformance.lubricantCapacity.jsonKey)
+            .orNil()
+            .map { $0.map { Measurement<UnitVolume>(value: $0, unit: .liters) } }
         
-        return curry(Motorcycle.CapacitiesAndPerformance.init)
-            <^> fuelCapacity
-            <*> lubricantCapacity
-            <*> weight
-            <*> maxSpeed
-            <*> fuelConsumption
+        let weight: Decoded<Measurement<UnitMass>> = json
+            .get(at: Key.Motorcycle.CapacitiesAndPerformance.weight.jsonKey)
+            .map { Measurement<UnitMass>(value: $0, unit: .kilograms) }
+        
+        let maxSpeed: Decoded<Measurement<UnitSpeed>?> = json
+            .get(at: Key.Motorcycle.CapacitiesAndPerformance.maxSpeed.jsonKey)
+            .orNil()
+            .map { $0.map { Measurement<UnitSpeed>(value: $0, unit: .kilometersPerHour) } }
+        
+        let fuelConsumption: Decoded<Measurement<UnitFuelEfficiency>?> = json
+            .get(at: Key.Motorcycle.CapacitiesAndPerformance.fuelConsumption.jsonKey)
+            .orNil()
+            .map { $0.map { Measurement<UnitFuelEfficiency>(value: $0, unit: .litersPer100Kilometers) } }
+        
+        return Decoded.pure(curry(Motorcycle.CapacitiesAndPerformance.init))
+            .call(fuelCapacity)
+            .call(lubricantCapacity)
+            .call(weight)
+            .call(maxSpeed)
+            .call(fuelConsumption)
     }
 }
 
+extension Texts: Argo.Decodable {
+    static func decode(_ json: JSON) -> Decoded<Texts> {
+        var languageCode = "en"
+        if let unwrappedLanguageCode = Calendar.current.locale?.languageCode, unwrappedLanguageCode == "it" {
+            languageCode = "it"
+        }
+        
+        let engineConfiguration: Decoded<String> = json.get(at: [Key.Motorcycle.Engine.configuration.jsonKey, languageCode])
+        let engineFeed: Decoded<String> = json.get(at: [Key.Motorcycle.Engine.feed.jsonKey, languageCode])
+        let engineIgnition: Decoded<String> = json.get(at: [Key.Motorcycle.Engine.ignition.jsonKey, languageCode])
+        
+        let transmissionGearbox: Decoded<String> = json.get(at: [Key.Motorcycle.Transmission.gearbox.jsonKey, languageCode])
+        let transmissionClutch: Decoded<String> = json.get(at: [Key.Motorcycle.Transmission.clutch.jsonKey, languageCode])
+        let transmissionFinalDrive: Decoded<String> = json.get(at: [Key.Motorcycle.Transmission.finalDrive.jsonKey, languageCode])
+        
+        let frameType: Decoded<String> = json.get(at: [Key.Motorcycle.Frame.type.jsonKey, languageCode])
+        let frameFrontSuspension: Decoded<String> = json.get(at: [Key.Motorcycle.Frame.frontSuspension.jsonKey, languageCode])
+        let frameRearSuspension: Decoded<String> = json.get(at: [Key.Motorcycle.Frame.rearSuspension.jsonKey, languageCode])
+        
+        let brakesType: Decoded<String> = json.get(at: [Key.Motorcycle.Brakes.type.jsonKey, languageCode])
+        let brakesNotes: Decoded<String?> = json.get(at: [Key.Motorcycle.Brakes.notes.jsonKey, languageCode]).orNil()
+        
+        let notes: Decoded<String?> = json.get(at: [Key.Motorcycle.notes.jsonKey, languageCode]).orNil()
+        
+        
+        return Decoded.pure(curry(Texts.init))
+            .call(engineConfiguration)
+            .call(engineFeed)
+            .call(engineIgnition)
+            .call(transmissionGearbox)
+            .call(transmissionClutch)
+            .call(transmissionFinalDrive)
+            .call(frameType)
+            .call(frameFrontSuspension)
+            .call(frameRearSuspension)
+            .call(brakesType)
+            .call(brakesNotes)
+            .call(notes)
+    }
+}
+
+extension JsonFile: Argo.Decodable {
+    static func decode(_ json: JSON) -> Decoded<JsonFile> {
+        return Decoded.pure(curry(JsonFile.init))
+            .call(json.get(at: Key.JsonFile.version))
+            .call(json.get(at: Key.JsonFile.elements))
+            .call(json.get(at: Key.JsonFile.texts))
+    }
+}
 
 extension URL: Argo.Decodable {
     public static func decode(_ json: JSON) -> Decoded<URL> {
@@ -136,11 +278,64 @@ extension URL: Argo.Decodable {
     }
 }
 
-extension JsonFile: Argo.Decodable {
-    static func decode(_ json: JSON) -> Decoded<JsonFile> {
-        return curry(JsonFile.init)
-            <^> json <| Key.JsonFile.version
-            <*> json <|| Key.JsonFile.elements
+extension Decoded {
+    static func materialize(_ throwing: () throws -> T) -> Decoded {
+        return Argo.materialize(throwing)
+    }
+}
+
+extension Decoded {
+    func orNil() -> Decoded<T?> {
+        switch self {
+        case let .success(value):
+            return .success(Optional(value))
+        case .failure(_):
+            return .success(nil)
+        }
+    }
+}
+
+//extension Optional: Argo.Decodable where Wrapped: Argo.Decodable, Wrapped.DecodedType == Wrapped {
+//    public typealias DecodedType = Optional
+//
+//    public static func decode(_ json: JSON) -> Decoded<Optional<Wrapped>> {
+//        if case .null = json {
+//            return .success(nil)
+//        }
+//
+//        return Wrapped.decode(json).map { Optional($0) }
+//    }
+//}
+
+extension Array: Argo.Decodable where Element: Argo.Decodable, Element.DecodedType == Element {
+    public typealias DecodedType = Array
+    
+    public static func decode(_ json: JSON) -> Decoded<Array> {
+        guard case let .array(array) = json else {
+            return .typeMismatch(expected: "array", actual: json)
+        }
+        
+        return .materialize {
+            try array.map { internalJson in
+                try Element.decode(internalJson).dematerialize()
+            }
+        }
+    }
+}
+
+extension Dictionary: Argo.Decodable where Key == String, Value: Argo.Decodable, Value.DecodedType == Value {
+    public typealias DecodedType = Dictionary
+    
+    public static func decode(_ json: JSON) -> Decoded<Dictionary<Key, Value>> {
+        guard case let .object(dict) = json else {
+            return .typeMismatch(expected: "object", actual: json)
+        }
+
+        return .materialize {
+            try dict.mapValues { internalJson in
+                try Value.decode(internalJson).dematerialize()
+            }
+        }
     }
 }
 
@@ -192,56 +387,44 @@ extension Motorcycle.GeneralInfo {
 }
 
 extension Motorcycle.Engine {
-    var getConfigurationString: String { return configuration }
+    var getConfigurationString: String { return configuration ?? "---" }
     var getCompressionString: String { return "\(compression) : 1" }
     var getPowerString: String { return power?.formattedValue ?? "---" }
-    var getFeedSystemString: String { return feedSystem }
-    
-    func getBoreString() -> String {
-        return bore.description
-    }
-    
-    func getStrokeString() -> String {
-        return stroke.description
-    }
-    
-    func getDisplacementString() -> String {
-        return displacement.description
-    }
+    var getFeedString: String { return feed ?? "---" }
+    var getIgnitionString: String { return ignition ?? "---" }
+    var getBoreString: String { return bore.description }
+    var getStrokeString: String { return stroke.description }
+    var getDisplacementString: String { return displacement.description }
+}
+
+extension Motorcycle.Transmission {
+    var getGearboxString: String { return gearbox ?? "---" }
+    var getClutchString: String { return clutch ?? "---" }
+    var getFinalDriveString: String { return finalDrive ?? "---" }
 }
 
 extension Motorcycle.Frame {
-    var getTypeString: String { return type }
-    var getFrontSuspensionString: String { return frontSuspension }
-    var getRearSuspensionString: String { return rearSuspension }
-    var getBrakesString: String { return brakes }
-    
-    func getWheelbaseString() -> String {
-        return Int(wheelbase.value).description + " " + wheelbase.unit.symbol
-    }
+    var getTypeString: String { return type ?? "---" }
+    var getFrontSuspensionString: String { return frontSuspension ?? "---" }
+    var getRearSuspensionString: String { return rearSuspension ?? "---" }
+    var getWheelbaseString: String { return wheelbase.descriptionWithDecimalsIfPresent }
+    var getWheelsString: String { return wheels }
+    var getTyresString: String { return tyres }
+}
+
+extension Motorcycle.Brakes {
+    var getTypeString: String { return type ?? "---" }
+    var getFrontSizeString: String { return frontSize?.descriptionWithDecimalsIfPresent ?? "---" }
+    var getRearSizeString: String { return rearSize?.descriptionWithDecimalsIfPresent ?? "---" }
+    var getNotesString: String { return notes ?? "---" }
 }
 
 extension Motorcycle.CapacitiesAndPerformance {
-    func getFuelCapacityString() -> String {
-        return fuelCapacity?.description ?? "---"
-    }
-    
-    func getLubricantCapacityString() -> String {
-        return lubricantCapacity?.description ?? "---"
-    }
-    
-    func getWeightString() -> String {
-        return Int(weight.value).description + " " + weight.unit.symbol
-    }
-    
-    func getMaxSpeedString() -> String {
-        guard let unwrappedMaxSpeed = maxSpeed else { return "---" }
-        return Int(unwrappedMaxSpeed.value).description + " " + unwrappedMaxSpeed.unit.symbol
-    }
-    
-    func getFuelConsumptionString() -> String {
-        return fuelConsumption?.description ?? "---"
-    }
+    var getFuelCapacityString: String { return fuelCapacity?.descriptionWithDecimalsIfPresent ?? "---" }
+    var getLubricantCapacityString: String { return lubricantCapacity?.descriptionWithDecimalsIfPresent ?? "---" }
+    var getWeightString: String { return weight.descriptionWithDecimalsIfPresent }
+    var getMaxSpeedString: String { return maxSpeed?.descriptionWithDecimalsIfPresent ?? "---" }
+    var getFuelConsumptionString: String { return fuelConsumption?.description ?? "---" }
 }
 
 // MARK: - Conforming to ArrayConvertible protocol
@@ -264,20 +447,39 @@ extension Motorcycle.GeneralInfo: ArrayConvertible {
 extension Motorcycle.Engine: ArrayConvertible {
     func convertToArray() -> [CellRepresentable] {
         var elements: [RowElement] = []
+        elements.reserveCapacity(8)
+        
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.configuration.guiKey,
                                    rowValue: getConfigurationString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.bore.guiKey,
-                                   rowValue: getBoreString()))
+                                   rowValue: getBoreString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.stroke.guiKey,
-                                   rowValue: getStrokeString()))
-        elements.append(RowElement(rowKey: Key.Motorcycle.Engine.displacement.guiKey,
-                                   rowValue: getDisplacementString()))
+                                   rowValue: getStrokeString))
+        elements.append(RowElement(rowKey: Key.Motorcycle.Engine.Displacement.guiKey,
+                                   rowValue: getDisplacementString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.compression.guiKey,
                                    rowValue: getCompressionString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Engine.Power.guiKey,
                                    rowValue: getPowerString))
-        elements.append(RowElement(rowKey: Key.Motorcycle.Engine.feedSystem.guiKey,
-                                   rowValue: getFeedSystemString))
+        elements.append(RowElement(rowKey: Key.Motorcycle.Engine.feed.guiKey,
+                                   rowValue: getFeedString))
+        elements.append(RowElement(rowKey: Key.Motorcycle.Engine.ignition.guiKey,
+                                   rowValue: getIgnitionString))
+        return elements
+    }
+}
+
+extension Motorcycle.Transmission: ArrayConvertible {
+    func convertToArray() -> [CellRepresentable] {
+        var elements: [RowElement] = []
+        elements.reserveCapacity(3)
+        
+        elements.append(RowElement(rowKey: Key.Motorcycle.Transmission.gearbox.guiKey,
+                                   rowValue: getGearboxString))
+        elements.append(RowElement(rowKey: Key.Motorcycle.Transmission.clutch.guiKey,
+                                   rowValue: getClutchString))
+        elements.append(RowElement(rowKey: Key.Motorcycle.Transmission.finalDrive.guiKey,
+                                   rowValue: getFinalDriveString))
         return elements
     }
 }
@@ -285,6 +487,8 @@ extension Motorcycle.Engine: ArrayConvertible {
 extension Motorcycle.Frame: ArrayConvertible {
     func convertToArray() -> [CellRepresentable] {
         var elements: [RowElement] = []
+        elements.reserveCapacity(6)
+        
         elements.append(RowElement(rowKey: Key.Motorcycle.Frame.type.guiKey,
                                    rowValue: getTypeString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Frame.frontSuspension.guiKey,
@@ -292,9 +496,32 @@ extension Motorcycle.Frame: ArrayConvertible {
         elements.append(RowElement(rowKey: Key.Motorcycle.Frame.rearSuspension.guiKey,
                                    rowValue: getRearSuspensionString))
         elements.append(RowElement(rowKey: Key.Motorcycle.Frame.wheelbase.guiKey,
-                                   rowValue: getWheelbaseString()))
-        elements.append(RowElement(rowKey: Key.Motorcycle.Frame.brakes.guiKey,
-                                   rowValue: getBrakesString))
+                                   rowValue: getWheelbaseString))
+        elements.append(RowElement(rowKey: Key.Motorcycle.Frame.wheels.guiKey,
+                                   rowValue: getWheelsString))
+        elements.append(RowElement(rowKey: Key.Motorcycle.Frame.tyres.guiKey,
+                                   rowValue: getTyresString))
+        return elements
+    }
+}
+
+extension Motorcycle.Brakes: ArrayConvertible {
+    func convertToArray() -> [CellRepresentable] {
+        var elements: [RowElement] = []
+        elements.reserveCapacity(3)
+        
+        elements.append(RowElement(rowKey: Key.Motorcycle.Brakes.type.guiKey,
+                                   rowValue: getTypeString))
+        elements.append(RowElement(rowKey: Key.Motorcycle.Brakes.frontSize.guiKey,
+                                   rowValue: getFrontSizeString))
+        elements.append(RowElement(rowKey: Key.Motorcycle.Brakes.rearSize.guiKey,
+                                   rowValue: getRearSizeString))
+        
+        if notes != nil {
+            elements.append(RowElement(rowKey: Key.Motorcycle.Brakes.notes.guiKey,
+                                       rowValue: getNotesString))
+        }
+        
         return elements
     }
 }
@@ -302,16 +529,18 @@ extension Motorcycle.Frame: ArrayConvertible {
 extension Motorcycle.CapacitiesAndPerformance: ArrayConvertible {
     func convertToArray() -> [CellRepresentable] {
         var elements: [RowElement] = []
+        elements.reserveCapacity(5)
+        
         elements.append(RowElement(rowKey: Key.Motorcycle.CapacitiesAndPerformance.fuelCapacity.guiKey,
-                                   rowValue: getFuelCapacityString()))
+                                   rowValue: getFuelCapacityString))
         elements.append(RowElement(rowKey: Key.Motorcycle.CapacitiesAndPerformance.lubricantCapacity.guiKey,
-                                   rowValue: getLubricantCapacityString()))
+                                   rowValue: getLubricantCapacityString))
         elements.append(RowElement(rowKey: Key.Motorcycle.CapacitiesAndPerformance.weight.guiKey,
-                                   rowValue: getWeightString()))
+                                   rowValue: getWeightString))
         elements.append(RowElement(rowKey: Key.Motorcycle.CapacitiesAndPerformance.maxSpeed.guiKey,
-                                   rowValue: getMaxSpeedString()))
+                                   rowValue: getMaxSpeedString))
         elements.append(RowElement(rowKey: Key.Motorcycle.CapacitiesAndPerformance.fuelConsumption.guiKey,
-                                   rowValue: getFuelConsumptionString()))
+                                   rowValue: getFuelConsumptionString))
         return elements
     }
 }
@@ -319,12 +548,18 @@ extension Motorcycle.CapacitiesAndPerformance: ArrayConvertible {
 extension Motorcycle {
     func createArrayfromStruct() -> [SectionData] {
         var elements: [SectionData] = []
+        elements.reserveCapacity(6)
+        
         elements.append(SectionData(sectionName: Key.Motorcycle.GeneralInfo.guiKey,
                                     sectionElements: generalInfo.convertToArray()))
         elements.append(SectionData(sectionName: Key.Motorcycle.Engine.guiKey,
                                     sectionElements: engine.convertToArray()))
+        elements.append(SectionData(sectionName: Key.Motorcycle.Transmission.guiKey,
+                                    sectionElements: transmission.convertToArray()))
         elements.append(SectionData(sectionName: Key.Motorcycle.Frame.guiKey,
                                     sectionElements: frame.convertToArray()))
+        elements.append(SectionData(sectionName: Key.Motorcycle.Brakes.guiKey,
+                                    sectionElements: brakes.convertToArray()))
         elements.append(SectionData(sectionName: Key.Motorcycle.CapacitiesAndPerformance.guiKey,
                                     sectionElements: capacitiesAndPerformance.convertToArray()))
 
@@ -582,9 +817,6 @@ extension UIImage {
         return newImage
     }
 }
-
-
-
 
 extension UIViewController {
     func handle(cellSelection: CellSelection, nextViewControllerTitle: String) {

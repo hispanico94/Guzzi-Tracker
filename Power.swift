@@ -69,7 +69,16 @@ extension Power: FilterProvider {
                       title: self.title,
                       caption: self.caption,
                       predicate: { motorcycle in
-                        guard let power = motorcycle.engine.power?.peak else { return false }
+                        guard let power = motorcycle.engine.power?.peak else {
+                            
+                            // If the user selected the widest possible range of power or tapped the "Clear" button
+                            // in the filter page the motorcycle with power == nil are included in the result
+                            if self.minPower == self.smallestPower && self.maxPower == self.biggestPower {
+                                return true
+                            }
+                            
+                            return false
+                        }
                         return power >= self.minPower && power <= self.maxPower
         })
     }

@@ -16,6 +16,13 @@ class MotorcyclesViewController: UITableViewController {
     private var motorcycleListToShow: [Motorcycle] {
         didSet {
             motorcyclesDisplayed.value = motorcycleListToShow.count
+            
+            
+            let sortedMotorcycles = motorcycleListToShow.sorted { $0.id < $1.id }
+            for motorcycle in sortedMotorcycles {
+                print("\(motorcycle.id) - \(motorcycle.generalInfo.name)")
+            }
+            
             tableView.reloadData()
         }
     }

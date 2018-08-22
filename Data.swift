@@ -7,7 +7,7 @@ final class MotorcycleData {
     
     private var jsonFile: JsonFile? {
         didSet {
-            let motorcycles: [Motorcycle] = jsonFile?.elements ?? []
+            let motorcycles: [Motorcycle] = jsonFile?.getMotorcycleList() ?? []
             
             self.motorcycleStorage.value = motorcycles
             
@@ -29,7 +29,7 @@ final class MotorcycleData {
         
         self.jsonFile = self.dataManager.getJsonFileFromLibrary()
         
-        let motorcycles: [Motorcycle] = jsonFile?.elements ?? []
+        let motorcycles: [Motorcycle] = self.jsonFile?.getMotorcycleList() ?? []
         
         self.motorcycleStorage = Ref<Array<Motorcycle>>.init(motorcycles)
         
@@ -75,8 +75,8 @@ fileprivate struct DataManager {
         }
     }
     
-    /// Creates and returns a JsonFile (containing json version and motorcycle list) from the json in the library directory
-    /// - returns: a JsonFile containing file version and an array of Motorcycle, nil if the data acquisition or the parsing fail
+    /// Creates and returns a JsonFile (containing json version, motorcycle list and localized texts) from the json in the library directory
+    /// - returns: a JsonFile containing file version, an array of Motorcycle and a dictionary [String: Texts], nil if the data acquisition or the parsing fail
     func getJsonFileFromLibrary() -> JsonFile? {
         let libraryUrls = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)
         guard
