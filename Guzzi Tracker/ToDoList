@@ -1,5 +1,3 @@
 1- in ImageCell.swift modify the motorcycleImageView.af_setImage(withURL: url) in set(_:) function for placing a motorcycle_image_placeholder while downloading the image (probably remove)
 
 2- implement "swipe down to dismiss" for SingleImageViewController.swift
-
-3- application(didBecomeActive:) update motorcycle list (remove from didFinishLaunchingWithOptions)

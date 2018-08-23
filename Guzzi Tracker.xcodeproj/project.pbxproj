@@ -46,6 +46,7 @@
 		CF73C4442093188A00596118 /* ComparatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73C4422093188A00596118 /* ComparatorsViewController.swift */; };
 		CF73C4452093188A00596118 /* ComparatorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF73C4432093188A00596118 /* ComparatorsViewController.xib */; };
 		CF73C44720931E5B00596118 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73C44620931E5B00596118 /* Function.swift */; };
+		CF7A907F212EA72A00F33C43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF7A907E212EA72A00F33C43 /* Localizable.strings */; };
 		CF8306532087342000570E60 /* Bore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8306522087342000570E60 /* Bore.swift */; };
 		CF830656208736F600570E60 /* BoreFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF830654208736F600570E60 /* BoreFilterViewController.swift */; };
 		CF830657208736F600570E60 /* BoreFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF830655208736F600570E60 /* BoreFilterViewController.xib */; };
@@ -128,6 +129,7 @@
 		CF73C4422093188A00596118 /* ComparatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparatorsViewController.swift; sourceTree = "<group>"; };
 		CF73C4432093188A00596118 /* ComparatorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComparatorsViewController.xib; sourceTree = "<group>"; };
 		CF73C44620931E5B00596118 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		CF7A907E212EA72A00F33C43 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CF8306522087342000570E60 /* Bore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bore.swift; sourceTree = "<group>"; };
 		CF830654208736F600570E60 /* BoreFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoreFilterViewController.swift; sourceTree = "<group>"; };
 		CF830655208736F600570E60 /* BoreFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoreFilterViewController.xib; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				CF1A41E11E6081F000E76F11 /* VCFactory.swift */,
 				CF094F701E66C1CA00D351E1 /* info_moto.json */,
 				CFC389341E7AE6EA00A0CEC2 /* ToDoList */,
+				CF7A907E212EA72A00F33C43 /* Localizable.strings */,
 			);
 			path = "Guzzi Tracker";
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */,
 				CF73C4452093188A00596118 /* ComparatorsViewController.xib in Resources */,
 				CFAC091B20AC1B7B00689C5A /* MyGarageViewController.xib in Resources */,
+				CF7A907F212EA72A00F33C43 /* Localizable.strings in Resources */,
 				CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */,
 				CF83065D20873FC300570E60 /* StrokeFilterViewController.xib in Resources */,
 				CF98DB2020849F68002EFC9B /* DisplacementFilterViewController.xib in Resources */,
