@@ -74,7 +74,6 @@ class MyGarageViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         favoritesMotorcyles.swapAt(fromIndexPath.row, to.row)
         favoriteList.swapAt(fromIndexPath.row, to.row)
-        print("move rows")
     }
  
     // MARK: - Table view delegate

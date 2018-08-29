@@ -28,9 +28,11 @@ struct Stroke {
             }
         }
     }
-    let title = "Strokes"
+    let title = NSLocalizedString("Stroke", comment: "Stroke")
     private var caption: String {
-        return "from \(minStroke.descriptionWithDecimalsIfPresent) to \(maxStroke.descriptionWithDecimalsIfPresent)"
+        let fromString = NSLocalizedString("from", comment: "lowercase from")
+        let toString = NSLocalizedString("to", comment: "lowercase to")
+        return fromString + " \(minStroke.descriptionWithDecimalsIfPresent) " + toString + " \(maxStroke.descriptionWithDecimalsIfPresent)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

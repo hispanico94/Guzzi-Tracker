@@ -3,16 +3,14 @@ import UIKit
 struct Family {
     let families: [String]
     var selectedFamilies: [String] = []
-    let title = "Families"
+    let title = NSLocalizedString("Families", comment: "Families (of motorcycles)")
     private var caption: String {
         let n = selectedFamilies.count
-        if n > 1 {
-            return "\(n) families selected"
-        } else if n == 1 {
-            return "1 family selected"
-        } else {
-            return ""
+        if n >= 1 {
+            let formatString = NSLocalizedString("%d families selected", comment: "%d families selected (%d >= 1, adjust 'families' and 'selected' accordingly)")
+            return String.localizedStringWithFormat(formatString, n)
         }
+        return ""
     }
     
     init(motorcycleList: [Motorcycle]?) {

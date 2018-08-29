@@ -36,31 +36,33 @@ class VCFactory {
     }
     
     func makeMotorcyclesVC() -> MotorcyclesViewController {
+        let motorcyclesString = NSLocalizedString("Motorcycles", comment: "Motorcycles")
         let motorcyclesVC = MotorcyclesViewController(vcFactory: self)
-        motorcyclesVC.title = "Motorcycles"
+        motorcyclesVC.title = motorcyclesString
         motorcyclesVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: nil, action: nil)
-        motorcyclesVC.tabBarItem = UITabBarItem(title: "Motorcycles", image: UIImage(named: "motorcycle_regular_tab_icon"), tag: 0)
+        motorcyclesVC.tabBarItem = UITabBarItem(title: motorcyclesString, image: UIImage(named: "motorcycle_regular_tab_icon"), tag: 0)
         return motorcyclesVC
     }
     
     func makeSearchVC() -> SearchViewController {
         let searchVC = SearchViewController(motorcycleStorage: motorcycleData.motorcycleStorage)
-        searchVC.title = "Search"
+        searchVC.title = NSLocalizedString("Search", comment: "Search")
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         return searchVC
     }
     
     func makeMyGarageVC() -> MyGarageViewController {
+        let myGarageString = NSLocalizedString("My Garage", comment: "'My Garage' (or only 'Garage' if the translated string is longer)" )
         let myGarageVC = MyGarageViewController(motorcycleStorage: motorcycleData.motorcycleStorage)
-        myGarageVC.title = "My Garage"
+        myGarageVC.title = myGarageString
         myGarageVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings_icon"), style: .plain, target: nil, action: nil)
-        myGarageVC.tabBarItem = UITabBarItem(title: "My Garage", image: UIImage(named: "my_garage_regular_tab_icon"), tag: 2)
+        myGarageVC.tabBarItem = UITabBarItem(title: myGarageString, image: UIImage(named: "my_garage_regular_tab_icon"), tag: 2)
         return myGarageVC
     }
     
     func makeFiltersVC(motorcyclesDisplayed: Ref<Int>) -> FiltersViewController {
         let filterVC = FiltersViewController(motorcycleData: motorcycleData, motorcyclesDisplayed: motorcyclesDisplayed)
-        filterVC.title = "Filter & Sort"
+        filterVC.title = NSLocalizedString("Filter & Sort", comment: "'Filter & Sort' (or only 'Filter' if the translated string is longer)")
         return filterVC
     }
 }

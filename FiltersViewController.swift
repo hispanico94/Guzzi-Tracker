@@ -96,8 +96,8 @@ class FiltersViewController: UITableViewController {
             newFilters.forEach { self?.filterProviders[$0.filterId] = $0 }
             
             // Clear orders
-            self?.orders = [Order.init(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)]
-            self?.oldOrders = [Order.init(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)]
+            self?.orders = [MotorcycleOrder.yearDescending]
+            self?.oldOrders = [MotorcycleOrder.yearDescending]
         }
         
         self.motorcyclesDisplayed?.add(listener: "FiltersViewController") { [weak self] newValue in
@@ -121,8 +121,10 @@ class FiltersViewController: UITableViewController {
         let toolbarItem = UIBarButtonItem(customView: filterButton.button)
         setToolbarItems([toolbarItem], animated: true)
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAndDismiss))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearFiltersAndOrders))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelAndDismiss))
+        
+        let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearFiltersAndOrders))
     }
     
     // MARK: - View transition
@@ -158,9 +160,9 @@ class FiltersViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case filterSection:
-            return "Filters"
+            return NSLocalizedString("Filters", comment: "Filters")
         case orderSection:
-            return "List Sorting"
+            return NSLocalizedString("Sorting", comment: "Sorting")
         default:
             return nil
         }
@@ -219,7 +221,7 @@ class FiltersViewController: UITableViewController {
             filterProviders[filter.filterId] = filter
         }
         
-        orders = [Order.init(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)]
+        orders = [MotorcycleOrder.yearDescending]
         orderStorage?.value = orders
         
         tableView.reloadData()
@@ -236,12 +238,7 @@ class FiltersViewController: UITableViewController {
     }
     
     private func orderCellCaption() -> String? {
-        let orderCount = orders.count
-        
-        if orderCount <= 1 {
-            return "\(orderCount) sort selected"
-        }
-        
-        return "\(orderCount) sorts selected"
+        let formatString = NSLocalizedString("%d criteria selected", comment: "%d criteria selected (&d >= 1, adjust 'criteria' and 'selected' accordingly)")
+        return String.localizedStringWithFormat(formatString, orders.count)
     }
 }

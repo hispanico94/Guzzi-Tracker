@@ -37,7 +37,7 @@ final class MotorcycleData {
         self.originalFilterStorage = Ref<Array<FilterProvider>>.init(filters)
         self.filterStorage = Ref<Array<FilterProvider>>.init(filters)
         
-        self.orderStorage = Ref<Array<Order>>.init([Order.init(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)])
+        self.orderStorage = Ref<Array<Order>>.init([MotorcycleOrder.yearDescending])
     }
     
     func updateJson() {

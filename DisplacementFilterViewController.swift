@@ -50,7 +50,9 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
+        
+        let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
         let minDisplacementRow = displacements.index(of: selectedMinDisplacement) ?? 0
         let maxDisplacementRow = displacements.index(of: selectedMaxDisplacement) ?? (displacements.count - 1)
         displacementPicker.selectRow(minDisplacementRow, inComponent: minDisplacementPickerComponent, animated: true)
@@ -104,6 +106,10 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
     }
     
     private func updateCaptionLabel() {
-        captionLabel.text = "Filter all motorcycles with displacement between \(selectedMinDisplacement.descriptionWithDecimalsIfPresent) and \(selectedMaxDisplacement.descriptionWithDecimalsIfPresent)"
+        let formatString = NSLocalizedString("Select all motorcycles with displacement between %@ and %@",
+                                             comment: "Select all motorcycles with (engine) displacement between %@ and %@ (two measurements, the first has a lower value than the second)")
+        captionLabel.text = String.localizedStringWithFormat(formatString,
+                                                             selectedMinDisplacement.descriptionWithDecimalsIfPresent,
+                                                             selectedMaxDisplacement.descriptionWithDecimalsIfPresent)
     }
 }

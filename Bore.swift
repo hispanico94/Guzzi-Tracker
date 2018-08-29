@@ -28,9 +28,11 @@ struct Bore {
             }
         }
     }
-    let title = "Bores"
+    let title = NSLocalizedString("Bore", comment: "Bore")
     private var caption: String {
-        return "from \(minBore.descriptionWithDecimalsIfPresent) to \(maxBore.descriptionWithDecimalsIfPresent)"
+        let fromString = NSLocalizedString("from", comment: "lowercase from")
+        let toString = NSLocalizedString("to", comment: "lowercase to")
+        return fromString + " \(minBore.descriptionWithDecimalsIfPresent) " + toString + " \(maxBore.descriptionWithDecimalsIfPresent)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

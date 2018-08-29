@@ -65,13 +65,13 @@ class SearchViewController: UIViewController {
         headerLabel.textColor = UIColor.gray
         headerLabel.textColor = UIColor.gray
         
-        headerLabel.text = "Search Motorcycles"
-        detailLabel.text = "Tap the search bar above to search motorcycles"
+        headerLabel.text = NSLocalizedString("Search Motorcycles", comment: "Search Motorcycles")
+        detailLabel.text = NSLocalizedString("To start searching, tap the bar on top", comment: "To start searching, tap the bar on top")
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.searchController.searchBar.setPlaceholderText("Search Motorcycles", withColor: .gray)
+        self.searchController.searchBar.setPlaceholderText(NSLocalizedString("Search Motorcycles", comment: "Search Motorcycles"), withColor: .gray)
         self.searchController.searchBar.setIconColor(.gray)
     }
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>View %d results</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Mostra %#@results@</string>
+		<key>results</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%d risultato</string>
+			<key>other</key>
+			<string>%d risultati</string>
+		</dict>
+	</dict>
+	<key>%d criteria selected</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@criteria@</string>
+		<key>criteria</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%d criterio selezionato</string>
+			<key>other</key>
+			<string>%d criteri selezionati</string>
+		</dict>
+	</dict>
+	<key>%d families selected</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@families@</string>
+		<key>families</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>zero</key>
+			<string></string>
+			<key>one</key>
+			<string>%d famiglia selezionata</string>
+			<key>two</key>
+			<string></string>
+			<key>few</key>
+			<string></string>
+			<key>many</key>
+			<string></string>
+			<key>other</key>
+			<string>%d famiglie selezionate</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

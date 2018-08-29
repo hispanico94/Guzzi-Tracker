@@ -5,28 +5,14 @@ class ComparatorsViewController: UITableViewController {
     // MARK: - Properties
     
     private let orders: [[Order]] = [
-        [Order(id: .family, title: "Families", comparator: MotorcycleComparator.family)],
-        
-        [Order(id: .yearAscending,  title: "Year ascending",  comparator: MotorcycleComparator.yearAscending),
-         Order(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)],
-        
-        [Order(id: .displacementAscending,  title: "Displacement ascending",  comparator: MotorcycleComparator.displacementAscending),
-         Order(id: .displacementDescending, title: "Displacement descending", comparator: MotorcycleComparator.displacementDescending)],
-        
-        [Order(id: .boreAscending,  title: "Bore ascending",  comparator: MotorcycleComparator.boreAscending),
-         Order(id: .boreDescending, title: "Bore descending", comparator: MotorcycleComparator.boreDescending)],
-        
-        [Order(id: .strokeAscending,  title: "Stroke ascending",  comparator: MotorcycleComparator.strokeAscending),
-         Order(id: .strokeDescending, title: "Stroke descending", comparator: MotorcycleComparator.strokeDescending)],
-        
-        [Order(id: .powerAscending,  title: "Power ascending",  comparator: MotorcycleComparator.powerAscending),
-         Order(id: .powerDescending, title: "Power descending", comparator: MotorcycleComparator.powerDescending)],
-        
-        [Order(id: .wheelbaseAscending,  title: "Wheelbase ascending",  comparator: MotorcycleComparator.wheelbaseAscending),
-         Order(id: .wheelbaseDescending, title: "Wheelbase descending", comparator: MotorcycleComparator.wheelbaseDescending)],
-        
-        [Order(id: .weightAscending,  title: "Weight ascending",  comparator: MotorcycleComparator.weightAscending),
-         Order(id: .weightDescending, title: "Weight descending", comparator: MotorcycleComparator.weightDescending)]
+        [MotorcycleOrder.family],
+        [MotorcycleOrder.yearAscending, MotorcycleOrder.yearDescending],
+        [MotorcycleOrder.displacementAscending, MotorcycleOrder.displacementDescending],
+        [MotorcycleOrder.boreAscending, MotorcycleOrder.boreDescending],
+        [MotorcycleOrder.strokeAscending, MotorcycleOrder.strokeDescending],
+        [MotorcycleOrder.powerAscending, MotorcycleOrder.powerDescending],
+        [MotorcycleOrder.wheelbaseAscending, MotorcycleOrder.wheelbaseDescending],
+        [MotorcycleOrder.weightAscending, MotorcycleOrder.weightDescending]
     ]
     
     private var selectedOrders: [Order] = []
@@ -36,7 +22,7 @@ class ComparatorsViewController: UITableViewController {
     // MARK: - Intialization
     
     init(orders: [Order]?, _ callback: @escaping ([Order]) -> ()) {
-        self.selectedOrders = orders ?? [Order(id: .yearDescending, title: "Year descending", comparator: MotorcycleComparator.yearDescending)]
+        self.selectedOrders = orders ?? [MotorcycleOrder.yearDescending]
         self.callback = callback
         
         super.init(nibName: nil, bundle: nil)
@@ -48,9 +34,10 @@ class ComparatorsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "List Ordering"
+        self.title = NSLocalizedString("Sorting", comment: "(list) Sorting")
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearOrders))
+        let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearOrders))
     }
 
     // MARK: - View transition

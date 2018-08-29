@@ -49,7 +49,9 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
+        
+        let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
         let minWheelbaseRow = wheelbases.index(of: selectedMinWheelbase) ?? 0
         let maxWheelbaseRow = wheelbases.index(of: selectedMaxWheelbase) ?? (wheelbases.count - 1)
         wheelbasePicker.selectRow(minWheelbaseRow, inComponent: minWheelbasePickerComponent, animated: true)
@@ -103,6 +105,10 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
     }
     
     private func updateCaptionLabel() {
-        captionLabel.text = "Filter all motorcycles with wheelbase between \(selectedMinWheelbase.descriptionWithDecimalsIfPresent) and \(selectedMaxWheelbase.descriptionWithDecimalsIfPresent)"
+        let formatString = NSLocalizedString("Select all motorcycles with wheelbase between %@ and %@",
+                                             comment: "Select all motorcycles with wheelbase between %@ and %@ (two measurements, the first has a lower value than the second)")
+        captionLabel.text = String.localizedStringWithFormat(formatString,
+                                                             selectedMinWheelbase.descriptionWithDecimalsIfPresent,
+                                                             selectedMaxWheelbase.descriptionWithDecimalsIfPresent)
     }
 }

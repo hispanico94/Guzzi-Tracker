@@ -99,7 +99,7 @@ class MotorcyclesViewController: UITableViewController {
         
         tableView.register(UINib(nibName: "MotorcycleCell", bundle: nil), forCellReuseIdentifier: MotorcycleCell.defaultIdentifier)
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: "Back"), style: .plain, target: nil, action: nil)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "filter_icon"),

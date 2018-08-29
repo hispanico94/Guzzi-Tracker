@@ -49,7 +49,9 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
+        
+        let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
         let minStrokeRow = strokes.index(of: selectedMinStroke) ?? 0
         let maxStrokeRow = strokes.index(of: selectedMaxStroke) ?? (strokes.count - 1)
         strokePicker.selectRow(minStrokeRow, inComponent: minStrokePickerComponent, animated: true)
@@ -103,6 +105,10 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     }
     
     private func updateCaptionLabel() {
-        captionLabel.text = "Filter all motorcycles with stroke between \(selectedMinStroke.descriptionWithDecimalsIfPresent) and \(selectedMaxStroke.descriptionWithDecimalsIfPresent)"
+        let formatString = NSLocalizedString("Select all motorcycles with stroke between %@ and %@",
+                                             comment: "Select all motorcycles with (engine) stroke between %@ and %@ (two measurements, the first has a lower value than the second)")
+        captionLabel.text = String.localizedStringWithFormat(formatString,
+                                                             selectedMinStroke.descriptionWithDecimalsIfPresent,
+                                                             selectedMaxStroke.descriptionWithDecimalsIfPresent)
     }
 }

@@ -45,8 +45,9 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Years interval"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
+        self.title = NSLocalizedString("Years", comment: "Interval of years")
+        let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
         let minYearRow = yearsArray.index(of: selectedMinYear) ?? 0
         let maxYearRow = yearsArray.index(of: selectedMaxYear) ?? (yearsArray.count - 1)
         yearPicker.selectRow(minYearRow, inComponent: minYearPickerComponent, animated: true)
@@ -99,6 +100,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
     }
     
     private func updateCaptionLabel() {
-        captionLabel.text = "Filter all motorcycles built from \(selectedMinYear) to \(selectedMaxYear)"
+        let formatString = NSLocalizedString("Select all motorcycles built from %d to %d", comment: "%d are years")
+        captionLabel.text = String(format: formatString, selectedMinYear, selectedMaxYear)
     }
 }

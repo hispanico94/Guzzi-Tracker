@@ -41,15 +41,19 @@ struct Motorcycle {
             let nominal: Measurement<UnitVolume>
             
             var description: String {
-                return "Real: \(real.descriptionWithDecimalsIfPresent)\nNominal: \(nominal.descriptionWithDecimalsIfPresent)"
+                let realString = NSLocalizedString("Real", comment: "Real Displacement")
+                let nominalString = NSLocalizedString("Nominal", comment: "Nominal Displacement")
+                return realString + ": \(real.descriptionWithDecimalsIfPresent)\n" + nominalString + ": \(nominal.descriptionWithDecimalsIfPresent)"
             }
         }
         
         struct Power {
             let peak: Measurement<UnitPower>
             let rpm: Int
-            var formattedValue: String {
-                return "\(peak.descriptionWithDecimalsIfPresent) at \(rpm) rpm"
+            
+            var description: String {
+                let atString = NSLocalizedString("at", comment: "at")
+                return "\(peak.descriptionWithDecimalsIfPresent) " + atString + " \(rpm) rpm"
             }
         }
     }

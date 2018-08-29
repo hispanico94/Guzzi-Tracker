@@ -388,12 +388,12 @@ extension Motorcycle.GeneralInfo {
 
 extension Motorcycle.Engine {
     var getConfigurationString: String { return configuration ?? "---" }
-    var getCompressionString: String { return "\(compression) : 1" }
-    var getPowerString: String { return power?.formattedValue ?? "---" }
+    var getCompressionString: String { return compression.descriptionWithDecimalsIfPresent + " : 1" }
+    var getPowerString: String { return power?.description ?? "---" }
     var getFeedString: String { return feed ?? "---" }
     var getIgnitionString: String { return ignition ?? "---" }
-    var getBoreString: String { return bore.description }
-    var getStrokeString: String { return stroke.description }
+    var getBoreString: String { return bore.descriptionWithDecimalsIfPresent }
+    var getStrokeString: String { return stroke.descriptionWithDecimalsIfPresent }
     var getDisplacementString: String { return displacement.description }
 }
 
@@ -424,7 +424,7 @@ extension Motorcycle.CapacitiesAndPerformance {
     var getLubricantCapacityString: String { return lubricantCapacity?.descriptionWithDecimalsIfPresent ?? "---" }
     var getWeightString: String { return weight.descriptionWithDecimalsIfPresent }
     var getMaxSpeedString: String { return maxSpeed?.descriptionWithDecimalsIfPresent ?? "---" }
-    var getFuelConsumptionString: String { return fuelConsumption?.description ?? "---" }
+    var getFuelConsumptionString: String { return fuelConsumption?.descriptionWithDecimalsIfPresent ?? "---" }
 }
 
 // MARK: - Conforming to ArrayConvertible protocol
@@ -614,18 +614,39 @@ extension UnitVolume {
     static let engineCubicInches = UnitVolume(symbol: "cu in", converter: UnitConverterLinear(coefficient: 0.016387064))
 }
 
-extension Measurement {    
+extension Measurement {
+    /// Returns a string of the measurement formatted according to the locale of the user. If the value
+    /// doesn't contains any decimals (e.g. 10.0) it is converted without decimal point (e.g. 10.0 -> "10")
     var descriptionWithDecimalsIfPresent: String {
+        let formatter = MeasurementFormatter()
+        
         let roundedValue = self.value.rounded(.down)
-        guard (self.value - roundedValue).isZero else { return description }
-        return String(format: "%.0f", self.value) + " " + self.unit.symbol
+        guard (self.value - roundedValue).isZero else {
+            // Thsi step is necessary in order to avoid that the MeasurementFormatter
+            // changes the unit of measure because of the locale
+            // (also, strange behaviour was experienced where '80 mm' was converted to '0 km')
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            let numberString = numberFormatter.string(from: NSNumber(value: self.value)) ?? self.value.description
+            return numberString + " " + formatter.string(from: self.unit)
+        }
+        
+        return String(format: "%.0f", self.value) + " " + formatter.string(from: self.unit)
     }
 }
 
 extension Double {
+    /// Returns a string containing the number without decimal point if no decimals are present (e.g. 10.0 is
+    /// converted as "10"). If decimals are present they are included and the number is formatted according
+    /// to the locale of the user.
     var descriptionWithDecimalsIfPresent: String {
         let roundedValue = self.rounded(.down)
-        guard (self - roundedValue).isZero else { return description }
+        guard (self - roundedValue).isZero else {
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            return numberFormatter.string(from: NSNumber(value: self)) ?? self.description
+        }
+        
         return String(format: "%.0f", self)
     }
 }

@@ -28,9 +28,11 @@ struct Power {
             }
         }
     }
-    let title = "Horsepowers"
+    let title = NSLocalizedString("Power", comment: "Power")
     private var caption: String {
-        return "from \(minPower.descriptionWithDecimalsIfPresent) to \(maxPower.descriptionWithDecimalsIfPresent)"
+        let fromString = NSLocalizedString("from", comment: "lowercase from")
+        let toString = NSLocalizedString("to", comment: "lowercase to")
+        return fromString + " \(minPower.descriptionWithDecimalsIfPresent) " + toString + " \(maxPower.descriptionWithDecimalsIfPresent)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

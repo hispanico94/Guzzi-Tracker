@@ -29,10 +29,12 @@ struct MinMaxYear {
             }
         }
     }
-    let title = "Years interval"
+    let title = NSLocalizedString("Years", comment: "Interval of years")
     private var caption: String {
         get {
-            return "from \(minYear) to \(maxYear)"
+            let fromString = NSLocalizedString("from", comment: "lowercase from")
+            let toString = NSLocalizedString("to", comment: "lowercase to")
+            return fromString + " \(minYear) " + toString + " \(maxYear)"
         }
     }
     

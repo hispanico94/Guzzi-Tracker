@@ -5,7 +5,8 @@ class StrokeCycleFilterTableViewController: UITableViewController {
     private var filter: StrokeCycle
     private var selectedStrokeCycle: Motorcycle.Engine.StrokeCycle?
     private var selectedIndexPath: IndexPath?
-    private let cases: [(Motorcycle.Engine.StrokeCycle, String)] = [(.twoStroke, "2-stroke"), (.fourStroke, "4-stroke")]
+    private let cases: [(Motorcycle.Engine.StrokeCycle, String)] = [(.twoStroke, NSLocalizedString("2-stroke", comment: "2-stroke (engine)")),
+                                                                    (.fourStroke, NSLocalizedString("4-stroke", comment: "4-stroke (engine)"))]
     private let callback: (StrokeCycle) -> ()
     
     init(filter: StrokeCycle, _ callback: @escaping (StrokeCycle) -> ()) {
@@ -22,7 +23,9 @@ class StrokeCycleFilterTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
+        
+        let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
     }
 
     override func viewWillDisappear(_ animated: Bool) {

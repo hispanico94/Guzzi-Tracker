@@ -28,9 +28,11 @@ struct Displacement {
             }
         }
     }
-    let title = "Displacements"
+    let title = NSLocalizedString("Displacement", comment: "Displacement")
     private var caption: String {
-        return "from \(minDisplacement.descriptionWithDecimalsIfPresent) to \(maxDisplacement.descriptionWithDecimalsIfPresent)"
+        let fromString = NSLocalizedString("from", comment: "lowercase from")
+        let toString = NSLocalizedString("to", comment: "lowercase to")
+        return fromString + " \(minDisplacement.descriptionWithDecimalsIfPresent) " + toString + " \(maxDisplacement.descriptionWithDecimalsIfPresent)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

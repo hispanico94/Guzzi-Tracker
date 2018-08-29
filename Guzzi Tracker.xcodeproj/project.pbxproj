@@ -31,10 +31,9 @@
 		CF41DEC420A6D95000F4A508 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF41DEC220A6D95000F4A508 /* SearchResultsViewController.swift */; };
 		CF41DEC520A6D95000F4A508 /* SearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF41DEC320A6D95000F4A508 /* SearchResultsViewController.xib */; };
 		CF466A10208B212800E44BF2 /* WheelbaseFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF466A0E208B212800E44BF2 /* WheelbaseFilterViewController.swift */; };
-		CF466A11208B212800E44BF2 /* WheelbaseFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF466A0F208B212800E44BF2 /* WheelbaseFilterViewController.xib */; };
 		CF466A13208B27EA00E44BF2 /* StrokeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF466A12208B27EA00E44BF2 /* StrokeCycle.swift */; };
 		CF466A16208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF466A14208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift */; };
-		CF466A17208B364700E44BF2 /* StrokeCycleFilterTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF466A15208B364700E44BF2 /* StrokeCycleFilterTableViewController.xib */; };
+		CF46F9512131549800DD03CC /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = CF46F9532131549800DD03CC /* Localizable.stringsdict */; };
 		CF55CABF1E76EEDB002275A0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF55CABD1E76EEDB002275A0 /* Alamofire.framework */; };
 		CF55CAC01E76EEDB002275A0 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */; };
 		CF56823B20B6A3ED00B52AEB /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56823A20B6A3ED00B52AEB /* FilterButton.swift */; };
@@ -46,16 +45,13 @@
 		CF73C4442093188A00596118 /* ComparatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73C4422093188A00596118 /* ComparatorsViewController.swift */; };
 		CF73C4452093188A00596118 /* ComparatorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF73C4432093188A00596118 /* ComparatorsViewController.xib */; };
 		CF73C44720931E5B00596118 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73C44620931E5B00596118 /* Function.swift */; };
-		CF7A907F212EA72A00F33C43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF7A907E212EA72A00F33C43 /* Localizable.strings */; };
+		CF7A9081212EAA7000F33C43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF7A9083212EAA7000F33C43 /* Localizable.strings */; };
 		CF8306532087342000570E60 /* Bore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8306522087342000570E60 /* Bore.swift */; };
 		CF830656208736F600570E60 /* BoreFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF830654208736F600570E60 /* BoreFilterViewController.swift */; };
-		CF830657208736F600570E60 /* BoreFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF830655208736F600570E60 /* BoreFilterViewController.xib */; };
 		CF83065920873EEB00570E60 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83065820873EEB00570E60 /* Stroke.swift */; };
 		CF83065C20873FC300570E60 /* StrokeFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83065A20873FC300570E60 /* StrokeFilterViewController.swift */; };
-		CF83065D20873FC300570E60 /* StrokeFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF83065B20873FC300570E60 /* StrokeFilterViewController.xib */; };
 		CF83065F208744BD00570E60 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83065E208744BD00570E60 /* Power.swift */; };
 		CF8306622087499700570E60 /* PowerFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8306602087499700570E60 /* PowerFilterViewController.swift */; };
-		CF8306632087499700570E60 /* PowerFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8306612087499700570E60 /* PowerFilterViewController.xib */; };
 		CF8C6283206FC629002B8CF6 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8C6282206FC629002B8CF6 /* Filter.swift */; };
 		CF8C6285206FC7DD002B8CF6 /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8C6284206FC7DD002B8CF6 /* Ref.swift */; };
 		CF8CCE921E65CBB500F4A37E /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CCE901E65CBB500F4A37E /* Argo.framework */; };
@@ -65,9 +61,7 @@
 		CF8CCE9E1E65D8A300F4A37E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */; };
 		CF98DB1C20849A44002EFC9B /* Displacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF98DB1B20849A44002EFC9B /* Displacement.swift */; };
 		CF98DB1F20849F68002EFC9B /* DisplacementFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF98DB1D20849F68002EFC9B /* DisplacementFilterViewController.swift */; };
-		CF98DB2020849F68002EFC9B /* DisplacementFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */; };
 		CF9FD436207624A9003F66F4 /* MinMaxYearFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */; };
-		CF9FD437207624A9003F66F4 /* MinMaxYearFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */; };
 		CFA60557207B541500F6AF27 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA60556207B541500F6AF27 /* Family.swift */; };
 		CFAB03F21E60432E0032BD11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB03F11E60432E0032BD11 /* AppDelegate.swift */; };
 		CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAB03F81E60432E0032BD11 /* Assets.xcassets */; };
@@ -83,10 +77,17 @@
 		CFE280A91E6F12830090AAA7 /* MotorcycleNotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE280A71E6F12830090AAA7 /* MotorcycleNotesCell.xib */; };
 		CFE400D2207B703E001F9E1A /* FamilyFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */; };
 		CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */; };
+		CFE485B7213539F200949E81 /* WeightFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE485B9213539F200949E81 /* WeightFilterViewController.xib */; };
+		CFE485BE21353D9600949E81 /* StrokeCycleFilterTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE485C021353D9600949E81 /* StrokeCycleFilterTableViewController.xib */; };
+		CFE485C521353DDF00949E81 /* WheelbaseFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE485C721353DDF00949E81 /* WheelbaseFilterViewController.xib */; };
+		CFE485CC21353DF900949E81 /* PowerFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE485CE21353DF900949E81 /* PowerFilterViewController.xib */; };
+		CFE485D321353E1200949E81 /* StrokeFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE485D521353E1200949E81 /* StrokeFilterViewController.xib */; };
+		CFE485DA21353E3100949E81 /* BoreFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE485DC21353E3100949E81 /* BoreFilterViewController.xib */; };
+		CFE485E121353E4200949E81 /* DisplacementFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE485E321353E4200949E81 /* DisplacementFilterViewController.xib */; };
+		CFE485E821353E5F00949E81 /* MinMaxYearFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE485EA21353E5F00949E81 /* MinMaxYearFilterViewController.xib */; };
 		CFF259571E6C73FC0092A005 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF259561E6C73FC0092A005 /* Protocols.swift */; };
 		CFF7C68A207CB30F001A7B90 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7C689207CB30F001A7B90 /* Weight.swift */; };
 		CFF7C68D207CBA26001A7B90 /* WeightFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */; };
-		CFF7C68E207CBA26001A7B90 /* WeightFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFF7C68C207CBA26001A7B90 /* WeightFilterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,10 +115,10 @@
 		CF41DEC220A6D95000F4A508 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		CF41DEC320A6D95000F4A508 /* SearchResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultsViewController.xib; sourceTree = "<group>"; };
 		CF466A0E208B212800E44BF2 /* WheelbaseFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelbaseFilterViewController.swift; sourceTree = "<group>"; };
-		CF466A0F208B212800E44BF2 /* WheelbaseFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WheelbaseFilterViewController.xib; sourceTree = "<group>"; };
 		CF466A12208B27EA00E44BF2 /* StrokeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeCycle.swift; sourceTree = "<group>"; };
 		CF466A14208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeCycleFilterTableViewController.swift; sourceTree = "<group>"; };
-		CF466A15208B364700E44BF2 /* StrokeCycleFilterTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeCycleFilterTableViewController.xib; sourceTree = "<group>"; };
+		CF46F9522131549800DD03CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		CF46F9542131549E00DD03CC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = it; path = it.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		CF55CABD1E76EEDB002275A0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		CF56823A20B6A3ED00B52AEB /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
@@ -129,16 +130,15 @@
 		CF73C4422093188A00596118 /* ComparatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparatorsViewController.swift; sourceTree = "<group>"; };
 		CF73C4432093188A00596118 /* ComparatorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComparatorsViewController.xib; sourceTree = "<group>"; };
 		CF73C44620931E5B00596118 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
-		CF7A907E212EA72A00F33C43 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CF7A9080212EAA0A00F33C43 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CF7A9082212EAA7000F33C43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CF7A9084212EAA8000F33C43 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CF8306522087342000570E60 /* Bore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bore.swift; sourceTree = "<group>"; };
 		CF830654208736F600570E60 /* BoreFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoreFilterViewController.swift; sourceTree = "<group>"; };
-		CF830655208736F600570E60 /* BoreFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoreFilterViewController.xib; sourceTree = "<group>"; };
 		CF83065820873EEB00570E60 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
 		CF83065A20873FC300570E60 /* StrokeFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeFilterViewController.swift; sourceTree = "<group>"; };
-		CF83065B20873FC300570E60 /* StrokeFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrokeFilterViewController.xib; sourceTree = "<group>"; };
 		CF83065E208744BD00570E60 /* Power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
 		CF8306602087499700570E60 /* PowerFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerFilterViewController.swift; sourceTree = "<group>"; };
-		CF8306612087499700570E60 /* PowerFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PowerFilterViewController.xib; sourceTree = "<group>"; };
 		CF8C6282206FC629002B8CF6 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		CF8C6284206FC7DD002B8CF6 /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
 		CF8CCE901E65CBB500F4A37E /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
@@ -148,9 +148,7 @@
 		CF8CCE9D1E65D8A300F4A37E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CF98DB1B20849A44002EFC9B /* Displacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displacement.swift; sourceTree = "<group>"; };
 		CF98DB1D20849F68002EFC9B /* DisplacementFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplacementFilterViewController.swift; sourceTree = "<group>"; };
-		CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplacementFilterViewController.xib; sourceTree = "<group>"; };
 		CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinMaxYearFilterViewController.swift; sourceTree = "<group>"; };
-		CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MinMaxYearFilterViewController.xib; sourceTree = "<group>"; };
 		CFA60556207B541500F6AF27 /* Family.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
 		CFAB03EE1E60432E0032BD11 /* Guzzi Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guzzi Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAB03F11E60432E0032BD11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,10 +166,33 @@
 		CFE280A71E6F12830090AAA7 /* MotorcycleNotesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleNotesCell.xib; sourceTree = "<group>"; };
 		CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyFilterViewController.swift; sourceTree = "<group>"; };
 		CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyFilterViewController.xib; sourceTree = "<group>"; };
+		CFE485B8213539F200949E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/WeightFilterViewController.xib; sourceTree = "<group>"; };
+		CFE485BB213539F400949E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WeightFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485BD213539F600949E81 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/WeightFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485BF21353D9600949E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StrokeCycleFilterTableViewController.xib; sourceTree = "<group>"; };
+		CFE485C221353D9800949E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StrokeCycleFilterTableViewController.strings; sourceTree = "<group>"; };
+		CFE485C421353D9900949E81 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/StrokeCycleFilterTableViewController.strings; sourceTree = "<group>"; };
+		CFE485C621353DDF00949E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/WheelbaseFilterViewController.xib; sourceTree = "<group>"; };
+		CFE485C921353DE300949E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WheelbaseFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485CB21353DE400949E81 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/WheelbaseFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485CD21353DF900949E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PowerFilterViewController.xib; sourceTree = "<group>"; };
+		CFE485D021353DFA00949E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PowerFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485D221353DFB00949E81 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/PowerFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485D421353E1200949E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StrokeFilterViewController.xib; sourceTree = "<group>"; };
+		CFE485D721353E1400949E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StrokeFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485D921353E1500949E81 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/StrokeFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485DB21353E3100949E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BoreFilterViewController.xib; sourceTree = "<group>"; };
+		CFE485DE21353E3300949E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BoreFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485E021353E3400949E81 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/BoreFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485E221353E4200949E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DisplacementFilterViewController.xib; sourceTree = "<group>"; };
+		CFE485E521353E4400949E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DisplacementFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485E721353E4500949E81 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/DisplacementFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485E921353E5F00949E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MinMaxYearFilterViewController.xib; sourceTree = "<group>"; };
+		CFE485EC21353E6100949E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MinMaxYearFilterViewController.strings; sourceTree = "<group>"; };
+		CFE485EE21353E6200949E81 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MinMaxYearFilterViewController.strings; sourceTree = "<group>"; };
 		CFF259561E6C73FC0092A005 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CFF7C689207CB30F001A7B90 /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightFilterViewController.swift; sourceTree = "<group>"; };
-		CFF7C68C207CBA26001A7B90 /* WeightFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeightFilterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,15 +329,15 @@
 		CF96C5762090693500340C76 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				CF9FD435207624A9003F66F4 /* MinMaxYearFilterViewController.xib */,
+				CFE485EA21353E5F00949E81 /* MinMaxYearFilterViewController.xib */,
 				CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */,
-				CFF7C68C207CBA26001A7B90 /* WeightFilterViewController.xib */,
-				CF98DB1E20849F68002EFC9B /* DisplacementFilterViewController.xib */,
-				CF830655208736F600570E60 /* BoreFilterViewController.xib */,
-				CF83065B20873FC300570E60 /* StrokeFilterViewController.xib */,
-				CF8306612087499700570E60 /* PowerFilterViewController.xib */,
-				CF466A0F208B212800E44BF2 /* WheelbaseFilterViewController.xib */,
-				CF466A15208B364700E44BF2 /* StrokeCycleFilterTableViewController.xib */,
+				CFE485E321353E4200949E81 /* DisplacementFilterViewController.xib */,
+				CFE485DC21353E3100949E81 /* BoreFilterViewController.xib */,
+				CFE485D521353E1200949E81 /* StrokeFilterViewController.xib */,
+				CFE485CE21353DF900949E81 /* PowerFilterViewController.xib */,
+				CFE485C721353DDF00949E81 /* WheelbaseFilterViewController.xib */,
+				CFE485C021353D9600949E81 /* StrokeCycleFilterTableViewController.xib */,
+				CFE485B9213539F200949E81 /* WeightFilterViewController.xib */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -352,7 +373,8 @@
 				CF1A41E11E6081F000E76F11 /* VCFactory.swift */,
 				CF094F701E66C1CA00D351E1 /* info_moto.json */,
 				CFC389341E7AE6EA00A0CEC2 /* ToDoList */,
-				CF7A907E212EA72A00F33C43 /* Localizable.strings */,
+				CF7A9083212EAA7000F33C43 /* Localizable.strings */,
+				CF46F9532131549800DD03CC /* Localizable.stringsdict */,
 			);
 			path = "Guzzi Tracker";
 			sourceTree = "<group>";
@@ -436,6 +458,7 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = CFAB03E51E60432D0032BD11;
 			productRefGroup = CFAB03EF1E60432E0032BD11 /* Products */;
@@ -452,30 +475,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF7C68E207CBA26001A7B90 /* WeightFilterViewController.xib in Resources */,
-				CF466A17208B364700E44BF2 /* StrokeCycleFilterTableViewController.xib in Resources */,
+				CFE485BE21353D9600949E81 /* StrokeCycleFilterTableViewController.xib in Resources */,
 				CFE280A91E6F12830090AAA7 /* MotorcycleNotesCell.xib in Resources */,
 				CF419B031E6D692700EA7B74 /* MotorcycleInfoCell.xib in Resources */,
-				CF830657208736F600570E60 /* BoreFilterViewController.xib in Resources */,
+				CFE485DA21353E3100949E81 /* BoreFilterViewController.xib in Resources */,
 				CF1CDB81206FD465007BCE95 /* FiltersViewController.xib in Resources */,
-				CF466A11208B212800E44BF2 /* WheelbaseFilterViewController.xib in Resources */,
+				CFE485C521353DDF00949E81 /* WheelbaseFilterViewController.xib in Resources */,
 				CFC389351E7AE6EA00A0CEC2 /* ToDoList in Resources */,
 				CFAB03FC1E60432E0032BD11 /* LaunchScreen.storyboard in Resources */,
 				CF0ED0841E6F15E8008BAB23 /* MotorcycleImagesCell.xib in Resources */,
 				CF1A41D71E60808C00E76F11 /* MotorcyclesViewController.xib in Resources */,
 				CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */,
 				CF41DEC120A6D6EB00F4A508 /* SearchViewController.xib in Resources */,
-				CF8306632087499700570E60 /* PowerFilterViewController.xib in Resources */,
+				CFE485CC21353DF900949E81 /* PowerFilterViewController.xib in Resources */,
 				CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */,
 				CF73C4452093188A00596118 /* ComparatorsViewController.xib in Resources */,
 				CFAC091B20AC1B7B00689C5A /* MyGarageViewController.xib in Resources */,
-				CF7A907F212EA72A00F33C43 /* Localizable.strings in Resources */,
+				CF7A9081212EAA7000F33C43 /* Localizable.strings in Resources */,
 				CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */,
-				CF83065D20873FC300570E60 /* StrokeFilterViewController.xib in Resources */,
-				CF98DB2020849F68002EFC9B /* DisplacementFilterViewController.xib in Resources */,
+				CFE485D321353E1200949E81 /* StrokeFilterViewController.xib in Resources */,
+				CFE485B7213539F200949E81 /* WeightFilterViewController.xib in Resources */,
+				CF46F9512131549800DD03CC /* Localizable.stringsdict in Resources */,
+				CFE485E121353E4200949E81 /* DisplacementFilterViewController.xib in Resources */,
 				CF094F711E66C1CA00D351E1 /* info_moto.json in Resources */,
 				CF0B83181E785D71001C4172 /* SingleImageViewController.xib in Resources */,
-				CF9FD437207624A9003F66F4 /* MinMaxYearFilterViewController.xib in Resources */,
+				CFE485E821353E5F00949E81 /* MinMaxYearFilterViewController.xib in Resources */,
 				CF690CA91E7150BF00523796 /* ImageCell.xib in Resources */,
 				CF41DEC520A6D95000F4A508 /* SearchResultsViewController.xib in Resources */,
 				CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */,
@@ -565,12 +589,111 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CF46F9532131549800DD03CC /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF46F9522131549800DD03CC /* en */,
+				CF46F9542131549E00DD03CC /* it */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+		CF7A9083212EAA7000F33C43 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF7A9082212EAA7000F33C43 /* en */,
+				CF7A9084212EAA8000F33C43 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CFAB03FA1E60432E0032BD11 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CFAB03FB1E60432E0032BD11 /* Base */,
+				CF7A9080212EAA0A00F33C43 /* it */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CFE485B9213539F200949E81 /* WeightFilterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFE485B8213539F200949E81 /* Base */,
+				CFE485BB213539F400949E81 /* en */,
+				CFE485BD213539F600949E81 /* it */,
+			);
+			name = WeightFilterViewController.xib;
+			sourceTree = "<group>";
+		};
+		CFE485C021353D9600949E81 /* StrokeCycleFilterTableViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFE485BF21353D9600949E81 /* Base */,
+				CFE485C221353D9800949E81 /* en */,
+				CFE485C421353D9900949E81 /* it */,
+			);
+			name = StrokeCycleFilterTableViewController.xib;
+			sourceTree = "<group>";
+		};
+		CFE485C721353DDF00949E81 /* WheelbaseFilterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFE485C621353DDF00949E81 /* Base */,
+				CFE485C921353DE300949E81 /* en */,
+				CFE485CB21353DE400949E81 /* it */,
+			);
+			name = WheelbaseFilterViewController.xib;
+			sourceTree = "<group>";
+		};
+		CFE485CE21353DF900949E81 /* PowerFilterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFE485CD21353DF900949E81 /* Base */,
+				CFE485D021353DFA00949E81 /* en */,
+				CFE485D221353DFB00949E81 /* it */,
+			);
+			name = PowerFilterViewController.xib;
+			sourceTree = "<group>";
+		};
+		CFE485D521353E1200949E81 /* StrokeFilterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFE485D421353E1200949E81 /* Base */,
+				CFE485D721353E1400949E81 /* en */,
+				CFE485D921353E1500949E81 /* it */,
+			);
+			name = StrokeFilterViewController.xib;
+			sourceTree = "<group>";
+		};
+		CFE485DC21353E3100949E81 /* BoreFilterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFE485DB21353E3100949E81 /* Base */,
+				CFE485DE21353E3300949E81 /* en */,
+				CFE485E021353E3400949E81 /* it */,
+			);
+			name = BoreFilterViewController.xib;
+			sourceTree = "<group>";
+		};
+		CFE485E321353E4200949E81 /* DisplacementFilterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFE485E221353E4200949E81 /* Base */,
+				CFE485E521353E4400949E81 /* en */,
+				CFE485E721353E4500949E81 /* it */,
+			);
+			name = DisplacementFilterViewController.xib;
+			sourceTree = "<group>";
+		};
+		CFE485EA21353E5F00949E81 /* MinMaxYearFilterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFE485E921353E5F00949E81 /* Base */,
+				CFE485EC21353E6100949E81 /* en */,
+				CFE485EE21353E6200949E81 /* it */,
+			);
+			name = MinMaxYearFilterViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -580,6 +703,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -640,6 +764,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

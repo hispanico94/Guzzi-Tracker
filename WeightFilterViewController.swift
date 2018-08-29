@@ -79,7 +79,9 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
+        
+        let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
         let minWeightRow = weights.index(of: selectedMinWeight) ?? 0
         let maxWeightRow = weights.index(of: selectedMaxWeight) ?? (weights.count - 1)
         weightPicker.selectRow(minWeightRow, inComponent: minWeightPickerComponent, animated: true)
@@ -133,6 +135,10 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     }
     
     private func updateCaptionLabel() {
-        captionLabel.text = "Filter all motorcycles with weight between \(selectedMinWeight.descriptionWithDecimalsIfPresent) and \(selectedMaxWeight.descriptionWithDecimalsIfPresent)"
+        let formatString = NSLocalizedString("Select all motorcycles with weight between %@ and %@",
+                                             comment: "Select all motorcycles with weight between %@ and %@ (two measurements, the first has a lower value than the second)")
+        captionLabel.text = String.localizedStringWithFormat(formatString,
+                                                             selectedMinWeight.descriptionWithDecimalsIfPresent,
+                                                             selectedMaxWeight.descriptionWithDecimalsIfPresent)
     }
 }

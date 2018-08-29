@@ -49,7 +49,9 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
+        
+        let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
         let minPowerRow = powers.index(of: selectedMinPower) ?? 0
         let maxPowerRow = powers.index(of: selectedMaxPower) ?? (powers.count - 1)
         powerPicker.selectRow(minPowerRow, inComponent: minPowerPickerComponent, animated: true)
@@ -103,7 +105,11 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
     private func updateCaptionLabel() {
-        captionLabel.text = "Filter all motorcycles with power between \(selectedMinPower.descriptionWithDecimalsIfPresent) and \(selectedMaxPower.descriptionWithDecimalsIfPresent)"
+        let formatString = NSLocalizedString("Select all motorcycles with power between %@ and %@",
+                                             comment: "Select all motorcycles with (engine) power between %@ and %@ (two measurements, the first has a lower value than the second)")
+        captionLabel.text = String.localizedStringWithFormat(formatString,
+                                                             selectedMinPower.descriptionWithDecimalsIfPresent,
+                                                             selectedMaxPower.descriptionWithDecimalsIfPresent)
     }
 }
 

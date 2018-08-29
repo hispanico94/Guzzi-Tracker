@@ -28,9 +28,11 @@ struct Weight {
             }
         }
     }
-    let title = "Weight"
+    let title = NSLocalizedString("Weight", comment: "Weight")
     private var caption: String {
-        return "from \(minWeight.descriptionWithDecimalsIfPresent) to \(maxWeight.descriptionWithDecimalsIfPresent)"
+        let fromString = NSLocalizedString("from", comment: "lowercase from")
+        let toString = NSLocalizedString("to", comment: "lowercase to")
+        return fromString + " \(minWeight.descriptionWithDecimalsIfPresent) " + toString + " \(maxWeight.descriptionWithDecimalsIfPresent)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

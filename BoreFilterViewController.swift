@@ -49,7 +49,9 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = filter.title
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Clear", style: .plain, target: self, action: #selector(clearSelection))
+        
+        let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
         let minBoreRow = bores.index(of: selectedMinBore) ?? 0
         let maxBoreRow = bores.index(of: selectedMaxBore) ?? (bores.count - 1)
         borePicker.selectRow(minBoreRow, inComponent: minBorePickerComponent, animated: true)
@@ -103,6 +105,10 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     private func updateCaptionLabel() {
-        captionLabel.text = "Filter all motorcycles with bore between \(selectedMinBore.descriptionWithDecimalsIfPresent) and \(selectedMaxBore.descriptionWithDecimalsIfPresent)"
+        let formatString = NSLocalizedString("Select all motorcycles with bore between %@ and %@",
+                                             comment: "Select all motorcycles with (engine) bore between %@ and %@ (two measurements, the first has a lower value than the second)")
+        captionLabel.text = String.localizedStringWithFormat(formatString,
+                                                             selectedMinBore.descriptionWithDecimalsIfPresent,
+                                                             selectedMaxBore.descriptionWithDecimalsIfPresent)
     }
 }

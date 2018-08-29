@@ -8,7 +8,7 @@ struct FilterButton {
         button = UIButton()
         button.setTitleColor(.guzziRed, for: .normal)
         button.setTitleColor(.gray, for: .disabled)
-        button.setTitle("No results", for: .disabled)
+        button.setTitle(NSLocalizedString("No results", comment: "No results"), for: .disabled)
     }
     
     func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControlEvents) {
@@ -21,11 +21,10 @@ struct FilterButton {
         switch unwrap {
         case 0:
             button.isEnabled = false
-        case 1:
-            button.setTitle("View 1 result", for: .normal)
-            button.isEnabled = true
         default:
-            button.setTitle("View \(unwrap) results", for: .normal)
+            let formatString = NSLocalizedString("View %d results", comment: "View %d results (%d >= 1)")
+            let buttonCaption = String.localizedStringWithFormat(formatString, unwrap)
+            button.setTitle(buttonCaption, for: .normal)
             button.isEnabled = true
         }
     }
