@@ -4,6 +4,8 @@ class MyGarageViewController: UITableViewController {
     
     // MARK: - Properties
     
+    private let vcFactory: VCFactory
+    
     private weak var motorcycleStorage: Ref<Array<Motorcycle>>?
     
     private var motorcycleList: [Motorcycle]
@@ -12,9 +14,10 @@ class MyGarageViewController: UITableViewController {
     
     // MARK: - Initialization
     
-    init(motorcycleStorage: Ref<Array<Motorcycle>>) {
-        self.motorcycleStorage = motorcycleStorage
-        self.motorcycleList = motorcycleStorage.value
+    init(vcFactory: VCFactory) {
+        self.vcFactory = vcFactory
+        self.motorcycleStorage = vcFactory.motorcycleData.motorcycleStorage
+        self.motorcycleList = vcFactory.motorcycleData.motorcycleStorage.value
         
         super.init(style: .plain)
         
@@ -36,7 +39,14 @@ class MyGarageViewController: UITableViewController {
         
         tableView.register(UINib(nibName: "MotorcycleCell", bundle: nil), forCellReuseIdentifier: MotorcycleCell.defaultIdentifier)
 
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        navigationItem.rightBarButtonItem = self.editButtonItem
+        
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(
+//            image: UIImage(named: "info_icon"),
+//            style: .plain,
+//            target: self,
+//            action: #selector(didTapInfoButton(sender:))
+//        )
     }
 
     // MARK: - View transition
@@ -97,5 +107,12 @@ class MyGarageViewController: UITableViewController {
         }
         
         tableView.reloadData()
+    }
+    
+    
+    
+    @IBAction func didTapInfoButton(sender: UIBarButtonItem) {
+        let infoVC = UINavigationController(rootViewController: vcFactory.makeInfoVC())
+        present(infoVC, animated: true, completion: nil)
     }
 }

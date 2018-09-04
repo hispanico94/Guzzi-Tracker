@@ -1,6 +1,6 @@
 "Motorcycles" = "Motociclette";
 "Search" = "Cerca";
-"My Garage" = "Garage";
+"Garage" = "Garage";
 "Filter & Sort" = "Filtra e Ordina";
 "Back" = "Indietro";
 "Search Motorcycles" = "Cerca Motociclette";
@@ -81,4 +81,13 @@
 "Clear" = "Pulisci";
 "No results" = "Nessun risultato";
 "View %d results" = "Mostra %d risultati";
-
+"About" = "Informazioni";
+"Version" = "Versione";
+"About the app" = "Riguardo l'app";
+"Contacts" = "Contatti";
+"Reviews" = "Recensioni";
+"(Version not available)" = "(Versione non disponibile)";
+"Write a review!" = "Scrivi una recensione!";
+"(APP DESCRIPTION)" = "Quest'app è stata ideata e realizzata da Paolo Rocca. La lista delle motociclette prodotte dalla Moto Guzzi nel corso degli anni è incompleta e può contenere delle imprecisioni. Sei invitato a inviare consigli, suggerimenti e a comunicare eventuali errori nei dati o bug nell'app tramite uno dei contatti indicati in basso. Sei anche invitato a inviare dati di moto non presenti nella lista, in modo che vengano aggiunte, e foto che ritraggono moto nel loro stato originale.\nSe l'app ti piace lascia una recensione nell'App Store!";
+"Error" = "Errore";
+"(URL ERROR)" = "Un errore è avvenuto durante l'estrazione dell'URL, per favore contatta lo sviluppatore a hispanico94@gmail.com descrivendo il problema.";

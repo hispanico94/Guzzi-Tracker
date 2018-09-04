@@ -31,4 +31,5 @@ protocol Monoid {
 enum CellSelection {
     case ignored
     case showImages(imageURLs: [URL])
+    case openURL(linkURL: URL?)
 }

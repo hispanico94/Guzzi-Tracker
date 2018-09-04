@@ -18,9 +18,6 @@ class MotorcycleImagesCell: UITableViewCell {
     
     func setText(withElementNumber number: Int) -> MotorcycleImagesCell {
         var text = ""
-//        if number != 1 {
-//            text += "s"
-//        }
         
         text = number == 1 ? NSLocalizedString("image", comment: "image (lowercase i)") : NSLocalizedString("images", comment: "images (lowercase i)")
         

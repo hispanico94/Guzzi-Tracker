@@ -20,11 +20,6 @@ class MotorcycleInfoViewController: UITableViewController {
     private let favoriteIcon = UIImage(named: "favorite_icon")
     private let selectedFavoriteIcon = UIImage(named: "selected_favorite_icon")
     
-    
-    // Constants used for determine the selected cell (only the image cell can be selected)
-//    let imageSection = 5
-//    let imageRow = 0
-    
     // MARK: - Initialization
     
     init(selectedMotorcycle motorcycle: Motorcycle, nibName: String?, bundle: Bundle?) {
@@ -48,12 +43,7 @@ class MotorcycleInfoViewController: UITableViewController {
         navigationItem.title = motorcycle.generalInfo.name
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: nil,
-            style: .plain,
-            target: self,
-            action: #selector(didTapFavoriteButton)
-        )
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: nil, style: .plain, target: self, action: #selector(didTapFavoriteButton))
     }
     
     // MARK: - View transition

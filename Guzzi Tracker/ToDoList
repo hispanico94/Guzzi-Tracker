@@ -1,3 +1,9 @@
 1- in ImageCell.swift modify the motorcycleImageView.af_setImage(withURL: url) in set(_:) function for placing a motorcycle_image_placeholder while downloading the image (probably remove)
 
 2- implement "swipe down to dismiss" for SingleImageViewController.swift
+
+3- in InfoViewController and about.swift change the email address and link to the app's app store page (for review)
+
+4- eventually change email address in "URL ERROR"
+
+5- in InfoViewController add tableFooterView with .lightLegnanoGreen color for padding when rows doesn't cover all bounds

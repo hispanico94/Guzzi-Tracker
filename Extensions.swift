@@ -840,16 +840,30 @@ extension UIImage {
 }
 
 extension UIViewController {
-    func handle(cellSelection: CellSelection, nextViewControllerTitle: String) {
+    
+    func handle(cellSelection: CellSelection, nextViewControllerTitle: String? = nil) {
         switch cellSelection {
-        case .ignored:
-            break
-        case let .showImages(imageURLs):
-            navigationController?.pushViewController(ImagesViewController(motorcycleName: nextViewControllerTitle,
+            
+        case let .showImages(imageURLs) where nextViewControllerTitle != nil:
+            navigationController?.pushViewController(ImagesViewController(motorcycleName: nextViewControllerTitle!,
                                                                           imagesUrls: imageURLs,
                                                                           nibName: "ImagesViewController",
                                                                           bundle: nil),
                                                      animated: true)
+            
+        case let .openURL(linkURL):
+            guard let url = linkURL else {
+                let alert = UIAlertController(title: NSLocalizedString("Error", comment: "action error"),
+                                              message: NSLocalizedString("(URL ERROR)", comment: "error during the safe unwrapping of a optional that should have contained a URL"), preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+                present(alert, animated: true)
+                return
+            }
+            UIApplication.shared.open(url, options: [:])
+            
+        default:
+            break
         }
     }
 }

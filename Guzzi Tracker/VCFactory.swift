@@ -52,10 +52,10 @@ class VCFactory {
     }
     
     func makeMyGarageVC() -> MyGarageViewController {
-        let myGarageString = NSLocalizedString("My Garage", comment: "'My Garage' (or only 'Garage' if the translated string is longer)" )
-        let myGarageVC = MyGarageViewController(motorcycleStorage: motorcycleData.motorcycleStorage)
+        let myGarageString = NSLocalizedString("Garage", comment: "contains a list of favorite motorcycles" )
+        let myGarageVC = MyGarageViewController(vcFactory: self)
         myGarageVC.title = myGarageString
-        myGarageVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings_icon"), style: .plain, target: nil, action: nil)
+        myGarageVC.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "info_icon"), style: .plain, target: myGarageVC, action: #selector(myGarageVC.didTapInfoButton(sender:)))
         myGarageVC.tabBarItem = UITabBarItem(title: myGarageString, image: UIImage(named: "my_garage_regular_tab_icon"), tag: 2)
         return myGarageVC
     }
@@ -64,5 +64,12 @@ class VCFactory {
         let filterVC = FiltersViewController(motorcycleData: motorcycleData, motorcyclesDisplayed: motorcyclesDisplayed)
         filterVC.title = NSLocalizedString("Filter & Sort", comment: "'Filter & Sort' (or only 'Filter' if the translated string is longer)")
         return filterVC
+    }
+    
+    func makeInfoVC() -> InfoViewController {
+        let infoVC = InfoViewController()
+        infoVC.title = NSLocalizedString("About", comment: "title of the view that contains informations about the app and contacts")
+        infoVC.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: infoVC, action: #selector(infoVC.didTapDoneButton(sender:)))
+        return infoVC
     }
 }
