@@ -32,7 +32,7 @@ struct Bore {
     private var caption: String {
         let fromString = NSLocalizedString("from", comment: "lowercase from")
         let toString = NSLocalizedString("to", comment: "lowercase to")
-        return fromString + " \(minBore.descriptionWithDecimalsIfPresent) " + toString + " \(maxBore.descriptionWithDecimalsIfPresent)"
+        return fromString + " \(minBore.customLocalizedDescription) " + toString + " \(maxBore.customLocalizedDescription)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

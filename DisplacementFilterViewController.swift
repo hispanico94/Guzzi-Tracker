@@ -80,7 +80,7 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
     // MARK: - UIPickerView Delegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return displacements[row].value.descriptionWithDecimalsIfPresent
+        return displacements[row].value.customLocalizedDescription
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -109,7 +109,7 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
         let formatString = NSLocalizedString("Select all motorcycles with displacement between %@ and %@",
                                              comment: "Select all motorcycles with (engine) displacement between %@ and %@ (two measurements, the first has a lower value than the second)")
         captionLabel.text = String.localizedStringWithFormat(formatString,
-                                                             selectedMinDisplacement.descriptionWithDecimalsIfPresent,
-                                                             selectedMaxDisplacement.descriptionWithDecimalsIfPresent)
+                                                             selectedMinDisplacement.customLocalizedDescription,
+                                                             selectedMaxDisplacement.customLocalizedDescription)
     }
 }

@@ -13,6 +13,8 @@ enum FilterId: Int {
     case strokeCycle
 }
 
+// MARK: Conforming FilterId to Comparable
+
 extension FilterId: Comparable {
     static func <(lhs: FilterId, rhs: FilterId) -> Bool {
         return lhs.rawValue < rhs.rawValue
@@ -27,6 +29,8 @@ struct Filter {
     var caption: String
     var predicate: Predicate<Motorcycle>
 }
+
+// MARK: Conforming Filter to Hashable
 
 extension Filter: Hashable {
     var hashValue: Int {

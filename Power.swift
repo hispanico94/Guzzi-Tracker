@@ -32,7 +32,7 @@ struct Power {
     private var caption: String {
         let fromString = NSLocalizedString("from", comment: "lowercase from")
         let toString = NSLocalizedString("to", comment: "lowercase to")
-        return fromString + " \(minPower.descriptionWithDecimalsIfPresent) " + toString + " \(maxPower.descriptionWithDecimalsIfPresent)"
+        return fromString + " \(minPower.customLocalizedDescription) " + toString + " \(maxPower.customLocalizedDescription)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

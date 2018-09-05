@@ -79,7 +79,7 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
     // MARK: - UIPickerView Delegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return bores[row].value.descriptionWithDecimalsIfPresent
+        return bores[row].value.customLocalizedDescription
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -108,7 +108,7 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
         let formatString = NSLocalizedString("Select all motorcycles with bore between %@ and %@",
                                              comment: "Select all motorcycles with (engine) bore between %@ and %@ (two measurements, the first has a lower value than the second)")
         captionLabel.text = String.localizedStringWithFormat(formatString,
-                                                             selectedMinBore.descriptionWithDecimalsIfPresent,
-                                                             selectedMaxBore.descriptionWithDecimalsIfPresent)
+                                                             selectedMinBore.customLocalizedDescription,
+                                                             selectedMaxBore.customLocalizedDescription)
     }
 }

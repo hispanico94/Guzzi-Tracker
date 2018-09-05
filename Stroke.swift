@@ -32,7 +32,7 @@ struct Stroke {
     private var caption: String {
         let fromString = NSLocalizedString("from", comment: "lowercase from")
         let toString = NSLocalizedString("to", comment: "lowercase to")
-        return fromString + " \(minStroke.descriptionWithDecimalsIfPresent) " + toString + " \(maxStroke.descriptionWithDecimalsIfPresent)"
+        return fromString + " \(minStroke.customLocalizedDescription) " + toString + " \(maxStroke.customLocalizedDescription)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

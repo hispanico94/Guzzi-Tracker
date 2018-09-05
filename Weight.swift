@@ -32,7 +32,7 @@ struct Weight {
     private var caption: String {
         let fromString = NSLocalizedString("from", comment: "lowercase from")
         let toString = NSLocalizedString("to", comment: "lowercase to")
-        return fromString + " \(minWeight.descriptionWithDecimalsIfPresent) " + toString + " \(maxWeight.descriptionWithDecimalsIfPresent)"
+        return fromString + " \(minWeight.customLocalizedDescription) " + toString + " \(maxWeight.customLocalizedDescription)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

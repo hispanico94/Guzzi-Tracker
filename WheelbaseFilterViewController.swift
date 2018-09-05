@@ -79,7 +79,7 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
     // MARK: - UIPickerView Delegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return wheelbases[row].value.descriptionWithDecimalsIfPresent
+        return wheelbases[row].value.customLocalizedDescription
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -108,7 +108,7 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
         let formatString = NSLocalizedString("Select all motorcycles with wheelbase between %@ and %@",
                                              comment: "Select all motorcycles with wheelbase between %@ and %@ (two measurements, the first has a lower value than the second)")
         captionLabel.text = String.localizedStringWithFormat(formatString,
-                                                             selectedMinWheelbase.descriptionWithDecimalsIfPresent,
-                                                             selectedMaxWheelbase.descriptionWithDecimalsIfPresent)
+                                                             selectedMinWheelbase.customLocalizedDescription,
+                                                             selectedMaxWheelbase.customLocalizedDescription)
     }
 }

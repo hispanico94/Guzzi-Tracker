@@ -32,7 +32,7 @@ struct Wheelbase {
     private var caption: String {
         let fromString = NSLocalizedString("from", comment: "lowercase from")
         let toString = NSLocalizedString("to", comment: "lowercase to")
-        return fromString + " \(minWheelbase.descriptionWithDecimalsIfPresent) " + toString + " \(maxWheelbase.descriptionWithDecimalsIfPresent)"
+        return fromString + " \(minWheelbase.customLocalizedDescription) " + toString + " \(maxWheelbase.customLocalizedDescription)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

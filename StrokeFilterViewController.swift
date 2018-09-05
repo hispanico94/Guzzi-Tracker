@@ -79,7 +79,7 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     // MARK: - UIPickerView Delegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return strokes[row].value.descriptionWithDecimalsIfPresent
+        return strokes[row].value.customLocalizedDescription
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -108,7 +108,7 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         let formatString = NSLocalizedString("Select all motorcycles with stroke between %@ and %@",
                                              comment: "Select all motorcycles with (engine) stroke between %@ and %@ (two measurements, the first has a lower value than the second)")
         captionLabel.text = String.localizedStringWithFormat(formatString,
-                                                             selectedMinStroke.descriptionWithDecimalsIfPresent,
-                                                             selectedMaxStroke.descriptionWithDecimalsIfPresent)
+                                                             selectedMinStroke.customLocalizedDescription,
+                                                             selectedMaxStroke.customLocalizedDescription)
     }
 }

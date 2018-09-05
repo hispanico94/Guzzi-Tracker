@@ -24,7 +24,7 @@ class MotorcycleInfoViewController: UITableViewController {
     
     init(selectedMotorcycle motorcycle: Motorcycle, nibName: String?, bundle: Bundle?) {
         self.motorcycle = motorcycle
-        motorcycleArray = motorcycle.createArrayfromStruct()
+        motorcycleArray = motorcycle.makeArray()
         super.init(nibName: nibName, bundle: bundle)
     }
     

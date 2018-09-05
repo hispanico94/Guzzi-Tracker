@@ -79,7 +79,7 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
     // MARK: - UIPickerView Delegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return powers[row].value.descriptionWithDecimalsIfPresent
+        return powers[row].value.customLocalizedDescription
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -108,8 +108,8 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
         let formatString = NSLocalizedString("Select all motorcycles with power between %@ and %@",
                                              comment: "Select all motorcycles with (engine) power between %@ and %@ (two measurements, the first has a lower value than the second)")
         captionLabel.text = String.localizedStringWithFormat(formatString,
-                                                             selectedMinPower.descriptionWithDecimalsIfPresent,
-                                                             selectedMaxPower.descriptionWithDecimalsIfPresent)
+                                                             selectedMinPower.customLocalizedDescription,
+                                                             selectedMaxPower.customLocalizedDescription)
     }
 }
 

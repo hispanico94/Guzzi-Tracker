@@ -7,3 +7,5 @@
 4- eventually change email address in "URL ERROR"
 
 5- in InfoViewController add tableFooterView with .lightLegnanoGreen color for padding when rows doesn't cover all bounds
+
+6- in Standard types.swift check if UIImage and some methods of UISearchBar extensions are used (SearchViewController)

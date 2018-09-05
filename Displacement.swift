@@ -32,7 +32,7 @@ struct Displacement {
     private var caption: String {
         let fromString = NSLocalizedString("from", comment: "lowercase from")
         let toString = NSLocalizedString("to", comment: "lowercase to")
-        return fromString + " \(minDisplacement.descriptionWithDecimalsIfPresent) " + toString + " \(maxDisplacement.descriptionWithDecimalsIfPresent)"
+        return fromString + " \(minDisplacement.customLocalizedDescription) " + toString + " \(maxDisplacement.customLocalizedDescription)"
     }
     
     init(motorcycleList: [Motorcycle]?) {

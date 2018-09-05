@@ -138,7 +138,7 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         let formatString = NSLocalizedString("Select all motorcycles with weight between %@ and %@",
                                              comment: "Select all motorcycles with weight between %@ and %@ (two measurements, the first has a lower value than the second)")
         captionLabel.text = String.localizedStringWithFormat(formatString,
-                                                             selectedMinWeight.descriptionWithDecimalsIfPresent,
-                                                             selectedMaxWeight.descriptionWithDecimalsIfPresent)
+                                                             selectedMinWeight.customLocalizedDescription,
+                                                             selectedMaxWeight.customLocalizedDescription)
     }
 }
