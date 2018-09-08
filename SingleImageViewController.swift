@@ -12,12 +12,16 @@ class SingleImageViewController: UIViewController {
     private let image: UIImage
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            imageView.image = image
+        }
+    }
     
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
     // MARK: - Initialization
     
@@ -30,12 +34,6 @@ class SingleImageViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imageView.image = image
-        imageView.sizeToFit()
-    }
-    
     // MARK: -
     
     override func viewDidLayoutSubviews() {
@@ -45,27 +43,27 @@ class SingleImageViewController: UIViewController {
     }
     
     private func updateMinZoomScale(forSize size: CGSize) {
-        let widthScale = size.width / imageView.bounds.width
-        let heightScale = size.height / imageView.bounds.height
+        let widthScale = size.width / image.size.width
+        let heightScale = size.height / image.size.height
         let minScale = min(widthScale, heightScale)
         
         scrollView.minimumZoomScale = minScale
         
-        scrollView.zoomScale = minScale
+//        scrollView.zoomScale = minScale
     }
     
-    fileprivate func updateConstraints(forSize size: CGSize) {
-        
-        let yOffset = max(0, (size.height - imageView.frame.height) / 2)
-        imageViewTopConstraint.constant = yOffset
-        imageViewBottomConstraint.constant = yOffset
-        
-        let xOffset = max(0, (size.width - imageView.frame.width) / 2)
-        imageViewLeadingConstraint.constant = xOffset
-        imageViewTrailingConstraint.constant = xOffset
-        
-        view.layoutIfNeeded()
-    }
+//    fileprivate func updateConstraints(forSize size: CGSize) {
+//
+//        let yOffset = max(0, (size.height - imageView.frame.height) / 2)
+//        imageViewTopConstraint.constant = yOffset
+//        imageViewBottomConstraint.constant = yOffset
+//
+//        let xOffset = max(0, (size.width - imageView.frame.width) / 2)
+//        imageViewLeadingConstraint.constant = xOffset
+//        imageViewTrailingConstraint.constant = xOffset
+//
+//        view.layoutIfNeeded()
+//    }
     
     @IBAction func userDidTap(_ sender: UITapGestureRecognizer) {
         dismiss(animated: true, completion: nil)
@@ -79,7 +77,7 @@ extension SingleImageViewController: UIScrollViewDelegate {
         return imageView
     }
     
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        updateConstraints(forSize: view.bounds.size)
-    }
+//    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+//        updateConstraints(forSize: view.bounds.size)
+//    }
 }
