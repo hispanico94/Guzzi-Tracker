@@ -1,5 +1,22 @@
 import UIKit
 
+extension UITableView {
+    func addFooterView() {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 1))
+        self.tableFooterView = footerView
+        
+        let greenFooterView = UIView(frame: .zero)
+        greenFooterView.translatesAutoresizingMaskIntoConstraints = false
+        greenFooterView.backgroundColor = .lightLegnanoGreen
+        footerView.addSubview(greenFooterView)
+        
+        greenFooterView.topAnchor.constraint(equalTo: footerView.topAnchor).isActive = true
+        greenFooterView.leftAnchor.constraint(equalTo: footerView.leftAnchor).isActive = true
+        greenFooterView.rightAnchor.constraint(equalTo: footerView.rightAnchor).isActive = true
+        greenFooterView.heightAnchor.constraint(equalToConstant: 10000).isActive = true
+    }
+}
+
 class InfoViewController: UITableViewController {
     
     let informations = Information.defaultInformations.makeArray()
@@ -9,30 +26,8 @@ class InfoViewController: UITableViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = CGFloat(44)
-        
-        let footerView = UIView(frame: .zero)
-        footerView.backgroundColor = .lightLegnanoGreen
-        tableView.tableFooterView = footerView
+        tableView.addFooterView()
     }
-    
-//    override func viewDidLayoutSubviews() {
-//        makeTableFooterView()
-//    }
-//
-//    private func makeTableFooterView() {
-//        if tableView.tableFooterView == nil {
-//            let fvX = tableView.frame.origin.x
-//            let fvY = tableView.contentSize.height
-//            let fvWidth = tableView.frame.width
-//            let fvHeight = tableView.frame.height - tableView.contentSize.height
-//
-//            let footerView = UIView(frame: CGRect(x: fvX, y: fvY, width: fvWidth, height: fvHeight))
-//            footerView.backgroundColor = UIColor.lightLegnanoGreen
-//
-//            tableView.tableFooterView = footerView
-//
-//        }
-//    }
 
     // MARK: - Table view data source
 

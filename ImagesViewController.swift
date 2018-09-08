@@ -35,7 +35,13 @@ class ImagesViewController: UITableViewController {
 
         ImageDownloader().download(imageUrlRequests)
         navigationItem.title = motorcycleName
-        tableView.rowHeight = calculateRowHeight(withWidth: view.bounds.width)
+//        tableView.rowHeight = calculateRowHeight(withWidth: view.bounds.width)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        tableView.rowHeight = calculateRowHeight(withWidth: tableView.bounds.width)
     }
 
     // MARK: - View transition
@@ -45,7 +51,7 @@ class ImagesViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

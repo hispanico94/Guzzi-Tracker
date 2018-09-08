@@ -8,4 +8,4 @@
 
 5- in InfoViewController add tableFooterView with .lightLegnanoGreen color for padding when rows doesn't cover all bounds
 
-6- in Standard types.swift check if UIImage and some methods of UISearchBar extensions are used (SearchViewController)
+6- solve problem on ipad, images in ImagesViewController not displaying full size in tableView

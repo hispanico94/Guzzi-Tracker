@@ -12,10 +12,6 @@ class SearchViewController: UIViewController {
     
     private let searchResultsViewController: SearchResultsViewController
     
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var headerLabel: UILabel!
-    
     @IBOutlet weak var detailLabel: UILabel!
     
     // MARK: - Initialization
@@ -62,10 +58,6 @@ class SearchViewController: UIViewController {
         
         view.backgroundColor = UIColor.lightLegnanoGreen
         
-        headerLabel.textColor = UIColor.gray
-        headerLabel.textColor = UIColor.gray
-        
-        headerLabel.text = NSLocalizedString("Search Motorcycles", comment: "Search Motorcycles")
         detailLabel.text = NSLocalizedString("To start searching, tap the bar on top", comment: "To start searching, tap the bar on top")
     }
     

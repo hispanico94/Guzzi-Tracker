@@ -208,7 +208,6 @@ extension Double {
 // MARK: UIKit extensions
 // MARK: -
 
-
 // MARK: UIColor extensions
 
 // Colors used in the app

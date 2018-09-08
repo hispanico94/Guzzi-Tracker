@@ -47,6 +47,9 @@ class MyGarageViewController: UITableViewController {
 //            target: self,
 //            action: #selector(didTapInfoButton(sender:))
 //        )
+        
+        let footerView = UIView(frame: .zero)
+        tableView.tableFooterView = footerView
     }
 
     // MARK: - View transition
