@@ -126,8 +126,7 @@ class FiltersViewController: UITableViewController {
         let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearFiltersAndOrders))
         
-        let footerView = UIView(frame: .zero)
-        tableView.tableFooterView = footerView
+        tableView.addFooterView()
     }
     
     // MARK: - View transition

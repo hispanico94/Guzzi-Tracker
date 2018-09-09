@@ -26,8 +26,7 @@ class FamilyFilterViewController: UITableViewController {
         let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
         
-        let footerView = UIView(frame: .zero)
-        tableView.tableFooterView = footerView
+        tableView.addFooterView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
