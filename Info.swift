@@ -6,7 +6,7 @@ struct Information {
     let version: Version
     let about: About
     let contacts: [Contact]
-//    let review: Review
+    //    let review: Review
     
     
     struct Version {
@@ -29,10 +29,10 @@ struct Information {
         let link: URL?
     }
     
-//    struct Review {
-//        let text: String
-//        let link: URL?
-//    }
+    //    struct Review {
+    //        let text: String
+    //        let link: URL?
+    //    }
 }
 
 // MARK: - Conforming Information.* to CellRepresentable protocol
@@ -99,15 +99,15 @@ extension Information {
         let emailURL = emailUrlEncoded ?? "mailto:hispanico94@gmail.com"
         
         let contacts = [ Contact(text: "email: hispanico94@gmail.com", link: URL(string: emailURL)),
-                        Contact(text: "GitHub", link: URL(string: "https://github.com/hispanico94/Guzzi-Tracker")) ]
-//        let review = Review(text: NSLocalizedString("Write a review!", comment: "write a review in the app store"), link: URL(string: "https://[LINK_APP_STORE]/[LINK_APP]&action=write-review"))
+                         Contact(text: "GitHub", link: URL(string: "https://github.com/hispanico94/Guzzi-Tracker")) ]
+        //        let review = Review(text: NSLocalizedString("Write a review!", comment: "write a review in the app store"), link: URL(string: "https://[LINK_APP_STORE]/[LINK_APP]&action=write-review"))
         
         return Information(version: version, about: about, contacts: contacts)//, review: review)
     }
     
     func makeArray() -> [SectionData] {
         var elements: [SectionData] = []
-//        elements.reserveCapacity(4)
+        //        elements.reserveCapacity(4)
         elements.reserveCapacity(3)
         
         elements.append(SectionData(sectionName: NSLocalizedString("Version", comment: "application version"),
@@ -116,9 +116,10 @@ extension Information {
                                     sectionElements: [about]))
         elements.append(SectionData(sectionName: NSLocalizedString("Contacts", comment: "(or contact the developer)"),
                                     sectionElements: contacts))
-//        elements.append(SectionData(sectionName: NSLocalizedString("Reviews", comment: "Reviews"),
-//                                    sectionElements: [review]))
+        //        elements.append(SectionData(sectionName: NSLocalizedString("Reviews", comment: "Reviews"),
+        //                                    sectionElements: [review]))
         
         return elements
     }
 }
+
