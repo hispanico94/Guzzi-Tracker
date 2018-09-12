@@ -22,6 +22,7 @@
 		CF1CDB81206FD465007BCE95 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */; };
 		CF1CDB84206FD5AF007BCE95 /* MinMaxYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */; };
 		CF2A863A2089EB8C00C1A7E7 /* Wheelbase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2A86392089EB8C00C1A7E7 /* Wheelbase.swift */; };
+		CF3A1CAF2147B66200ABCEC2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A1CAE2147B66200ABCEC2 /* Review.swift */; };
 		CF419AFE1E6D643300EA7B74 /* MotorcycleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF419AFC1E6D643300EA7B74 /* MotorcycleInfoViewController.swift */; };
 		CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */; };
 		CF419B021E6D692700EA7B74 /* MotorcycleInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF419B001E6D692700EA7B74 /* MotorcycleInfoCell.swift */; };
@@ -115,6 +116,7 @@
 		CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
 		CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinMaxYear.swift; sourceTree = "<group>"; };
 		CF2A86392089EB8C00C1A7E7 /* Wheelbase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wheelbase.swift; sourceTree = "<group>"; };
+		CF3A1CAE2147B66200ABCEC2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		CF419AFC1E6D643300EA7B74 /* MotorcycleInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleInfoViewController.swift; sourceTree = "<group>"; };
 		CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleInfoViewController.xib; sourceTree = "<group>"; };
 		CF419B001E6D692700EA7B74 /* MotorcycleInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleInfoCell.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				CF8C6284206FC7DD002B8CF6 /* Ref.swift */,
 				CF56823A20B6A3ED00B52AEB /* FilterButton.swift */,
 				CFA843AE21451D38009BE72C /* Info.swift */,
+				CF3A1CAE2147B66200ABCEC2 /* Review.swift */,
 			);
 			name = Elements;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				CFB4E1FD213EEDD80081E0CC /* Standard types.swift in Sources */,
 				CF0F546C1E81A06A0059650F /* Elements.swift in Sources */,
 				CF73C44720931E5B00596118 /* Function.swift in Sources */,
+				CF3A1CAF2147B66200ABCEC2 /* Review.swift in Sources */,
 				CF1A41D61E60808C00E76F11 /* MotorcyclesViewController.swift in Sources */,
 				CF83065F208744BD00570E60 /* Power.swift in Sources */,
 				CFB4E1F4213ED2D20081E0CC /* JsonFile.swift in Sources */,

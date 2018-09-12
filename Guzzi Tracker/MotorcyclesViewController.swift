@@ -46,6 +46,8 @@ class MotorcyclesViewController: UITableViewController {
     
     private let vcFactory: VCFactory
 
+    private let review = Review.sharedReview
+    
     // MARK: - Initialization
     
     init(vcFactory: VCFactory) {
@@ -111,6 +113,13 @@ class MotorcyclesViewController: UITableViewController {
         if motorcycleList.isEmpty {
             presentErrorMessage()
         }
+    }
+    
+    // MARK: - View transition
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        review.requestReviewIfPossible()
     }
     
     // MARK: - Interface Builder methods

@@ -12,6 +12,8 @@ class MyGarageViewController: UITableViewController {
     private var favoritesMotorcyles: [Motorcycle] = []
     private let favoriteList = FavoritesList.sharedFavoritesList
     
+    private let review = Review.sharedReview
+    
     // MARK: - Initialization
     
     init(vcFactory: VCFactory) {
@@ -55,8 +57,13 @@ class MyGarageViewController: UITableViewController {
     // MARK: - View transition
     
     override func viewWillAppear(_ animated: Bool) {
-        updateFavorites()
         super.viewWillAppear(animated)
+        updateFavorites()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        review.requestReviewIfPossible()
     }
     
     

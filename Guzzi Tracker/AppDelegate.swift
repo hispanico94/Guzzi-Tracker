@@ -8,8 +8,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var vcFactory: VCFactory?
     var motorcycleData: MotorcycleData?
     
+    let review = Review.sharedReview
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Launch counter update
+        
+        review.incrementCounter()
 
         // Appearance customization
         
@@ -41,6 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        review.saveActiveDate()
+        
         motorcycleData?.updateJson()
     }
 }
