@@ -5,7 +5,10 @@ import StoreKit
 /// `sharedReview`. Every interaction with this class is via the singleton. The prompt is handled by
 /// `SKStoreReviewController.requestReview()`. The first prompt is displayed after the first
 /// ten launches of the app, the second five launches later and the third after another five launces
-/// of the app. SKStoreReviewController automatically limits the number of prompts to three every 365 days.
+/// of the app. Prompts are also spaced in time by 24 hours (so that users that fully open and close and app
+/// consecutively does not get the prompt), this is also necessary because jumping from a tab to another after
+/// a prompt is displayed may cause the prompt to show up again.In any case SKStoreReviewController
+/// automatically limits the number of prompts to three every 365 days.
 /// This class resets the counter after every update of the app (checks the bundle's version).
 /// The prompt is displayed, if possible, 30 seconds after the app become active.
 final class Review {
@@ -15,16 +18,19 @@ final class Review {
     private let secondRequestCounterVaule = 15
     private let thirdRequestCounterValue = 20
     
-    private let minimumSecondsElapsedSinceActive = 30.0
+    private let minimumSecondsElapsedSinceActive = TimeInterval(30)
     
     private var counter: Int
     private var storedAppVersion: String
+    private var lastRequestDate: Date?
     private var activeDate: Date
     
     private init() {
         let defaults = UserDefaults.standard
         
         self.counter = defaults.integer(forKey: "launchCounter")
+        
+        self.lastRequestDate = defaults.object(forKey: "lastRequestDate") as? Date
         
         let infoDictionaryKey = kCFBundleVersionKey as String
         guard let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: infoDictionaryKey) as? String else {
@@ -63,15 +69,25 @@ final class Review {
     /// This function needs to be called in the
     /// `func viewDidAppear(_:)` of main view controllers.
     func requestReviewIfPossible() {
-        let timeIntervalSinceBecomeActive = Date().timeIntervalSince(activeDate)
+        let currentDate = Date()
         
+        let timeIntervalSinceBecomeActive = currentDate.timeIntervalSince(activeDate)
         guard timeIntervalSinceBecomeActive > minimumSecondsElapsedSinceActive else { return }
+        
+        if let lastRequest = lastRequestDate {
+            let timeIntervalSinceLastRequest = currentDate.timeIntervalSince(lastRequest)
+            let oneDayInSeconds = TimeInterval(60 * 60 * 24)
+            guard timeIntervalSinceLastRequest > oneDayInSeconds else { return }
+        }
         
         switch counter {
         case firstRequestCounterValue,
              secondRequestCounterVaule,
              thirdRequestCounterValue:
-            SKStoreReviewController.requestReview()
+            
+            lastRequestDate = currentDate
+            UserDefaults.standard.set(currentDate, forKey: "lastRequestDate")
+            requestReview()
         default:
             return
         }
