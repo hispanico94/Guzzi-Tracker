@@ -42,16 +42,6 @@ class MyGarageViewController: UITableViewController {
         tableView.register(UINib(nibName: "MotorcycleCell", bundle: nil), forCellReuseIdentifier: MotorcycleCell.defaultIdentifier)
 
         navigationItem.rightBarButtonItem = self.editButtonItem
-        
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(
-//            image: UIImage(named: "info_icon"),
-//            style: .plain,
-//            target: self,
-//            action: #selector(didTapInfoButton(sender:))
-//        )
-        
-        let footerView = UIView(frame: .zero)
-        tableView.tableFooterView = footerView
     }
 
     // MARK: - View transition
@@ -88,6 +78,10 @@ class MyGarageViewController: UITableViewController {
             favoriteList.remove(deletedMotorcycleId)
             favoritesMotorcyles.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            if favoritesMotorcyles.isEmpty {
+                setBackgroundView()
+            }
         }
     }
     
@@ -109,17 +103,26 @@ class MyGarageViewController: UITableViewController {
     // MARK: - Private instance methods
     
     private func updateFavorites() {
-        self.favoritesMotorcyles.removeAll(keepingCapacity: true)
+        favoritesMotorcyles.removeAll(keepingCapacity: true)
         
         for id in favoriteList.favorites {
-            let motorcycle = self.motorcycleList.filter { $0.id == id }
-            self.favoritesMotorcyles += motorcycle
+            let motorcycle = motorcycleList.filter { $0.id == id }
+            favoritesMotorcyles += motorcycle
         }
         
+        setBackgroundView()
         tableView.reloadData()
     }
     
-    
+    private func setBackgroundView() {
+        if favoritesMotorcyles.isEmpty {
+            tableView.backgroundView = TableBackgroundViewController(text: NSLocalizedString("Saved motorcycles will appear here", comment: "Saved motorcycles will appear here")).view
+            tableView.tableFooterView = UIView(frame: .zero)
+            return
+        }
+        tableView.backgroundView = nil
+        tableView.addFooterView()
+    }
     
     @IBAction func didTapInfoButton(sender: UIBarButtonItem) {
         let infoVC = UINavigationController(rootViewController: vcFactory.makeInfoVC())

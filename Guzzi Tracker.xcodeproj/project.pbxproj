@@ -98,6 +98,8 @@
 		CFE485E821353E5F00949E81 /* MinMaxYearFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE485EA21353E5F00949E81 /* MinMaxYearFilterViewController.xib */; };
 		CFF7C68A207CB30F001A7B90 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7C689207CB30F001A7B90 /* Weight.swift */; };
 		CFF7C68D207CBA26001A7B90 /* WeightFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */; };
+		CFF80DD6214A505E001CAC01 /* TableBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF80DD4214A505E001CAC01 /* TableBackgroundViewController.swift */; };
+		CFF80DD7214A505E001CAC01 /* TableBackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFF80DD5214A505E001CAC01 /* TableBackgroundViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -213,6 +215,8 @@
 		CFE485EE21353E6200949E81 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MinMaxYearFilterViewController.strings; sourceTree = "<group>"; };
 		CFF7C689207CB30F001A7B90 /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightFilterViewController.swift; sourceTree = "<group>"; };
+		CFF80DD4214A505E001CAC01 /* TableBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBackgroundViewController.swift; sourceTree = "<group>"; };
+		CFF80DD5214A505E001CAC01 /* TableBackgroundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableBackgroundViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +281,8 @@
 				CF73C4422093188A00596118 /* ComparatorsViewController.swift */,
 				CF5D2DB62138362F00E01DFA /* InfoViewController.swift */,
 				CF31C9B3208DC72800D4B3BD /* Filters */,
+				CFF80DD4214A505E001CAC01 /* TableBackgroundViewController.swift */,
+				CFF80DD5214A505E001CAC01 /* TableBackgroundViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 				CF1CDB81206FD465007BCE95 /* FiltersViewController.xib in Resources */,
 				CFE485C521353DDF00949E81 /* WheelbaseFilterViewController.xib in Resources */,
 				CFAB03FC1E60432E0032BD11 /* LaunchScreen.storyboard in Resources */,
+				CFF80DD7214A505E001CAC01 /* TableBackgroundViewController.xib in Resources */,
 				CF0ED0841E6F15E8008BAB23 /* MotorcycleImagesCell.xib in Resources */,
 				CF1A41D71E60808C00E76F11 /* MotorcyclesViewController.xib in Resources */,
 				CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */,
@@ -613,6 +620,7 @@
 				CFB0664D214014F00065EC5E /* FilterProvider.swift in Sources */,
 				CF1A41E21E6081F000E76F11 /* VCFactory.swift in Sources */,
 				CFB06650214015C80065EC5E /* Comparator.swift in Sources */,
+				CFF80DD6214A505E001CAC01 /* TableBackgroundViewController.swift in Sources */,
 				CFAC091A20AC1B7B00689C5A /* MyGarageViewController.swift in Sources */,
 				CFB4E1F0213ECDDA0081E0CC /* Motorcycle.swift in Sources */,
 				CFF7C68D207CBA26001A7B90 /* WeightFilterViewController.swift in Sources */,
