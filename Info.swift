@@ -94,11 +94,13 @@ extension Information {
         let version = Version(appName: "Guzzi Tracker", version: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String)
         let about = About(text: NSLocalizedString("(APP DESCRIPTION)", comment: "write the app description as in the english and italian localizable files"))
         
-        let emailUrlEncoded = "mailto:hispanico94@gmail.com?body=\n\n(\(version.text))"
+        let modelID = UIDevice.modelIdentifier
+        let iOSVersion = "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
+        let emailUrlEncoded = "mailto:guzzitracker@gmail.com?body=\n\n(\(version.text) - \(modelID) - \(iOSVersion))"
             .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        let emailURL = emailUrlEncoded ?? "mailto:hispanico94@gmail.com"
+        let emailURL = emailUrlEncoded ?? "mailto:guzzitracker@gmail.com"
         
-        let contacts = [ Contact(text: "email: hispanico94@gmail.com", link: URL(string: emailURL)),
+        let contacts = [ Contact(text: "email: guzzitracker@gmail.com", link: URL(string: emailURL)),
                          Contact(text: "GitHub", link: URL(string: "https://github.com/hispanico94/Guzzi-Tracker")) ]
         let review = Review(text: NSLocalizedString("Write a review!", comment: "write a review in the app store"), link: URL(string: "https://itunes.apple.com/app/guzzi-tracker/id1435726246?action=write-review"))
         

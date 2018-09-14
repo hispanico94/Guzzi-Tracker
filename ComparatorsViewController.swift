@@ -38,6 +38,8 @@ class ComparatorsViewController: UITableViewController {
         
         let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearOrders))
+        
+        tableView.addFooterView()
     }
 
     // MARK: - View transition

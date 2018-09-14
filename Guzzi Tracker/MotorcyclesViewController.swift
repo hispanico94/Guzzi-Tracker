@@ -110,6 +110,8 @@ class MotorcyclesViewController: UITableViewController {
             action: #selector(didTapFilterButton(sender:))
         )
         
+        tableView.addFooterView()
+        
         if motorcycleList.isEmpty {
             presentErrorMessage()
         }
@@ -158,7 +160,7 @@ class MotorcyclesViewController: UITableViewController {
     // MARK: - Private instance methods
     
     private func presentErrorMessage() {
-        let alert = UIAlertController(title: NSLocalizedString("Error", comment: "list extraction error"), message: "An error occurred while retrieving data. Please try again later.", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Error", comment: "list extraction error"), message: NSLocalizedString("(DATA EXTRACTION ERROR)", comment: "Error during data extraction"), preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true)

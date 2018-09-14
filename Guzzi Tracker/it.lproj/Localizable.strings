@@ -88,7 +88,8 @@
 "Reviews" = "Recensioni";
 "(Version not available)" = "(Versione non disponibile)";
 "Write a review!" = "Scrivi una recensione!";
-"(APP DESCRIPTION)" = "Quest'app è stata ideata e realizzata da Paolo Rocca. La lista delle motociclette prodotte dalla Moto Guzzi nel corso degli anni è incompleta e può contenere delle imprecisioni. Sei invitato a inviare consigli, suggerimenti e a comunicare eventuali errori nei dati o bug nell'app tramite uno dei contatti indicati in basso. Sei anche invitato a inviare dati di moto non presenti nella lista, in modo che vengano aggiunte, e foto che ritraggono moto nel loro stato originale.\nSe l'app ti piace lascia una recensione nell'App Store!";
+"(APP DESCRIPTION)" = "Quest'app è stata ideata e realizzata da Paolo Rocca, un guzzista come voi! La lista delle motociclette prodotte dalla Moto Guzzi nel corso degli anni è incompleta e può contenere delle imprecisioni. Consigli e suggerimenti sono ben accetti. Per comunicare eventuali errori nei dati o bug nell'app sfrutta uno dei contatti indicati in basso. Se hai dati di motociclette non presenti nella lista e vuoi contribuire ad ampliare e migliorare l'app inviali tramite uno dei contatti. Puoi inviare anche fotografie di moto (preferibilmente nel loro stato originale) in modo che vengano aggiunte alla lista.\nSe l'app ti piace lascia una recensione nell'App Store!";
 "Error" = "Errore";
-"(URL ERROR)" = "Un errore è avvenuto durante l'estrazione dell'URL, per favore contatta lo sviluppatore a hispanico94@gmail.com descrivendo il problema.";
+"(URL ERROR)" = "Un errore è avvenuto durante l'estrazione dell'URL, per favore contatta lo sviluppatore a guzzitracker@gmail.com descrivendo il problema.";
 "Saved motorcycles will appear here" = "Le moto salvate appariranno qui";
+"(DATA EXTRACTION ERROR)" = "È avvenuto un errore durante il recupero dei dati. Sei pregato di provare più tardi. Se il problema persiste contatta lo svilupattore a guzzitracker@gmail.com";

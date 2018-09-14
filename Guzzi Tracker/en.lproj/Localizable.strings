@@ -89,7 +89,8 @@
 "Reviews" = "Reviews";
 "(Version not available)" = "(Version not available)";
 "Write a review!" = "Write a review!";
-"(APP DESCRIPTION)" = "This app was conceived and created by Paolo Rocca. The list of motorcycles manufactured by Moto Guzzi over the years is incomplete and may contain errors. You are invited to send advices, suggestions and report bugs in the app or errors in the data via one the contacts listed below. You are also invited to send data of motorcycles not listed, so that they can be added, and pictures of motorcycles in their original state.\nIf you like the app please leave a review in the App Store!";
+"(APP DESCRIPTION)" = "This app was conceived and created by Paolo Rocca, a \"guzzista\" like you! The list of motorcycles manufactured by Moto Guzzi over the years is incomplete and may contain errors. Advices and suggestions are welcome. To report bugs in the app or errors in the data use one of the contacts listed below. If you have data of motorcycles not listed, and you want to contribute to expand and improve the app, please send the data via one of the contacts. You can also send pictures of motorcycles (preferably in their original state) so that they can be added to the list.\nIf you like the app please leave a review in the App Store!";
 "Error" = "Error";
-"(URL ERROR)" = "An error occurred while extracting the URL, please contact the developer at hispanico94@gmail.com and describe the issue.";
+"(URL ERROR)" = "An error occurred while extracting the URL, please contact the developer at guzzitracker@gmail.com and describe the issue.";
 "Saved motorcycles will appear here" = "Saved motorcycles will appear here";
+"(DATA EXTRACTION ERROR)" = "An error occurred while retrieving data. Please try again later. If the problem persists please contact the developer at guzzitracker@gmail.com";
