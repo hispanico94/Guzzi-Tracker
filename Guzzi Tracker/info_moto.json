@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "elements": [
                  {
                  "id": 1,
@@ -4490,6 +4490,276 @@
                  },
                  "notes": "notes",
                  "images": null
+                 },
+                 {
+                 "id": 84,
+                 "general_info": {
+                 "family": "V50",
+                 "name": "V50",
+                 "first_year": 1977,
+                 "last_year": 1979
+                 },
+                 "engine" : {
+                 "configuration": "engine_configuration",
+                 "stroke_cycle": 4,
+                 "bore": 74,
+                 "stroke": 57,
+                 "displacement": {
+                 "real": 490.2,
+                 "nominal": 500
+                 },
+                 "compression": 10.8,
+                 "power": {
+                 "peak": 45,
+                 "rpm": 7500
+                 },
+                 "feed": "engine_feed",
+                 "ignition": "engine_ignition"
+                 },
+                 "transmission": {
+                 "type": "transmission_gearbox",
+                 "clutch": "transmission_clutch",
+                 "final_drive": "transmission_final_drive"
+                 },
+                 "frame": {
+                 "type": "frame_type",
+                 "front_suspension": "frame_front_suspension",
+                 "rear_suspension": "frame_rear_suspension",
+                 "wheelbase": 1395,
+                 "wheels": "WM 2/1.85X18 CP2 - WM 3/2.15X18 CP2",
+                 "tyres": "3.00S18 - 3.50S18"
+                 },
+                 "brakes": {
+                 "type": "brakes_type",
+                 "front_size": 260,
+                 "rear_size": 235,
+                 "notes": "brakes_notes"
+                 },
+                 "capacities_performances": {
+                 "fuel_capacity": 16.5,
+                 "lubricant_capacity": 2.25,
+                 "weight": 152,
+                 "max_speed": 170,
+                 "fuel_consumption": 4
+                 },
+                 "notes": "notes",
+                 "images": null
+                 },
+                 {
+                 "id": 85,
+                 "general_info": {
+                 "family": "V50",
+                 "name": "V50 II",
+                 "first_year": 1979,
+                 "last_year": 1980
+                 },
+                 "engine" : {
+                 "configuration": "engine_configuration",
+                 "stroke_cycle": 4,
+                 "bore": 74,
+                 "stroke": 57,
+                 "displacement": {
+                 "real": 490.2,
+                 "nominal": 500
+                 },
+                 "compression": 10.8,
+                 "power": {
+                 "peak": 45,
+                 "rpm": 7500
+                 },
+                 "feed": "engine_feed",
+                 "ignition": "engine_ignition"
+                 },
+                 "transmission": {
+                 "type": "transmission_gearbox",
+                 "clutch": "transmission_clutch",
+                 "final_drive": "transmission_final_drive"
+                 },
+                 "frame": {
+                 "type": "frame_type",
+                 "front_suspension": "frame_front_suspension",
+                 "rear_suspension": "frame_rear_suspension",
+                 "wheelbase": 1395,
+                 "wheels": "WM 2/1.85X18 CP2 - WM 3/2.15X18 CP2",
+                 "tyres": "3.00S18 - 3.50S18"
+                 },
+                 "brakes": {
+                 "type": "brakes_type",
+                 "front_size": 260,
+                 "rear_size": 235,
+                 "notes": "brakes_notes"
+                 },
+                 "capacities_performances": {
+                 "fuel_capacity": 16.5,
+                 "lubricant_capacity": 2.5,
+                 "weight": 152,
+                 "max_speed": 170,
+                 "fuel_consumption": 4
+                 },
+                 "notes": "notes",
+                 "images": null
+                 },
+                 {
+                 "id": 86,
+                 "general_info": {
+                 "family": "V50",
+                 "name": "V50 III",
+                 "first_year": 1981,
+                 "last_year": 1986
+                 },
+                 "engine" : {
+                 "configuration": "engine_configuration",
+                 "stroke_cycle": 4,
+                 "bore": 74,
+                 "stroke": 57,
+                 "displacement": {
+                 "real": 490.2,
+                 "nominal": 500
+                 },
+                 "compression": 10.4,
+                 "power": {
+                 "peak": 47,
+                 "rpm": 7500
+                 },
+                 "feed": "engine_feed",
+                 "ignition": "engine_ignition"
+                 },
+                 "transmission": {
+                 "type": "transmission_gearbox",
+                 "clutch": "transmission_clutch",
+                 "final_drive": "transmission_final_drive"
+                 },
+                 "frame": {
+                 "type": "frame_type",
+                 "front_suspension": "frame_front_suspension",
+                 "rear_suspension": "frame_rear_suspension",
+                 "wheelbase": 1420,
+                 "wheels": "WM 2/1.85X18 - WM 3/2.15X18",
+                 "tyres": "3.00S18 - 3.50S18"
+                 },
+                 "brakes": {
+                 "type": "brakes_type",
+                 "front_size": 260,
+                 "rear_size": 235,
+                 "notes": "brakes_notes"
+                 },
+                 "capacities_performances": {
+                 "fuel_capacity": 16,
+                 "lubricant_capacity": 2.5,
+                 "weight": 158,
+                 "max_speed": 170,
+                 "fuel_consumption": 4
+                 },
+                 "notes": "notes",
+                 "images": null
+                 },
+                 {
+                 "id": 87,
+                 "general_info": {
+                 "family": "V50",
+                 "name": "V50 C",
+                 "first_year": 1982,
+                 "last_year": 1986
+                 },
+                 "engine" : {
+                 "configuration": "engine_configuration",
+                 "stroke_cycle": 4,
+                 "bore": 74,
+                 "stroke": 57,
+                 "displacement": {
+                 "real": 490.2,
+                 "nominal": 500
+                 },
+                 "compression": 10.4,
+                 "power": {
+                 "peak": 47,
+                 "rpm": 7500
+                 },
+                 "feed": "engine_feed",
+                 "ignition": "engine_ignition"
+                 },
+                 "transmission": {
+                 "type": "transmission_gearbox",
+                 "clutch": "transmission_clutch",
+                 "final_drive": "transmission_final_drive"
+                 },
+                 "frame": {
+                 "type": "frame_type",
+                 "front_suspension": "frame_front_suspension",
+                 "rear_suspension": "frame_rear_suspension",
+                 "wheelbase": 1460,
+                 "wheels": "2.15X18 - 2.50X16",
+                 "tyres": "100/90-18 - 130/90-16"
+                 },
+                 "brakes": {
+                 "type": "brakes_type",
+                 "front_size": 260,
+                 "rear_size": 235,
+                 "notes": "brakes_notes"
+                 },
+                 "capacities_performances": {
+                 "fuel_capacity": 15,
+                 "lubricant_capacity": 2.5,
+                 "weight": 165,
+                 "max_speed": 165,
+                 "fuel_consumption": 5
+                 },
+                 "notes": "notes",
+                 "images": null
+                 },
+                 {
+                 "id": 88,
+                 "general_info": {
+                 "family": "V50",
+                 "name": "V50 Monza",
+                 "first_year": 1980,
+                 "last_year": 1984
+                 },
+                 "engine" : {
+                 "configuration": "engine_configuration",
+                 "stroke_cycle": 4,
+                 "bore": 74,
+                 "stroke": 57,
+                 "displacement": {
+                 "real": 490.2,
+                 "nominal": 500
+                 },
+                 "compression": 10.4,
+                 "power": {
+                 "peak": 45,
+                 "rpm": 7600
+                 },
+                 "feed": "engine_feed",
+                 "ignition": "engine_ignition"
+                 },
+                 "transmission": {
+                 "type": "transmission_gearbox",
+                 "clutch": "transmission_clutch",
+                 "final_drive": "transmission_final_drive"
+                 },
+                 "frame": {
+                 "type": "frame_type",
+                 "front_suspension": "frame_front_suspension",
+                 "rear_suspension": "frame_rear_suspension",
+                 "wheelbase": 1420,
+                 "wheels": "WM 2/1.85X18 - WM 3/2.15X18",
+                 "tyres": "3.25S18 - 3.50S18"
+                 },
+                 "brakes": {
+                 "type": "brakes_type",
+                 "front_size": 260,
+                 "rear_size": 235,
+                 "notes": "brakes_notes"
+                 },
+                 "capacities_performances": {
+                 "fuel_capacity": 16,
+                 "lubricant_capacity": 2.5,
+                 "weight": 160,
+                 "max_speed": 175,
+                 "fuel_consumption": 5
+                 },
+                 "notes": "notes",
+                 "images": null
                  }
                  
                  
@@ -8265,7 +8535,7 @@
                 "en": "Two carburetors, Dell'Orto VHB 26 F"
             },
             "engine_ignition": {
-                "it": "Spinterogeno con doppie puntine",
+                "it": "Spinterogeno con doppio ruttore",
                 "en": "Distributor with two contact breakers"
             },
             "transmission_gearbox": {
@@ -8365,7 +8635,7 @@
                 "en": "Two carburetors, Dell'Orto VHB 26 F"
             },
             "engine_ignition": {
-                "it": "Spinterogeno con doppie puntine",
+                "it": "Spinterogeno con doppio ruttore",
                 "en": "Distributor with two contact breakers"
             },
             "transmission_gearbox": {
@@ -8465,7 +8735,7 @@
                 "en": "Two carburetors, Dell'Orto PHBH 28"
             },
             "engine_ignition": {
-                "it": "Spinterogeno con doppie puntine",
+                "it": "Spinterogeno con doppio ruttore",
                 "en": "Distributor with two contact breakers"
             },
             "transmission_gearbox": {
@@ -8565,8 +8835,8 @@
                 "en": "Two carburetors, Dell'Orto VHB 26 F"
             },
             "engine_ignition": {
-                "it": "Spinterogeno, Marelli",
-                "en": "Distributor, Marelli"
+                "it": "Spinterogeno Marelli con doppio ruttore",
+                "en": "Marelli distributor with two contact breakers"
             },
             "transmission_gearbox": {
                 "it": "5 marce",
@@ -8653,6 +8923,256 @@
             "notes": {
                 "it": "Differenti valori di alesaggio e corsa rispetto agli altri bicilindrici Guzzi di pari cilindata, comuni con la V35 Florida.",
                 "en": "Different values of bore and stroke compared to other Guzzi V-twin of the same displacement, shared with the V35 Florida."
+            }
+        },
+        "84": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Due carburatori, Dell'Orto VHB 24 F",
+                "en": "Two carburetors, Dell'Orto VHB 24 F"
+            },
+            "engine_ignition": {
+                "it": "Elettronica, Bosch",
+                "en": "Electronic, Bosch"
+            },
+            "transmission_gearbox": {
+                "it": "5 marce",
+                "en": "5-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with single plate"
+            },
+            "transmission_final_drive": {
+                "it": "Cardano con giunto semplice",
+                "en": "Single joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa",
+                "en": "Closed double cradle"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica",
+                "en": "Telescopic fork"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+            },
+            "notes": {
+                "it": null,
+                "en": null
+            }
+        },
+        "85": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Due carburatori, Dell'Orto VHB 24 F",
+                "en": "Two carburetors, Dell'Orto VHB 24 F"
+            },
+            "engine_ignition": {
+                "it": "Elettronica, Bosch",
+                "en": "Electronic, Bosch"
+            },
+            "transmission_gearbox": {
+                "it": "5 marce",
+                "en": "5-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with single plate"
+            },
+            "transmission_final_drive": {
+                "it": "Cardano con giunto semplice",
+                "en": "Single joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa",
+                "en": "Closed double cradle"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica",
+                "en": "Telescopic fork"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+            },
+            "notes": {
+                "it": "Stessa numerazione di telaio della V50. La V50 II presenta, rispetto alla V50, piccole differenze estetiche (decalcomanie, sportello serbatoio, indicatori di direzione, ghiera faro anteriore) e meccaniche (cilindri in Nigusil, coppa olio più profonda).",
+                "en": "Same frame number notation of the V50. The V50 II introduces, compared to the V50, small esthetic differences (decals, fuel tank cap, turn indicators, headlight bezel) and mechanical differences (Nigusil-coated cylinders, deeper sump)."
+            }
+        },
+        "86": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Due carburatori, Dell'Orto PHBH 28 B",
+                "en": "Two carburetors, Dell'Orto PHBH 28 B"
+            },
+            "engine_ignition": {
+                "it": "Spinterogeno Marelli con doppio ruttore",
+                "en": "Marelli distributor with two contact breakers"
+            },
+            "transmission_gearbox": {
+                "it": "5 marce",
+                "en": "5-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with single plate"
+            },
+            "transmission_final_drive": {
+                "it": "Cardano con giunto semplice",
+                "en": "Single joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa",
+                "en": "Closed double cradle"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica",
+                "en": "Telescopic fork"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+            },
+            "notes": {
+                "it": "Carrozzeria leggermente rivista, nuovi ammortizzatori idropneumatici, motore rivisto e migliorato.",
+                "en": "Minor bodywork changes, new hydropneumatic shock absorbers, revised and improved engine."
+            }
+        },
+        "87": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Due carburatori, Dell'Orto PHBH 28 B",
+                "en": "Two carburetors, Dell'Orto PHBH 28 B"
+            },
+            "engine_ignition": {
+                "it": "Spinterogeno Marelli con doppio ruttore",
+                "en": "Marelli distributor with two contact breakers"
+            },
+            "transmission_gearbox": {
+                "it": "5 marce",
+                "en": "5-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with single plate"
+            },
+            "transmission_final_drive": {
+                "it": "Cardano con giunto semplice",
+                "en": "Single joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa",
+                "en": "Closed double cradle"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica",
+                "en": "Telescopic fork"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+            },
+            "notes": {
+                "it": "I dati si riferiscono al modello venduto dal 1984 al 1986.",
+                "en": "Data refers to the model sold from 1984 to 1986."
+            }
+        },
+        "88": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Due carburatori, Dell'Orto PHBH 28 B",
+                "en": "Two carburetors, Dell'Orto PHBH 28 B"
+            },
+            "engine_ignition": {
+                "it": "Spinterogeno Marelli con doppio ruttore",
+                "en": "Marelli distributor with two contact breakers"
+            },
+            "transmission_gearbox": {
+                "it": "5 marce",
+                "en": "5-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with single plate"
+            },
+            "transmission_final_drive": {
+                "it": "Cardano con giunto semplice",
+                "en": "Single joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa",
+                "en": "Closed double cradle"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica",
+                "en": "Telescopic fork"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+            },
+            "notes": {
+                "it": null,
+                "en": null
             }
         }
         
