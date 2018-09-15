@@ -4760,6 +4760,60 @@
                  },
                  "notes": "notes",
                  "images": null
+                 },
+                 {
+                 "id": 89,
+                 "general_info": {
+                 "family": "V65",
+                 "name": "V65",
+                 "first_year": 1981,
+                 "last_year": 1987
+                 },
+                 "engine" : {
+                 "configuration": "engine_configuration",
+                 "stroke_cycle": 4,
+                 "bore": 80,
+                 "stroke": 64,
+                 "displacement": {
+                 "real": 643.4,
+                 "nominal": 650
+                 },
+                 "compression": 10,
+                 "power": {
+                 "peak": 52,
+                 "rpm": 7050
+                 },
+                 "feed": "engine_feed",
+                 "ignition": "engine_ignition"
+                 },
+                 "transmission": {
+                 "type": "transmission_gearbox",
+                 "clutch": "transmission_clutch",
+                 "final_drive": "transmission_final_drive"
+                 },
+                 "frame": {
+                 "type": "frame_type",
+                 "front_suspension": "frame_front_suspension",
+                 "rear_suspension": "frame_rear_suspension",
+                 "wheelbase": 1460,
+                 "wheels": "WM 2/1.85X18 - WM 3/2.15X18",
+                 "tyres": "100/90H18 - 110/90H18"
+                 },
+                 "brakes": {
+                 "type": "brakes_type",
+                 "front_size": 260,
+                 "rear_size": 235,
+                 "notes": "brakes_notes"
+                 },
+                 "capacities_performances": {
+                 "fuel_capacity": 16,
+                 "lubricant_capacity": 2,
+                 "weight": 165,
+                 "max_speed": 185,
+                 "fuel_consumption": 5.5
+                 },
+                 "notes": "notes",
+                 "images": null
                  }
                  
                  
@@ -8835,8 +8889,8 @@
                 "en": "Two carburetors, Dell'Orto VHB 26 F"
             },
             "engine_ignition": {
-                "it": "Spinterogeno Marelli con doppio ruttore",
-                "en": "Marelli distributor with two contact breakers"
+                "it": "Spinterogeno con doppio ruttore",
+                "en": "Distributor with two contact breakers"
             },
             "transmission_gearbox": {
                 "it": "5 marce",
@@ -9035,8 +9089,8 @@
                 "en": "Two carburetors, Dell'Orto PHBH 28 B"
             },
             "engine_ignition": {
-                "it": "Spinterogeno Marelli con doppio ruttore",
-                "en": "Marelli distributor with two contact breakers"
+                "it": "Spinterogeno con doppio ruttore",
+                "en": "Distributor with two contact breakers"
             },
             "transmission_gearbox": {
                 "it": "5 marce",
@@ -9085,8 +9139,8 @@
                 "en": "Two carburetors, Dell'Orto PHBH 28 B"
             },
             "engine_ignition": {
-                "it": "Spinterogeno Marelli con doppio ruttore",
-                "en": "Marelli distributor with two contact breakers"
+                "it": "Spinterogeno con doppio ruttore",
+                "en": "Distributor with two contact breakers"
             },
             "transmission_gearbox": {
                 "it": "5 marce",
@@ -9135,8 +9189,58 @@
                 "en": "Two carburetors, Dell'Orto PHBH 28 B"
             },
             "engine_ignition": {
-                "it": "Spinterogeno Marelli con doppio ruttore",
-                "en": "Marelli distributor with two contact breakers"
+                "it": "Spinterogeno con doppio ruttore",
+                "en": "Distributor with two contact breakers"
+            },
+            "transmission_gearbox": {
+                "it": "5 marce",
+                "en": "5-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with single plate"
+            },
+            "transmission_final_drive": {
+                "it": "Cardano con giunto semplice",
+                "en": "Single joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa",
+                "en": "Closed double cradle"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica",
+                "en": "Telescopic fork"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+            },
+            "notes": {
+                "it": null,
+                "en": null
+            }
+        },
+        "89": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Due carburatori, Dell'Orto PHBH 30 B",
+                "en": "Two carburetors, Dell'Orto PHBH 30 B"
+            },
+            "engine_ignition": {
+                "it": "Spinterogeno con doppio ruttore",
+                "en": "Distributor with two contact breakers"
             },
             "transmission_gearbox": {
                 "it": "5 marce",
