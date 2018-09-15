@@ -14,7 +14,8 @@ class FiltersViewController: UITableViewController {
     // to the presentation of FiltersViewController.
     private var originalFilterProviders: [FilterProvider]
     
-    
+    // used for storing the "clean" filters from MotorcycleData. Together with originalFilterProviders
+    // is used when the user tap the "Clear" button for restoring the original state (original filters)
     private weak var originalFilterStorage: Ref<Array<FilterProvider>>?
     
     // used for storing the old active filters. If the user tap "Cancel" this
@@ -70,6 +71,7 @@ class FiltersViewController: UITableViewController {
     // MARK: - Initialization
     
     init(motorcycleData: MotorcycleData, motorcyclesDisplayed: Ref<Int>) {
+        
         self.originalFilterStorage = motorcycleData.originalFilterStorage
         self.originalFilterProviders = motorcycleData.originalFilterStorage.value
         
@@ -92,6 +94,7 @@ class FiltersViewController: UITableViewController {
         super.init(style: .plain)
         
         self.originalFilterStorage?.add(listener: "FiltersViewController") { [weak self] newFilters in
+            
             self?.originalFilterProviders = newFilters
             newFilters.forEach { self?.filterProviders[$0.filterId] = $0 }
             
