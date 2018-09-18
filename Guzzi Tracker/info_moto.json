@@ -4310,7 +4310,7 @@
                  "front_suspension": "frame_front_suspension",
                  "rear_suspension": "frame_rear_suspension",
                  "wheelbase": 1455,
-                 "wheels": "MT H2 2.15 X 16 - MT H2 2.50 X 16",
+                 "wheels": "MT-H2 2.15 X 16 - MT-H2 2.50 X 16",
                  "tyres": "100/90V16 - 120/90V16"
                  },
                  "brakes": {
@@ -4795,7 +4795,7 @@
                  "type": "frame_type",
                  "front_suspension": "frame_front_suspension",
                  "rear_suspension": "frame_rear_suspension",
-                 "wheelbase": 1460,
+                 "wheelbase": 1440,
                  "wheels": "WM 2/1.85X18 - WM 3/2.15X18",
                  "tyres": "100/90H18 - 110/90H18"
                  },
@@ -4814,7 +4814,709 @@
                  },
                  "notes": "notes",
                  "images": null
-                 }
+                 },
+		 		{
+		 			"id": 90,
+		 			"general_info": {
+		 				"family": "V65",
+		 				"name": "V65 SP",
+		 				"first_year": 1981,
+		 				"last_year": 1987
+		 			},
+		 			"engine" : {
+		 				"configuration": "engine_configuration",
+		 				"stroke_cycle": 4,
+		 				"bore": 80,
+		 				"stroke": 64,
+		 				"displacement": {
+		 					"real": 643.4,
+		 					"nominal": 650
+		 				},
+		 				"compression": 10,
+		 				"power": {
+		 					"peak": 52,
+		 					"rpm": 7050
+		 				},
+		 				"feed": "engine_feed",
+		 				"ignition": "engine_ignition"
+		 			},
+		 			"transmission": {
+		 				"type": "transmission_gearbox",
+		 				"clutch": "transmission_clutch",
+		 				"final_drive": "transmission_final_drive"
+		 			},
+		 			"frame": {
+		 				"type": "frame_type",
+		 				"front_suspension": "frame_front_suspension",
+		 				"rear_suspension": "frame_rear_suspension",
+		 				"wheelbase": 1440,
+		 				"wheels": "WM 2/1.85X18 - WM 3/2.15X18",
+		 				"tyres": "100/90H18 - 110/90H18"
+		 			},
+		 			"brakes": {
+		 				"type": "brakes_type",
+		 				"front_size": 260,
+		 				"rear_size": 235,
+		 				"notes": "brakes_notes"
+		 			},
+		 			"capacities_performances": {
+		 				"fuel_capacity": 16,
+		 				"lubricant_capacity": 2,
+		 				"weight": 170,
+		 				"max_speed": 185,
+		 				"fuel_consumption": 5.5
+		 			},
+		             "notes": "notes",
+		             "images": null
+		 		},
+				{
+					"id": 91,
+					"general_info": {
+						"family": "V65",
+						"name": "V65 Florida",
+						"first_year": 1986,
+						"last_year": 1995
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 64,
+						"displacement": {
+							"real": 643.4,
+							"nominal": 650
+						},
+						"compression": 10,
+						"power": {
+							"peak": 52,
+							"rpm": 7050
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1505,
+						"wheels": "2.15x18\" - 2.50x16\"",
+						"tyres": "100/90-18 - 130/90-16"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 260,
+						"rear_size": 235,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 17,
+						"lubricant_capacity": 2,
+						"weight": 170,
+						"max_speed": 170,
+						"fuel_consumption": 5.1
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 92,
+					"general_info": {
+						"family": "V65",
+						"name": "V65TT",
+						"first_year": 1983,
+						"last_year": 1986
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 64,
+						"displacement": {
+							"real": 643.4,
+							"nominal": 650
+						},
+						"compression": 10,
+						"power": {
+							"peak": 48,
+							"rpm": 7400
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1480,
+						"wheels": "WM 1.6x21\" - WM 2.15x18\"",
+						"tyres": "3.00S21 - 4.00S18"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 260,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 14,
+						"lubricant_capacity": 2,
+						"weight": 165,
+						"max_speed": 170,
+						"fuel_consumption": 5.4
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 93,
+					"general_info": {
+						"family": "V65",
+						"name": "650 NTX",
+						"first_year": 1986,
+						"last_year": 1995
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 64,
+						"displacement": {
+							"real": 643.4,
+							"nominal": 650
+						},
+						"compression": 10,
+						"power": {
+							"peak": 48,
+							"rpm": 7400
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1480,
+						"wheels": "WM 1.6x21\" - WM 2.15x18\"",
+						"tyres": "3.00S21 - 4.00S18"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 260,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 32,
+						"lubricant_capacity": 2,
+						"weight": 170,
+						"max_speed": 170,
+						"fuel_consumption": 5.5
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 94,
+					"general_info": {
+						"family": "V65",
+						"name": "V65 Lario",
+						"first_year": 1983,
+						"last_year": 1989
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 64,
+						"displacement": {
+							"real": 643.4,
+							"nominal": 650
+						},
+						"compression": 10.3,
+						"power": {
+							"peak": 60,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1455,
+						"wheels": "MT-H2 2.15 X 16 - MT-H2 2.50 X 16",
+						"tyres": "100/90V16 - 120/90V16"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 270,
+						"rear_size": 235,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 18,
+						"lubricant_capacity": 2,
+						"weight": 184,
+						"max_speed": 190,
+						"fuel_consumption": 5.6
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 95,
+					"general_info": {
+						"family": "V75",
+						"name": "V75",
+						"first_year": 1985,
+						"last_year": 1986
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 74,
+						"displacement": {
+							"real": 743.9,
+							"nominal": 750
+						},
+						"compression": 10.2,
+						"power": {
+							"peak": 65,
+							"rpm": 7200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1470,
+						"wheels": "MT-H2 2.50 X 16 - MT-H2 2.75 X 18",
+						"tyres": "100/90H16 - 120/80H18"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 270,
+						"rear_size": 235,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 17,
+						"lubricant_capacity": 2,
+						"weight": 175,
+						"max_speed": 200,
+						"fuel_consumption": 5.6
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 96,
+					"general_info": {
+						"family": "V75",
+						"name": "V75 SP",
+						"first_year": 1989,
+						"last_year": 1996
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 74,
+						"displacement": {
+							"real": 743.9,
+							"nominal": 750
+						},
+						"compression": 9.6,
+						"power": {
+							"peak": 46,
+							"rpm": 6200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1480,
+						"wheels": "MT-H2 2.50 X 18 - MT-H2 2.75 X 18",
+						"tyres": "100/90V18 - 120/80V18"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 270,
+						"rear_size": 235,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 18,
+						"lubricant_capacity": 2,
+						"weight": 180,
+						"max_speed": 170,
+						"fuel_consumption": 5.8
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 97,
+					"general_info": {
+						"family": "V75",
+						"name": "750 Targa",
+						"first_year": 1991,
+						"last_year": 1992
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 74,
+						"displacement": {
+							"real": 743.9,
+							"nominal": 750
+						},
+						"compression": 9.6,
+						"power": {
+							"peak": 46,
+							"rpm": 6200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1480,
+						"wheels": "MT-H2 2.50 X 18 - MT-H2 2.75 X 18",
+						"tyres": "100/90V18 - 120/80V18"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 270,
+						"rear_size": 235,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 18,
+						"lubricant_capacity": 2,
+						"weight": 180,
+						"max_speed": 185,
+						"fuel_consumption": 6.1
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 98,
+					"general_info": {
+						"family": "V75",
+						"name": "750 NTX",
+						"first_year": 1986,
+						"last_year": 1993
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 74,
+						"displacement": {
+							"real": 743.9,
+							"nominal": 750
+						},
+						"compression": 9.6,
+						"power": {
+							"peak": 46,
+							"rpm": 6200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1480,
+						"wheels": "WM 1.6x21\" - WM 2.15x18\"",
+						"tyres": "3.00S21 - 4.00S18"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 260,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 30,
+						"lubricant_capacity": 2,
+						"weight": 180,
+						"max_speed": 170,
+						"fuel_consumption": 5.8
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 99,
+					"general_info": {
+						"family": "Nevada",
+						"name": "Nevada 750",
+						"first_year": 1989,
+						"last_year": 1998
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 74,
+						"displacement": {
+							"real": 743.9,
+							"nominal": 750
+						},
+						"compression": 9.6,
+						"power": {
+							"peak": 48,
+							"rpm": 6200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1482,
+						"wheels": "2.15X18 - 2.50X16",
+						"tyres": "100/90H18 - 130/90H16"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 270,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 16,
+						"lubricant_capacity": 2,
+						"weight": 170,
+						"max_speed": 170,
+						"fuel_consumption": 5.3
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 100,
+					"general_info": {
+						"family": "Nevada",
+						"name": "Nevada 350",
+						"first_year": 1992,
+						"last_year": 1998
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 66,
+						"stroke": 50.6,
+						"displacement": {
+							"real": 346.2,
+							"nominal": 350
+						},
+						"compression": 10.6,
+						"power": {
+							"peak": 30,
+							"rpm": 8200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1482,
+						"wheels": "2.15X18 - 2.50X16",
+						"tyres": "100/90H18 - 130/90H16"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 270,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 16,
+						"lubricant_capacity": 2,
+						"weight": 170,
+						"max_speed": 150,
+						"fuel_consumption": 6.4
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 101,
+					"general_info": {
+						"family": "Nevada",
+						"name": "Nevada 750 Club",
+						"first_year": 1998,
+						"last_year": 2001
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 74,
+						"displacement": {
+							"real": 743.9,
+							"nominal": 750
+						},
+						"compression": 9.6,
+						"power": {
+							"peak": 46.2,
+							"rpm": 6600
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1482,
+						"wheels": "2.15X18 - 2.50X16",
+						"tyres": "100/90H18 - 130/90H16"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 270,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 16,
+						"lubricant_capacity": 2,
+						"weight": 182,
+						"max_speed": 170,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 102,
+					"general_info": {
+						"family": "Nevada",
+						"name": "Nevada 750",
+						"first_year": 2002,
+						"last_year": 2003
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 74,
+						"displacement": {
+							"real": 743.9,
+							"nominal": 750
+						},
+						"compression": 9.6,
+						"power": {
+							"peak": 47,
+							"rpm": 6600
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1482,
+						"wheels": "2.15X18 - 2.50X16",
+						"tyres": "100/90H18 - 130/90H16"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 14,
+						"lubricant_capacity": 2,
+						"weight": 176,
+						"max_speed": 170,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				}
                  
                  
                  
@@ -8809,12 +9511,12 @@
                 "en": "Closed double cradle"
             },
             "frame_front_suspension": {
-                "it": "Forcella telescopica",
-                "en": "Telescopic fork"
+				"it": "Forcella telescopica idropneumatica",
+				"en": "Hydropneumatic telescopic fork"
             },
             "frame_rear_suspension": {
-                "it": "Forcellone con due ammortizzatori",
-                "en": "Swingarm with twin shock absorbers"
+                "it": "Forcellone con due ammortizzatori idropneumatici",
+                "en": "Swingarm with twin hydropneumatic shock absorbers"
             },
             "brakes_type": {
                 "it": "Doppio freno a disco anteriore, freno a disco posteriore",
@@ -8964,7 +9666,7 @@
             },
             "frame_rear_suspension": {
                 "it": "Forcellone con due ammortizzatori rovesciati con serbatoio esterno",
-                "en": "Swingarm with upside-down twin shock absorbers with external reservoir"
+                "en": "Swingarm with twin upside-down shock absorbers with external reservoir"
             },
             "brakes_type": {
                 "it": "Freno a disco anteriore, freno a disco posteriore",
@@ -9278,7 +9980,658 @@
                 "it": null,
                 "en": null
             }
-        }
+        },
+		"90": {
+			"engine_configuration": {
+				"it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+				"en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+				"it": "Spinterogeno con doppio ruttore",
+				"en": "Distributor with two contact breakers"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone con due ammortizzatori",
+				"en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+				"it": "Doppio freno a disco anteriore, freno a disco posteriore",
+				"en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "Dotato di frenata integrale Guzzi.",
+				"en": "Equipped with Guzzi integral braking."
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"91": {
+			"engine_configuration": {
+				"it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+				"en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+				"it": "Spinterogeno con doppio ruttore",
+				"en": "Distributor with two contact breakers"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone con due ammortizzatori",
+				"en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+				"it": "Doppio freno a disco anteriore, freno a disco posteriore",
+				"en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "Dotato di frenata integrale Guzzi.",
+				"en": "Equipped with Guzzi integral braking."
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"92": {
+			"engine_configuration": {
+				"it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+				"en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+				"it": "Spinterogeno con doppio ruttore",
+				"en": "Distributor with two contact breakers"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone con due ammortizzatori",
+				"en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+				"it": "Freno a disco anteriore, freno a disco posteriore",
+				"en": "Front disk brake, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"93": {
+			"engine_configuration": {
+				"it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+				"en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+                "it": "Elettronica, Motoplat",
+                "en": "Electronic, Motoplat"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone con due ammortizzatori rovesciati con serbatoio esterno",
+				"en": "Swingarm with twin upside-down shock absorbers with external reservoir"
+			},
+			"brakes_type": {
+				"it": "Freno a disco anteriore, freno a disco posteriore",
+				"en": "Front disk brake, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Nel 1993 fu aggiornata con la versione \"P.B.\".",
+				"en": "In 1993 it was updated with the \"P.B.\" version."
+			}
+		},
+		"94": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30",
+				"en": "Two carburetors, Dell'Orto PHBH 30"
+			},
+			"engine_ignition": {
+				"it": "Spinterogeno con doppio ruttore",
+				"en": "Distributor with two contact breakers"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica idropneumatica",
+				"en": "Hydropneumatic telescopic fork"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori idropneumatici",
+                "en": "Swingarm with twin hydropneumatic shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"95": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Motoplat",
+				"en": "Electronic, Motoplat"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica idropneumatica",
+				"en": "Hydropneumatic telescopic fork"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori idropneumatici",
+                "en": "Swingarm with twin hydropneumatic shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+			},
+			"notes": {
+				"it": "I modelli derivati successivamente adottarono un motore con due valvole per cilindro",
+				"en": "Later models derived from the V75 uses an engine with two valves per cylinder"
+			}
+		},
+		"96": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Motoplat",
+				"en": "Electronic, Motoplat"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"97": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Motoplat",
+				"en": "Electronic, Motoplat"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"98": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Motoplat",
+				"en": "Electronic, Motoplat"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Freno a disco anteriore, freno a disco posteriore",
+                "en": "Front disk brake, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": null,
+                "en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"99": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Motoplat",
+				"en": "Electronic, Motoplat"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+			},
+			"notes": {
+				"it": "Nel 1994 fu aggiornata di estetica e di motore, con l'introduzione dell'accensione elettronica Magneti Marelli Digiplex, nuovi comandi, e altro.",
+				"en": "In 1994 the bodywork was updated, also the engine was updated with the Magneti Marelli Digiplex ignition, new handlebar switches, and more."
+			}
+		},
+		"100": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 28 B",
+				"en": "Two carburetors, Dell'Orto PHBH 28 B"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Motoplat",
+				"en": "Electronic, Motoplat"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+			},
+			"notes": {
+				"it": "Nel 1994 fu aggiornata di estetica e di motore, con l'introduzione dell'accensione elettronica Magneti Marelli Digiplex, nuovi comandi, e altro.",
+				"en": "In 1994 the bodywork was updated, also the engine was updated with the Magneti Marelli Digiplex ignition, new handlebar switches, and more."
+			}
+		},
+		"101": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli Digiplex",
+				"en": "Electronic, Magneti Marelli Digiplex"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": "Dotato di frenata integrale Guzzi.",
+                "en": "Equipped with Guzzi integral braking."
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"102": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHBH 30 B",
+				"en": "Two carburetors, Dell'Orto PHBH 30 B"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli Digiplex",
+				"en": "Electronic, Magneti Marelli Digiplex"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica",
+				"en": "Telescopic fork"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Freno a disco anteriore, freno a disco posteriore",
+                "en": "Front disk brake, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": "Prima Nevada con singolo freno a disco anteriore Brembo Serie Oro, conseguentemente viene abbandonata la frenata integrale.",
+                "en": "First Nevada with Brembo Serie Oro single front disk, consequently the integral braking is abandoned."
+			},
+			"notes": {
+				"it": "Venduta in due versioni: \"Base\" e \"Club\". La Club pesa 182 kg.",
+				"en": "Sold in two versions: \"Base\" and \"Club\". The Club version weights 182 kg (401 lbs)."
+			}
+		}
+		
         
         
         
