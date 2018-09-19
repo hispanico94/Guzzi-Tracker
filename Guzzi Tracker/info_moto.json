@@ -1,5 +1,5 @@
 {
-    "version": 7,
+    "version": 8,
     "elements": [
                  {
                  "id": 1,
@@ -5516,6 +5516,114 @@
 					},
 		            "notes": "notes",
 		            "images": null
+				},
+				{
+					"id": 103,
+					"general_info": {
+						"family": "Nevada",
+						"name": "Nevada Classic 750 IE",
+						"first_year": 2004,
+						"last_year": 2011
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 74,
+						"displacement": {
+							"real": 744,
+							"nominal": 750
+						},
+						"compression": 9.6,
+						"power": {
+							"peak": 48.3,
+							"rpm": 6800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1467,
+						"wheels": "2.50x18\" - 3.50x16\"",
+						"tyres": "100/90-V18 56V - 130/90-16 67V"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 14,
+						"lubricant_capacity": 1.78,
+						"weight": 184,
+						"max_speed": 175,
+						"fuel_consumption": 5
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 104,
+					"general_info": {
+						"family": "Nevada",
+						"name": "Nevada",
+						"first_year": 2012,
+						"last_year": 2016
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 74,
+						"displacement": {
+							"real": 744,
+							"nominal": 750
+						},
+						"compression": 10.4,
+						"power": {
+							"peak": 51,
+							"rpm": 6200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1467,
+						"wheels": "2.50x18\" - 3.00x16\"",
+						"tyres": "100/90V18 MC - 130/90V16 MC"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 14,
+						"lubricant_capacity": 2,
+						"weight": 191,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
 				}
                  
                  
@@ -10629,6 +10737,106 @@
 			"notes": {
 				"it": "Venduta in due versioni: \"Base\" e \"Club\". La Club pesa 182 kg.",
 				"en": "Sold in two versions: \"Base\" and \"Club\". The Club version weights 182 kg (401 lbs)."
+			}
+		},
+		"103": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Weber-Marelli con due corpi farfallati da 36mm",
+				"en": "Weber-Marelli EFI with two 36mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi, 40mm",
+				"en": "Marzocchi telescopic fork, 40mm"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Freno a disco anteriore, freno a disco posteriore",
+                "en": "Front disk brake, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": null,
+                "en": null
+			},
+			"notes": {
+				"it": "Nel 2007 ha subito lievi aggiornamenti estetici e il nome è stato cambiato in \"Nevada Classic\". Nel 2009 ha subito un nuovo aggiornamento estetico, e lievi cambiamenti nella meccanica, ed è stata chiamata \"Nevada\". Nel corso degli anni è stata venudta anche in altre versioni (Touring, Anniversario, Aquila Nera).",
+				"en": "In 2007 it recevied small esthetic upgrades (with new colors) and it was named \"Nevada Classic\". In 2009 it received another small esthetic upgrade (also with new colors), and small technical improvements, and it was named \"Nevada\". Over the years it was sold also in other versions (Touring, Anniversario, Aquila Nera)."
+			}
+		},
+		"104": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Marelli MIU G3 con singolo corpo farfallato da 38mm",
+				"en": "Marelli MIU G3 EFI with single 38mm throttle body"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with single plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi, 40mm",
+				"en": "Marzocchi telescopic fork, 40mm"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Freno a disco anteriore, freno a disco posteriore",
+                "en": "Front disk brake, rear disk brake"
+			},
+			"brakes_notes": {
+                "it": null,
+                "en": null
+			},
+			"notes": {
+				"it": "Nuove teste e iniezione elettronica (comune con la V7 my2012). Venduta nelle versioni base, Anniversario e Aquila Nera.",
+				"en": "New cylinder heads and fuel injection (common with the my2012 V7). Sold in the base, Anniversario and Aquila Nera versions."
 			}
 		}
 		
