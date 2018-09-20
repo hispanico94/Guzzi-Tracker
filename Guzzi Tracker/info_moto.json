@@ -1,5 +1,5 @@
 {
-    "version": 8,
+    "version": 9,
     "elements": [
                  {
                  "id": 1,
@@ -5624,6 +5624,276 @@
 					},
 		            "notes": "notes",
 		            "images": null
+				},
+				{
+					"id": 105,
+					"general_info": {
+						"family": "Daytona",
+						"name": "Daytona 1000 I.E.",
+						"first_year": 1992,
+						"last_year": 1996
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 90,
+						"stroke": 78,
+						"displacement": {
+							"real": 992,
+							"nominal": 1000
+						},
+						"compression": 10,
+						"power": {
+							"peak": 95,
+							"rpm": 8000
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1480,
+						"wheels": "3.50x17 MT H2 - 4.50x18 MT H2",
+						"tyres": "120/70ZR17 - 160/60ZR18"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 300,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.5,
+						"weight": 215,
+						"max_speed": 240,
+						"fuel_consumption": 5
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 106,
+					"general_info": {
+						"family": "Daytona",
+						"name": "Daytona RS",
+						"first_year": 1997,
+						"last_year": 1998
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 90,
+						"stroke": 78,
+						"displacement": {
+							"real": 992,
+							"nominal": 1000
+						},
+						"compression": 10.5,
+						"power": {
+							"peak": 102,
+							"rpm": 8400
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1475,
+						"wheels": "3.50x17 MT H2 - 4.50x17 MT H2",
+						"tyres": "120/70ZR17 - 160/60ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 19,
+						"lubricant_capacity": 3.5,
+						"weight": 223,
+						"max_speed": 240,
+						"fuel_consumption": 4.5
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 107,
+					"general_info": {
+						"family": null,
+						"name": "V10 Centauro",
+						"first_year": 1995,
+						"last_year": 1999
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 90,
+						"stroke": 78,
+						"displacement": {
+							"real": 992,
+							"nominal": 1000
+						},
+						"compression": 10.5,
+						"power": {
+							"peak": 95,
+							"rpm": 8200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1475,
+						"wheels": "3.50x17 MT H2 - 4.50x17 MT H2",
+						"tyres": "120/70ZR17 - 160/60ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 18,
+						"lubricant_capacity": 3.5,
+						"weight": 232,
+						"max_speed": 218,
+						"fuel_consumption": 4.5
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 108,
+					"general_info": {
+						"family": "1100 Sport",
+						"name": "Sport 1100",
+						"first_year": 1994,
+						"last_year": 1996
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 10.5,
+						"power": {
+							"peak": 90,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1475,
+						"wheels": "3.50x17 MT H2 - 4.50x18 MT H2",
+						"tyres": "120/70ZR17 - 160/60ZR18"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 19,
+						"lubricant_capacity": 3,
+						"weight": 210,
+						"max_speed": 235,
+						"fuel_consumption": 4.9
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 109,
+					"general_info": {
+						"family": "1100 Sport",
+						"name": "1100 Sport",
+						"first_year": 1996,
+						"last_year": 1999
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 10.5,
+						"power": {
+							"peak": 90,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1475,
+						"wheels": "3.50x17 MT H2 - 4.50x17 MT H2",
+						"tyres": "120/70ZR17 - 160/70ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 19,
+						"lubricant_capacity": 3.5,
+						"weight": 221,
+						"max_speed": 230,
+						"fuel_consumption": 4.5
+					},
+		            "notes": "notes",
+		            "images": null
 				}
                  
                  
@@ -10837,6 +11107,256 @@
 			"notes": {
 				"it": "Nuove teste e iniezione elettronica (comune con la V7 my2012). Venduta nelle versioni base, Anniversario e Aquila Nera.",
 				"en": "New cylinder heads and fuel injection (common with the my2012 V7). Sold in the base, Anniversario and Aquila Nera versions."
+			}
+		},
+		"105": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Weber-Marelli Alfa-N",
+				"en": "EFI Weber-Marelli Alfa-N"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Weber-Marelli",
+				"en": "Electronic, Weber-Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce con ingranaggi a denti dritti",
+				"en": "Straight-tooth 5-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi completamente regolabile",
+				"en": "Fully adjustable Marzocchi telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante a sezione quadrata con monoammortizzatore Koni",
+				"en": "Rectangular section swingarm with Koni single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Originariamente monoposto, dal 1993 fu disponibile anche una versione biposto.",
+				"en": "Originally sold with only one seat, from 1993 was available also a two-seater version."
+			}
+		},
+		"106": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Weber-Marelli",
+				"en": "EFI Weber-Marelli"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Weber-Marelli",
+				"en": "Electronic, Weber-Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce con ingranaggi a denti dritti",
+				"en": "Straight-tooth 5-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica WP a steli rovesciati completamente regolabile",
+				"en": "Fully adjustable upside-down WP telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante a sezione quadrata con monoammortizzatore WP completamente regolabile",
+				"en": "Rectangular section swingarm with fully adjustable WP single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "Freno anteriore tipo \"Brembo Racing\".",
+				"en": "\"Brembo Racing\" type front brakes."
+			},
+			"notes": {
+				"it": "Gli ultimi modelli prodotti avevano il cambio a denti elicoidali",
+				"en": "Later models that were built had the gearbox with helical-tooth gears."
+			}
+		},
+		"107": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Weber-Marelli",
+				"en": "EFI Weber-Marelli"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Weber-Marelli",
+				"en": "Electronic, Weber-Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica WP a steli rovesciati completamente regolabile",
+				"en": "Fully adjustable upside-down WP telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante a sezione quadrata con monoammortizzatore WP completamente regolabile",
+				"en": "Rectangular section swingarm with fully adjustable WP single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Dal 1997 furono in vendita due versioni: \"Centauro GT\" e \"Centauro Sport\".",
+				"en": "From 1997 two models were available: \"Centauro GT\" and \"Centauro Sport\"."
+			}
+		},
+		"108": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Due carburatori, Dell'Orto PHM 40 N",
+				"en": "Two carburetors, Dell'Orto PHM 40 N"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli Digiplex",
+				"en": "Electronic, Magneti Marelli Digiplex"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce con ingranaggi a denti dritti",
+				"en": "Straight-tooth 5-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi completamente regolabile",
+				"en": "Fully adjustable Marzocchi telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante a sezione quadrata con monoammortizzatore WP completamente regolabile",
+				"en": "Rectangular section swingarm with fully adjustable WP single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"109": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Weber-Marelli",
+				"en": "EFI Weber-Marelli"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Weber-Marelli",
+				"en": "Electronic, Weber-Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce con ingranaggi a denti dritti",
+				"en": "Straight-tooth 5-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica WP a steli rovesciati completamente regolabile",
+				"en": "Fully adjustable upside-down WP telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante a sezione quadrata con monoammortizzatore WP completamente regolabile",
+				"en": "Rectangular section swingarm with fully adjustable WP single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Gli ultimi modelli prodotti avevano il cambio a denti elicoidali",
+				"en": "Later models that were built had the gearbox with helical-tooth gears."
 			}
 		}
 		
