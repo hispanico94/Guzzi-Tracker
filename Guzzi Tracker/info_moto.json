@@ -1,5 +1,5 @@
 {
-    "version": 9,
+    "version": 10,
     "elements": [
                  {
                  "id": 1,
@@ -5894,6 +5894,546 @@
 					},
 		            "notes": "notes",
 		            "images": null
+				},
+				{
+					"id": 110,
+					"general_info": {
+						"family": "V11",
+						"name": "V11 Sport",
+						"first_year": 1999,
+						"last_year": 2001
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.3,
+						"power": {
+							"peak": 91,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1471,
+						"wheels": "3.50x17 - 4.50x17",
+						"tyres": "120/70ZR17 - 170/60ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.5,
+						"weight": 219,
+						"max_speed": 220,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 111,
+					"general_info": {
+						"family": "V11",
+						"name": "V11 Rosso Mandello",
+						"first_year": 2000,
+						"last_year": 2000
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.3,
+						"power": {
+							"peak": 91,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1471,
+						"wheels": "3.50x17 - 4.50x17",
+						"tyres": "120/70ZR17 - 170/60ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.5,
+						"weight": 219,
+						"max_speed": 220,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 112,
+					"general_info": {
+						"family": "V11",
+						"name": "V11 Sport Naked",
+						"first_year": 2001,
+						"last_year": 2005
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.3,
+						"power": {
+							"peak": 91,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1471,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.5,
+						"weight": 221,
+						"max_speed": 220,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 113,
+					"general_info": {
+						"family": "V11",
+						"name": "V11 Scura",
+						"first_year": 2001,
+						"last_year": 2003
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.5,
+						"power": {
+							"peak": 91,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1490,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 22,
+						"lubricant_capacity": 3.5,
+						"weight": 221,
+						"max_speed": 220,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 114,
+					"general_info": {
+						"family": "V11",
+						"name": "V11 Le Mans",
+						"first_year": 2001,
+						"last_year": 2005
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.5,
+						"power": {
+							"peak": 91,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1490,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.5,
+						"weight": 226,
+						"max_speed": 220,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 115,
+					"general_info": {
+						"family": "V11",
+						"name": "V11 Café Sport",
+						"first_year": 2003,
+						"last_year": 2005
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 91,
+							"rpm": 8200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1490,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 21,
+						"lubricant_capacity": 3.5,
+						"weight": 221,
+						"max_speed": 220,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 116,
+					"general_info": {
+						"family": "V11",
+						"name": "V11 Sport Ballabio",
+						"first_year": 2003,
+						"last_year": 2006
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 91,
+							"rpm": 8200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1490,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 21,
+						"lubricant_capacity": 3.5,
+						"weight": 221,
+						"max_speed": 220,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 117,
+					"general_info": {
+						"family": "V11",
+						"name": "V11 Coppa Italia",
+						"first_year": 2003,
+						"last_year": 2005
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 91,
+							"rpm": 8200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1490,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 21,
+						"lubricant_capacity": 3.5,
+						"weight": 226,
+						"max_speed": 220,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 118,
+					"general_info": {
+						"family": "V11",
+						"name": "V11 Scura R",
+						"first_year": 2003,
+						"last_year": 2005
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 91,
+							"rpm": 8200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1490,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 21,
+						"lubricant_capacity": 3.5,
+						"weight": 226,
+						"max_speed": 220,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 119,
+					"general_info": {
+						"family": "Breva",
+						"name": "Breva 750 IE",
+						"first_year": 2003,
+						"last_year": 2009
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 80,
+						"stroke": 74,
+						"displacement": {
+							"real": 744,
+							"nominal": 750
+						},
+						"compression": 9.6,
+						"power": {
+							"peak": 48.3,
+							"rpm": 6800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1449,
+						"wheels": "3.00x17 - 3.50x17",
+						"tyres": "110/70ZR17 - 130/80ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 18,
+						"lubricant_capacity": 1.78,
+						"weight": 182,
+						"max_speed": null,
+						"fuel_consumption": 5
+					},
+		            "notes": "notes",
+		            "images": null
 				}
                  
                  
@@ -11015,8 +11555,8 @@
                 "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
 			},
 			"engine_feed": {
-				"it": "Iniezione elettronica Weber-Marelli con due corpi farfallati da 36mm",
-				"en": "Weber-Marelli EFI with two 36mm throttle bodies"
+				"it": "Iniezione elettronica Magneti Marelli IAW 15RC con due corpi farfallati da 36mm",
+				"en": "Magneti Marelli IAW 15RC EFI with two 36mm throttle bodies"
 			},
 			"engine_ignition": {
 				"it": "Elettronica, Magneti Marelli",
@@ -11357,6 +11897,506 @@
 			"notes": {
 				"it": "Gli ultimi modelli prodotti avevano il cambio a denti elicoidali",
 				"en": "Later models that were built had the gearbox with helical-tooth gears."
+			}
+		},
+		"110": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 15M con due corpi farfallati da 40mm",
+				"en": "Magneti Marelli IAW 15M EFI with two 40mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi a steli rovesciati da 40 mm",
+				"en": "Upside-down 40 mm Marzocchi telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante cantilever con monoammortizzatore Sachs o WP",
+				"en": "Cantilever swingarm with Sachs or WP single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"111": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 15M con due corpi farfallati da 40mm",
+				"en": "Magneti Marelli IAW 15M EFI with two 40mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con un disco",
+				"en": "Dry with one plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi a steli rovesciati da 40mm",
+				"en": "Upside-down 40mm Marzocchi telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante cantilever con monoammortizzatore Sachs o WP",
+				"en": "Cantilever swingarm with Sachs or WP single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Edizione speciale prodotta in solo 300 esemplari. Si differenzia dalla versione Sport per:\nColorazione;\nParticolari in fibra di carbonio;\nCupolino in fibra di carbonio;\nFrizione monodisco.",
+				"en": "Special edition limited to 300 bikes. The differences with the Sport version are:\nColors;\nSeveralcarbon fiber parts;\nCarbon fiber front fairing;\nSingle disk clutch."
+			}
+		},
+		"112": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 15M con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 15M EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi a steli rovesciati da 40mm",
+				"en": "Upside-down 40mm Marzocchi telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante cantilever con monoammortizzatore Sachs",
+				"en": "Cantilever swingarm with Sachs single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Nel 2002 il passo è salito a 1490mm. Nel 2003 è stato aggiornato ad Euro 3, con:\nIniezione elettronica Marelli 15RC;\nAumento dell rapporto di compressione a 9.8:1;\nRegime di rotazione massimo salito a 8200 rpm (stessa potenza);\nSerbatoio più picolo di 2 litri;\nForcella da 43mm.",
+				"en": "In 2002 the wheelbase was increased by 19 mm (0.748 inch). In 2003 the engine was made Euro 3 compliant with:\nEFI Marelli 15RC;\nCompression ratio increased to 9.8:1;\nMax rpm increased to 8200 (same power);\nFuel tank reduced by 2 liters (approx. 2 quarts);\n43mm front fork."
+			}
+		},
+		"113": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 15M con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 15M EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Öhlins a steli rovesciati da 40mm",
+				"en": "Upside-down 40mm Öhlins telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante cantilever con monoammortizzatore Öhlins",
+				"en": "Cantilever swingarm with Öhlins single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Nel 2003 è stata introdotta la forcella da 43mm.",
+				"en": "In 2003 the front fork was updated with a 43 mm version."
+			}
+		},
+		"114": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 15M con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 15M EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi a steli rovesciati da 40mm",
+				"en": "Upside-down 40mm Marzocchi telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante cantilever con monoammortizzatore Sachs",
+				"en": "Cantilever swingarm with Sachs single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Nel 2003 è stato aggiornato ad Euro 3, con:\nIniezione elettronica Marelli 15RC;\nAumento dell rapporto di compressione a 9.8:1;\nRegime di rotazione massimo salito a 8200 rpm (stessa potenza);\nSerbatoio più picolo di 2 litri;\nForcella da 43mm.\nDal 2001 al 2002 fu in vendita la versione limitata \"Tenni\", in 150 esemplari, con frizione monodisco, dedicata al famoso pilota degli anni '30.\nDal 2003 al 2005 fu in vendita la versione \"Rosso Corsa\", e dal 2004 al 2005 la versione \"Nero Corsa\", con sospensioni Öhlins e altri particolari pregiati.",
+				"en": "In 2003 the engine was made Euro 3 compliant with:\nEFI Marelli 15RC;\nCompression ratio increased to 9.8:1;\nMax rpm increased to 8200 (same power);\nFuel tank reduced by 2 liters (approx. 2 quarts);\n43mm front fork.\nFrom 2001 to 2002 the \"Tenni\" limited edition was sold, in memory of the famous racing rider of the thirties, in only 150 models. It has a single plate clutch.\nFrom 2003 to 2005 the \"Rosso Corsa\" version was sold, and from 2004 to 2005 the \"Nero Corsa\" version was sold, both with Öhlins suspensions and other valuable components."
+			}
+		},
+		"115": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 15RC con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 15RC EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Öhlins a steli rovesciati da 43mm",
+				"en": "Upside-down 43mm Öhlins telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante cantilever con monoammortizzatore Öhlins",
+				"en": "Cantilever swingarm with Öhlins single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"116": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 15RC con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 15RC EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi a steli rovesciati da 43mm",
+				"en": "Upside-down 43mm Marzocchi telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante cantilever con monoammortizzatore Sachs",
+				"en": "Cantilever swingarm with Sachs single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"117": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 15RC con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 15RC EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi o Öhlins a steli rovesciati da 43mm",
+				"en": "Upside-down 43mm Marzocchi or Öhlins telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante cantilever con monoammortizzatore Öhlins",
+				"en": "Cantilever swingarm with Öhlins single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"118": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 15RC con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 15RC EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "A secco con due dischi",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardanica con doppio giunto, coppia conica flottante con asta di reazione",
+				"en": "Double joint cardan shaft, floating rear drive box with torque arm"
+			},
+			"frame_type": {
+				"it": "Monotrave in tubo a sezione quadrata",
+				"en": "Rectangular section tube backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Öhlins a steli rovesciati da 43mm",
+				"en": "Upside-down 43mm Öhlins telescopic fork"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante cantilever con monoammortizzatore Öhlins",
+				"en": "Cantilever swingarm with Öhlins single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"119": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 15RC con due corpi farfallati da 36mm",
+				"en": "Magneti Marelli IAW 15RC EFI with two 36mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with one plate"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano con giunto semplice",
+				"en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+				"it": "Doppia culla chiusa",
+				"en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi (Kaifa dal 2008), 40mm",
+				"en": "Marzocchi (Kaifa from 2008) telescopic fork, 40mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone oscillante con due ammortizzatori",
+				"en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Freno a disco anteriore, freno a disco posteriore",
+                "en": "Front disk brake, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Dal 2006 al 2008 disponibile anche nella versione \"Touring\".",
+				"en": "From 2006 to 2008 available also in the \"Touring\" version."
 			}
 		}
 		
