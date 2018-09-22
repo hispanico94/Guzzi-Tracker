@@ -1,5 +1,5 @@
 {
-    "version": 10,
+    "version": 11,
     "elements": [
                  {
                  "id": 1,
@@ -6434,6 +6434,384 @@
 					},
 		            "notes": "notes",
 		            "images": null
+				},
+				{
+					"id": 120,
+					"general_info": {
+						"family": "Breva",
+						"name": "Breva 1100",
+						"first_year": 2005,
+						"last_year": 2008
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 84,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1495,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 58W - 180/55ZR17 73W"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.6,
+						"weight": 248,
+						"max_speed": 209,
+						"fuel_consumption": 6.9
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 121,
+					"general_info": {
+						"family": "Breva",
+						"name": "Breva 850",
+						"first_year": 2006,
+						"last_year": 2008
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 66,
+						"displacement": {
+							"real": 877,
+							"nominal": 850
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 72,
+							"rpm": 7700
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1495,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 58W - 180/55ZR17 73W"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.6,
+						"weight": 248,
+						"max_speed": 190,
+						"fuel_consumption": 5.6
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 122,
+					"general_info": {
+						"family": "Breva",
+						"name": "Breva 1200",
+						"first_year": 2007,
+						"last_year": 2011
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 81.2,
+						"displacement": {
+							"real": 1151,
+							"nominal": 1200
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 95,
+							"rpm": 7500
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1495,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 58W - 180/55ZR17 73W"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.6,
+						"weight": 248,
+						"max_speed": null,
+						"fuel_consumption": 7.1
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 123,
+					"general_info": {
+						"family": "1200 Sport",
+						"name": "1200 Sport",
+						"first_year": 2006,
+						"last_year": 2008
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 81.2,
+						"displacement": {
+							"real": 1151,
+							"nominal": 1200
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 95,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1495,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 58W - 180/55ZR17 73W"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.6,
+						"weight": 248,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 124,
+					"general_info": {
+						"family": "1200 Sport",
+						"name": "1200 Sport 4V",
+						"first_year": 2009,
+						"last_year": 2011
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 81.2,
+						"displacement": {
+							"real": 1151,
+							"nominal": 1200
+						},
+						"compression": 11,
+						"power": {
+							"peak": 105,
+							"rpm": 7000
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1495,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.5,
+						"weight": 257,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 125,
+					"general_info": {
+						"family": "Norge",
+						"name": "Norge 1200",
+						"first_year": 2006,
+						"last_year": 2010
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 81.2,
+						"displacement": {
+							"real": 1151,
+							"nominal": 1200
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 95,
+							"rpm": 7600
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1495,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.5,
+						"weight": 246,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 126,
+					"general_info": {
+						"family": "Norge",
+						"name": "Norge 850",
+						"first_year": 2007,
+						"last_year": 2008
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 66,
+						"displacement": {
+							"real": 877,
+							"nominal": 850
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 72,
+							"rpm": 7600
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1495,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.5,
+						"weight": 242,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
 				}
                  
                  
@@ -12397,6 +12775,356 @@
 			"notes": {
 				"it": "Dal 2006 al 2008 disponibile anche nella versione \"Touring\".",
 				"en": "From 2006 to 2008 available also in the \"Touring\" version."
+			}
+		},
+		"120": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli a doppia candela",
+				"en": "Electronic, Magneti Marelli with dual spark plugs"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Bidisco a secco",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Tubolare in acciaio",
+				"en": "Steel tubes chassis"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi da 45mm",
+				"en": "Marzocchi telescopic fork, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore",
+				"en": "Single-sided swingarm CARC with single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "Dal 2007 ABS disponibile come optional",
+				"en": "From 2007 ABS available as option"
+			},
+			"notes": {
+				"it": "Aggiornata nel 2007 con blocchetti al manubrio della Norge, miglioramenti al motore, ABS come optional e specchietti cromati.",
+				"en": "Updated in 2007 with Norge's switches, engine improvements, ABS as option, and cromed mirrors."
+			}
+		},
+		"121": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Bidisco a secco",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Tubolare in acciaio",
+				"en": "Steel tubes chassis"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi da 45mm",
+				"en": "Marzocchi telescopic fork, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore",
+				"en": "Single-sided swingarm CARC with single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Aggiornata nel 2007 con blocchetti al manubrio della Norge, miglioramenti al motore e specchietti cromati.",
+				"en": "Updated in 2007 with Norge's switches, engine improvements and cromed mirrors."
+			}
+		},
+		"122": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli a doppia candela",
+				"en": "Electronic, Magneti Marelli with dual spark plugs"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Bidisco a secco",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Tubolare in acciaio",
+				"en": "Steel tubes chassis"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi da 45mm",
+				"en": "Marzocchi telescopic fork, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore",
+				"en": "Single-sided swingarm CARC with single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "ABS disponibile come optional",
+				"en": "ABS available as option"
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"123": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli a doppia candela",
+				"en": "Electronic, Magneti Marelli with dual spark plugs"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Bidisco a secco",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Tubolare in acciaio",
+				"en": "Steel tubes chassis"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi da 45mm",
+				"en": "Marzocchi telescopic fork, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore",
+				"en": "Single-sided swingarm CARC with single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "ABS disponibile come optional (senza ABS sono forniti dischi a margherita).",
+				"en": "ABS available as option (without ABS the bike is equipped with petal disks)."
+			},
+			"notes": {
+				"it": "Derivata dalla Breva 1200, si differenzia per:\nColori;\nManubrio basso;\nCupolino;\nCoperchi teste;\nQuadro strumenti.\nDisponibili due kit sportivi che portano la potenza a 100 hp.",
+				"en": "Derived from the Breva 1200, the differences are:\nColors;\nLow handlebar\n;Front fairing;\nValve covers;\nDashboard.\nTwo racing kits available that increase the power to 100 hp."
+			}
+		},
+		"124": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 50mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 50mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Bidisco a secco",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Tubolare in acciaio",
+				"en": "Steel tubes chassis"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi da 45mm",
+				"en": "Marzocchi telescopic fork, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore",
+				"en": "Single-sided swingarm CARC with single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "ABS disponibile come optional",
+				"en": "ABS available as option"
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"125": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli a doppia candela",
+				"en": "Electronic, Magneti Marelli with dual spark plugs"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Bidisco a secco",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Tubolare in acciaio",
+				"en": "Steel tubes chassis"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi da 45mm",
+				"en": "Marzocchi telescopic fork, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore",
+				"en": "Single-sided swingarm CARC with single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "ABS di serie su alcune versioni",
+				"en": "ABS comes standard with some versions"
+			},
+			"notes": {
+				"it": "Venduta nelle seguenti versioni:\nT (2006-2008);\nTL (2006);\nGT e GTL (2006-2009);\nGT Comfort (2010).",
+				"en": "Sold in the following versions:\nT (2006-2008);\nTL (2006);\nGT and GTL (2006-2009);\nGT Comfort (2010)."
+			}
+		},
+		"126": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 40mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 40mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Bidisco a secco",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Tubolare in acciaio",
+				"en": "Steel tubes chassis"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi da 45mm",
+				"en": "Marzocchi telescopic fork, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore",
+				"en": "Single-sided swingarm CARC with single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
 			}
 		}
 		
