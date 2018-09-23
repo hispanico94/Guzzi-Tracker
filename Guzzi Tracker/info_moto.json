@@ -1,5 +1,5 @@
 {
-    "version": 11,
+    "version": 12,
     "elements": [
                  {
                  "id": 1,
@@ -6753,8 +6753,8 @@
 						"fuel_capacity": 23,
 						"lubricant_capacity": 3.5,
 						"weight": 246,
-						"max_speed": null,
-						"fuel_consumption": null
+						"max_speed": 215,
+						"fuel_consumption": 4.7
 					},
 		            "notes": "notes",
 		            "images": null
@@ -6807,6 +6807,492 @@
 						"fuel_capacity": 23,
 						"lubricant_capacity": 3.5,
 						"weight": 242,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 127,
+					"general_info": {
+						"family": "Norge",
+						"name": "Norge GT 8V",
+						"first_year": 2011,
+						"last_year": 2016
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 81.2,
+						"displacement": {
+							"real": 1151,
+							"nominal": 1200
+						},
+						"compression": 10.8,
+						"power": {
+							"peak": 105,
+							"rpm": 7500
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1495,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": 3.4,
+						"weight": 257,
+						"max_speed": 213,
+						"fuel_consumption": 6.25
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 128,
+					"general_info": {
+						"family": ,
+						"name": "Bellagio",
+						"first_year": 2007,
+						"last_year": 2014
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 66,
+						"displacement": {
+							"real": 935.6,
+							"nominal": 940
+						},
+						"compression": 10,
+						"power": {
+							"peak": 74.8,
+							"rpm": 7200
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1570,
+						"wheels": "3.50x18 - 5.50x17",
+						"tyres": "120/70ZR18 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 19,
+						"lubricant_capacity": 3.5,
+						"weight": 226,
+						"max_speed": 200,
+						"fuel_consumption": 5
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 129,
+					"general_info": {
+						"family": "Griso",
+						"name": "Griso 1100",
+						"first_year": 2005,
+						"last_year": 2007
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 88.1,
+							"rpm": 7600
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1554,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 17.2,
+						"lubricant_capacity": 3.6,
+						"weight": 227,
+						"max_speed": 213,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 130,
+					"general_info": {
+						"family": "Griso",
+						"name": "Griso 850",
+						"first_year": 2006,
+						"last_year": 2008
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 66,
+						"displacement": {
+							"real": 877,
+							"nominal": 850
+						},
+						"compression": 9.8,
+						"power": {
+							"peak": 76,
+							"rpm": 7800
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1554,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 17.2,
+						"lubricant_capacity": 3.6,
+						"weight": 240,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 131,
+					"general_info": {
+						"family": "Griso",
+						"name": "Griso 1200 8V",
+						"first_year": 2007,
+						"last_year": 2016
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 81.2,
+						"displacement": {
+							"real": 1151,
+							"nominal": 1200
+						},
+						"compression": 11,
+						"power": {
+							"peak": 110,
+							"rpm": 7500
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1554,
+						"wheels": "3.50x17 - 5.50x17",
+						"tyres": "120/70ZR17 - 180/55ZR17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 16.7,
+						"lubricant_capacity": 3.5,
+						"weight": 240,
+						"max_speed": 225,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 132,
+					"general_info": {
+						"family": "Stelvio",
+						"name": "Stelvio 1200 8V",
+						"first_year": 2008,
+						"last_year": 2010
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 81.2,
+						"displacement": {
+							"real": 1151,
+							"nominal": 1200
+						},
+						"compression": 11,
+						"power": {
+							"peak": 105,
+							"rpm": 7250
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1535,
+						"wheels": "2.50x19 - 5.50x17",
+						"tyres": "110/80R19 59V - 180/55R17 73V"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 18,
+						"lubricant_capacity": 3.5,
+						"weight": 251,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 133,
+					"general_info": {
+						"family": "Stelvio",
+						"name": "Stelvio 1200 8V NTX",
+						"first_year": 2009,
+						"last_year": 2010
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 81.2,
+						"displacement": {
+							"real": 1151,
+							"nominal": 1200
+						},
+						"compression": 11,
+						"power": {
+							"peak": 105,
+							"rpm": 7250
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1535,
+						"wheels": "2.50x19 - 4.25x17",
+						"tyres": "110/80R19 59V - 150/70R17 69V"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 18,
+						"lubricant_capacity": 3.5,
+						"weight": 278,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 134,
+					"general_info": {
+						"family": "Stelvio",
+						"name": "Stelvio 1200 8V",
+						"first_year": 2011,
+						"last_year": 2016
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 81.2,
+						"displacement": {
+							"real": 1151,
+							"nominal": 1200
+						},
+						"compression": 11,
+						"power": {
+							"peak": 105,
+							"rpm": 7250
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1535,
+						"wheels": "2.50x19 - 4.25x17",
+						"tyres": "110/80R19 59V - 150/70R17 69V"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 32,
+						"lubricant_capacity": 3.5,
+						"weight": 281,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 135,
+					"general_info": {
+						"family": "Stelvio",
+						"name": "Stelvio 1200 8V NTX",
+						"first_year": 2011,
+						"last_year": 2016
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 95,
+						"stroke": 81.2,
+						"displacement": {
+							"real": 1151,
+							"nominal": 1200
+						},
+						"compression": 11,
+						"power": {
+							"peak": 105,
+							"rpm": 7250
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1535,
+						"wheels": "2.50x19 - 4.25x17",
+						"tyres": "110/80R19 59V - 150/70R17 69V"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 32,
+						"lubricant_capacity": 3.5,
+						"weight": 296,
 						"max_speed": null,
 						"fuel_consumption": null
 					},
@@ -12995,8 +13481,8 @@
 				"en": "6-speed"
 			},
 			"transmission_clutch": {
-				"it": "Bidisco a secco",
-				"en": "Dry with two plates"
+				"it": "Monodisco a secco",
+				"en": "Dry with one disk"
 			},
 			"transmission_final_drive": {
 				"it": "Cardano CARC con doppio giunto",
@@ -13125,6 +13611,456 @@
 			"notes": {
 				"it": null,
 				"en": null
+			}
+		},
+		"127": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 50mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 50mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with one disk"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Tubolare in acciaio",
+				"en": "Steel tubes chassis"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi da 45mm",
+				"en": "Marzocchi telescopic fork, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore",
+				"en": "Single-sided swingarm CARC with single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "ABS di serie",
+				"en": "ABS comes standard"
+			},
+			"notes": {
+				"it": "Nel 2012 è stata aggiornata la carenatura per migliorare il raffreddamento del motore, il motore è stato rivisto, e la potenza è scesa a 102 hp a 7000 rpm.",
+				"en": "In 2012 the fairing was updated for increasing the engine cooling, the engine was updated and power has dropped to 102 hp at 7000 rpm."
+			}
+		},
+		"128": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 40mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 40mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Bidisco a secco",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Tubolare in acciaio",
+				"en": "Steel tubes chassis"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi da 45mm",
+				"en": "Marzocchi telescopic fork, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore",
+				"en": "Single-sided swingarm CARC with single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": "Nel 2010 è stata aggiornata con varie migliorie e l'adozione di un monoammortizzatore più basso. Dal 2010 fu venduta nelle versioni \"Aquila Nera\" e \"Luxury\".",
+				"en": "In 2010 it was updated with several improvements and the adoption of a lower rear shock absorber. From 2010 it was sold in the \"Aquila Nera\" and \"Luxury\" versions."
+			}
+		},
+		"129": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 45mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 45mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli a doppia candela",
+				"en": "Electronic, Magneti Marelli with dual spark plugs"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Bidisco a secco",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Doppia culla superiore in tubi",
+				"en": "Double spine backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Showa a steli rovesciati, completamente regolabile, 43mm",
+				"en": "Upside-down Showa telescopic fork, fully adjustable, 43mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore Sachs completamente regolabile",
+				"en": "Single-sided swingarm CARC with fully adjustable Sachs single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"130": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 40mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 40mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Bidisco a secco",
+				"en": "Dry with two plates"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Doppia culla superiore in tubi",
+				"en": "Double spine backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Showa a steli rovesciati, completamente regolabile, 43mm",
+				"en": "Upside-down Showa telescopic fork, fully adjustable, 43mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore Sachs completamente regolabile",
+				"en": "Single-sided swingarm CARC with fully adjustable Sachs single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": null,
+				"en": null
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"131": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 50mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 50mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with one disk"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Doppia culla superiore in tubi",
+				"en": "Double spine backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Showa a steli rovesciati, completamente regolabile, 43mm",
+				"en": "Upside-down Showa telescopic fork, fully adjustable, 43mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore Sachs completamente regolabile",
+				"en": "Single-sided swingarm CARC with fully adjustable Sachs single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "Pinze radiali all'anteriore. La versione non SE ha i dischi a margherita.",
+				"en": "Radial calipers. The non SE version has petal disks."
+			},
+			"notes": {
+				"it": "Nel 2010 il motore è stato migliorato, ma la potenza è scesa a 105 hp a 7500 rpm. Nel corso degli anni sono state prodotte varie \"Special Edition\" (abbreviate \"SE\").",
+				"en": "In 2010 the engine was improved, but the power dropped to 105 hp at 7500 rpm. Over the yars several \"Special Edition\" versions were made (\"SE\" short)."
+			}
+		},
+		"132": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 50mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 50mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with one disk"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Doppia culla superiore in tubi",
+				"en": "Double spine backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi a steli rovesciati, completamente regolabile, 45mm",
+				"en": "Upside-down Marzocchi telescopic fork, fully adjustable, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore Sachs completamente regolabile",
+				"en": "Single-sided swingarm CARC with fully adjustable Sachs single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "Pinze radiali all'anteriore. ABS disponibile come optional.",
+				"en": "Radial calipers. ABS available as option."
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"133": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 50mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 50mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with one disk"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Doppia culla superiore in tubi",
+				"en": "Double spine backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi a steli rovesciati, completamente regolabile, 45mm",
+				"en": "Upside-down Marzocchi telescopic fork, fully adjustable, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore Sachs completamente regolabile",
+				"en": "Single-sided swingarm CARC with fully adjustable Sachs single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "Pinze radiali all'anteriore. ABS disponibile come optional.",
+				"en": "Radial calipers. ABS available as option."
+			},
+			"notes": {
+				"it": null,
+				"en": null
+			}
+		},
+		"134": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 50mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 50mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with one disk"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Doppia culla superiore in tubi",
+				"en": "Double spine backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi a steli rovesciati, completamente regolabile, 45mm",
+				"en": "Upside-down Marzocchi telescopic fork, fully adjustable, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore Sachs completamente regolabile",
+				"en": "Single-sided swingarm CARC with fully adjustable Sachs single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "Pinze radiali all'anteriore. ABS di serie",
+				"en": "Radial calipers. ABS comes standard"
+			},
+			"notes": {
+				"it": "Numerosi miglioramenti rispetto al modello 2008-2010. Controllo di trazione di serie.",
+				"en": "Many improvements over the 2008-2010 model. Traction control comes standard."
+			}
+		},
+		"135": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+			},
+			"engine_feed": {
+				"it": "Iniezione elettronica Magneti Marelli IAW 5AM2 con due corpi farfallati da 50mm",
+				"en": "Magneti Marelli IAW 5AM2 EFI with two 50mm throttle bodies"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with one disk"
+			},
+			"transmission_final_drive": {
+				"it": "Cardano CARC con doppio giunto",
+				"en": "Double joint cardan shaft CARC"
+			},
+			"frame_type": {
+				"it": "Doppia culla superiore in tubi",
+				"en": "Double spine backbone"
+			},
+			"frame_front_suspension": {
+				"it": "Forcella telescopica Marzocchi a steli rovesciati, completamente regolabile, 45mm",
+				"en": "Upside-down Marzocchi telescopic fork, fully adjustable, 45mm"
+			},
+			"frame_rear_suspension": {
+				"it": "Forcellone monobraccio CARC con monoammortizzatore Sachs completamente regolabile",
+				"en": "Single-sided swingarm CARC with fully adjustable Sachs single shock absorber"
+			},
+			"brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "Pinze radiali all'anteriore. ABS di serie",
+				"en": "Radial calipers. ABS comes standard"
+			},
+			"notes": {
+				"it": "Numerosi miglioramenti rispetto al modello 2009-2010. Controllo di trazione di serie.",
+				"en": "Many improvements over the 2009-2010 model. Traction control comes standard."
 			}
 		}
 		
