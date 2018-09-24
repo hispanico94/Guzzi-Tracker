@@ -1,6 +1,10 @@
 import Foundation
 import Argo
 
+
+/// Handles the initialization and update of the models (motorcycles and filters)
+/// when the app is launched and the JSON stored in the app's library directory,
+/// or downloaded from the remote, is parsed.
 final class MotorcycleData {
     
     private let dataManager: DataManager
@@ -12,14 +16,28 @@ final class MotorcycleData {
             self.motorcycleStorage.value = motorcycles
             
             let filters = self.dataManager.getFilters(fromMotorcycles: motorcycles)
-            self.originalFilterStorage.value = filters
+            self.filterStorage.value = filters
+            self.originalFilters = filters
         }
     }
     
+    /// Storage of the array containing the motorcycles extracted from the JSON.
+    /// The parsing of a new JSON updates the value of this storage
     let motorcycleStorage: Ref<Array<Motorcycle>>
     
-    let originalFilterStorage: Ref<Array<FilterProvider>>
+    /// Filters made from the motorcycles extracted from the JSON. This parameter
+    /// is modified only by this class when a new JSON is parsed.
+    private(set) var originalFilters: [FilterProvider]
+    
+    /// Storage of the filters made from the motorcycles extracted from the JSON.
+    /// The filters in this storage are modified by FiltersViewController and it's
+    /// used for passing filters to MotorcyclesViewController. The parsing of a new
+    /// JSON updates (and in fact resets) the filters stored in this storage.
     let filterStorage: Ref<Array<FilterProvider>>
+    
+    /// Storage of the orders applied to the motorcycles in MotorcyclesViewController.
+    /// Orders are added and removed in this storage by FiltersViewController and it's
+    /// used for passing orders to MotorcyclesViewController
     let orderStorage: Ref<Array<Order>>
     
     /// Save the bundle's info_moto.json in the library directory if it doesn't already exists.
@@ -34,7 +52,7 @@ final class MotorcycleData {
         self.motorcycleStorage = Ref<Array<Motorcycle>>.init(motorcycles)
         
         let filters = self.dataManager.getFilters(fromMotorcycles: motorcycles)
-        self.originalFilterStorage = Ref<Array<FilterProvider>>.init(filters)
+        self.originalFilters = filters
         self.filterStorage = Ref<Array<FilterProvider>>.init(filters)
         
         self.orderStorage = Ref<Array<Order>>.init([MotorcycleOrder.yearDescending])
@@ -52,6 +70,9 @@ final class MotorcycleData {
     }
 }
 
+/// Handles the read, write, download from the remote, and parsing of the JSON
+/// containing the data of the motorcycles.
+/// This class works paired with the MotorcycleData class.
 fileprivate struct DataManager {
     
     private let fileName = "info_moto"

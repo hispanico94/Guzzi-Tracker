@@ -9,14 +9,12 @@ class FiltersViewController: UITableViewController {
     
     private let filterButton = FilterButton()
     
-    // used for storing the filterProviders freshly initialized. if the user tap
-    // "Clear" this variable is copied in filterProviders restoring the original state prior
-    // to the presentation of FiltersViewController.
-    private var originalFilterProviders: [FilterProvider]
-    
-    // used for storing the "clean" filters from MotorcycleData. Together with originalFilterProviders
-    // is used when the user tap the "Clear" button for restoring the original state (original filters)
-    private weak var originalFilterStorage: Ref<Array<FilterProvider>>?
+    // Used for storing the MotorcyleData originalFilters.
+    // originalFilters contains the filters made from the motorcycles array extracted from the JSON.
+    // This filters are not set by the user and they are used for cleaning all the user selections
+    // in the "Filter & Sort" page (handled by this view controller). if the user tap "Clear"
+    // this variable is copied in filterProviders restoring the original state of the filters.
+    private var originalFilters: [FilterProvider]
     
     // used for storing the old active filters. If the user tap "Cancel" this
     // variable is copied in filterProviders and filterStorage.value restoring
@@ -72,8 +70,7 @@ class FiltersViewController: UITableViewController {
     
     init(motorcycleData: MotorcycleData, motorcyclesDisplayed: Ref<Int>) {
         
-        self.originalFilterStorage = motorcycleData.originalFilterStorage
-        self.originalFilterProviders = motorcycleData.originalFilterStorage.value
+        self.originalFilters = motorcycleData.originalFilters
         
         self.filterStorage = motorcycleData.filterStorage
         
@@ -93,16 +90,6 @@ class FiltersViewController: UITableViewController {
         
         super.init(style: .plain)
         
-        self.originalFilterStorage?.add(listener: "FiltersViewController") { [weak self] newFilters in
-            
-            self?.originalFilterProviders = newFilters
-            newFilters.forEach { self?.filterProviders[$0.filterId] = $0 }
-            
-            // Clear orders
-            self?.orders = [MotorcycleOrder.yearDescending]
-            self?.oldOrders = [MotorcycleOrder.yearDescending]
-        }
-        
         self.motorcyclesDisplayed?.add(listener: "FiltersViewController") { [weak self] newValue in
             self?.filterButton.setTitle(withValue: newValue)
         }
@@ -114,7 +101,6 @@ class FiltersViewController: UITableViewController {
     
     deinit {
         motorcyclesDisplayed?.remove(listener: "FiltersViewController")
-        originalFilterStorage?.remove(listener: "FiltersViewController")
     }
 
     override func viewDidLoad() {
@@ -221,8 +207,8 @@ class FiltersViewController: UITableViewController {
     // MARK: - Private instance methods
     
     @objc private func clearFiltersAndOrders() {
-        filterStorage?.value = originalFilterProviders
-        for filter in originalFilterProviders {
+        filterStorage?.value = originalFilters
+        for filter in originalFilters {
             filterProviders[filter.filterId] = filter
         }
         
