@@ -26,6 +26,8 @@ class SingleImageViewController: UIViewController {
     @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var closeButton: UIButton!
+    
     // MARK: - Initialization
     
     init(imageToBeDisplayed image: UIImage) {
@@ -39,6 +41,11 @@ class SingleImageViewController: UIViewController {
     
     // MARK: -
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        closeButton.titleLabel?.adjustsFontSizeToFitWidth = true
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -48,11 +55,10 @@ class SingleImageViewController: UIViewController {
     private func updateMinZoomScale(forSize size: CGSize) {
         let widthScale = size.width / image.size.width
         let heightScale = size.height / image.size.height
-        let minScale = min(widthScale, heightScale)
+        let minZoomScale = min(widthScale, heightScale)
         
-        scrollView.minimumZoomScale = minScale
-        
-        scrollView.zoomScale = minScale
+        scrollView.minimumZoomScale = minZoomScale
+        scrollView.zoomScale = minZoomScale
     }
     
     fileprivate func updateConstraints(forSize size: CGSize) {
@@ -68,10 +74,9 @@ class SingleImageViewController: UIViewController {
         view.layoutIfNeeded()
     }
     
-    @IBAction func userDidTap(_ sender: UITapGestureRecognizer) {
+    @IBAction func didTapCloseButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
 // MARK: - Scroll View Delegate
