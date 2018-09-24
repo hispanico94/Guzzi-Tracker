@@ -7298,61 +7298,7 @@
             },
             "notes": "notes",
             "images": null
-        },
-		{
-			"id": 136,
-			"general_info": {
-				"family": "V7 (new)",
-				"name": "V7 Classic",
-				"first_year": 2008,
-				"last_year": 2011
-			},
-			"engine" : {
-				"configuration": "engine_configuration",
-				"stroke_cycle": 4,
-				"bore": 80,
-				"stroke": 74,
-				"displacement": {
-					"real": 744,
-					"nominal": 750
-				},
-				"compression": 9.6,
-				"power": {
-					"peak": 48.3,
-					"rpm": 6800
-				},
-				"feed": "engine_feed",
-				"ignition": "engine_ignition"
-			},
-			"transmission": {
-				"type": "transmission_gearbox",
-				"clutch": "transmission_clutch",
-				"final_drive": "transmission_final_drive"
-			},
-			"frame": {
-				"type": "frame_type",
-				"front_suspension": "frame_front_suspension",
-				"rear_suspension": "frame_rear_suspension",
-				"wheelbase": 1435,
-				"wheels": "2.50x18 - 3.50x17",
-				"tyres": "100/90-18 56H - 130/80-17 65H"
-			},
-			"brakes": {
-				"type": "brakes_type",
-				"front_size": 320,
-				"rear_size": 282,
-				"notes": "brakes_notes"
-			},
-			"capacities_performances": {
-				"fuel_capacity": 15,
-				"lubricant_capacity": 1.78,
-				"weight": 198,
-				"max_speed": 175,
-				"fuel_consumption": 4
-			},
-            "notes": "notes",
-            "images": null
-		}
+        }
         
         
         
@@ -14116,57 +14062,7 @@
                 "it": "Numerosi miglioramenti rispetto al modello 2009-2010. Controllo di trazione di serie.",
                 "en": "Many improvements over the 2009-2010 model. Traction control comes standard."
             }
-        },
-		"136": {
-			"engine_configuration": {
-                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
-                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
-			},
-			"engine_feed": {
-                "it": "Iniezione elettronica Magneti Marelli IAW 15RC con due corpi farfallati da 36mm",
-                "en": "Magneti Marelli IAW 15RC EFI with two 36mm throttle bodies"
-			},
-			"engine_ignition": {
-				"it": "Elettronica, Magneti Marelli",
-				"en": "Electronic, Magneti Marelli"
-			},
-			"transmission_gearbox": {
-				"it": "5 marce",
-				"en": "5-speed"
-			},
-			"transmission_clutch": {
-				"it": "Monodisco a secco",
-				"en": "Dry with one disk"
-			},
-			"transmission_final_drive": {
-                "it": "Cardano con giunto semplice",
-                "en": "Single joint cardan shaft"
-			},
-			"frame_type": {
-                "it": "Doppia culla chiusa",
-                "en": "Closed double cradle"
-			},
-			"frame_front_suspension": {
-                "it": "Forcella telescopica Marzocchi, 40mm",
-                "en": "Marzocchi telescopic fork, 40mm"
-			},
-			"frame_rear_suspension": {
-                "it": "Forcellone con due ammortizzatori",
-                "en": "Swingarm with twin shock absorbers"
-			},
-			"brakes_type": {
-                "it": "Freno a disco anteriore, freno a disco posteriore",
-                "en": "Front disk brake, rear disk brake"
-			},
-			"brakes_notes": {
-				"it": null,
-				"en": null
-			},
-			"notes": {
-				"it": null,
-				"en": null
-			}
-		}
+        }
         
         
         
