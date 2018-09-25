@@ -1,5 +1,5 @@
 {
-    "version": 16,
+    "version": 17,
     "elements": [
         {
             "id": 1,
@@ -2826,7 +2826,7 @@
         {
             "id": 53,
             "general_info": {
-                "family": "California",
+                "family": "California 1400",
                 "name": "California 1400 Custom",
                 "first_year": 2012,
                 "last_year": 2016
@@ -2858,8 +2858,8 @@
                 "front_suspension": "frame_front_suspension",
                 "rear_suspension": "frame_rear_suspension",
                 "wheelbase": 1685,
-                "wheels": "18\" X 2.50 - 17\" X 3.50",
-                "tyres": "110/90-18 - 140/80-17"
+                "wheels": "3.50x18 - 6.00x16",
+                "tyres": "130/70R18 63H - 200/60R16 79H"
             },
             "brakes": {
                 "type": "brakes_type",
@@ -2880,7 +2880,7 @@
         {
             "id": 54,
             "general_info": {
-                "family": "California",
+                "family": "California 1400",
                 "name": "California 1400 Touring",
                 "first_year": 2012,
                 "last_year": 2016
@@ -2912,8 +2912,8 @@
                 "front_suspension": "frame_front_suspension",
                 "rear_suspension": "frame_rear_suspension",
                 "wheelbase": 1685,
-                "wheels": "18\" X 2.50 - 17\" X 3.50",
-                "tyres": "110/90-18 - 140/80-17"
+                "wheels": "3.50x18 - 6.00x16",
+                "tyres": "130/70R18 63H - 200/60R16 79H"
             },
             "brakes": {
                 "type": "brakes_type",
@@ -7352,7 +7352,223 @@
 			},
             "notes": "notes",
             "images": null
-		}
+		},
+		{
+			"id": 137,
+			"general_info": {
+				"family": "V7 (new)",
+				"name": "V7",
+				"first_year": 2012,
+				"last_year": 2014
+			},
+			"engine" : {
+				"configuration": "engine_configuration",
+				"stroke_cycle": 4,
+				"bore": 80,
+				"stroke": 74,
+				"displacement": {
+					"real": 744,
+					"nominal": 750
+				},
+				"compression": 10.2,
+				"power": {
+					"peak": 50,
+					"rpm": 6200
+				},
+				"feed": "engine_feed",
+				"ignition": "engine_ignition"
+			},
+			"transmission": {
+				"type": "transmission_gearbox",
+				"clutch": "transmission_clutch",
+				"final_drive": "transmission_final_drive"
+			},
+			"frame": {
+				"type": "frame_type",
+				"front_suspension": "frame_front_suspension",
+				"rear_suspension": "frame_rear_suspension",
+				"wheelbase": 1435,
+				"wheels": "2.50x18 - 3.50x17",
+				"tyres": "100/90-18 56H - 130/80-17 65H"
+			},
+			"brakes": {
+				"type": "brakes_type",
+				"front_size": 320,
+				"rear_size": 282,
+				"notes": "brakes_notes"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 21,
+				"lubricant_capacity": 2,
+				"weight": 198,
+				"max_speed": 170,
+				"fuel_consumption": 4
+			},
+            "notes": "notes",
+            "images": null
+		},
+		{
+			"id": 138,
+			"general_info": {
+				"family": "V7 (new)",
+				"name": "V7 II",
+				"first_year": 2015,
+				"last_year": 2016
+			},
+			"engine" : {
+				"configuration": "engine_configuration",
+				"stroke_cycle": 4,
+				"bore": 80,
+				"stroke": 74,
+				"displacement": {
+					"real": 744,
+					"nominal": 750
+				},
+				"compression": 10.2,
+				"power": {
+					"peak": 48,
+					"rpm": 6200
+				},
+				"feed": "engine_feed",
+				"ignition": "engine_ignition"
+			},
+			"transmission": {
+				"type": "transmission_gearbox",
+				"clutch": "transmission_clutch",
+				"final_drive": "transmission_final_drive"
+			},
+			"frame": {
+				"type": "frame_type",
+				"front_suspension": "frame_front_suspension",
+				"rear_suspension": "frame_rear_suspension",
+				"wheelbase": 1435,
+				"wheels": "2.50x18 - 3.50x17",
+				"tyres": "100/90-18 56H - 130/80-17 65H"
+			},
+			"brakes": {
+				"type": "brakes_type",
+				"front_size": 320,
+				"rear_size": 282,
+				"notes": "brakes_notes"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 21,
+				"lubricant_capacity": 2,
+				"weight": 189,
+				"max_speed": 177,
+				"fuel_consumption": 5
+			},
+            "notes": "notes",
+            "images": null
+		},
+		{
+			"id": 139,
+			"general_info": {
+				"family": "V7 (new)",
+				"name": "V7 III",
+				"first_year": 2017,
+				"last_year": null
+			},
+			"engine" : {
+				"configuration": "engine_configuration",
+				"stroke_cycle": 4,
+				"bore": 80,
+				"stroke": 74,
+				"displacement": {
+					"real": 744,
+					"nominal": 750
+				},
+				"compression": 10.5,
+				"power": {
+					"peak": 52,
+					"rpm": 6200
+				},
+				"feed": "engine_feed",
+				"ignition": "engine_ignition"
+			},
+			"transmission": {
+				"type": "transmission_gearbox",
+				"clutch": "transmission_clutch",
+				"final_drive": "transmission_final_drive"
+			},
+			"frame": {
+				"type": "frame_type",
+				"front_suspension": "frame_front_suspension",
+				"rear_suspension": "frame_rear_suspension",
+				"wheelbase": 1445,
+				"wheels": "2.50x18 - 3.50x17",
+				"tyres": "100/90-18 56H - 130/80-17 65H"
+			},
+			"brakes": {
+				"type": "brakes_type",
+				"front_size": 320,
+				"rear_size": 282,
+				"notes": "brakes_notes"
+			},
+			"capacities_performances": {
+				"fuel_capacity": 21,
+				"lubricant_capacity": 2,
+				"weight": 209,
+				"max_speed": 179,
+				"fuel_consumption": 5
+			},
+            "notes": "notes",
+            "images": null
+		},
+        {
+            "id": 140,
+            "general_info": {
+                "family": "California 1400",
+                "name": "California 1400 Touring",
+                "first_year": 2017,
+                "last_year": null
+            },
+            "engine" : {
+                "configuration": "engine_configuration",
+                "stroke_cycle": 4,
+                "bore": 104,
+                "stroke": 81.2,
+                "displacement": {
+                    "real": 1380,
+                    "nominal": 1400
+                },
+                "compression": 10.5,
+                "power": {
+                    "peak": 96,
+                    "rpm": 6500
+                },
+                "feed": "engine_feed",
+                "ignition": "engine_ignition"
+            },
+            "transmission": {
+                "type": "transmission_gearbox",
+                "clutch": "transmission_clutch",
+                "final_drive": "transmission_final_drive"
+            },
+            "frame": {
+                "type": "frame_type",
+                "front_suspension": "frame_front_suspension",
+                "rear_suspension": "frame_rear_suspension",
+                "wheelbase": 1685,
+                "wheels": "3.50x18 - 6.00x16",
+                "tyres": "130/70R18 63H - 200/60R16 79H"
+            },
+            "brakes": {
+                "type": "brakes_type",
+                "front_size": 320,
+                "rear_size": 282,
+                "notes": "brakes_notes"
+            },
+            "capacities_performances": {
+                "fuel_capacity": 20.5,
+                "lubricant_capacity": 4.01,
+                "weight": 346,
+                "max_speed": 200,
+                "fuel_consumption": 8.3
+            },
+            "notes": "notes",
+            "images": null
+        }
         
         
         
@@ -9973,20 +10189,20 @@
                 "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
             },
             "engine_feed": {
-                "it": "Iniezione elettronica, Weber-Marelli con singolo corpo farfallato da 52 mm, ride by wire",
-                "en": "EFI Weber-Marelli with single 52 mm throttle body, ride-by-wire"
+                "it": "Iniezione elettronica, Magneti Marelli IAW7SM con singolo corpo farfallato da 52 mm, ride by wire",
+                "en": "Magneti Marelli IAW7SM EFI with single 52 mm throttle body, ride-by-wire"
             },
             "engine_ignition": {
-                "it": "Elettronica, Magneti Marelli",
-                "en": "Electronic, Magneti Marelli"
+                "it": "Elettronica, Magneti Marelli a doppia candela",
+                "en": "Electronic, Magneti Marelli with twin spark plugs"
             },
             "transmission_gearbox": {
                 "it": "6 marce",
                 "en": "6-speed"
             },
             "transmission_clutch": {
-                "it": "A secco con disco singolo",
-                "en": "Dry with one plate"
+                "it": "Monodisco a secco",
+                "en": "Dry with one disk"
             },
             "transmission_final_drive": {
                 "it": "Cardanica con doppio giunto",
@@ -9997,8 +10213,8 @@
                 "en": "Closed double cradle with elastic engine mounting system"
             },
             "frame_front_suspension": {
-                "it": "Forcella telescopica",
-                "en": "Telescopic fork"
+                "it": "Forcella telescopica, 46mm",
+                "en": "Telescopic fork, 46mm"
             },
             "frame_rear_suspension": {
                 "it": "Forcellone con due ammortizzatori",
@@ -10013,8 +10229,8 @@
                 "en": "ABS comes standard"
             },
             "notes": {
-                "it": null,
-                "en": null
+                "it": "Dotata di ABS, controllo di trazione, cruise control, mappe motore di serie.",
+                "en": "Equipped with ABS, traction control, cruise control, engine mappings, all standard."
             }
         },
         "54": {
@@ -10023,20 +10239,20 @@
                 "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
             },
             "engine_feed": {
-                "it": "Iniezione elettronica, Weber-Marelli con singolo corpo farfallato da 52 mm, ride by wire",
-                "en": "EFI Weber-Marelli with single 52 mm throttle body, ride-by-wire"
+                "it": "Iniezione elettronica, Magneti Marelli IAW7SM con singolo corpo farfallato da 52 mm, ride by wire",
+                "en": "Magneti Marelli IAW7SM EFI with single 52 mm throttle body, ride-by-wire"
             },
             "engine_ignition": {
-                "it": "Elettronica, Magneti Marelli",
-                "en": "Electronic, Magneti Marelli"
+                "it": "Elettronica, Magneti Marelli a doppia candela",
+                "en": "Electronic, Magneti Marelli with twin spark plugs"
             },
             "transmission_gearbox": {
                 "it": "6 marce",
                 "en": "6-speed"
             },
             "transmission_clutch": {
-                "it": "A secco con disco singolo",
-                "en": "Dry with one plate"
+                "it": "Monodisco a secco",
+                "en": "Dry with one disk"
             },
             "transmission_final_drive": {
                 "it": "Cardanica con doppio giunto",
@@ -10047,8 +10263,8 @@
                 "en": "Closed double cradle with elastic engine mounting system"
             },
             "frame_front_suspension": {
-                "it": "Forcella telescopica",
-                "en": "Telescopic fork"
+                "it": "Forcella telescopica, 46mm",
+                "en": "Telescopic fork, 46mm"
             },
             "frame_rear_suspension": {
                 "it": "Forcellone con due ammortizzatori",
@@ -10063,8 +10279,8 @@
                 "en": "ABS comes standard"
             },
             "notes": {
-                "it": null,
-                "en": null
+                "it": "Dotata di ABS, controllo di trazione, cruise control, mappe motore di serie. Dal 2015 venduta anche in versione \"SE\".",
+                "en": "Equipped with ABS, traction control, cruise control, engine mappings, all standard. From 2015 sold also in the \"SE\" version."
             }
         },
         "55": {
@@ -14163,10 +14379,210 @@
 				"en": null
 			},
 			"notes": {
+				"it": "Nel 2009 la V7 Classic fu affiancata dalla \"Cafè Classic\", dotata di sella monoposto, scarichi rialzati, semimanubri, ammortizzatori posteriori di qualità migliore, colorazione Verde Legnano. Nel 2010 fu messa in vendita la versione \"Racer\", simile alla Cafè Classic, ma con particolari esclusivi. Inizialmente pensata come una serie limitata, successivamente la Racer è diventata di normale produzione.",
+				"en": "In 2009, along the V7 Classic, the \"Cafè Classic\" was introduced. The \"Cafè Classic\" is equipped with single seat, higher mufflers, half handlebars, better rear shock absorbers, is painted in Legnano Green color. In 2010 the \"Racer\" version was introduced, it's similar to the Cafè Classic, but with exclusive details. Initially sold as a limited edition, the Racer later became a standard edition."
+			}
+		},
+		"137": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+                "it": "Iniezione elettronica Magneti Marelli MIU G3 con singolo corpo farfallato da 38mm",
+                "en": "Magneti Marelli MIU G3 EFI with single 38mm throttle body"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "5 marce",
+				"en": "5-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with one disk"
+			},
+			"transmission_final_drive": {
+                "it": "Cardano con giunto semplice",
+                "en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+                "it": "Doppia culla chiusa",
+                "en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+                "it": "Forcella telescopica Kaifa, 40mm",
+                "en": "Kaifa telescopic fork, 40mm"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Freno a disco anteriore, freno a disco posteriore",
+                "en": "Front disk brake, rear disk brake"
+			},
+			"brakes_notes": {
 				"it": null,
 				"en": null
+			},
+			"notes": {
+				"it": "Migliorati motore (con nuove teste) e cambio. Venduta in tre versioni: \"Stone\", \"Special\" e \"Racer\".",
+				"en": "Updated engine (with new heads) and transmission. Sold in three versions: \"Stone\", \"Special\" and \"Racer\"."
 			}
-		}
+		},
+		"138": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+                "it": "Iniezione elettronica Magneti Marelli MIU G3 con singolo corpo farfallato da 38mm",
+                "en": "Magneti Marelli MIU G3 EFI with single 38mm throttle body"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with one disk"
+			},
+			"transmission_final_drive": {
+                "it": "Cardano con giunto semplice",
+                "en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+                "it": "Doppia culla chiusa",
+                "en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+                "it": "Forcella telescopica, 40mm",
+                "en": "Telescopic fork, 40mm"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Freno a disco anteriore, freno a disco posteriore",
+                "en": "Front disk brake, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "ABS di serie.",
+				"en": "ABS comes standard."
+			},
+			"notes": {
+				"it": "Nuovo cambio a 6 marce. ABS e controllo di trazione di serie. Migliorata l'abitabilità del guidatore. Potenza ridotta a 48 hp per patente A2. Venduta in quattro versioni: \"Stone\", \"Special\", \"Racer\" e \"Stornello\", quest'ultima limitata a 1000 esemplari.",
+				"en": "New 6-speed gearbox. ABS and traction control comes standard. More legroom for the rider. Engine power reduced to 48 hp for A2 license. Sold in four versions: \"Stone\", \"Special\", \"Racer\" and \"Stornello\", the last one limited to 1000 models."
+			}
+		},
+		"139": {
+			"engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+			},
+			"engine_feed": {
+                "it": "Iniezione elettronica Magneti Marelli MIU G3 con singolo corpo farfallato da 38mm",
+                "en": "Magneti Marelli MIU G3 EFI with single 38mm throttle body"
+			},
+			"engine_ignition": {
+				"it": "Elettronica, Magneti Marelli",
+				"en": "Electronic, Magneti Marelli"
+			},
+			"transmission_gearbox": {
+				"it": "6 marce",
+				"en": "6-speed"
+			},
+			"transmission_clutch": {
+				"it": "Monodisco a secco",
+				"en": "Dry with one disk"
+			},
+			"transmission_final_drive": {
+                "it": "Cardano con giunto semplice",
+                "en": "Single joint cardan shaft"
+			},
+			"frame_type": {
+                "it": "Doppia culla chiusa",
+                "en": "Closed double cradle"
+			},
+			"frame_front_suspension": {
+                "it": "Forcella telescopica Kaifa, 40mm",
+                "en": "Kaifa telescopic fork, 40mm"
+			},
+			"frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori Kayaba",
+                "en": "Swingarm with twin Kayaba shock absorbers"
+			},
+			"brakes_type": {
+                "it": "Freno a disco anteriore, freno a disco posteriore",
+                "en": "Front disk brake, rear disk brake"
+			},
+			"brakes_notes": {
+				"it": "ABS di serie.",
+				"en": "ABS comes standard."
+			},
+			"notes": {
+				"it": "Nuovo motore. nuova frizione, nuovo forcellone, nuova strumentazione, nuovi particolari di alluminio, più cura nei dettagli. ABS e controllo di trazione di serie. Venduta in tre versioni standard: \"Stone\", \"Special\" (peso 213 kg), \"Racer\". Nel 2017 fu in vendita la versione limitata \"Anniversario\". Nel 2018 sono in vendita, oltre le standard, le versioni \"Carbon\", \"Rough\", \"Milano\" e \"Limited\".",
+				"en": "New engine, new clutch, new swingarm, new dashboard, new aluminum parts, more attention to details. ABS and traction control comes standard. Sold in three standard versions: \"Stone\", \"Special\" (weight 213kg/470lbs), \"Racer\". In 2012 the \"Anniversario\" limited edition was sold. In 2018 are on sale the \"Carbon\", \"Rough\", \"Milano\" and \"Limited\", together with the standard versions."
+			}
+		},
+        "140": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Iniezione elettronica, Magneti Marelli IAW7SM con singolo corpo farfallato da 52 mm, ride by wire",
+                "en": "Magneti Marelli IAW7SM EFI with single 52 mm throttle body, ride-by-wire"
+            },
+            "engine_ignition": {
+                "it": "Elettronica, Magneti Marelli a doppia candela",
+                "en": "Electronic, Magneti Marelli with twin spark plugs"
+            },
+            "transmission_gearbox": {
+                "it": "6 marce",
+                "en": "6-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with one disk"
+            },
+            "transmission_final_drive": {
+                "it": "Cardanica con doppio giunto",
+                "en": "Double joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa con montaggio elastico del motore",
+                "en": "Closed double cradle with elastic engine mounting system"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica, 46mm",
+                "en": "Telescopic fork, 46mm"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "ABS di serie",
+                "en": "ABS comes standard"
+            },
+            "notes": {
+                "it": "Aggiornata Euro 4. Nuovi ammortizzatori e forcella. Nuovi comandi a manubrio. Rifiniture migliori. Più accessori. Dotata di ABS, controllo di trazione, cruise control, mappe motore di serie.",
+                "en": "Euro 4 compliant. New shock absorbers and fork. New switches. More attention to details. More accessories. Equipped with ABS, traction control, cruise control, engine mappings, all standard."
+            }
+        }
         
         
         
