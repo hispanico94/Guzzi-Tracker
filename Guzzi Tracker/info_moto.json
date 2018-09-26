@@ -1,5 +1,5 @@
 {
-    "version": 18,
+    "version": 19,
     "elements": [
         {
             "id": 1,
@@ -6494,7 +6494,7 @@
                 "fuel_consumption": 6.9
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1924/44016102225_6c7acfd58c_o.jpg"]
         },
         {
             "id": 121,
@@ -6548,7 +6548,7 @@
                 "fuel_consumption": 5.6
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1925/44016102815_b658fa5e00_o.jpg"]
         },
         {
             "id": 122,
@@ -6602,7 +6602,8 @@
                 "fuel_consumption": 7.1
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1912/44016099375_913c811834_o.jpg",
+						"https://c2.staticflickr.com/2/1968/44878462622_a872b803cc_o.jpg"]
         },
         {
             "id": 123,
@@ -6764,7 +6765,8 @@
                 "fuel_consumption": 4.7
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1912/29991337727_47a55f19bb_o.jpg",
+						"https://c2.staticflickr.com/2/1973/44928286571_61633b34bc_o.jpg"]
         },
         {
             "id": 126,
@@ -6872,7 +6874,9 @@
                 "fuel_consumption": 6.25
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1978/44928290521_5ffa8c424a_o.jpg",
+						"https://c2.staticflickr.com/2/1919/44928289051_9340960e64_o.jpg",
+						"https://c2.staticflickr.com/2/1926/44928287961_7b9926ef28_o.jpg"]
         },
         {
             "id": 128,
@@ -6926,7 +6930,9 @@
                 "fuel_consumption": 5
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1901/44207769454_c98610e397_o.jpg",
+						"https://c2.staticflickr.com/2/1924/29991048977_fd24114933_o.jpg",
+						"https://c2.staticflickr.com/2/1922/44207765374_dc241b3b31_o.jpg"]
         },
         {
             "id": 129,
@@ -6980,7 +6986,7 @@
                 "fuel_consumption": null
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1939/44015126255_3c915e2798_o.jpg"]
         },
         {
             "id": 130,
@@ -7088,7 +7094,9 @@
                 "fuel_consumption": null
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1955/31054465398_157e703d19_o.jpg",
+						"https://c2.staticflickr.com/2/1968/44015124115_3c94e8c5cf_o.jpg",
+						"https://c2.staticflickr.com/2/1965/43115335240_8f24a9797d_o.jpg"]
         },
         {
             "id": 132,
@@ -7142,7 +7150,7 @@
                 "fuel_consumption": null
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1979/44927661851_ec27d5b307_o.jpg"]
         },
         {
             "id": 133,
@@ -7196,7 +7204,7 @@
                 "fuel_consumption": null
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1965/31054476348_721e48c458_o.jpg"]
         },
         {
             "id": 134,
@@ -7250,7 +7258,7 @@
                 "fuel_consumption": null
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1929/44927658581_1b7cda9869_o.jpg"]
         },
         {
             "id": 135,
@@ -7304,7 +7312,7 @@
                 "fuel_consumption": null
             },
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1931/31054473218_e40e8d38c6_o.jpg"]
         },
 		{
 			"id": 136,
@@ -7477,7 +7485,11 @@
 				"fuel_consumption": 5
 			},
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1920/44204973004_1c5971a14e_o.jpg",
+						"https://c2.staticflickr.com/2/1966/44875163952_dba17002cd_o.jpg",
+						"https://c2.staticflickr.com/2/1949/44204972334_3bfb527e63_o.jpg",
+						"https://c2.staticflickr.com/2/1952/44925098141_9472c9061c_o.jpg",
+						"https://c2.staticflickr.com/2/1971/44204971934_d4ddd27c07_o.jpg"]
 		},
 		{
 			"id": 139,
@@ -7531,7 +7543,14 @@
 				"fuel_consumption": 5
 			},
             "notes": "notes",
-            "images": null
+            "images": ["https://c2.staticflickr.com/2/1959/44925123351_32a81ac5d9_o.jpg",
+						"https://c2.staticflickr.com/2/1967/44012644555_c752de5e4b_o.jpg",
+						"https://c2.staticflickr.com/2/1944/44925121841_47f5d82bda_o.jpg",
+						"https://c2.staticflickr.com/2/1954/44925121621_a8e375d0b6_o.jpg",
+						"https://c2.staticflickr.com/2/1967/44925120511_c139755619_o.jpg",
+						"https://c2.staticflickr.com/2/1942/44925119951_40930ba6d2_o.jpg",
+						"https://c2.staticflickr.com/2/1956/44925119561_f999cb3be2_o.jpg",
+						"https://c2.staticflickr.com/2/1917/44925118761_9bb8a73de2_o.jpg"]
 		},
         {
             "id": 140,
@@ -7586,6 +7605,232 @@
             },
             "notes": "notes",
             "images": ["https://c2.staticflickr.com/2/1924/29971679567_baba8a1886_o.jpg"]
+        },
+        {
+            "id": 141,
+            "general_info": {
+                "family": "California 1400",
+                "name": "Eldorado",
+                "first_year": 2015,
+                "last_year": null
+            },
+            "engine" : {
+                "configuration": "engine_configuration",
+                "stroke_cycle": 4,
+                "bore": 104,
+                "stroke": 81.2,
+                "displacement": {
+                    "real": 1380,
+                    "nominal": 1400
+                },
+                "compression": 10.5,
+                "power": {
+                    "peak": 96,
+                    "rpm": 6500
+                },
+                "feed": "engine_feed",
+                "ignition": "engine_ignition"
+            },
+            "transmission": {
+                "type": "transmission_gearbox",
+                "clutch": "transmission_clutch",
+                "final_drive": "transmission_final_drive"
+            },
+            "frame": {
+                "type": "frame_type",
+                "front_suspension": "frame_front_suspension",
+                "rear_suspension": "frame_rear_suspension",
+                "wheelbase": 1685,
+                "wheels": "3.50x16 - 5.50x16",
+                "tyres": "130/90B16 - 180/65B16"
+            },
+            "brakes": {
+                "type": "brakes_type",
+                "front_size": 320,
+                "rear_size": 282,
+                "notes": "brakes_notes"
+            },
+            "capacities_performances": {
+                "fuel_capacity": 20.5,
+                "lubricant_capacity": 4.01,
+                "weight": 346,
+                "max_speed": 200,
+                "fuel_consumption": 8.3
+            },
+            "notes": "notes",
+            "images": ["https://c2.staticflickr.com/2/1927/44012973905_95ec77d091_o.jpg",
+						"https://c2.staticflickr.com/2/1975/44012973735_9c1b104e57_o.jpg",
+						"https://c2.staticflickr.com/2/1917/44012973405_66626ee0e9_o.jpg"]
+        },
+        {
+            "id": 142,
+            "general_info": {
+                "family": "California 1400",
+                "name": "Audace",
+                "first_year": 2015,
+                "last_year": null
+            },
+            "engine" : {
+                "configuration": "engine_configuration",
+                "stroke_cycle": 4,
+                "bore": 104,
+                "stroke": 81.2,
+                "displacement": {
+                    "real": 1380,
+                    "nominal": 1400
+                },
+                "compression": 10.5,
+                "power": {
+                    "peak": 96,
+                    "rpm": 6500
+                },
+                "feed": "engine_feed",
+                "ignition": "engine_ignition"
+            },
+            "transmission": {
+                "type": "transmission_gearbox",
+                "clutch": "transmission_clutch",
+                "final_drive": "transmission_final_drive"
+            },
+            "frame": {
+                "type": "frame_type",
+                "front_suspension": "frame_front_suspension",
+                "rear_suspension": "frame_rear_suspension",
+                "wheelbase": 1685,
+                "wheels": "3.50x18 - 6.00x16",
+                "tyres": "130/70R18 63H - 200/60R16 79H"
+            },
+            "brakes": {
+                "type": "brakes_type",
+                "front_size": 320,
+                "rear_size": 282,
+                "notes": "brakes_notes"
+            },
+            "capacities_performances": {
+                "fuel_capacity": 20.5,
+                "lubricant_capacity": 4.01,
+                "weight": 299,
+                "max_speed": 200,
+                "fuel_consumption": 8.3
+            },
+            "notes": "notes",
+            "images": ["https://c2.staticflickr.com/2/1953/44012966115_d85c6076a3_o.jpg",
+						"https://c2.staticflickr.com/2/1965/44012965725_bc75589cd5_o.jpg",
+						"https://c2.staticflickr.com/2/1935/44012964865_9240307086_o.jpg",
+						"https://c2.staticflickr.com/2/1942/44012964065_ae32a74c3b_o.jpg"]
+        },
+        {
+            "id": 143,
+            "general_info": {
+                "family": "California 1400",
+                "name": "MGX-21",
+                "first_year": 2016,
+                "last_year": null
+            },
+            "engine" : {
+                "configuration": "engine_configuration",
+                "stroke_cycle": 4,
+                "bore": 104,
+                "stroke": 81.2,
+                "displacement": {
+                    "real": 1380,
+                    "nominal": 1400
+                },
+                "compression": 10.5,
+                "power": {
+                    "peak": 96,
+                    "rpm": 6500
+                },
+                "feed": "engine_feed",
+                "ignition": "engine_ignition"
+            },
+            "transmission": {
+                "type": "transmission_gearbox",
+                "clutch": "transmission_clutch",
+                "final_drive": "transmission_final_drive"
+            },
+            "frame": {
+                "type": "frame_type",
+                "front_suspension": "frame_front_suspension",
+                "rear_suspension": "frame_rear_suspension",
+                "wheelbase": 1700,
+                "wheels": "3.50x21 - 5.50x16",
+                "tyres": "120/70R21 - 180/60R16"
+            },
+            "brakes": {
+                "type": "brakes_type",
+                "front_size": 320,
+                "rear_size": 282,
+                "notes": "brakes_notes"
+            },
+            "capacities_performances": {
+                "fuel_capacity": 20.5,
+                "lubricant_capacity": 4.01,
+                "weight": 341,
+                "max_speed": 200,
+                "fuel_consumption": 8.3
+            },
+            "notes": "notes",
+            "images": ["https://c2.staticflickr.com/2/1954/44875778452_9051cd9735_o.jpg",
+						"https://c2.staticflickr.com/2/1909/44875777872_e30dc61daa_o.jpg",
+						"https://c2.staticflickr.com/2/1917/44875776652_05d5646760_o.jpg"]
+        },
+        {
+            "id": 144,
+            "general_info": {
+                "family": "V9",
+                "name": "V9",
+                "first_year": 2016,
+                "last_year": null
+            },
+            "engine" : {
+                "configuration": "engine_configuration",
+                "stroke_cycle": 4,
+                "bore": 84,
+                "stroke": 77,
+                "displacement": {
+                    "real": 853,
+                    "nominal": 850
+                },
+                "compression": 10.5,
+                "power": {
+                    "peak": 55,
+                    "rpm": 6250
+                },
+                "feed": "engine_feed",
+                "ignition": "engine_ignition"
+            },
+            "transmission": {
+                "type": "transmission_gearbox",
+                "clutch": "transmission_clutch",
+                "final_drive": "transmission_final_drive"
+            },
+            "frame": {
+                "type": "frame_type",
+                "front_suspension": "frame_front_suspension",
+                "rear_suspension": "frame_rear_suspension",
+                "wheelbase": 1465,
+                "wheels": "Bobber: 3.50x16 - 4.00x16\nRoamer: 2.50x19 - 4.00x16",
+                "tyres": "Bobber: 130/90-16 67H - 150/80B16 77H\nRoamer: 100/90-19 57V - 150/80V16 71V"
+            },
+            "brakes": {
+                "type": "brakes_type",
+                "front_size": 320,
+                "rear_size": 260,
+                "notes": "brakes_notes"
+            },
+            "capacities_performances": {
+                "fuel_capacity": 15,
+                "lubricant_capacity": 2,
+                "weight": 213,
+                "max_speed": null,
+                "fuel_consumption": 4
+            },
+            "notes": "notes",
+            "images": ["https://c2.staticflickr.com/2/1960/29988928907_729ee011ab_o.jpg",
+						"https://c2.staticflickr.com/2/1933/31052556908_493569dc9a_o.jpg",
+						"https://c2.staticflickr.com/2/1904/31052556388_d7d3b4ffa7_o.jpg",
+						"https://c2.staticflickr.com/2/1976/31052555448_c15c7b7bc8_b.jpg"]
         }
         
         
@@ -14581,8 +14826,8 @@
                 "en": "Closed double cradle with elastic engine mounting system"
             },
             "frame_front_suspension": {
-                "it": "Forcella telescopica, 46mm",
-                "en": "Telescopic fork, 46mm"
+                "it": "Forcella telescopica, 45mm",
+                "en": "Telescopic fork, 45mm"
             },
             "frame_rear_suspension": {
                 "it": "Forcellone con due ammortizzatori",
@@ -14599,6 +14844,206 @@
             "notes": {
                 "it": "Aggiornata Euro 4. Nuovi ammortizzatori e forcella. Nuovi comandi a manubrio. Rifiniture migliori. Più accessori. Dotata di ABS, controllo di trazione, cruise control, mappe motore di serie.",
                 "en": "Euro 4 compliant. New shock absorbers and fork. New switches. More attention to details. More accessories. Equipped with ABS, traction control, cruise control, engine mappings, all standard."
+            }
+        },
+        "141": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Iniezione elettronica, Magneti Marelli IAW7SM con singolo corpo farfallato da 52 mm, ride by wire",
+                "en": "Magneti Marelli IAW7SM EFI with single 52 mm throttle body, ride-by-wire"
+            },
+            "engine_ignition": {
+                "it": "Elettronica, Magneti Marelli a doppia candela",
+                "en": "Electronic, Magneti Marelli with twin spark plugs"
+            },
+            "transmission_gearbox": {
+                "it": "6 marce",
+                "en": "6-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with one disk"
+            },
+            "transmission_final_drive": {
+                "it": "Cardanica con doppio giunto",
+                "en": "Double joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa con montaggio elastico del motore",
+                "en": "Closed double cradle with elastic engine mounting system"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica, 45mm",
+                "en": "Telescopic fork, 45mm"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "ABS di serie",
+                "en": "ABS comes standard"
+            },
+            "notes": {
+                "it": "Cerchi a raggi tubeless. Aggiornata Euro 4 nel 2017. Dotata di ABS, controllo di trazione, cruise control, mappe motore di serie.",
+                "en": "Tubeless spoke wheels. Euro 4 compliant from 2017. Equipped with ABS, traction control, cruise control, engine mappings, all standard."
+            }
+        },
+        "142": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Iniezione elettronica, Magneti Marelli IAW7SM con singolo corpo farfallato da 52 mm, ride by wire",
+                "en": "Magneti Marelli IAW7SM EFI with single 52 mm throttle body, ride-by-wire"
+            },
+            "engine_ignition": {
+                "it": "Elettronica, Magneti Marelli a doppia candela",
+                "en": "Electronic, Magneti Marelli with twin spark plugs"
+            },
+            "transmission_gearbox": {
+                "it": "6 marce",
+                "en": "6-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with one disk"
+            },
+            "transmission_final_drive": {
+                "it": "Cardanica con doppio giunto",
+                "en": "Double joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa con montaggio elastico del motore",
+                "en": "Closed double cradle with elastic engine mounting system"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica, 45mm",
+                "en": "Telescopic fork, 45mm"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "ABS di serie",
+                "en": "ABS comes standard"
+            },
+            "notes": {
+                "it": "Aggiornata Euro 4 nel 2017. Nello stesso anno sono state introdotte alcune migliorie (tra cui nuovi blocchetti e nuovi ammortizzatori completamente regolabili) ed è stata presentata la versione \"Carbon\", con particolari in fibra di carbonio. Dotata di ABS, controllo di trazione, cruise control, mappe motore di serie.",
+                "en": "Euro 4 compliant from 2017. In the same year several improvements were introduced (including new handlebar switches and fully adjustable shock absorbers), and the \"Carbon\" version was introduced, with carbon fiber details. Equipped with ABS, traction control, cruise control, engine mappings, all standard."
+            }
+        },
+        "143": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, monoalbero a camme in testa con aste e bilancieri, 4 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, cam-in-head 4 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Iniezione elettronica, Magneti Marelli IAW7SM con singolo corpo farfallato da 52 mm, ride by wire",
+                "en": "Magneti Marelli IAW7SM EFI with single 52 mm throttle body, ride-by-wire"
+            },
+            "engine_ignition": {
+                "it": "Elettronica, Magneti Marelli a doppia candela",
+                "en": "Electronic, Magneti Marelli with twin spark plugs"
+            },
+            "transmission_gearbox": {
+                "it": "6 marce",
+                "en": "6-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with one disk"
+            },
+            "transmission_final_drive": {
+                "it": "Cardanica con doppio giunto",
+                "en": "Double joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa con montaggio elastico del motore",
+                "en": "Closed double cradle with elastic engine mounting system"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica, 45mm",
+                "en": "Telescopic fork, 45mm"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Doppio freno a disco anteriore, freno a disco posteriore",
+                "en": "Front twin disk brakes, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "ABS di serie",
+                "en": "ABS comes standard"
+            },
+            "notes": {
+                "it": "Telaio rinforzato rispetto alle altre California 1400. Dotata di ABS, controllo di trazione, cruise control, mappe motore di serie.",
+                "en": "Reinforced frame compared to other California 1400. Equipped with ABS, traction control, cruise control, engine mappings, all standard."
+            }
+        },
+        "144": {
+            "engine_configuration": {
+                "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+                "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+            },
+            "engine_feed": {
+                "it": "Iniezione elettronica, Magneti Marelli MIU G3 con singolo corpo farfallato da 38 mm",
+                "en": "Magneti Marelli MIU G3 EFI with single 38 mm throttle body"
+            },
+            "engine_ignition": {
+                "it": "Elettronica, Magneti Marelli",
+                "en": "Electronic, Magneti Marelli"
+            },
+            "transmission_gearbox": {
+                "it": "6 marce",
+                "en": "6-speed"
+            },
+            "transmission_clutch": {
+                "it": "Monodisco a secco",
+                "en": "Dry with one disk"
+            },
+            "transmission_final_drive": {
+                "it": "Cardanica con doppio giunto",
+                "en": "Double joint cardan shaft"
+            },
+            "frame_type": {
+                "it": "Doppia culla chiusa con montaggio elastico del motore",
+                "en": "Closed double cradle with elastic engine mounting system"
+            },
+            "frame_front_suspension": {
+                "it": "Forcella telescopica, 40mm",
+                "en": "Telescopic fork, 40mm"
+            },
+            "frame_rear_suspension": {
+                "it": "Forcellone con due ammortizzatori",
+                "en": "Swingarm with twin shock absorbers"
+            },
+            "brakes_type": {
+                "it": "Freno a disco anteriore, freno a disco posteriore",
+                "en": "Front disk brake, rear disk brake"
+            },
+            "brakes_notes": {
+                "it": "ABS di serie",
+                "en": "ABS comes standard"
+            },
+            "notes": {
+                "it": "Venduta nelle versioni \"Bobber\" e \"Roamer\". Nel 2017 fu aggiornata con nuove selle (più grandi e comode) e pedane arretrate e rialzate (con le precedenti pedane alcuni motociclisti toccavano i coperchi valvole con le ginocchia). Dotata di ABS e controllo di trazione di serie. Il peso riportato si riferisce in ordine di marcia col pieno di carburante.",
+                "en": "Sold in \"Bobber\" and \"Roamer\" versions. In 2017 it was updated with new seats (bigger and more comfortable) and footpegs moved back and up (with the earlier footpegs some riders hit the valve covers with the knees). ABS and traction control comes standard. Reported weight refers to kerb weight with fuel tank full."
             }
         }
         
