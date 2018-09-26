@@ -1,11 +1,3 @@
-//
-//  MotorcycleCell.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 01/03/17.
-//  Copyright © 2017 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class MotorcycleCell: UITableViewCell {
@@ -19,7 +11,8 @@ class MotorcycleCell: UITableViewCell {
         if let lastYear = motorcycleData.generalInfo.lastYear {
             detailText = String(motorcycleData.generalInfo.firstYear) + " - " + String(lastYear)
         } else {
-            detailText = "From " + String(motorcycleData.generalInfo.firstYear)
+            let fromString = NSLocalizedString("From", comment: "From (year)")
+            detailText = fromString + " " + String(motorcycleData.generalInfo.firstYear)
         }
         
         detailTextLabel?.text = detailText
