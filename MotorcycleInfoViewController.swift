@@ -41,7 +41,7 @@ class MotorcycleInfoViewController: UITableViewController {
         tableView.estimatedRowHeight = CGFloat(200)
         
         navigationItem.title = motorcycle.generalInfo.name
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: "Back"), style: .plain, target: nil, action: nil)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: nil, style: .plain, target: self, action: #selector(didTapFavoriteButton))
     }
