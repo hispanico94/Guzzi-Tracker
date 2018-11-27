@@ -1,5 +1,5 @@
 {
-    "version": 20,
+    "version": 21,
     "elements": [
         {
             "id": 1,
@@ -15023,8 +15023,8 @@
                 "en": "Double joint cardan shaft"
             },
             "frame_type": {
-                "it": "Doppia culla chiusa con montaggio elastico del motore",
-                "en": "Closed double cradle with elastic engine mounting system"
+                "it": "Doppia culla chiusa",
+                "en": "Closed double cradle"
             },
             "frame_front_suspension": {
                 "it": "Forcella telescopica, 40mm",
