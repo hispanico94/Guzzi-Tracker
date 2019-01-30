@@ -1,5 +1,6 @@
-github "Alamofire/Alamofire" "4.7.3"
-github "Alamofire/AlamofireImage" "3.4.1"
+github "Alamofire/Alamofire" "4.8.1"
+github "Alamofire/AlamofireImage" "3.5.0"
+github "onevcat/Kingfisher" "5.1.0"
 github "thoughtbot/Argo" "v4.1.2"
 github "thoughtbot/Curry" "v4.0.1"
 github "thoughtbot/Runes" "v4.1.1"

@@ -22,6 +22,7 @@
 		CF1CDB81206FD465007BCE95 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */; };
 		CF1CDB84206FD5AF007BCE95 /* MinMaxYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */; };
 		CF2A863A2089EB8C00C1A7E7 /* Wheelbase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2A86392089EB8C00C1A7E7 /* Wheelbase.swift */; };
+		CF3923F72201F42E000B81E6 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3923F62201F42E000B81E6 /* Kingfisher.framework */; };
 		CF3A1CAF2147B66200ABCEC2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A1CAE2147B66200ABCEC2 /* Review.swift */; };
 		CF419AFE1E6D643300EA7B74 /* MotorcycleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF419AFC1E6D643300EA7B74 /* MotorcycleInfoViewController.swift */; };
 		CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */; };
@@ -118,6 +119,7 @@
 		CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
 		CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinMaxYear.swift; sourceTree = "<group>"; };
 		CF2A86392089EB8C00C1A7E7 /* Wheelbase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wheelbase.swift; sourceTree = "<group>"; };
+		CF3923F62201F42E000B81E6 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		CF3A1CAE2147B66200ABCEC2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		CF419AFC1E6D643300EA7B74 /* MotorcycleInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleInfoViewController.swift; sourceTree = "<group>"; };
 		CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleInfoViewController.xib; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				CF55CAC01E76EEDB002275A0 /* AlamofireImage.framework in Frameworks */,
 				CF8CCE921E65CBB500F4A37E /* Argo.framework in Frameworks */,
 				CF8CCE961E65CFFE00F4A37E /* Curry.framework in Frameworks */,
+				CF3923F72201F42E000B81E6 /* Kingfisher.framework in Frameworks */,
 				CF55CABF1E76EEDB002275A0 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +292,7 @@
 		CF8CCE8F1E65CB9300F4A37E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CF3923F62201F42E000B81E6 /* Kingfisher.framework */,
 				CF55CABD1E76EEDB002275A0 /* Alamofire.framework */,
 				CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */,
 				CF8CCE951E65CFFE00F4A37E /* Curry.framework */,
@@ -742,13 +746,14 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

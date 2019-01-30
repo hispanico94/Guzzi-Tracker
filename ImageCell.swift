@@ -1,11 +1,3 @@
-//
-//  ImageCell.swift
-//  Guzzi Tracker
-//
-//  Created by Paolo Rocca on 09/03/17.
-//  Copyright © 2017 PaoloRocca. All rights reserved.
-//
-
 import UIKit
 
 class ImageCell: UITableViewCell {
@@ -23,7 +15,7 @@ class ImageCell: UITableViewCell {
     }
     
     func set(withImageURL url: URL) -> ImageCell {
-        motorcycleImageView.af_setImage(withURL: url)
+        motorcycleImageView.kf.setImage(with: url)
         return self
     }
     

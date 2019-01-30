@@ -1,5 +1,5 @@
 import UIKit
-import AlamofireImage
+//import AlamofireImage
 
 class SingleImageViewController: UIViewController {
     

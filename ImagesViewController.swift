@@ -1,5 +1,6 @@
 import UIKit
-import AlamofireImage
+import Kingfisher
+
 
 class ImagesViewController: UITableViewController {
     
@@ -32,10 +33,9 @@ class ImagesViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        ImageDownloader().download(imageUrlRequests)
+        
+        ImagePrefetcher(urls: imageUrls).start()
         navigationItem.title = motorcycleName
-//        tableView.rowHeight = calculateRowHeight(withWidth: view.bounds.width)
     }
     
     override func viewWillLayoutSubviews() {
