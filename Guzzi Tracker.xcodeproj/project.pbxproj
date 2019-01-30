@@ -36,8 +36,6 @@
 		CF466A13208B27EA00E44BF2 /* StrokeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF466A12208B27EA00E44BF2 /* StrokeCycle.swift */; };
 		CF466A16208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF466A14208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift */; };
 		CF46F9512131549800DD03CC /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = CF46F9532131549800DD03CC /* Localizable.stringsdict */; };
-		CF55CABF1E76EEDB002275A0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF55CABD1E76EEDB002275A0 /* Alamofire.framework */; };
-		CF55CAC01E76EEDB002275A0 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */; };
 		CF56823B20B6A3ED00B52AEB /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56823A20B6A3ED00B52AEB /* FilterButton.swift */; };
 		CF5D2DB82138362F00E01DFA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5D2DB62138362F00E01DFA /* InfoViewController.swift */; };
 		CF5D2DB92138362F00E01DFA /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5D2DB72138362F00E01DFA /* InfoViewController.xib */; };
@@ -134,8 +132,6 @@
 		CF466A14208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeCycleFilterTableViewController.swift; sourceTree = "<group>"; };
 		CF46F9522131549800DD03CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		CF46F9542131549E00DD03CC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = it; path = it.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		CF55CABD1E76EEDB002275A0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		CF56823A20B6A3ED00B52AEB /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		CF5D2DB62138362F00E01DFA /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		CF5D2DB72138362F00E01DFA /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
@@ -227,11 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF8CCE931E65CBB500F4A37E /* Runes.framework in Frameworks */,
-				CF55CAC01E76EEDB002275A0 /* AlamofireImage.framework in Frameworks */,
 				CF8CCE921E65CBB500F4A37E /* Argo.framework in Frameworks */,
 				CF8CCE961E65CFFE00F4A37E /* Curry.framework in Frameworks */,
 				CF3923F72201F42E000B81E6 /* Kingfisher.framework in Frameworks */,
-				CF55CABF1E76EEDB002275A0 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				CF3923F62201F42E000B81E6 /* Kingfisher.framework */,
-				CF55CABD1E76EEDB002275A0 /* Alamofire.framework */,
-				CF55CABE1E76EEDB002275A0 /* AlamofireImage.framework */,
 				CF8CCE951E65CFFE00F4A37E /* Curry.framework */,
 				CF8CCE901E65CBB500F4A37E /* Argo.framework */,
 				CF8CCE911E65CBB500F4A37E /* Runes.framework */,
@@ -744,8 +736,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Copy Carthage Frameworks";

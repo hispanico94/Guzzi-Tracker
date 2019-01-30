@@ -1,6 +1,4 @@
 github "thoughtbot/Argo"
 github "thoughtbot/Runes"
 github "thoughtbot/Curry"
-github "Alamofire/Alamofire"
-github "Alamofire/AlamofireImage"
 github "onevcat/Kingfisher"
