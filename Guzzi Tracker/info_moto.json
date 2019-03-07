@@ -1,5 +1,5 @@
 {
-    "version": 21,
+    "version": 22,
     "elements": [
         {
             "id": 1,
@@ -7832,7 +7832,170 @@
 						"https://c2.staticflickr.com/2/1933/31052556908_493569dc9a_o.jpg",
 						"https://c2.staticflickr.com/2/1904/31052556388_d7d3b4ffa7_o.jpg",
 						"https://c2.staticflickr.com/2/1976/31052555448_c15c7b7bc8_b.jpg"]
-        }
+        },
+				{
+					"id": 145,
+					"general_info": {
+						"family": "California",
+						"name": "California Special Sport",
+						"first_year": 2001,
+						"last_year": 2002
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.5,
+						"power": {
+							"peak": 73.5,
+							"rpm": 6400
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1560,
+						"wheels": "18\"X2.50-B-40 H2-T DOT \n 17\"X3.50-B-40 H2-TR",
+						"tyres": "110/90-18 61H - 140/80-17 69H"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 19,
+						"lubricant_capacity": 3,
+						"weight": 251,
+						"max_speed": 200,
+						"fuel_consumption": 5
+					},
+		            "notes": "notes",
+		            "images": null
+				},
+				{
+					"id": 146,
+					"general_info": {
+						"family": "California",
+						"name": "California Jackal",
+						"first_year": 1999,
+						"last_year": 2001
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.5,
+						"power": {
+							"peak": 73.5,
+							"rpm": 6400
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1560,
+						"wheels": "18\"X2.50-B-40 H2-T DOT \n 17\"X3.50-B-40 H2-TR",
+						"tyres": "110/90-18 61H - 140/80-17 69H"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 19,
+						"lubricant_capacity": 3,
+						"weight": 246,
+						"max_speed": null,
+						"fuel_consumption": null
+					},
+		            "notes": "notes",
+		            "images": ["https://farm8.staticflickr.com/7840/47309062591_35024a6803_o.jpg"]
+				},
+				{
+					"id": 147,
+					"general_info": {
+						"family": "California",
+						"name": "California Special",
+						"first_year": 2000,
+						"last_year": 2001
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 92,
+						"stroke": 80,
+						"displacement": {
+							"real": 1064,
+							"nominal": 1100
+						},
+						"compression": 9.5,
+						"power": {
+							"peak": 73.5,
+							"rpm": 6400
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 1560,
+						"wheels": "18\"X2.50-B-40 H2-T DOT \n 17\"X3.50-B-40 H2-TR",
+						"tyres": "110/90-18 61H - 140/80-17 69H"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 282,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 19,
+						"lubricant_capacity": 3,
+						"weight": 251,
+						"max_speed": 200,
+						"fuel_consumption": 5
+					},
+		            "notes": "notes",
+		            "images": null
+				}
+				
         
         
         
@@ -15046,7 +15209,157 @@
                 "it": "Venduta nelle versioni \"Bobber\" e \"Roamer\". Nel 2017 fu aggiornata con nuove selle (più grandi e comode) e pedane arretrate e rialzate (con le precedenti pedane alcuni motociclisti toccavano i coperchi valvole con le ginocchia). Dotata di ABS e controllo di trazione di serie. Il peso riportato si riferisce in ordine di marcia col pieno di carburante.",
                 "en": "Sold in \"Bobber\" and \"Roamer\" versions. In 2017 it was updated with new seats (bigger and more comfortable) and footpegs moved back and up (with the earlier footpegs some riders hit the valve covers with the knees). ABS and traction control comes standard. Reported weight refers to kerb weight with fuel tank full."
             }
-        }
+        },
+				"145": {
+					"engine_configuration": {
+		        "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+		        "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+					},
+					"engine_feed": {
+		        "it": "Iniezione elettronica Magneti Marelli IAW 15 M con due corpi farfallati da 40mm",
+		        "en": "Magneti Marelli IAW 15 M EFI with two 40mm throttle bodies"
+					},
+					"engine_ignition": {
+		        "it": "Elettronica, Magneti Marelli (gestisce anche l'iniezione)",
+		        "en": "Electronic, Magneti Marelli (also handles fuel injection)"
+					},
+					"transmission_gearbox": {
+						"it": "5 marce",
+						"en": "5-speed"
+					},
+					"transmission_clutch": {
+		        "it": "Bidisco a secco",
+		        "en": "Dry with two plates"
+					},
+					"transmission_final_drive": {
+		        "it": "Cardanica con doppio giunto",
+		        "en": "Double joint cardan shaft"
+					},
+					"frame_type": {
+						"it": "Doppia culla chiusa",
+						"en": "Closed double cradle"
+					},
+					"frame_front_suspension": {
+						"it": "Forcella telescopica Marzocchi da 45mm",
+						"en": "Marzocchi telescopic fork, 45mm"
+					},
+					"frame_rear_suspension": {
+						"it": "Forcellone con due ammortizzatori Sachs",
+						"en": "Swingarm with twin Sachs shock absorbers"
+					},
+					"brakes_type": {
+						"it": "Doppio freno a disco anteriore, freno a disco posteriore",
+						"en": "Front twin disk brakes, rear disk brake"
+					},
+					"brakes_notes": {
+		        "it": "Dotato di frenata integrale Guzzi.",
+		        "en": "Equipped with Guzzi integral braking."
+					},
+					"notes": {
+						"it": "Gli ultimi modelli prodotti nel 2002 erano dotati di punterie idrauliche.",
+						"en": "Last models built in 2002 had hydraulic tappets."
+					}
+				},
+				"146": {
+					"engine_configuration": {
+		        "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+		        "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+					},
+					"engine_feed": {
+		        "it": "Iniezione elettronica Magneti Marelli IAW 15 M con due corpi farfallati da 40mm",
+		        "en": "Magneti Marelli IAW 15 M EFI with two 40mm throttle bodies"
+					},
+					"engine_ignition": {
+		        "it": "Elettronica, Magneti Marelli (gestisce anche l'iniezione)",
+		        "en": "Electronic, Magneti Marelli (also handles fuel injection)"
+					},
+					"transmission_gearbox": {
+						"it": "5 marce",
+						"en": "5-speed"
+					},
+					"transmission_clutch": {
+		        "it": "Bidisco a secco",
+		        "en": "Dry with two plates"
+					},
+					"transmission_final_drive": {
+		        "it": "Cardanica con doppio giunto",
+		        "en": "Double joint cardan shaft"
+					},
+					"frame_type": {
+						"it": "Doppia culla chiusa",
+						"en": "Closed double cradle"
+					},
+					"frame_front_suspension": {
+						"it": "Forcella telescopica Marzocchi da 45mm",
+						"en": "Marzocchi telescopic fork, 45mm"
+					},
+					"frame_rear_suspension": {
+						"it": "Forcellone con due ammortizzatori",
+						"en": "Swingarm with twin shock absorbers"
+					},
+					"brakes_type": {
+						"it": "Freno a disco anteriore, freno a disco posteriore",
+						"en": "Front disk brake, rear disk brake"
+					},
+					"brakes_notes": {
+		        "it": null,
+		        "en": null
+					},
+					"notes": {
+						"it": null,
+						"en": null
+					}
+				},
+				"147": {
+					"engine_configuration": {
+		        "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+		        "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+					},
+					"engine_feed": {
+		        "it": "Iniezione elettronica Magneti Marelli IAW 15 M con due corpi farfallati da 40mm",
+		        "en": "Magneti Marelli IAW 15 M EFI with two 40mm throttle bodies"
+					},
+					"engine_ignition": {
+		        "it": "Elettronica, Magneti Marelli (gestisce anche l'iniezione)",
+		        "en": "Electronic, Magneti Marelli (also handles fuel injection)"
+					},
+					"transmission_gearbox": {
+						"it": "5 marce",
+						"en": "5-speed"
+					},
+					"transmission_clutch": {
+		        "it": "Bidisco a secco",
+		        "en": "Dry with two plates"
+					},
+					"transmission_final_drive": {
+		        "it": "Cardanica con doppio giunto",
+		        "en": "Double joint cardan shaft"
+					},
+					"frame_type": {
+						"it": "Doppia culla chiusa",
+						"en": "Closed double cradle"
+					},
+					"frame_front_suspension": {
+						"it": "Forcella telescopica Marzocchi da 45mm completamente regolabile",
+						"en": "Fully adjustable Marzocchi telescopic fork, 45mm "
+					},
+					"frame_rear_suspension": {
+						"it": "Forcellone con due ammortizzatori Sachs regolabili in estensione",
+						"en": "Swingarm with twin Sachs shock absorbers adjustable in rebound"
+					},
+					"brakes_type": {
+						"it": "Doppio freno a disco anteriore, freno a disco posteriore",
+						"en": "Front twin disk brakes, rear disk brake"
+					},
+					"brakes_notes": {
+		        "it": "Dotato di frenata integrale Guzzi.",
+		        "en": "Equipped with Guzzi integral braking."
+					},
+					"notes": {
+						"it": "Dal telaio n° KD131950 le sospensioni non sono più regolabili.",
+						"en": "From frame number KD131950 suspensions are no longer adjustable."
+					}
+				}
         
         
         
