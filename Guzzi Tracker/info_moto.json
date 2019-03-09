@@ -1,5 +1,5 @@
 {
-    "version": 22,
+    "version": 23,
     "elements": [
         {
             "id": 1,
@@ -7994,6 +7994,68 @@
 					},
 		            "notes": "notes",
 		            "images": null
+				},
+				{
+					"id": 148,
+					"general_info": {
+						"family": null,
+						"name": "V85 TT",
+						"first_year": 2019,
+						"last_year": null
+					},
+					"engine" : {
+						"configuration": "engine_configuration",
+						"stroke_cycle": 4,
+						"bore": 84,
+						"stroke": 77,
+						"displacement": {
+							"real": 853,
+							"nominal": 850
+						},
+						"compression": 10.5,
+						"power": {
+							"peak": 80,
+							"rpm": 7750
+						},
+						"feed": "engine_feed",
+						"ignition": "engine_ignition"
+					},
+					"transmission": {
+						"type": "transmission_gearbox",
+						"clutch": "transmission_clutch",
+						"final_drive": "transmission_final_drive"
+					},
+					"frame": {
+						"type": "frame_type",
+						"front_suspension": "frame_front_suspension",
+						"rear_suspension": "frame_rear_suspension",
+						"wheelbase": 0,
+						"wheels": "2.50X19\" - 4.25X17\"",
+						"tyres": "110/80-19 - 150/70-17"
+					},
+					"brakes": {
+						"type": "brakes_type",
+						"front_size": 320,
+						"rear_size": 260,
+						"notes": "brakes_notes"
+					},
+					"capacities_performances": {
+						"fuel_capacity": 23,
+						"lubricant_capacity": null,
+						"weight": 229,
+						"max_speed": null,
+						"fuel_consumption": 4.9
+					},
+		            "notes": "notes",
+		            "images": ["https://farm5.staticflickr.com/4871/43882821430_45464cc7bc_o.jpg",
+													"https://farm2.staticflickr.com/1975/30759910047_da05477112_o.jpg",
+													"https://farm2.staticflickr.com/1928/45700890611_6c01ef036e_o.jpg",
+													"https://farm5.staticflickr.com/4825/30759905977_82bf0d05b5_o.jpg",
+													"https://farm5.staticflickr.com/4872/30759903777_ae0857b4ff_o.jpg",
+													"https://farm5.staticflickr.com/4814/45700888771_fa1319da8e_o.jpg",
+													"https://farm2.staticflickr.com/1940/30759899977_6ae3524559_o.jpg",
+													"https://farm5.staticflickr.com/4896/45700886911_bfe3a55be3_o.jpg",
+													"https://farm5.staticflickr.com/4834/30759896397_bb013ff06b_o.jpg"]
 				}
 				
         
@@ -14206,8 +14268,8 @@
                 "en": "ABS available as option"
             },
             "notes": {
-                "it": null,
-                "en": null
+                "it": "Successivamente rinominata \"1200 Sport 8V\".",
+                "en": "Later was renamed \"1200 Sport 8V\"."
             }
         },
         "125": {
@@ -15358,6 +15420,56 @@
 					"notes": {
 						"it": "Dal telaio n° KD131950 le sospensioni non sono più regolabili.",
 						"en": "From frame number KD131950 suspensions are no longer adjustable."
+					}
+				},
+				"148": {
+					"engine_configuration": {
+		        "it": "Bicilindrico a V trasversale di 90°, 4 tempi, aste e bilancieri 2 valvole per cilindro",
+		        "en": "4-stroke transversal 90° V-twin, OHV 2 valves per cylinder"
+					},
+					"engine_feed": {
+		        "it": "Iniezione elettronica con singolo corpo farfallato da 52mm, ride-by-wire",
+		        "en": "EFI with single 52mm throttle body, ride-by-wire"
+					},
+					"engine_ignition": {
+		        "it": "Elettronica",
+		        "en": "Electronic"
+					},
+					"transmission_gearbox": {
+						"it": "6 marce",
+						"en": "6-speed"
+					},
+					"transmission_clutch": {
+		        "it": "Monodisco a secco",
+		        "en": "Dry with one plate"
+					},
+					"transmission_final_drive": {
+		        "it": "Cardanica con doppio giunto",
+		        "en": "Double joint cardan shaft"
+					},
+					"frame_type": {
+		        "it": "Tubolare in acciaio",
+		        "en": "Steel tubes chassis"
+					},
+					"frame_front_suspension": {
+						"it": "Forcella a steli rovesciati da 41mm regolabile in precarico ed estensione",
+						"en": "Upside-down telescopic fork, 41mm, adjustable in preload and rebound"
+					},
+					"frame_rear_suspension": {
+						"it": "Forcellone bibraccio in alluminio scatolato con monoammortizzatore laterale destro, regolabile in precarico ed estensione",
+						"en": "Double-sided swingarm in box-type aluminium with single shock absorber on the right side, with adjustable preload and rebound"
+					},
+					"brakes_type": {
+						"it": "Doppio freno a disco anteriore, freno a disco posteriore",
+						"en": "Front twin disk brakes, rear disk brake"
+					},
+					"brakes_notes": {
+		        "it": "ABS di serie",
+		        "en": "ABS as standard"
+					},
+					"notes": {
+						"it": "Nessuna informazione disponibile per l'iterasse.\nPeso indicato in ordine di marcia (a secco 208kg).\nCoppia motrice: 80 Nm a 5000 rpm.\nEscursione ruote (ant/post): 170mm.\nLa moto è dotata di serie di fanaleria full-led, ride-by-wire con tre mappe che agiscono anche su ABS e controllo di trazione, cruise control, crucotto completamente digitale.",
+						"en": "No data available for wheelbase.\nReported weight refers to kerb weight (dry 208kg).\nEngine torque: 80 Nm @ 5000 rpm.\nWheels travel (F/R): 170mm.\nBike comes as standard with full led lighting, ride-by-wire with three mappings that modify also ABS and traction control response, cruise control, fully digital dashboard."
 					}
 				}
         
