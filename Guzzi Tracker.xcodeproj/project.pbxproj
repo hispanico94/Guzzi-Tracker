@@ -363,15 +363,15 @@
 		CF1B241E224A8B640086DB9F /* Filters View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CF9FFAD9215BFA9500D0ED03 /* MinMax */,
-				CF9FFAD8215BFA9100D0ED03 /* Family */,
-				CF9FFAD6215BFA8600D0ED03 /* Weight */,
-				CF9FFAD5215BFA8300D0ED03 /* Displacement */,
-				CF9FFAD4215BFA7F00D0ED03 /* Bore */,
-				CF9FFAD3215BFA6000D0ED03 /* Stroke */,
-				CF9FFAD2215BFA5D00D0ED03 /* Power */,
-				CF9FFAD1215BFA5700D0ED03 /* Wheelbase */,
-				CF9FFAD0215BFA4800D0ED03 /* StrokeCycle */,
+				CF1B2435224A8E1C0086DB9F /* MinMax */,
+				CF1B2434224A8E0D0086DB9F /* Family */,
+				CF1B2433224A8DFC0086DB9F /* Weight */,
+				CF1B2432224A8DE30086DB9F /* Displacement */,
+				CF1B2431224A8DD50086DB9F /* Bore */,
+				CF1B2430224A8DC60086DB9F /* Stroke */,
+				CF1B242F224A8DB20086DB9F /* Power */,
+				CF1B242E224A8DA10086DB9F /* Wheelbase */,
+				CF1B242D224A8D900086DB9F /* StrokeCycle */,
 			);
 			path = "Filters View Controllers";
 			sourceTree = "<group>";
@@ -502,6 +502,87 @@
 			path = ImageCell;
 			sourceTree = "<group>";
 		};
+		CF1B242D224A8D900086DB9F /* StrokeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				CF466A14208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift */,
+				CFE485C021353D9600949E81 /* StrokeCycleFilterTableViewController.xib */,
+			);
+			path = StrokeCycle;
+			sourceTree = "<group>";
+		};
+		CF1B242E224A8DA10086DB9F /* Wheelbase */ = {
+			isa = PBXGroup;
+			children = (
+				CF466A0E208B212800E44BF2 /* WheelbaseFilterViewController.swift */,
+				CFE485C721353DDF00949E81 /* WheelbaseFilterViewController.xib */,
+			);
+			path = Wheelbase;
+			sourceTree = "<group>";
+		};
+		CF1B242F224A8DB20086DB9F /* Power */ = {
+			isa = PBXGroup;
+			children = (
+				CF8306602087499700570E60 /* PowerFilterViewController.swift */,
+				CFE485CE21353DF900949E81 /* PowerFilterViewController.xib */,
+			);
+			path = Power;
+			sourceTree = "<group>";
+		};
+		CF1B2430224A8DC60086DB9F /* Stroke */ = {
+			isa = PBXGroup;
+			children = (
+				CF83065A20873FC300570E60 /* StrokeFilterViewController.swift */,
+				CFE485D521353E1200949E81 /* StrokeFilterViewController.xib */,
+			);
+			path = Stroke;
+			sourceTree = "<group>";
+		};
+		CF1B2431224A8DD50086DB9F /* Bore */ = {
+			isa = PBXGroup;
+			children = (
+				CF830654208736F600570E60 /* BoreFilterViewController.swift */,
+				CFE485DC21353E3100949E81 /* BoreFilterViewController.xib */,
+			);
+			path = Bore;
+			sourceTree = "<group>";
+		};
+		CF1B2432224A8DE30086DB9F /* Displacement */ = {
+			isa = PBXGroup;
+			children = (
+				CF98DB1D20849F68002EFC9B /* DisplacementFilterViewController.swift */,
+				CFE485E321353E4200949E81 /* DisplacementFilterViewController.xib */,
+			);
+			path = Displacement;
+			sourceTree = "<group>";
+		};
+		CF1B2433224A8DFC0086DB9F /* Weight */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */,
+				CFE485B9213539F200949E81 /* WeightFilterViewController.xib */,
+			);
+			path = Weight;
+			sourceTree = "<group>";
+		};
+		CF1B2434224A8E0D0086DB9F /* Family */ = {
+			isa = PBXGroup;
+			children = (
+				CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */,
+				CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */,
+			);
+			path = Family;
+			sourceTree = "<group>";
+		};
+		CF1B2435224A8E1C0086DB9F /* MinMax */ = {
+			isa = PBXGroup;
+			children = (
+				CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */,
+				CFE485EA21353E5F00949E81 /* MinMaxYearFilterViewController.xib */,
+			);
+			path = MinMax;
+			sourceTree = "<group>";
+		};
 		CF8CCE8F1E65CB9300F4A37E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,96 +592,6 @@
 				CF8CCE911E65CBB500F4A37E /* Runes.framework */,
 			);
 			name = Libraries;
-			sourceTree = "<group>";
-		};
-		CF9FFAD0215BFA4800D0ED03 /* StrokeCycle */ = {
-			isa = PBXGroup;
-			children = (
-				CF466A14208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift */,
-				CFE485C021353D9600949E81 /* StrokeCycleFilterTableViewController.xib */,
-			);
-			name = StrokeCycle;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		CF9FFAD1215BFA5700D0ED03 /* Wheelbase */ = {
-			isa = PBXGroup;
-			children = (
-				CF466A0E208B212800E44BF2 /* WheelbaseFilterViewController.swift */,
-				CFE485C721353DDF00949E81 /* WheelbaseFilterViewController.xib */,
-			);
-			name = Wheelbase;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		CF9FFAD2215BFA5D00D0ED03 /* Power */ = {
-			isa = PBXGroup;
-			children = (
-				CF8306602087499700570E60 /* PowerFilterViewController.swift */,
-				CFE485CE21353DF900949E81 /* PowerFilterViewController.xib */,
-			);
-			name = Power;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		CF9FFAD3215BFA6000D0ED03 /* Stroke */ = {
-			isa = PBXGroup;
-			children = (
-				CF83065A20873FC300570E60 /* StrokeFilterViewController.swift */,
-				CFE485D521353E1200949E81 /* StrokeFilterViewController.xib */,
-			);
-			name = Stroke;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		CF9FFAD4215BFA7F00D0ED03 /* Bore */ = {
-			isa = PBXGroup;
-			children = (
-				CF830654208736F600570E60 /* BoreFilterViewController.swift */,
-				CFE485DC21353E3100949E81 /* BoreFilterViewController.xib */,
-			);
-			name = Bore;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		CF9FFAD5215BFA8300D0ED03 /* Displacement */ = {
-			isa = PBXGroup;
-			children = (
-				CF98DB1D20849F68002EFC9B /* DisplacementFilterViewController.swift */,
-				CFE485E321353E4200949E81 /* DisplacementFilterViewController.xib */,
-			);
-			name = Displacement;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		CF9FFAD6215BFA8600D0ED03 /* Weight */ = {
-			isa = PBXGroup;
-			children = (
-				CFF7C68B207CBA26001A7B90 /* WeightFilterViewController.swift */,
-				CFE485B9213539F200949E81 /* WeightFilterViewController.xib */,
-			);
-			name = Weight;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		CF9FFAD8215BFA9100D0ED03 /* Family */ = {
-			isa = PBXGroup;
-			children = (
-				CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */,
-				CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */,
-			);
-			name = Family;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		CF9FFAD9215BFA9500D0ED03 /* MinMax */ = {
-			isa = PBXGroup;
-			children = (
-				CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */,
-				CFE485EA21353E5F00949E81 /* MinMaxYearFilterViewController.xib */,
-			);
-			name = MinMax;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		CFAB03E51E60432D0032BD11 = {
