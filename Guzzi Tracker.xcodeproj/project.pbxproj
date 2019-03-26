@@ -109,8 +109,8 @@
 		CF0ED0821E6F15E8008BAB23 /* MotorcycleImagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleImagesCell.xib; sourceTree = "<group>"; };
 		CF0F54691E819FEC0059650F /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		CF0F546B1E81A06A0059650F /* Elements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
-		CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotorcyclesViewController.swift; path = "Guzzi Tracker/MotorcyclesViewController.swift"; sourceTree = "<group>"; };
-		CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MotorcyclesViewController.xib; path = "Guzzi Tracker/MotorcyclesViewController.xib"; sourceTree = "<group>"; };
+		CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcyclesViewController.swift; sourceTree = "<group>"; };
+		CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcyclesViewController.xib; sourceTree = "<group>"; };
 		CF1A41E11E6081F000E76F11 /* VCFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCFactory.swift; sourceTree = "<group>"; };
 		CF1CDB7C206FCCBF007BCE95 /* Predicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
 		CF1CDB7E206FD465007BCE95 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
@@ -232,7 +232,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CF1CDB82206FD598007BCE95 /* Motorcycle filters */ = {
+		CF1B2414224A89EE0086DB9F /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B2415224A8A500086DB9F /* Extensions */,
+				CF1B2416224A8A680086DB9F /* Models */,
+				CF1B2417224A8A7D0086DB9F /* Filter */,
+				CF1B2419224A8AA80086DB9F /* Order */,
+				CF1A41E11E6081F000E76F11 /* VCFactory.swift */,
+				CFB0664921400D440065EC5E /* CellRepresentable.swift */,
+				CF0F546B1E81A06A0059650F /* Elements.swift */,
+				CFD4E44E1E66DC8000EFAB57 /* Data.swift */,
+				CFAC091C20AC1C7300689C5A /* FavoritesList.swift */,
+				CF8C6284206FC7DD002B8CF6 /* Ref.swift */,
+				CF56823A20B6A3ED00B52AEB /* FilterButton.swift */,
+				CFA843AE21451D38009BE72C /* Info.swift */,
+				CF3A1CAE2147B66200ABCEC2 /* Review.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		CF1B2415224A8A500086DB9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4E1FA213EEC680081E0CC /* Argo.swift */,
+				CFB4E1FC213EEDD80081E0CC /* Standard types.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CF1B2416224A8A680086DB9F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4E1EF213ECDDA0081E0CC /* Motorcycle.swift */,
+				CFB4E1F1213ED0C50081E0CC /* Texts.swift */,
+				CFB4E1F3213ED2D20081E0CC /* JsonFile.swift */,
+				CFB4E1F7213EEA1D0081E0CC /* ViewModel structs.swift */,
+				CF0F54691E819FEC0059650F /* Key.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF1B2417224A8A7D0086DB9F /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B2418224A8A8E0086DB9F /* Motorcycle filters */,
+				CF1CDB7C206FCCBF007BCE95 /* Predicate.swift */,
+				CF8C6282206FC629002B8CF6 /* Filter.swift */,
+				CFB0664C214014F00065EC5E /* FilterProvider.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		CF1B2418224A8A8E0086DB9F /* Motorcycle filters */ = {
 			isa = PBXGroup;
 			children = (
 				CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */,
@@ -245,10 +297,70 @@
 				CF2A86392089EB8C00C1A7E7 /* Wheelbase.swift */,
 				CF466A12208B27EA00E44BF2 /* StrokeCycle.swift */,
 			);
-			name = "Motorcycle filters";
+			path = "Motorcycle filters";
 			sourceTree = "<group>";
 		};
-		CF31C9B3208DC72800D4B3BD /* Filters View Controllers */ = {
+		CF1B2419224A8AA80086DB9F /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				CF73C44620931E5B00596118 /* Function.swift */,
+				CF73C440209315F200596118 /* Ordering.swift */,
+				CFB0664F214015C80065EC5E /* Comparator.swift */,
+				CFB066512140165C0065EC5E /* Order.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		CF1B241A224A8AC70086DB9F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B241C224A8B2D0086DB9F /* MotorcyclesVC */,
+				CF1B241D224A8B3F0086DB9F /* SearchVC */,
+				CF1B2427224A8C640086DB9F /* MyGarageVC */,
+				CF1B2426224A8C4C0086DB9F /* SearchResultsVC */,
+				CF1B2425224A8C370086DB9F /* MotorcycleInfoVC */,
+				CF1B2424224A8C200086DB9F /* ImagesVC */,
+				CF1B2423224A8C010086DB9F /* SingleImageVC */,
+				CF1B2422224A8BE80086DB9F /* FiltersVC */,
+				CF1B2421224A8BD20086DB9F /* ComparatorsVC */,
+				CF1B2420224A8BB00086DB9F /* InfoVC */,
+				CF1B241F224A8B950086DB9F /* TableBackgroundVC */,
+				CF1B241E224A8B640086DB9F /* Filters View Controllers */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CF1B241B224A8B020086DB9F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B2428224A8CA80086DB9F /* MotorcycleCell */,
+				CF1B2429224A8CB70086DB9F /* MotorcycleInfoCell */,
+				CF1B242A224A8CD00086DB9F /* MotorcycleNotesCell */,
+				CF1B242B224A8CE60086DB9F /* MotorcycleImagesCell */,
+				CF1B242C224A8CFC0086DB9F /* ImageCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CF1B241C224A8B2D0086DB9F /* MotorcyclesVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */,
+				CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */,
+			);
+			path = MotorcyclesVC;
+			sourceTree = "<group>";
+		};
+		CF1B241D224A8B3F0086DB9F /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF41DEBE20A6D6EA00F4A508 /* SearchViewController.swift */,
+				CF41DEBF20A6D6EA00F4A508 /* SearchViewController.xib */,
+			);
+			path = SearchVC;
+			sourceTree = "<group>";
+		};
+		CF1B241E224A8B640086DB9F /* Filters View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				CF9FFAD9215BFA9500D0ED03 /* MinMax */,
@@ -261,26 +373,133 @@
 				CF9FFAD1215BFA5700D0ED03 /* Wheelbase */,
 				CF9FFAD0215BFA4800D0ED03 /* StrokeCycle */,
 			);
-			name = "Filters View Controllers";
+			path = "Filters View Controllers";
 			sourceTree = "<group>";
 		};
-		CF8CCE8B1E65CAEA00F4A37E /* ViewControllers */ = {
+		CF1B241F224A8B950086DB9F /* TableBackgroundVC */ = {
 			isa = PBXGroup;
 			children = (
-				CF9FFACB215BF8B300D0ED03 /* MotorcyclesVC */,
-				CF9FFACA215BF8AF00D0ED03 /* SearchVC */,
-				CF9FFAC9215BF8AC00D0ED03 /* MyGarageVC */,
-				CF9FFAC8215BF8A800D0ED03 /* SearchResultsVC */,
-				CF9FFAC7215BF8A500D0ED03 /* MotorcycleInfoVC */,
-				CF9FFAC6215BF89D00D0ED03 /* ImagesVC */,
-				CF9FFAC5215BF89100D0ED03 /* SingleImageVC */,
-				CF9FFACC215BF8FF00D0ED03 /* FiltersVC */,
-				CF9FFACD215BF90400D0ED03 /* ComparatorsVC */,
-				CF9FFACE215BF90700D0ED03 /* InfoVC */,
-				CF9FFACF215BF94F00D0ED03 /* TableBackgroundVC */,
-				CF31C9B3208DC72800D4B3BD /* Filters View Controllers */,
+				CFF80DD4214A505E001CAC01 /* TableBackgroundViewController.swift */,
+				CFF80DD5214A505E001CAC01 /* TableBackgroundViewController.xib */,
 			);
-			name = ViewControllers;
+			path = TableBackgroundVC;
+			sourceTree = "<group>";
+		};
+		CF1B2420224A8BB00086DB9F /* InfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF5D2DB62138362F00E01DFA /* InfoViewController.swift */,
+				CF5D2DB72138362F00E01DFA /* InfoViewController.xib */,
+			);
+			path = InfoVC;
+			sourceTree = "<group>";
+		};
+		CF1B2421224A8BD20086DB9F /* ComparatorsVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF73C4422093188A00596118 /* ComparatorsViewController.swift */,
+				CF73C4432093188A00596118 /* ComparatorsViewController.xib */,
+			);
+			path = ComparatorsVC;
+			sourceTree = "<group>";
+		};
+		CF1B2422224A8BE80086DB9F /* FiltersVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF1CDB7E206FD465007BCE95 /* FiltersViewController.swift */,
+				CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */,
+			);
+			path = FiltersVC;
+			sourceTree = "<group>";
+		};
+		CF1B2423224A8C010086DB9F /* SingleImageVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF0B83151E785D71001C4172 /* SingleImageViewController.swift */,
+				CF0B83161E785D71001C4172 /* SingleImageViewController.xib */,
+			);
+			path = SingleImageVC;
+			sourceTree = "<group>";
+		};
+		CF1B2424224A8C200086DB9F /* ImagesVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF690CAA1E7153AB00523796 /* ImagesViewController.swift */,
+				CF690CAB1E7153AB00523796 /* ImagesViewController.xib */,
+			);
+			path = ImagesVC;
+			sourceTree = "<group>";
+		};
+		CF1B2425224A8C370086DB9F /* MotorcycleInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF419AFC1E6D643300EA7B74 /* MotorcycleInfoViewController.swift */,
+				CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */,
+			);
+			path = MotorcycleInfoVC;
+			sourceTree = "<group>";
+		};
+		CF1B2426224A8C4C0086DB9F /* SearchResultsVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF41DEC220A6D95000F4A508 /* SearchResultsViewController.swift */,
+				CF41DEC320A6D95000F4A508 /* SearchResultsViewController.xib */,
+			);
+			path = SearchResultsVC;
+			sourceTree = "<group>";
+		};
+		CF1B2427224A8C640086DB9F /* MyGarageVC */ = {
+			isa = PBXGroup;
+			children = (
+				CFAC091820AC1B7B00689C5A /* MyGarageViewController.swift */,
+				CFAC091920AC1B7B00689C5A /* MyGarageViewController.xib */,
+			);
+			path = MyGarageVC;
+			sourceTree = "<group>";
+		};
+		CF1B2428224A8CA80086DB9F /* MotorcycleCell */ = {
+			isa = PBXGroup;
+			children = (
+				CFD4E4511E67355900EFAB57 /* MotorcycleCell.swift */,
+				CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */,
+			);
+			path = MotorcycleCell;
+			sourceTree = "<group>";
+		};
+		CF1B2429224A8CB70086DB9F /* MotorcycleInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF419B011E6D692700EA7B74 /* MotorcycleInfoCell.xib */,
+				CF419B001E6D692700EA7B74 /* MotorcycleInfoCell.swift */,
+			);
+			path = MotorcycleInfoCell;
+			sourceTree = "<group>";
+		};
+		CF1B242A224A8CD00086DB9F /* MotorcycleNotesCell */ = {
+			isa = PBXGroup;
+			children = (
+				CFE280A71E6F12830090AAA7 /* MotorcycleNotesCell.xib */,
+				CFE280A61E6F12830090AAA7 /* MotorcycleNotesCell.swift */,
+			);
+			path = MotorcycleNotesCell;
+			sourceTree = "<group>";
+		};
+		CF1B242B224A8CE60086DB9F /* MotorcycleImagesCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF0ED0811E6F15E8008BAB23 /* MotorcycleImagesCell.swift */,
+				CF0ED0821E6F15E8008BAB23 /* MotorcycleImagesCell.xib */,
+			);
+			path = MotorcycleImagesCell;
+			sourceTree = "<group>";
+		};
+		CF1B242C224A8CFC0086DB9F /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF690CA61E7150BF00523796 /* ImageCell.swift */,
+				CF690CA71E7150BF00523796 /* ImageCell.xib */,
+			);
+			path = ImageCell;
 			sourceTree = "<group>";
 		};
 		CF8CCE8F1E65CB9300F4A37E /* Libraries */ = {
@@ -294,125 +513,6 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
-		CF8CCE981E65D0F200F4A37E /* Elements */ = {
-			isa = PBXGroup;
-			children = (
-				CFB4E1F9213EEC580081E0CC /* Extensions */,
-				CFB4E1EE213ECDBD0081E0CC /* Models */,
-				CFB0664B214014B70065EC5E /* Filter */,
-				CFB0664E214015650065EC5E /* Order */,
-				CF1A41E11E6081F000E76F11 /* VCFactory.swift */,
-				CFB0664921400D440065EC5E /* CellRepresentable.swift */,
-				CF0F546B1E81A06A0059650F /* Elements.swift */,
-				CFD4E44E1E66DC8000EFAB57 /* Data.swift */,
-				CFAC091C20AC1C7300689C5A /* FavoritesList.swift */,
-				CF8C6284206FC7DD002B8CF6 /* Ref.swift */,
-				CF56823A20B6A3ED00B52AEB /* FilterButton.swift */,
-				CFA843AE21451D38009BE72C /* Info.swift */,
-				CF3A1CAE2147B66200ABCEC2 /* Review.swift */,
-			);
-			name = Elements;
-			sourceTree = "<group>";
-		};
-		CF9FFAC5215BF89100D0ED03 /* SingleImageVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF0B83151E785D71001C4172 /* SingleImageViewController.swift */,
-				CF0B83161E785D71001C4172 /* SingleImageViewController.xib */,
-			);
-			name = SingleImageVC;
-			sourceTree = "<group>";
-		};
-		CF9FFAC6215BF89D00D0ED03 /* ImagesVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF690CAA1E7153AB00523796 /* ImagesViewController.swift */,
-				CF690CAB1E7153AB00523796 /* ImagesViewController.xib */,
-			);
-			name = ImagesVC;
-			sourceTree = "<group>";
-		};
-		CF9FFAC7215BF8A500D0ED03 /* MotorcycleInfoVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF419AFC1E6D643300EA7B74 /* MotorcycleInfoViewController.swift */,
-				CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */,
-			);
-			name = MotorcycleInfoVC;
-			sourceTree = "<group>";
-		};
-		CF9FFAC8215BF8A800D0ED03 /* SearchResultsVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF41DEC220A6D95000F4A508 /* SearchResultsViewController.swift */,
-				CF41DEC320A6D95000F4A508 /* SearchResultsViewController.xib */,
-			);
-			name = SearchResultsVC;
-			sourceTree = "<group>";
-		};
-		CF9FFAC9215BF8AC00D0ED03 /* MyGarageVC */ = {
-			isa = PBXGroup;
-			children = (
-				CFAC091820AC1B7B00689C5A /* MyGarageViewController.swift */,
-				CFAC091920AC1B7B00689C5A /* MyGarageViewController.xib */,
-			);
-			name = MyGarageVC;
-			sourceTree = "<group>";
-		};
-		CF9FFACA215BF8AF00D0ED03 /* SearchVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF41DEBE20A6D6EA00F4A508 /* SearchViewController.swift */,
-				CF41DEBF20A6D6EA00F4A508 /* SearchViewController.xib */,
-			);
-			name = SearchVC;
-			sourceTree = "<group>";
-		};
-		CF9FFACB215BF8B300D0ED03 /* MotorcyclesVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF1A41D41E60808C00E76F11 /* MotorcyclesViewController.swift */,
-				CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */,
-			);
-			name = MotorcyclesVC;
-			sourceTree = "<group>";
-		};
-		CF9FFACC215BF8FF00D0ED03 /* FiltersVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF1CDB7E206FD465007BCE95 /* FiltersViewController.swift */,
-				CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */,
-			);
-			name = FiltersVC;
-			sourceTree = "<group>";
-		};
-		CF9FFACD215BF90400D0ED03 /* ComparatorsVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF73C4422093188A00596118 /* ComparatorsViewController.swift */,
-				CF73C4432093188A00596118 /* ComparatorsViewController.xib */,
-			);
-			name = ComparatorsVC;
-			sourceTree = "<group>";
-		};
-		CF9FFACE215BF90700D0ED03 /* InfoVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF5D2DB62138362F00E01DFA /* InfoViewController.swift */,
-				CF5D2DB72138362F00E01DFA /* InfoViewController.xib */,
-			);
-			name = InfoVC;
-			sourceTree = "<group>";
-		};
-		CF9FFACF215BF94F00D0ED03 /* TableBackgroundVC */ = {
-			isa = PBXGroup;
-			children = (
-				CFF80DD4214A505E001CAC01 /* TableBackgroundViewController.swift */,
-				CFF80DD5214A505E001CAC01 /* TableBackgroundViewController.xib */,
-			);
-			name = TableBackgroundVC;
-			sourceTree = "<group>";
-		};
 		CF9FFAD0215BFA4800D0ED03 /* StrokeCycle */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +520,7 @@
 				CFE485C021353D9600949E81 /* StrokeCycleFilterTableViewController.xib */,
 			);
 			name = StrokeCycle;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF9FFAD1215BFA5700D0ED03 /* Wheelbase */ = {
@@ -429,6 +530,7 @@
 				CFE485C721353DDF00949E81 /* WheelbaseFilterViewController.xib */,
 			);
 			name = Wheelbase;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF9FFAD2215BFA5D00D0ED03 /* Power */ = {
@@ -438,6 +540,7 @@
 				CFE485CE21353DF900949E81 /* PowerFilterViewController.xib */,
 			);
 			name = Power;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF9FFAD3215BFA6000D0ED03 /* Stroke */ = {
@@ -447,6 +550,7 @@
 				CFE485D521353E1200949E81 /* StrokeFilterViewController.xib */,
 			);
 			name = Stroke;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF9FFAD4215BFA7F00D0ED03 /* Bore */ = {
@@ -456,6 +560,7 @@
 				CFE485DC21353E3100949E81 /* BoreFilterViewController.xib */,
 			);
 			name = Bore;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF9FFAD5215BFA8300D0ED03 /* Displacement */ = {
@@ -465,6 +570,7 @@
 				CFE485E321353E4200949E81 /* DisplacementFilterViewController.xib */,
 			);
 			name = Displacement;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF9FFAD6215BFA8600D0ED03 /* Weight */ = {
@@ -474,6 +580,7 @@
 				CFE485B9213539F200949E81 /* WeightFilterViewController.xib */,
 			);
 			name = Weight;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF9FFAD8215BFA9100D0ED03 /* Family */ = {
@@ -483,6 +590,7 @@
 				CFE400D1207B703E001F9E1A /* FamilyFilterViewController.xib */,
 			);
 			name = Family;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF9FFAD9215BFA9500D0ED03 /* MinMax */ = {
@@ -492,51 +600,7 @@
 				CFE485EA21353E5F00949E81 /* MinMaxYearFilterViewController.xib */,
 			);
 			name = MinMax;
-			sourceTree = "<group>";
-		};
-		CF9FFADA215BFB8500D0ED03 /* ImageCellVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF690CA61E7150BF00523796 /* ImageCell.swift */,
-				CF690CA71E7150BF00523796 /* ImageCell.xib */,
-			);
-			name = ImageCellVC;
-			sourceTree = "<group>";
-		};
-		CF9FFADB215BFB8B00D0ED03 /* MotorcycleImagesCellVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF0ED0811E6F15E8008BAB23 /* MotorcycleImagesCell.swift */,
-				CF0ED0821E6F15E8008BAB23 /* MotorcycleImagesCell.xib */,
-			);
-			name = MotorcycleImagesCellVC;
-			sourceTree = "<group>";
-		};
-		CF9FFADC215BFB8D00D0ED03 /* MotorcycleNotesCellVC */ = {
-			isa = PBXGroup;
-			children = (
-				CFE280A71E6F12830090AAA7 /* MotorcycleNotesCell.xib */,
-				CFE280A61E6F12830090AAA7 /* MotorcycleNotesCell.swift */,
-			);
-			name = MotorcycleNotesCellVC;
-			sourceTree = "<group>";
-		};
-		CF9FFADD215BFB9700D0ED03 /* MotorcycleInfoCellVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF419B011E6D692700EA7B74 /* MotorcycleInfoCell.xib */,
-				CF419B001E6D692700EA7B74 /* MotorcycleInfoCell.swift */,
-			);
-			name = MotorcycleInfoCellVC;
-			sourceTree = "<group>";
-		};
-		CF9FFADE215BFB9E00D0ED03 /* MotorcycleCellVC */ = {
-			isa = PBXGroup;
-			children = (
-				CFD4E4511E67355900EFAB57 /* MotorcycleCell.swift */,
-				CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */,
-			);
-			name = MotorcycleCellVC;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CFAB03E51E60432D0032BD11 = {
@@ -544,9 +608,9 @@
 			children = (
 				CF8CCE8F1E65CB9300F4A37E /* Libraries */,
 				CFAB03F01E60432E0032BD11 /* Guzzi Tracker */,
-				CF8CCE981E65D0F200F4A37E /* Elements */,
-				CF8CCE8B1E65CAEA00F4A37E /* ViewControllers */,
-				CFD4E4501E67350900EFAB57 /* Cell */,
+				CF1B2414224A89EE0086DB9F /* Elements */,
+				CF1B241A224A8AC70086DB9F /* ViewControllers */,
+				CF1B241B224A8B020086DB9F /* Cell */,
 				CFAB03EF1E60432E0032BD11 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -571,61 +635,6 @@
 				CF46F9532131549800DD03CC /* Localizable.stringsdict */,
 			);
 			path = "Guzzi Tracker";
-			sourceTree = "<group>";
-		};
-		CFB0664B214014B70065EC5E /* Filter */ = {
-			isa = PBXGroup;
-			children = (
-				CF1CDB7C206FCCBF007BCE95 /* Predicate.swift */,
-				CF8C6282206FC629002B8CF6 /* Filter.swift */,
-				CFB0664C214014F00065EC5E /* FilterProvider.swift */,
-				CF1CDB82206FD598007BCE95 /* Motorcycle filters */,
-			);
-			name = Filter;
-			sourceTree = "<group>";
-		};
-		CFB0664E214015650065EC5E /* Order */ = {
-			isa = PBXGroup;
-			children = (
-				CF73C44620931E5B00596118 /* Function.swift */,
-				CF73C440209315F200596118 /* Ordering.swift */,
-				CFB0664F214015C80065EC5E /* Comparator.swift */,
-				CFB066512140165C0065EC5E /* Order.swift */,
-			);
-			name = Order;
-			sourceTree = "<group>";
-		};
-		CFB4E1EE213ECDBD0081E0CC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CFB4E1EF213ECDDA0081E0CC /* Motorcycle.swift */,
-				CFB4E1F1213ED0C50081E0CC /* Texts.swift */,
-				CFB4E1F3213ED2D20081E0CC /* JsonFile.swift */,
-				CFB4E1F7213EEA1D0081E0CC /* ViewModel structs.swift */,
-				CF0F54691E819FEC0059650F /* Key.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		CFB4E1F9213EEC580081E0CC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				CFB4E1FA213EEC680081E0CC /* Argo.swift */,
-				CFB4E1FC213EEDD80081E0CC /* Standard types.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		CFD4E4501E67350900EFAB57 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				CF9FFADE215BFB9E00D0ED03 /* MotorcycleCellVC */,
-				CF9FFADD215BFB9700D0ED03 /* MotorcycleInfoCellVC */,
-				CF9FFADC215BFB8D00D0ED03 /* MotorcycleNotesCellVC */,
-				CF9FFADB215BFB8B00D0ED03 /* MotorcycleImagesCellVC */,
-				CF9FFADA215BFB8500D0ED03 /* ImageCellVC */,
-			);
-			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -672,6 +681,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				it,
