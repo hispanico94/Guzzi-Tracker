@@ -148,7 +148,7 @@ extension Collection where Element: Equatable {
     /// no common elements are found.
     func index(fromFirstMatch array: [Element]) -> Index? {
         for element in array {
-            if let index = index(of: element) {
+            if let index = firstIndex(of: element) {
                 return index
             }
         }

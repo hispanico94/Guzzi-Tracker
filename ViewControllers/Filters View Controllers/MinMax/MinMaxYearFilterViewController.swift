@@ -11,7 +11,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
         didSet {
             if (selectedMinYear > selectedMaxYear) {
                 selectedMaxYear = selectedMinYear
-                let row = yearsArray.index(of: selectedMinYear) ?? (yearsArray.count - 1)
+                let row = yearsArray.firstIndex(of: selectedMinYear) ?? (yearsArray.count - 1)
                 yearPicker.selectRow(row, inComponent: maxYearPickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -22,7 +22,7 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
         didSet {
             if (selectedMaxYear < selectedMinYear) {
                 selectedMinYear = selectedMaxYear
-                let row = yearsArray.index(of: selectedMaxYear) ?? 0
+                let row = yearsArray.firstIndex(of: selectedMaxYear) ?? 0
                 yearPicker.selectRow(row, inComponent: minYearPickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -48,8 +48,8 @@ class MinMaxYearFilterViewController: UIViewController, UIPickerViewDataSource, 
         self.title = NSLocalizedString("Years", comment: "Interval of years")
         let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
-        let minYearRow = yearsArray.index(of: selectedMinYear) ?? 0
-        let maxYearRow = yearsArray.index(of: selectedMaxYear) ?? (yearsArray.count - 1)
+        let minYearRow = yearsArray.firstIndex(of: selectedMinYear) ?? 0
+        let maxYearRow = yearsArray.firstIndex(of: selectedMaxYear) ?? (yearsArray.count - 1)
         yearPicker.selectRow(minYearRow, inComponent: minYearPickerComponent, animated: true)
         yearPicker.selectRow(maxYearRow, inComponent: maxYearPickerComponent, animated: true)
         updateCaptionLabel()

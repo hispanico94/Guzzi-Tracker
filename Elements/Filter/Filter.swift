@@ -30,14 +30,10 @@ struct Filter {
     var predicate: Predicate<Motorcycle>
 }
 
-// MARK: Conforming Filter to Hashable
+// MARK: Conforming Filter to Equatable
 
-extension Filter: Hashable {
-    var hashValue: Int {
-        return id.rawValue
-    }
-    
+extension Filter: Equatable {
     static func ==(lhs: Filter, rhs: Filter) -> Bool {
-        return lhs.hashValue == rhs.hashValue
+        return lhs.id == rhs.id
     }
 }

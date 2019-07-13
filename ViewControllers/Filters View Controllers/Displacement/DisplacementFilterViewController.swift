@@ -12,7 +12,7 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
         didSet {
             if (selectedMinDisplacement > selectedMaxDisplacement) {
                 selectedMaxDisplacement = selectedMinDisplacement
-                let row = displacements.index(of: selectedMinDisplacement) ?? (displacements.count - 1)
+                let row = displacements.firstIndex(of: selectedMinDisplacement) ?? (displacements.count - 1)
                 displacementPicker.selectRow(row, inComponent: maxDisplacementPickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -23,7 +23,7 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
         didSet {
             if (selectedMaxDisplacement < selectedMinDisplacement) {
                 selectedMinDisplacement = selectedMaxDisplacement
-                let row = displacements.index(of: selectedMaxDisplacement) ?? 0
+                let row = displacements.firstIndex(of: selectedMaxDisplacement) ?? 0
                 displacementPicker.selectRow(row, inComponent: minDisplacementPickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -53,8 +53,8 @@ class DisplacementFilterViewController: UIViewController, UIPickerViewDataSource
         
         let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
-        let minDisplacementRow = displacements.index(of: selectedMinDisplacement) ?? 0
-        let maxDisplacementRow = displacements.index(of: selectedMaxDisplacement) ?? (displacements.count - 1)
+        let minDisplacementRow = displacements.firstIndex(of: selectedMinDisplacement) ?? 0
+        let maxDisplacementRow = displacements.firstIndex(of: selectedMaxDisplacement) ?? (displacements.count - 1)
         displacementPicker.selectRow(minDisplacementRow, inComponent: minDisplacementPickerComponent, animated: true)
         displacementPicker.selectRow(maxDisplacementRow, inComponent: maxDisplacementPickerComponent, animated: true)
         updateCaptionLabel()

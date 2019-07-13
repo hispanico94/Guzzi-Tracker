@@ -12,7 +12,7 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         didSet {
             if (selectedMinStroke > selectedMaxStroke) {
                 selectedMaxStroke = selectedMinStroke
-                let row = strokes.index(of: selectedMinStroke) ?? (strokes.count - 1)
+                let row = strokes.firstIndex(of: selectedMinStroke) ?? (strokes.count - 1)
                 strokePicker.selectRow(row, inComponent: maxStrokePickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -23,7 +23,7 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         didSet {
             if (selectedMaxStroke < selectedMinStroke) {
                 selectedMinStroke = selectedMaxStroke
-                let row = strokes.index(of: selectedMaxStroke) ?? 0
+                let row = strokes.firstIndex(of: selectedMaxStroke) ?? 0
                 strokePicker.selectRow(row, inComponent: minStrokePickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -52,8 +52,8 @@ class StrokeFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         
         let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
-        let minStrokeRow = strokes.index(of: selectedMinStroke) ?? 0
-        let maxStrokeRow = strokes.index(of: selectedMaxStroke) ?? (strokes.count - 1)
+        let minStrokeRow = strokes.firstIndex(of: selectedMinStroke) ?? 0
+        let maxStrokeRow = strokes.firstIndex(of: selectedMaxStroke) ?? (strokes.count - 1)
         strokePicker.selectRow(minStrokeRow, inComponent: minStrokePickerComponent, animated: true)
         strokePicker.selectRow(maxStrokeRow, inComponent: maxStrokePickerComponent, animated: true)
         updateCaptionLabel()

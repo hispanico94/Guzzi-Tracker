@@ -8,15 +8,11 @@ struct Order {
     var comparator: Comparator<Motorcycle>
 }
 
-// MARK: Conforming Order to Hashable
+// MARK: Conforming Order to Equatable
 
-extension Order: Hashable {
-    var hashValue: Int {
-        return id.rawValue
-    }
-    
+extension Order: Equatable {
     static func == (lhs: Order, rhs: Order) -> Bool {
-        return lhs.hashValue == rhs.hashValue
+        return lhs.id == rhs.id
     }
 }
 

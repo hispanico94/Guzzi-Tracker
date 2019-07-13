@@ -11,7 +11,7 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     private var selectedMinWeight: Measurement<UnitMass> {
         didSet {
             let lastIndex = weights.count - 1
-            guard let row = weights.index(of: selectedMinWeight) else {
+            guard let row = weights.firstIndex(of: selectedMinWeight) else {
                 clearSelection()
                 return
             }
@@ -37,7 +37,7 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
     private var selectedMaxWeight: Measurement<UnitMass> {
         didSet {
             let firstIndex = 0
-            guard let row = weights.index(of: selectedMaxWeight) else {
+            guard let row = weights.firstIndex(of: selectedMaxWeight) else {
                 clearSelection()
                 return
             }
@@ -82,8 +82,8 @@ class WeightFilterViewController: UIViewController, UIPickerViewDataSource, UIPi
         
         let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
-        let minWeightRow = weights.index(of: selectedMinWeight) ?? 0
-        let maxWeightRow = weights.index(of: selectedMaxWeight) ?? (weights.count - 1)
+        let minWeightRow = weights.firstIndex(of: selectedMinWeight) ?? 0
+        let maxWeightRow = weights.firstIndex(of: selectedMaxWeight) ?? (weights.count - 1)
         weightPicker.selectRow(minWeightRow, inComponent: minWeightPickerComponent, animated: true)
         weightPicker.selectRow(maxWeightRow, inComponent: maxWeightPickerComponent, animated: true)
         updateCaptionLabel()

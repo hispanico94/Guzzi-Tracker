@@ -12,7 +12,7 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
         didSet {
             if (selectedMinBore > selectedMaxBore) {
                 selectedMaxBore = selectedMinBore
-                let row = bores.index(of: selectedMinBore) ?? (bores.count - 1)
+                let row = bores.firstIndex(of: selectedMinBore) ?? (bores.count - 1)
                 borePicker.selectRow(row, inComponent: maxBorePickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -23,7 +23,7 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
         didSet {
             if (selectedMaxBore < selectedMinBore) {
                 selectedMinBore = selectedMaxBore
-                let row = bores.index(of: selectedMaxBore) ?? 0
+                let row = bores.firstIndex(of: selectedMaxBore) ?? 0
                 borePicker.selectRow(row, inComponent: minBorePickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -52,8 +52,8 @@ class BoreFilterViewController: UIViewController, UIPickerViewDataSource, UIPick
         
         let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
-        let minBoreRow = bores.index(of: selectedMinBore) ?? 0
-        let maxBoreRow = bores.index(of: selectedMaxBore) ?? (bores.count - 1)
+        let minBoreRow = bores.firstIndex(of: selectedMinBore) ?? 0
+        let maxBoreRow = bores.firstIndex(of: selectedMaxBore) ?? (bores.count - 1)
         borePicker.selectRow(minBoreRow, inComponent: minBorePickerComponent, animated: true)
         borePicker.selectRow(maxBoreRow, inComponent: maxBorePickerComponent, animated: true)
         updateCaptionLabel()

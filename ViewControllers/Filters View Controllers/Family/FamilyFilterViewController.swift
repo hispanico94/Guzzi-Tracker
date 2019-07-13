@@ -46,7 +46,7 @@ class FamilyFilterViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "reuseIdentifier")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "reuseIdentifier")
 
         cell.textLabel?.text = families[indexPath.row]
         cell.accessoryType = .none
@@ -65,7 +65,7 @@ class FamilyFilterViewController: UITableViewController {
             tableView.deselectRow(at: indexPath, animated: true)
         }
         
-        if let i = selectedFamilies.index(of: families[indexPath.row]) {
+        if let i = selectedFamilies.firstIndex(of: families[indexPath.row]) {
             if let cell = tableView.cellForRow(at: indexPath) {
                 cell.accessoryType = .none
                 selectedFamilies.remove(at: i)

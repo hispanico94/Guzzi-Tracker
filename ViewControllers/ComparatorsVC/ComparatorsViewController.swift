@@ -80,7 +80,7 @@ class ComparatorsViewController: UITableViewController {
         cell.detailTextLabel?.text = nil
         cell.textLabel?.text = currentOrder.title
         
-        if let index = selectedOrders.index(of: currentOrder) {
+        if let index = selectedOrders.firstIndex(of: currentOrder) {
             cell.detailTextLabel?.text = String(index + 1)
             selectedIndexPaths[currentOrder.id] = indexPath
         }
@@ -107,7 +107,7 @@ class ComparatorsViewController: UITableViewController {
         // Check if selectedOrders already contains the selected order.
         // If so remove the selected order from selectedOrders, updates the cells
         // and indexPath saved in selectedIndexPaths is removed
-        if let index = selectedOrders.index(of: selectedOrder) {
+        if let index = selectedOrders.firstIndex(of: selectedOrder) {
             let removedOrder = selectedOrders.remove(at: index)
             selectedIndexPaths[removedOrder.id] = nil
             cell.detailTextLabel?.text = nil

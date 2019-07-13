@@ -11,7 +11,7 @@ struct FilterButton {
         button.setTitle(NSLocalizedString("No results", comment: "No results"), for: .disabled)
     }
     
-    func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControlEvents) {
+    func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) {
         button.addTarget(target, action: action, for: controlEvents)
     }
     

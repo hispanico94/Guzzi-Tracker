@@ -37,7 +37,7 @@ class MotorcycleInfoViewController: UITableViewController {
         
         //tableView.register(UINib(nibName: "MotorcycleInfoCell", bundle: nil), forCellReuseIdentifier: MotorcycleInfoCell.defaultIdentifier)
         
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = CGFloat(200)
         
         navigationItem.title = motorcycle.generalInfo.name

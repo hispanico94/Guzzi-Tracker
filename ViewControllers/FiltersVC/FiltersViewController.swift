@@ -106,7 +106,7 @@ class FiltersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        filterButton.addTarget(self, action: #selector(applyAndDismiss), for: UIControlEvents.touchUpInside)
+        filterButton.addTarget(self, action: #selector(applyAndDismiss), for: UIControl.Event.touchUpInside)
         let toolbarItem = UIBarButtonItem(customView: filterButton.button)
         setToolbarItems([toolbarItem], animated: true)
         
@@ -161,12 +161,12 @@ class FiltersViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard indexPath.section == filterSection else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "reuseIdentifier")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "reuseIdentifier")
             cell.textLabel?.text = orderCellCaption()
             cell.accessoryType = .disclosureIndicator
             return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "reuseIdentifier")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "reuseIdentifier")
         let filterId = orderedFilterIds[indexPath.row]
         let filter = filterProviders[filterId]?.getFilter()
         

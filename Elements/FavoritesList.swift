@@ -18,7 +18,7 @@ final class FavoritesList {
     }
     
     func remove(_ favorite: Int) {
-        if let index = favorites.index(of: favorite) {
+        if let index = favorites.firstIndex(of: favorite) {
             favorites.remove(at: index)
             saveFavorites()
         }

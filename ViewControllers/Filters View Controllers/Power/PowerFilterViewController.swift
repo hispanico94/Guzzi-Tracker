@@ -12,7 +12,7 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
         didSet {
             if (selectedMinPower > selectedMaxPower) {
                 selectedMaxPower = selectedMinPower
-                let row = powers.index(of: selectedMinPower) ?? (powers.count - 1)
+                let row = powers.firstIndex(of: selectedMinPower) ?? (powers.count - 1)
                 powerPicker.selectRow(row, inComponent: maxPowerPickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -23,7 +23,7 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
         didSet {
             if (selectedMaxPower < selectedMinPower) {
                 selectedMinPower = selectedMaxPower
-                let row = powers.index(of: selectedMaxPower) ?? 0
+                let row = powers.firstIndex(of: selectedMaxPower) ?? 0
                 powerPicker.selectRow(row, inComponent: minPowerPickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -52,8 +52,8 @@ class PowerFilterViewController: UIViewController, UIPickerViewDataSource, UIPic
         
         let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
-        let minPowerRow = powers.index(of: selectedMinPower) ?? 0
-        let maxPowerRow = powers.index(of: selectedMaxPower) ?? (powers.count - 1)
+        let minPowerRow = powers.firstIndex(of: selectedMinPower) ?? 0
+        let maxPowerRow = powers.firstIndex(of: selectedMaxPower) ?? (powers.count - 1)
         powerPicker.selectRow(minPowerRow, inComponent: minPowerPickerComponent, animated: true)
         powerPicker.selectRow(maxPowerRow, inComponent: maxPowerPickerComponent, animated: true)
         updateCaptionLabel()

@@ -12,7 +12,7 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
         didSet {
             if (selectedMinWheelbase > selectedMaxWheelbase) {
                 selectedMaxWheelbase = selectedMinWheelbase
-                let row = wheelbases.index(of: selectedMinWheelbase) ?? (wheelbases.count - 1)
+                let row = wheelbases.firstIndex(of: selectedMinWheelbase) ?? (wheelbases.count - 1)
                 wheelbasePicker.selectRow(row, inComponent: maxWheelbasePickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -23,7 +23,7 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
         didSet {
             if (selectedMaxWheelbase < selectedMinWheelbase) {
                 selectedMinWheelbase = selectedMaxWheelbase
-                let row = wheelbases.index(of: selectedMaxWheelbase) ?? 0
+                let row = wheelbases.firstIndex(of: selectedMaxWheelbase) ?? 0
                 wheelbasePicker.selectRow(row, inComponent: minWheelbasePickerComponent, animated: true)
             }
             updateCaptionLabel()
@@ -52,8 +52,8 @@ class WheelbaseFilterViewController: UIViewController, UIPickerViewDataSource, U
         
         let clearString = NSLocalizedString("Clear", comment: "Clear (filters, criteria, selections)")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: clearString, style: .plain, target: self, action: #selector(clearSelection))
-        let minWheelbaseRow = wheelbases.index(of: selectedMinWheelbase) ?? 0
-        let maxWheelbaseRow = wheelbases.index(of: selectedMaxWheelbase) ?? (wheelbases.count - 1)
+        let minWheelbaseRow = wheelbases.firstIndex(of: selectedMinWheelbase) ?? 0
+        let maxWheelbaseRow = wheelbases.firstIndex(of: selectedMaxWheelbase) ?? (wheelbases.count - 1)
         wheelbasePicker.selectRow(minWheelbaseRow, inComponent: minWheelbasePickerComponent, animated: true)
         wheelbasePicker.selectRow(maxWheelbaseRow, inComponent: maxWheelbasePickerComponent, animated: true)
         updateCaptionLabel()
