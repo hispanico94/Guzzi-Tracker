@@ -47,6 +47,7 @@
 		CF73C4442093188A00596118 /* ComparatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73C4422093188A00596118 /* ComparatorsViewController.swift */; };
 		CF73C4452093188A00596118 /* ComparatorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF73C4432093188A00596118 /* ComparatorsViewController.xib */; };
 		CF73C44720931E5B00596118 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73C44620931E5B00596118 /* Function.swift */; };
+		CF7656C622DA203000E694FA /* ImageLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7656C522DA203000E694FA /* ImageLoadingIndicator.swift */; };
 		CF7A9081212EAA7000F33C43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF7A9083212EAA7000F33C43 /* Localizable.strings */; };
 		CF8306532087342000570E60 /* Bore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8306522087342000570E60 /* Bore.swift */; };
 		CF830656208736F600570E60 /* BoreFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF830654208736F600570E60 /* BoreFilterViewController.swift */; };
@@ -143,6 +144,7 @@
 		CF73C4422093188A00596118 /* ComparatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparatorsViewController.swift; sourceTree = "<group>"; };
 		CF73C4432093188A00596118 /* ComparatorsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComparatorsViewController.xib; sourceTree = "<group>"; };
 		CF73C44620931E5B00596118 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		CF7656C522DA203000E694FA /* ImageLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingIndicator.swift; sourceTree = "<group>"; };
 		CF7A9080212EAA0A00F33C43 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CF7A9082212EAA7000F33C43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CF7A9084212EAA8000F33C43 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 			children = (
 				CF690CAA1E7153AB00523796 /* ImagesViewController.swift */,
 				CF690CAB1E7153AB00523796 /* ImagesViewController.xib */,
+				CF7656C522DA203000E694FA /* ImageLoadingIndicator.swift */,
 			);
 			path = ImagesVC;
 			sourceTree = "<group>";
@@ -763,6 +766,7 @@
 				CFAC091D20AC1C7300689C5A /* FavoritesList.swift in Sources */,
 				CFB0664A21400D440065EC5E /* CellRepresentable.swift in Sources */,
 				CFB4E1FB213EEC680081E0CC /* Argo.swift in Sources */,
+				CF7656C622DA203000E694FA /* ImageLoadingIndicator.swift in Sources */,
 				CFB4E1FD213EEDD80081E0CC /* Standard types.swift in Sources */,
 				CF0F546C1E81A06A0059650F /* Elements.swift in Sources */,
 				CF73C44720931E5B00596118 /* Function.swift in Sources */,

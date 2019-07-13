@@ -69,8 +69,7 @@ class ImagesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard
             let cell = tableView.cellForRow(at: indexPath) as? ImageCell,
-            let image = cell.motorcycleImageView.image,
-            image != UIImage(named: "motorcycle_image_placeholder")
+            let image = cell.motorcycleImageView.image
         else { return }
         
         present(SingleImageViewController(imageToBeDisplayed: image), animated: true, completion: nil)

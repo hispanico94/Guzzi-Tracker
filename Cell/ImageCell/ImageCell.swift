@@ -15,6 +15,7 @@ class ImageCell: UITableViewCell {
     }
     
     func set(withImageURL url: URL) -> ImageCell {
+        motorcycleImageView.kf.indicatorType = .custom(indicator: ImageLoadingIndicator())
         motorcycleImageView.kf.setImage(with: url)
         return self
     }
