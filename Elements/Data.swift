@@ -1,6 +1,4 @@
 import Foundation
-import Argo
-
 
 /// Handles the initialization and update of the models (motorcycles and filters)
 /// when the app is launched and the JSON stored in the app's library directory,
