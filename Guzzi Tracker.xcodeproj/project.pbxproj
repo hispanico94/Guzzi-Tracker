@@ -84,6 +84,7 @@
 		CFD4E44F1E66DC8000EFAB57 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E44E1E66DC8000EFAB57 /* Data.swift */; };
 		CFD4E4521E67355900EFAB57 /* MotorcycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E4511E67355900EFAB57 /* MotorcycleCell.swift */; };
 		CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */; };
+		CFDAEE1F22F41523001D29F7 /* MotorcycleJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDAEE1E22F41523001D29F7 /* MotorcycleJson.swift */; };
 		CFE280A81E6F12830090AAA7 /* MotorcycleNotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE280A61E6F12830090AAA7 /* MotorcycleNotesCell.swift */; };
 		CFE280A91E6F12830090AAA7 /* MotorcycleNotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE280A71E6F12830090AAA7 /* MotorcycleNotesCell.xib */; };
 		CFE400D2207B703E001F9E1A /* FamilyFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */; };
@@ -185,6 +186,7 @@
 		CFD4E44E1E66DC8000EFAB57 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		CFD4E4511E67355900EFAB57 /* MotorcycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleCell.swift; sourceTree = "<group>"; };
 		CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleCell.xib; sourceTree = "<group>"; };
+		CFDAEE1E22F41523001D29F7 /* MotorcycleJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleJson.swift; sourceTree = "<group>"; };
 		CFE280A61E6F12830090AAA7 /* MotorcycleNotesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleNotesCell.swift; sourceTree = "<group>"; };
 		CFE280A71E6F12830090AAA7 /* MotorcycleNotesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleNotesCell.xib; sourceTree = "<group>"; };
 		CFE400D0207B703E001F9E1A /* FamilyFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyFilterViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				CFB4E1F3213ED2D20081E0CC /* JsonFile.swift */,
 				CFB4E1F7213EEA1D0081E0CC /* ViewModel structs.swift */,
 				CF0F54691E819FEC0059650F /* Key.swift */,
+				CFDAEE1E22F41523001D29F7 /* MotorcycleJson.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				CFB06650214015C80065EC5E /* Comparator.swift in Sources */,
 				CFF80DD6214A505E001CAC01 /* TableBackgroundViewController.swift in Sources */,
 				CFAC091A20AC1B7B00689C5A /* MyGarageViewController.swift in Sources */,
+				CFDAEE1F22F41523001D29F7 /* MotorcycleJson.swift in Sources */,
 				CFB4E1F0213ECDDA0081E0CC /* Motorcycle.swift in Sources */,
 				CFF7C68D207CBA26001A7B90 /* WeightFilterViewController.swift in Sources */,
 				CF466A16208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift in Sources */,

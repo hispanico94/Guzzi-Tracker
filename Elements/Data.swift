@@ -81,7 +81,7 @@ fileprivate struct DataManager {
         return fileName + "." + fileExtension
     }
     
-    private let remoteJsonUrl = "https://raw.githubusercontent.com/hispanico94/Guzzi-Tracker/master/Guzzi%20Tracker/info_moto.json"
+    private let remoteJsonUrl = "https://gist.githubusercontent.com/hispanico94/a48b323f0c10fe35334af01a60c96f53/raw/info_moto.json"
     
     /// Save the bundle's info_moto.json in the library directory if it doesn't already exists.
     func saveBundleJsonToLibrary() {
@@ -153,26 +153,19 @@ fileprivate struct DataManager {
     
     /// Creates and returns a JsonFile (containing json version and motorcycle list) from a Data object
     /// - parameter data: the data from which extract the JsonFile
-    /// - returns: a JsonFile containing file version and an array of Motorcycle, nil if the data acquisition or the parsing fail
+    /// - returns: a JsonFile containing file version and an array of MotorcycleJson, nil if the data acquisition or the parsing fail
     private func getJsonFile(fromData data: Data) -> JsonFile? {
-        guard
-            let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
-            else {
-                print("An error occurred during the json serialization (DataManager.getJsonFile(data:))")
-                return nil
+        var result: JsonFile? = nil
+        
+        do {
+            result = try JSONDecoder().decode(JsonFile.self, from: data)
+        } catch let error {
+            print("An error occurred while decoding json in DataManager.getJsonFile(data:)")
+            print(error)
         }
         
-        let file: Decoded<JsonFile> = decode(json)
-        
-        switch file {
-        case .success(let decodedFile):
-            return decodedFile
-        case .failure(let error):
-            print("An error occurred while extracting data from JSON (DataManager.getJsonFile(data:)), error: \(error)")
-            return nil
-        }
+        return result
     }
-    
 }
 
 func getFoundationYear() -> Int { return 1921 }
