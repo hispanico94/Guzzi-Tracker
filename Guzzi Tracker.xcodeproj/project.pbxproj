@@ -39,6 +39,7 @@
 		CF56823B20B6A3ED00B52AEB /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56823A20B6A3ED00B52AEB /* FilterButton.swift */; };
 		CF5D2DB82138362F00E01DFA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5D2DB62138362F00E01DFA /* InfoViewController.swift */; };
 		CF5D2DB92138362F00E01DFA /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5D2DB72138362F00E01DFA /* InfoViewController.xib */; };
+		CF63E8AC22F9BE5400D97FC8 /* MotorcycleSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF63E8AB22F9BE5400D97FC8 /* MotorcycleSplitViewController.swift */; };
 		CF690CA81E7150BF00523796 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF690CA61E7150BF00523796 /* ImageCell.swift */; };
 		CF690CA91E7150BF00523796 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF690CA71E7150BF00523796 /* ImageCell.xib */; };
 		CF690CAC1E7153AB00523796 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF690CAA1E7153AB00523796 /* ImagesViewController.swift */; };
@@ -57,6 +58,8 @@
 		CF8306622087499700570E60 /* PowerFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8306602087499700570E60 /* PowerFilterViewController.swift */; };
 		CF8C6283206FC629002B8CF6 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8C6282206FC629002B8CF6 /* Filter.swift */; };
 		CF8C6285206FC7DD002B8CF6 /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8C6284206FC7DD002B8CF6 /* Ref.swift */; };
+		CF90A0BE230063F900A5EB89 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90A0BC230063F900A5EB89 /* EmptyViewController.swift */; };
+		CF90A0BF230063F900A5EB89 /* EmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF90A0BD230063F900A5EB89 /* EmptyViewController.xib */; };
 		CF98DB1C20849A44002EFC9B /* Displacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF98DB1B20849A44002EFC9B /* Displacement.swift */; };
 		CF98DB1F20849F68002EFC9B /* DisplacementFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF98DB1D20849F68002EFC9B /* DisplacementFilterViewController.swift */; };
 		CF9FD436207624A9003F66F4 /* MinMaxYearFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */; };
@@ -133,6 +136,7 @@
 		CF56823A20B6A3ED00B52AEB /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		CF5D2DB62138362F00E01DFA /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		CF5D2DB72138362F00E01DFA /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		CF63E8AB22F9BE5400D97FC8 /* MotorcycleSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleSplitViewController.swift; sourceTree = "<group>"; };
 		CF690CA61E7150BF00523796 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		CF690CA71E7150BF00523796 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		CF690CAA1E7153AB00523796 /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
@@ -151,11 +155,14 @@
 		CF83065A20873FC300570E60 /* StrokeFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeFilterViewController.swift; sourceTree = "<group>"; };
 		CF83065E208744BD00570E60 /* Power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
 		CF8306602087499700570E60 /* PowerFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerFilterViewController.swift; sourceTree = "<group>"; };
+		CF8320FA230089BB00F0B725 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		CF8C6282206FC629002B8CF6 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		CF8C6284206FC7DD002B8CF6 /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
 		CF8CCE901E65CBB500F4A37E /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		CF8CCE911E65CBB500F4A37E /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		CF8CCE951E65CFFE00F4A37E /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
+		CF90A0BC230063F900A5EB89 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		CF90A0BD230063F900A5EB89 /* EmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewController.xib; sourceTree = "<group>"; };
 		CF98DB1B20849A44002EFC9B /* Displacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displacement.swift; sourceTree = "<group>"; };
 		CF98DB1D20849F68002EFC9B /* DisplacementFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplacementFilterViewController.swift; sourceTree = "<group>"; };
 		CF9FD434207624A9003F66F4 /* MinMaxYearFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinMaxYearFilterViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +317,7 @@
 		CF1B241A224A8AC70086DB9F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CF90A0BB230063CF00A5EB89 /* Various */,
 				CF1B241C224A8B2D0086DB9F /* MotorcyclesVC */,
 				CF1B241D224A8B3F0086DB9F /* SearchVC */,
 				CF1B2427224A8C640086DB9F /* MyGarageVC */,
@@ -591,6 +599,16 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
+		CF90A0BB230063CF00A5EB89 /* Various */ = {
+			isa = PBXGroup;
+			children = (
+				CF63E8AB22F9BE5400D97FC8 /* MotorcycleSplitViewController.swift */,
+				CF90A0BC230063F900A5EB89 /* EmptyViewController.swift */,
+				CF90A0BD230063F900A5EB89 /* EmptyViewController.xib */,
+			);
+			path = Various;
+			sourceTree = "<group>";
+		};
 		CFAB03E51E60432D0032BD11 = {
 			isa = PBXGroup;
 			children = (
@@ -621,6 +639,7 @@
 				CF094F701E66C1CA00D351E1 /* info_moto.json */,
 				CF7A9083212EAA7000F33C43 /* Localizable.strings */,
 				CF46F9532131549800DD03CC /* Localizable.stringsdict */,
+				CF8320FA230089BB00F0B725 /* TODO.md */,
 			);
 			path = "Guzzi Tracker";
 			sourceTree = "<group>";
@@ -704,6 +723,7 @@
 				CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */,
 				CF73C4452093188A00596118 /* ComparatorsViewController.xib in Resources */,
 				CFAC091B20AC1B7B00689C5A /* MyGarageViewController.xib in Resources */,
+				CF90A0BF230063F900A5EB89 /* EmptyViewController.xib in Resources */,
 				CF7A9081212EAA7000F33C43 /* Localizable.strings in Resources */,
 				CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */,
 				CFE485D321353E1200949E81 /* StrokeFilterViewController.xib in Resources */,
@@ -796,11 +816,13 @@
 				CF830656208736F600570E60 /* BoreFilterViewController.swift in Sources */,
 				CF83065920873EEB00570E60 /* Stroke.swift in Sources */,
 				CF1CDB84206FD5AF007BCE95 /* MinMaxYear.swift in Sources */,
+				CF63E8AC22F9BE5400D97FC8 /* MotorcycleSplitViewController.swift in Sources */,
 				CF0ED0831E6F15E8008BAB23 /* MotorcycleImagesCell.swift in Sources */,
 				CF73C441209315F200596118 /* Ordering.swift in Sources */,
 				CF41DEC420A6D95000F4A508 /* SearchResultsViewController.swift in Sources */,
 				CFB4E1F2213ED0C50081E0CC /* Texts.swift in Sources */,
 				CFD4E44F1E66DC8000EFAB57 /* Data.swift in Sources */,
+				CF90A0BE230063F900A5EB89 /* EmptyViewController.swift in Sources */,
 				CF1CDB80206FD465007BCE95 /* FiltersViewController.swift in Sources */,
 				CF690CA81E7150BF00523796 /* ImageCell.swift in Sources */,
 				CF5D2DB82138362F00E01DFA /* InfoViewController.swift in Sources */,

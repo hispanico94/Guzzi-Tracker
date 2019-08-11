@@ -11,6 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let review = Review.sharedReview
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         
         // Launch counter update
@@ -32,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vcFactory = VCFactory(motorcycleData: motorcycleData!)
         
         // View controllers initialization
-        
-        let firstVC = UINavigationController(rootViewController: vcFactory!.makeMotorcyclesVC())
+        let firstVC = MotorcycleSplitViewController(master: vcFactory!.makeMotorcyclesVC())
+        firstVC.tabBarItem = UITabBarItem(title: NSLocalizedString("Motorcycles", comment: "Motorcycles"), image: UIImage(named: "motorcycle_regular_tab_icon"), tag: 0)
         let secondVC = UINavigationController(rootViewController: vcFactory!.makeSearchVC())
         let thirdVC = UINavigationController(rootViewController: vcFactory!.makeMyGarageVC())
         

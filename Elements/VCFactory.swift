@@ -13,7 +13,6 @@ class VCFactory {
         let motorcyclesVC = MotorcyclesViewController(vcFactory: self)
         motorcyclesVC.title = motorcyclesString
         motorcyclesVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: nil, action: nil)
-        motorcyclesVC.tabBarItem = UITabBarItem(title: motorcyclesString, image: UIImage(named: "motorcycle_regular_tab_icon"), tag: 0)
         return motorcyclesVC
     }
     

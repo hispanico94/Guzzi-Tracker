@@ -16,7 +16,13 @@ class MotorcyclesViewController: UITableViewController {
     private var motorcycleListToShow: [Motorcycle] {
         didSet {
             motorcyclesDisplayed.value = motorcycleListToShow.count
+            
+            if splitViewController?.isCollapsed == false {
+                splitViewController?.showDetailViewController(EmptyViewController(), sender: nil)
+            }
+            
             tableView.reloadData()
+            tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
         }
     }
     
@@ -151,10 +157,14 @@ class MotorcyclesViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedMotorcycle = motorcycleListToShow[indexPath.row]
-        navigationController?.pushViewController(MotorcycleInfoViewController(selectedMotorcycle: selectedMotorcycle,
-                                                                              nibName: "MotorcycleInfoViewController",
-                                                                              bundle: nil),
-                                                 animated: true)
+        splitViewController?.showDetailViewController(
+            MotorcycleInfoViewController(
+                selectedMotorcycle: selectedMotorcycle,
+                nibName: "MotorcycleInfoViewController",
+                bundle: nil
+            ),
+            sender: nil
+        )
     }
     
     // MARK: - Private instance methods
