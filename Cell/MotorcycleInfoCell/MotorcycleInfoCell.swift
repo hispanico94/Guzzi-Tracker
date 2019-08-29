@@ -22,6 +22,7 @@ class MotorcycleInfoCell: UITableViewCell {
     func set(withRowElement rowElement: RowElement) -> MotorcycleInfoCell {
         titleLabel.text = rowElement.rowKey + ":"
         descriptionLabel.text = rowElement.rowValue
+        updateConstraintsIfNeeded()
         return self
     }
 

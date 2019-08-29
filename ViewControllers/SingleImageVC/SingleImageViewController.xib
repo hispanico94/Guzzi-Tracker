@@ -51,10 +51,13 @@
                     </connections>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sN-h6-flR">
-                    <rect key="frame" x="8" y="28" width="81" height="29"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <rect key="frame" x="8" y="28" width="81" height="32"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                     <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                     <state key="normal" title="Close"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="didTapCloseButton:" destination="-1" eventType="touchUpInside" id="WJF-zA-hh3"/>
                     </connections>

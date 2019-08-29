@@ -35,10 +35,11 @@ class MotorcycleInfoViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //tableView.register(UINib(nibName: "MotorcycleInfoCell", bundle: nil), forCellReuseIdentifier: MotorcycleInfoCell.defaultIdentifier)
-        
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = CGFloat(200)
+        tableView.estimatedRowHeight = 200.0
+        
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedSectionHeaderHeight = 100.0
         
         navigationItem.title = motorcycle.generalInfo.name
         navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: "Back"), style: .plain, target: nil, action: nil)
@@ -59,8 +60,10 @@ class MotorcycleInfoViewController: UITableViewController {
         return motorcycleArray.count
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return motorcycleArray[section].sectionName
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = SectionHeaderView()
+        headerView.text = motorcycleArray[section].sectionName
+        return headerView
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,12 +75,6 @@ class MotorcycleInfoViewController: UITableViewController {
     }
 
     // MARK: - Table view delegate
-    
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if let headerView = view as? UITableViewHeaderFooterView {
-            headerView.backgroundView?.backgroundColor = UIColor.lightLegnanoGreen
-        }
-    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = motorcycleArray[indexPath.section].sectionElements[indexPath.row]

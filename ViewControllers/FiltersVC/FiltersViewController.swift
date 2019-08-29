@@ -106,6 +106,12 @@ class FiltersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 40.0
+        
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedSectionHeaderHeight = 40.0
+        
         filterButton.addTarget(self, action: #selector(applyAndDismiss), for: UIControl.Event.touchUpInside)
         let toolbarItem = UIBarButtonItem(customView: filterButton.button)
         setToolbarItems([toolbarItem], animated: true)
@@ -148,57 +154,68 @@ class FiltersViewController: UITableViewController {
         }
     }
 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = SectionHeaderView()
+        
         switch section {
         case filterSection:
-            return NSLocalizedString("Filters", comment: "Filters")
+            headerView.text = NSLocalizedString("Filters", comment: "Filters")
         case orderSection:
-            return NSLocalizedString("Sorting", comment: "Sorting")
+            headerView.text = NSLocalizedString("Sorting", comment: "Sorting")
         default:
-            return nil
+            preconditionFailure("FiltersViewController.tableView(_:viewForHeaderInSection:) - returned an invalid section")
         }
+        
+        return headerView
     }
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard indexPath.section == filterSection else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "reuseIdentifier")
-            cell.textLabel?.text = orderCellCaption()
-            cell.accessoryType = .disclosureIndicator
+        switch indexPath.section {
+            
+        case filterSection:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "filterCellIdentifier")
+                ?? UITableViewCell(style: .value1, reuseIdentifier: "filterCellIdentifier")
+            let filterId = orderedFilterIds[indexPath.row]
+            let filter = filterProviders[filterId]?.getFilter()
+            
+            cell.textLabel?.text = filter?.title
+            cell.detailTextLabel?.text = filter?.caption
+            
+            cell.updateConstraintsIfNeeded()
+            
             return cell
+        
+        case orderSection:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "sortingCellIdentifier")
+                ?? UITableViewCell(style: .default, reuseIdentifier: "sortingCellIdentifier")
+            cell.textLabel?.text = orderCellCaption()
+            
+            cell.accessoryType = .disclosureIndicator
+            cell.updateConstraintsIfNeeded()
+            
+            return cell
+            
+        default:
+            preconditionFailure("FiltersViewController.tableView(_:cellForRowAt:) - returned an invalid indexPath.section")
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") ?? UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "reuseIdentifier")
-        let filterId = orderedFilterIds[indexPath.row]
-        let filter = filterProviders[filterId]?.getFilter()
-        
-        cell.textLabel?.text = filter?.title
-        cell.detailTextLabel?.text = filter?.caption
-        
-        return cell
     }
     
     // MARK: - Table view delegate
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(50)
-    }
-    
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if let headerView = view as? UITableViewHeaderFooterView {
-            headerView.backgroundView?.backgroundColor = UIColor.lightLegnanoGreen
-        }
-    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defer {
             tableView.deselectRow(at: indexPath, animated: true)
         }
         switch indexPath.section {
-        case 0:
+        case filterSection:
             let filterId = orderedFilterIds[indexPath.row]
             guard let filterProvider = filterProviders[filterId] else { return }
             navigationController?.pushViewController(filterProvider.getViewController({ [weak self] newFilter in self?.filterProviders[filterId] = newFilter }), animated: true)
-        case 1:
+            
+        case orderSection:
             navigationController?.pushViewController(ComparatorsViewController(orders: orders, { [weak self] newOrders in self?.orders = newOrders }), animated: true)
+            
         default:
             return
         }

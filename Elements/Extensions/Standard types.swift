@@ -148,6 +148,20 @@ extension Double {
 // MARK: UIKit extensions
 // MARK: -
 
+// MARK: UIButton extensions
+
+extension UIButton {
+    @IBInspectable
+    var adjustsFontForContentSizeCategory: Bool {
+        set {
+            self.titleLabel?.adjustsFontForContentSizeCategory = newValue
+        }
+        get {
+            return self.titleLabel?.adjustsFontForContentSizeCategory ?? false
+        }
+    }
+}
+
 // MARK: UIColor extensions
 
 // Colors used in the app

@@ -21,6 +21,7 @@
 		CF1CDB80206FD465007BCE95 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CDB7E206FD465007BCE95 /* FiltersViewController.swift */; };
 		CF1CDB81206FD465007BCE95 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */; };
 		CF1CDB84206FD5AF007BCE95 /* MinMaxYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */; };
+		CF25B78F2312D95B0080DF3D /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF25B78E2312D95B0080DF3D /* SectionHeaderView.swift */; };
 		CF2A863A2089EB8C00C1A7E7 /* Wheelbase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2A86392089EB8C00C1A7E7 /* Wheelbase.swift */; };
 		CF3923F72201F42E000B81E6 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3923F62201F42E000B81E6 /* Kingfisher.framework */; };
 		CF3A1CAF2147B66200ABCEC2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A1CAE2147B66200ABCEC2 /* Review.swift */; };
@@ -117,6 +118,7 @@
 		CF1CDB7E206FD465007BCE95 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
 		CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinMaxYear.swift; sourceTree = "<group>"; };
+		CF25B78E2312D95B0080DF3D /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		CF2A86392089EB8C00C1A7E7 /* Wheelbase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wheelbase.swift; sourceTree = "<group>"; };
 		CF3923F62201F42E000B81E6 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		CF3A1CAE2147B66200ABCEC2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 				CF63E8AB22F9BE5400D97FC8 /* MotorcycleSplitViewController.swift */,
 				CF90A0BC230063F900A5EB89 /* EmptyViewController.swift */,
 				CF90A0BD230063F900A5EB89 /* EmptyViewController.xib */,
+				CF25B78E2312D95B0080DF3D /* SectionHeaderView.swift */,
 			);
 			path = Various;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				CFF7C68D207CBA26001A7B90 /* WeightFilterViewController.swift in Sources */,
 				CF466A16208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift in Sources */,
 				CFB066522140165C0065EC5E /* Order.swift in Sources */,
+				CF25B78F2312D95B0080DF3D /* SectionHeaderView.swift in Sources */,
 				CF419B021E6D692700EA7B74 /* MotorcycleInfoCell.swift in Sources */,
 				CFE280A81E6F12830090AAA7 /* MotorcycleNotesCell.swift in Sources */,
 				CF8306532087342000570E60 /* Bore.swift in Sources */,
