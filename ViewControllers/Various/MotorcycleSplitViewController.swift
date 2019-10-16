@@ -47,7 +47,7 @@ extension MotorcycleSplitViewController: UISplitViewControllerDelegate {
         
         if let navController = secondaryViewController as? UINavigationController,
             navController.viewControllers.first is EmptyViewController {
-            splitViewController.viewControllers = [UINavigationController(rootViewController: masterViewController)]
+            return true
         }
         
         return false
