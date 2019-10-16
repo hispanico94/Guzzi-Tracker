@@ -22,7 +22,6 @@
 		CF1CDB81206FD465007BCE95 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1CDB7F206FD465007BCE95 /* FiltersViewController.xib */; };
 		CF1CDB84206FD5AF007BCE95 /* MinMaxYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CDB83206FD5AF007BCE95 /* MinMaxYear.swift */; };
 		CF2A863A2089EB8C00C1A7E7 /* Wheelbase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2A86392089EB8C00C1A7E7 /* Wheelbase.swift */; };
-		CF3923F72201F42E000B81E6 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3923F62201F42E000B81E6 /* Kingfisher.framework */; };
 		CF3A1CAF2147B66200ABCEC2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A1CAE2147B66200ABCEC2 /* Review.swift */; };
 		CF419AFE1E6D643300EA7B74 /* MotorcycleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF419AFC1E6D643300EA7B74 /* MotorcycleInfoViewController.swift */; };
 		CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */; };
@@ -80,6 +79,8 @@
 		CFB4E1F4213ED2D20081E0CC /* JsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4E1F3213ED2D20081E0CC /* JsonFile.swift */; };
 		CFB4E1F8213EEA1D0081E0CC /* ViewModel structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4E1F7213EEA1D0081E0CC /* ViewModel structs.swift */; };
 		CFB4E1FD213EEDD80081E0CC /* Standard types.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4E1FC213EEDD80081E0CC /* Standard types.swift */; };
+		CFC0EED22357506D00F4A2F3 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3923F62201F42E000B81E6 /* Kingfisher.framework */; };
+		CFC0EED32357506D00F4A2F3 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF3923F62201F42E000B81E6 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFD4E44F1E66DC8000EFAB57 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E44E1E66DC8000EFAB57 /* Data.swift */; };
 		CFD4E4521E67355900EFAB57 /* MotorcycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E4511E67355900EFAB57 /* MotorcycleCell.swift */; };
 		CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */; };
@@ -101,6 +102,20 @@
 		CFF80DD6214A505E001CAC01 /* TableBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF80DD4214A505E001CAC01 /* TableBackgroundViewController.swift */; };
 		CFF80DD7214A505E001CAC01 /* TableBackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFF80DD5214A505E001CAC01 /* TableBackgroundViewController.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CFC0EED42357506D00F4A2F3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CFC0EED32357506D00F4A2F3 /* Kingfisher.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CF094F701E66C1CA00D351E1 /* info_moto.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = info_moto.json; sourceTree = "<group>"; };
@@ -228,7 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF3923F72201F42E000B81E6 /* Kingfisher.framework in Frameworks */,
+				CFC0EED22357506D00F4A2F3 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +633,7 @@
 				CF1B241A224A8AC70086DB9F /* ViewControllers */,
 				CF1B241B224A8B020086DB9F /* Cell */,
 				CFAB03EF1E60432E0032BD11 /* Products */,
+				CFC0EED12357506D00F4A2F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -644,6 +660,13 @@
 			path = "Guzzi Tracker";
 			sourceTree = "<group>";
 		};
+		CFC0EED12357506D00F4A2F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -655,6 +678,7 @@
 				CFAB03EB1E60432D0032BD11 /* Frameworks */,
 				CFAB03EC1E60432D0032BD11 /* Resources */,
 				CF8CCE941E65CC8D00F4A37E /* Copy Carthage Frameworks */,
+				CFC0EED42357506D00F4A2F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -749,11 +773,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Copy Carthage Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
