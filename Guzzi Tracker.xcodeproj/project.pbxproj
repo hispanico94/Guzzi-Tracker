@@ -80,7 +80,6 @@
 		CFB4E1F8213EEA1D0081E0CC /* ViewModel structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4E1F7213EEA1D0081E0CC /* ViewModel structs.swift */; };
 		CFB4E1FD213EEDD80081E0CC /* Standard types.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4E1FC213EEDD80081E0CC /* Standard types.swift */; };
 		CFC0EED22357506D00F4A2F3 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3923F62201F42E000B81E6 /* Kingfisher.framework */; };
-		CFC0EED32357506D00F4A2F3 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF3923F62201F42E000B81E6 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFD4E44F1E66DC8000EFAB57 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E44E1E66DC8000EFAB57 /* Data.swift */; };
 		CFD4E4521E67355900EFAB57 /* MotorcycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E4511E67355900EFAB57 /* MotorcycleCell.swift */; };
 		CFD4E4541E67361800EFAB57 /* MotorcycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD4E4531E67361800EFAB57 /* MotorcycleCell.xib */; };
@@ -102,20 +101,6 @@
 		CFF80DD6214A505E001CAC01 /* TableBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF80DD4214A505E001CAC01 /* TableBackgroundViewController.swift */; };
 		CFF80DD7214A505E001CAC01 /* TableBackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFF80DD5214A505E001CAC01 /* TableBackgroundViewController.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CFC0EED42357506D00F4A2F3 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CFC0EED32357506D00F4A2F3 /* Kingfisher.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CF094F701E66C1CA00D351E1 /* info_moto.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = info_moto.json; sourceTree = "<group>"; };
@@ -678,7 +663,6 @@
 				CFAB03EB1E60432D0032BD11 /* Frameworks */,
 				CFAB03EC1E60432D0032BD11 /* Resources */,
 				CF8CCE941E65CC8D00F4A37E /* Copy Carthage Frameworks */,
-				CFC0EED42357506D00F4A2F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

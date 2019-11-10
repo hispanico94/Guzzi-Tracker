@@ -45,6 +45,13 @@ extension Array {
     mutating func sort(by comparator: Comparator<Element>) {
         self.sort { comparator.call(($0, $1)) == .lt }
     }
+    
+    /// Returns a new array with the elements sorted using `comparator` as the comparing function.
+    /// - parameter comparator: the `Comparator<Element>` that handles the comparison
+    /// - returns: a new array sorted using `comparator`
+    func sorted(by comparator: Comparator<Element>) -> Array {
+        return self.sorted { comparator.call(($0, $1)) == .lt }
+    }
 }
 
 extension Array {
@@ -155,6 +162,7 @@ extension UIColor {
     static let legnanoGreen = UIColor(displayP3Red: 181.0/255.0, green: 208.0/255.0, blue: 81.0/255.0, alpha: 1.0)
     static let lightLegnanoGreen = UIColor(displayP3Red: 238.0/255.0, green: 244.0/255.0, blue: 215.0/255.0, alpha: 1)
     static let guzziRed = UIColor(displayP3Red: 195.0/255.0, green: 21.0/255.0, blue: 26.0/255.0, alpha: 1.0)
+    static let ios12SystemGray5 = UIColor(displayP3Red: 229.0/255.0, green: 229.0/255.0, blue: 234.0/255.0, alpha: 1.0)
 }
 
 // MARK: - UISearchBar extensions
@@ -266,7 +274,12 @@ extension UITableView {
         
         let greenFooterView = UIView(frame: .zero)
         greenFooterView.translatesAutoresizingMaskIntoConstraints = false
-        greenFooterView.backgroundColor = .lightLegnanoGreen
+//        greenFooterView.backgroundColor = .lightLegnanoGreen
+        
+        if #available(iOS 13, *) {
+            greenFooterView.backgroundColor = .systemBackground
+        }
+        
         footerView.addSubview(greenFooterView)
         
         greenFooterView.topAnchor.constraint(equalTo: footerView.topAnchor).isActive = true

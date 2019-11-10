@@ -20,8 +20,10 @@ class MotorcycleSplitViewController: UISplitViewController {
     }
     
     private func setInitialViewControllers() {
+        let masterNavController = UINavigationController(rootViewController: masterViewController)
+        masterNavController.navigationBar.prefersLargeTitles = true
         let detailNavController = UINavigationController(rootViewController: EmptyViewController())
-        self.viewControllers = [UINavigationController(rootViewController: masterViewController), detailNavController]
+        self.viewControllers = [masterNavController, detailNavController]
     }
 }
 

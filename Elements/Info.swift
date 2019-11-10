@@ -52,7 +52,7 @@ extension Information.About: CellRepresentable {
         let cell = tableView.dequeueReusableCell(withIdentifier: "aboutIdentifier") ?? UITableViewCell(style: .default, reuseIdentifier: "aboutIdentifier")
         cell.selectionStyle = .none
         cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.textAlignment = .justified
+        cell.textLabel?.textAlignment = .left
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.text = text
         return cell
@@ -111,14 +111,14 @@ extension Information {
         var elements: [SectionData] = []
         elements.reserveCapacity(4)
         
-        elements.append(SectionData(sectionName: NSLocalizedString("Version", comment: "application version"),
-                                    sectionElements: [version]))
         elements.append(SectionData(sectionName: NSLocalizedString("About the app", comment: "about the app"),
                                     sectionElements: [about]))
         elements.append(SectionData(sectionName: NSLocalizedString("Contacts", comment: "(or contact the developer)"),
                                     sectionElements: contacts))
         elements.append(SectionData(sectionName: NSLocalizedString("Reviews", comment: "Reviews"),
                                     sectionElements: [review]))
+        elements.append(SectionData(sectionName: NSLocalizedString("Version", comment: "application version"),
+        sectionElements: [version]))
         
         return elements
     }

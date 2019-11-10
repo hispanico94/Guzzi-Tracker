@@ -56,7 +56,7 @@ class SearchViewController: UIViewController {
         
         definesPresentationContext = true
         
-        view.backgroundColor = UIColor.lightLegnanoGreen
+        //view.backgroundColor = UIColor.lightLegnanoGreen
         
         detailLabel.text = NSLocalizedString("To start searching, tap the bar on top", comment: "To start searching, tap the bar on top")
     }

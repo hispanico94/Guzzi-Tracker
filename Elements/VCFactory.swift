@@ -8,28 +8,22 @@ class VCFactory {
         self.motorcycleData = motorcycleData
     }
     
-    func makeMotorcyclesVC() -> MotorcyclesViewController {
-        let motorcyclesString = NSLocalizedString("Motorcycles", comment: "Motorcycles")
-        let motorcyclesVC = MotorcyclesViewController(vcFactory: self)
-        motorcyclesVC.title = motorcyclesString
-        motorcyclesVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: nil, action: nil)
-        return motorcyclesVC
+    func makeFirstTabVC() -> MotorcycleSplitViewController {
+        let motorcycleSVC = MotorcycleSplitViewController(master: makeMotorcyclesVC())
+        
+        motorcycleSVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "motorcycle_regular_tab_icon"), tag: 0)
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            motorcycleSVC.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        }
+        
+        return motorcycleSVC
     }
     
-    func makeSearchVC() -> SearchViewController {
-        let searchVC = SearchViewController(motorcycleStorage: motorcycleData.motorcycleStorage)
-        searchVC.title = NSLocalizedString("Search", comment: "Search")
-        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
-        return searchVC
-    }
-    
-    func makeMyGarageVC() -> MyGarageViewController {
-        let myGarageString = NSLocalizedString("Garage", comment: "contains a list of favorite motorcycles" )
-        let myGarageVC = MyGarageViewController(vcFactory: self)
-        myGarageVC.title = myGarageString
-        myGarageVC.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "info_icon"), style: .plain, target: myGarageVC, action: #selector(myGarageVC.didTapInfoButton(sender:)))
-        myGarageVC.tabBarItem = UITabBarItem(title: myGarageString, image: UIImage(named: "my_garage_regular_tab_icon"), tag: 2)
-        return myGarageVC
+    func makeSecondTabVC() -> UINavigationController {
+        let garageVC = UINavigationController(rootViewController: makeMyGarageVC())
+        garageVC.navigationBar.prefersLargeTitles = true
+        return garageVC
     }
     
     func makeFiltersVC(motorcyclesDisplayed: Ref<Int>) -> FiltersViewController {
@@ -43,5 +37,27 @@ class VCFactory {
         infoVC.title = NSLocalizedString("About", comment: "title of the view that contains informations about the app and contacts")
         infoVC.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: infoVC, action: #selector(infoVC.didTapDoneButton(sender:)))
         return infoVC
+    }
+    
+    private func makeMotorcyclesVC() -> MotorcyclesViewController {
+        let motorcyclesString = NSLocalizedString("Motorcycles", comment: "Motorcycles")
+        let motorcyclesVC = MotorcyclesViewController(vcFactory: self)
+        motorcyclesVC.title = motorcyclesString
+        motorcyclesVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter_icon"), style: .plain, target: nil, action: nil)
+        return motorcyclesVC
+    }
+    
+    private func makeMyGarageVC() -> MyGarageViewController {
+        let myGarageString = NSLocalizedString("Garage", comment: "contains a list of favorite motorcycles" )
+        let myGarageVC = MyGarageViewController(vcFactory: self)
+        myGarageVC.title = myGarageString
+        myGarageVC.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "info_icon"), style: .plain, target: myGarageVC, action: #selector(myGarageVC.didTapInfoButton(sender:)))
+        myGarageVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "my_garage_regular_tab_icon"), tag: 2)
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            myGarageVC.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        }
+        
+        return myGarageVC
     }
 }

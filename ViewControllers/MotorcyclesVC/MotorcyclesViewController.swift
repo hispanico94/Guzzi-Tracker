@@ -1,6 +1,7 @@
 import UIKit
 
 class MotorcyclesViewController: UITableViewController {
+    private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - Properties
     
@@ -14,33 +15,74 @@ class MotorcyclesViewController: UITableViewController {
     private let motorcyclesDisplayed: Ref<Int>
     
     private var motorcycleListToShow: [Motorcycle] {
-        didSet {
+        didSet(oldArray) {
             motorcyclesDisplayed.value = motorcycleListToShow.count
             
             if splitViewController?.isCollapsed == false {
                 splitViewController?.showDetailViewController(EmptyViewController(), sender: nil)
             }
             
-            tableView.reloadData()
-            tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+            if #available(iOS 13.0, *) {
+                let diffs = motorcycleListToShow.difference(from: oldArray) { $0.id == $1.id }
+                
+                tableView.performBatchUpdates({
+                    for change in diffs {
+                        switch change {
+                        case .remove(let offset, _, _):
+                            tableView.deleteRows(at: [IndexPath(row: offset, section: 0)], with: .automatic)
+                        case .insert(let offset, _, _):
+                            tableView.insertRows(at: [IndexPath(row: offset, section: 0)], with: .automatic)
+                        }
+                    }
+                }, completion: { [weak self] animationCompleted in
+                    guard
+                        animationCompleted,
+                        let self = self,
+                        self.tableView.numberOfRows(inSection: 0) > 0,
+                        self.tableView.indexPathsForVisibleRows?.contains(IndexPath(row: 0, section: 0)) == false
+                        else { return }
+                    
+                    self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                    
+                })
+            } else {
+                tableView.reloadData()
+            }
         }
     }
     
     private var filters: Array<FilterProvider> {
         didSet {
-            let predicate = filters
+            filterPredicate = filters
                 .lazy
                 .map { $0.getFilter().predicate }
                 .reduce({ _ in true }, <>)
-            
-            motorcycleListToShow = motorcycleList.filter(predicate)
-            sortMotorcycleList()
+        }
+    }
+    
+    private var filterPredicate: Predicate<Motorcycle> = { _ in true } {
+        didSet {
+            getNewMotorcycleListToShow()
         }
     }
     
     private var orders: Array<Order> {
         didSet {
-            sortMotorcycleList()
+            let comparators = orders
+                .lazy
+                .map { $0.comparator }
+                .reduce(Comparator.empty, <>)
+            
+            // used as a final sort rule
+            let internalComparator = MotorcycleComparator.name
+            
+            comparator = (comparators <> internalComparator)
+        }
+    }
+    
+    private var comparator: Function<(Motorcycle, Motorcycle), Ordering> = MotorcycleComparator.yearDescending <> MotorcycleComparator.name {
+        didSet {
+            getNewMotorcycleListToShow()
         }
     }
     
@@ -54,6 +96,22 @@ class MotorcyclesViewController: UITableViewController {
 
     private let review = Review.sharedReview
     
+    private var searchTextPredicate: Predicate<Motorcycle> = { _ in true } {
+        didSet {
+            getNewMotorcycleListToShow()
+        }
+    }
+    
+    private var searchText: String? {
+        didSet {
+            if let searchText = searchText, searchText.isEmpty == false {
+                searchTextPredicate = { $0.generalInfo.name.lowercased().contains(searchText.lowercased()) }
+            } else {
+                searchTextPredicate = { _ in true }
+            }
+        }
+    }
+    
     // MARK: - Initialization
     
     init(vcFactory: VCFactory) {
@@ -65,14 +123,11 @@ class MotorcyclesViewController: UITableViewController {
         
         self.motorcycleList = vcFactory.motorcycleData.motorcycleStorage.value
         self.filters = vcFactory.motorcycleData.filterStorage.value
+        self.orders = vcFactory.motorcycleData.orderStorage.value
         
-        self.motorcycleListToShow = self.motorcycleList
+        self.motorcycleListToShow = self.motorcycleList.sorted(by: comparator)
         
         self.motorcyclesDisplayed = Ref<Int>.init(self.motorcycleList.count)
-        
-        // self.orders is initialized empty and in viewDidLoad() gets the
-        // value from orderStorage in order to call its didSet observer
-        self.orders = []
         
         super.init(nibName: nil, bundle: nil)
         
@@ -102,9 +157,6 @@ class MotorcyclesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // the orders' didSet observer is called
-        orders = orderStorage?.value ?? []
-        
         tableView.register(UINib(nibName: "MotorcycleCell", bundle: nil), forCellReuseIdentifier: MotorcycleCell.defaultIdentifier)
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: "Back"), style: .plain, target: nil, action: nil)
@@ -116,7 +168,17 @@ class MotorcyclesViewController: UITableViewController {
             action: #selector(didTapFilterButton(sender:))
         )
         
-        tableView.addFooterView()
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+        
+        if #available(iOS 13, *) {
+            navigationItem.hidesSearchBarWhenScrolling = true
+        } else {
+            definesPresentationContext = true
+            navigationItem.hidesSearchBarWhenScrolling = false
+        }
+        
+        searchController.obscuresBackgroundDuringPresentation = false
         
         if motorcycleList.isEmpty {
             presentErrorMessage()
@@ -127,6 +189,11 @@ class MotorcyclesViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if #available(iOS 13, *) {} else {
+            navigationItem.hidesSearchBarWhenScrolling = true
+        }
+        
         review.requestReviewIfPossible()
     }
     
@@ -134,6 +201,11 @@ class MotorcyclesViewController: UITableViewController {
     
     @IBAction func didTapFilterButton(sender: UIBarButtonItem) {
         let navigationVC = UINavigationController(rootViewController: vcFactory.makeFiltersVC(motorcyclesDisplayed: motorcyclesDisplayed))
+        
+        if #available(iOS 13.0, *) {
+            navigationVC.isModalInPresentation = true
+        }
+        
         present(navigationVC, animated: true, completion: nil)
     }
     
@@ -186,5 +258,18 @@ class MotorcyclesViewController: UITableViewController {
         let internalComparator = MotorcycleComparator.name
         
         motorcycleListToShow.sort(by: comparators <> internalComparator)
+    }
+    
+    private func getNewMotorcycleListToShow() {
+        motorcycleListToShow = motorcycleList
+        .lazy
+        .filter(filterPredicate <> searchTextPredicate)
+        .sorted(by: comparator)
+    }
+}
+
+extension MotorcyclesViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        searchText = searchController.searchBar.text
     }
 }

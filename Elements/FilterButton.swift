@@ -6,8 +6,8 @@ struct FilterButton {
     
     init() {
         button = UIButton()
-        button.setTitleColor(.guzziRed, for: .normal)
-        button.setTitleColor(.gray, for: .disabled)
+        button.setTitleColor(UIColor(named: "accent"), for: .normal)
+        button.setTitleColor(.systemGray, for: .disabled)
         button.setTitle(NSLocalizedString("No results", comment: "No results"), for: .disabled)
     }
     

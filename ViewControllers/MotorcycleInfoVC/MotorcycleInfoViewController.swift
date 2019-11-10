@@ -26,6 +26,7 @@ class MotorcycleInfoViewController: UITableViewController {
         self.motorcycle = motorcycle
         motorcycleArray = motorcycle.makeArray()
         super.init(nibName: nibName, bundle: bundle)
+        self.navigationItem.largeTitleDisplayMode = .never
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -74,8 +75,9 @@ class MotorcycleInfoViewController: UITableViewController {
     // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if let headerView = view as? UITableViewHeaderFooterView {
-            headerView.backgroundView?.backgroundColor = UIColor.lightLegnanoGreen
+        if #available(iOS 13, *) {}
+        else if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.backgroundView?.backgroundColor = UIColor.ios12SystemGray5
         }
     }
     

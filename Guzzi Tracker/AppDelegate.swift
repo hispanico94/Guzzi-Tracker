@@ -10,6 +10,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let review = Review.sharedReview
     
+    var userInterfaceStyleChangeObserver: NSKeyValueObservation!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
@@ -22,10 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Appearance customization
         
-        UIApplication.shared.delegate?.window??.tintColor = UIColor.guzziRed
-        UINavigationBar.appearance().barTintColor = UIColor.legnanoGreen
-        UITabBar.appearance().barTintColor =  UIColor.legnanoGreen
-        UIToolbar.appearance().barTintColor = UIColor.legnanoGreen
+        customizeAppearance()
         
         // Data and vcFactory initialization
         
@@ -35,13 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vcFactory = VCFactory(motorcycleData: motorcycleData!)
         
         // View controllers initialization
-        let firstVC = MotorcycleSplitViewController(master: vcFactory!.makeMotorcyclesVC())
-        firstVC.tabBarItem = UITabBarItem(title: NSLocalizedString("Motorcycles", comment: "Motorcycles"), image: UIImage(named: "motorcycle_regular_tab_icon"), tag: 0)
-        let secondVC = UINavigationController(rootViewController: vcFactory!.makeSearchVC())
-        let thirdVC = UINavigationController(rootViewController: vcFactory!.makeMyGarageVC())
+        let motorcyclesVC = vcFactory!.makeFirstTabVC()
+        
+        let garageVC = vcFactory!.makeSecondTabVC()
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [firstVC, secondVC, thirdVC]
+        tabBarController.viewControllers = [motorcyclesVC, garageVC]
         
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
@@ -54,6 +52,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         review.saveActiveDate()
         
         motorcycleData?.updateJson()
+    }
+    
+    
+    private func customizeAppearance() {
+        if #available(iOS 13.0, *) {
+            setupNewAppearance()
+        } else {
+            setupOldAppearance()
+        }
+    }
+    
+    private func setupOldAppearance() {
+        UIApplication.shared.delegate?.window??.tintColor = UIColor.guzziRed
+    }
+    
+    @available(iOS 13.0, *)
+    private func setupNewAppearance() {
+        let barButtonAppearance = UIBarButtonItemAppearance()
+        barButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor(named: "accent")!]
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.backButtonAppearance = barButtonAppearance
+        navBarAppearance.buttonAppearance = barButtonAppearance
+        
+        UINavigationBar.appearance().standardAppearance = navBarAppearance
+        UINavigationBar.appearance().tintColor = UIColor(named: "accent")!
+        
+        let tabBarItemAppearance = UITabBarItemAppearance()
+        tabBarItemAppearance.selected.iconColor = UIColor(named: "accent")!
+        tabBarItemAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor(named: "accent")!]
+        
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.compactInlineLayoutAppearance = tabBarItemAppearance
+        tabBarAppearance.inlineLayoutAppearance = tabBarItemAppearance
+        tabBarAppearance.stackedLayoutAppearance = tabBarItemAppearance
+        
+        UITabBar.appearance().standardAppearance = tabBarAppearance
     }
 }
 

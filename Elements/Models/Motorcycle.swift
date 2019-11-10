@@ -5,7 +5,7 @@ import Foundation
 /// Motorcycle represents the motorcycle data (but not the texts) under the `elements` key in the info_moto.json JSON file.
 /// In particular, the correct representation of the data under `elements` is `[Motorcycle]` where every instance of Motorcycle
 /// represent a motorcycle with its data.
-struct Motorcycle {
+struct Motorcycle: Identifiable {
     let id: Int
     let generalInfo: GeneralInfo
     let engine: Engine
