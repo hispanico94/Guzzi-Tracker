@@ -27,10 +27,6 @@
 		CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */; };
 		CF419B021E6D692700EA7B74 /* MotorcycleInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF419B001E6D692700EA7B74 /* MotorcycleInfoCell.swift */; };
 		CF419B031E6D692700EA7B74 /* MotorcycleInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF419B011E6D692700EA7B74 /* MotorcycleInfoCell.xib */; };
-		CF41DEC020A6D6EA00F4A508 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF41DEBE20A6D6EA00F4A508 /* SearchViewController.swift */; };
-		CF41DEC120A6D6EB00F4A508 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF41DEBF20A6D6EA00F4A508 /* SearchViewController.xib */; };
-		CF41DEC420A6D95000F4A508 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF41DEC220A6D95000F4A508 /* SearchResultsViewController.swift */; };
-		CF41DEC520A6D95000F4A508 /* SearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF41DEC320A6D95000F4A508 /* SearchResultsViewController.xib */; };
 		CF466A10208B212800E44BF2 /* WheelbaseFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF466A0E208B212800E44BF2 /* WheelbaseFilterViewController.swift */; };
 		CF466A13208B27EA00E44BF2 /* StrokeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF466A12208B27EA00E44BF2 /* StrokeCycle.swift */; };
 		CF466A16208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF466A14208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift */; };
@@ -124,10 +120,6 @@
 		CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleInfoViewController.xib; sourceTree = "<group>"; };
 		CF419B001E6D692700EA7B74 /* MotorcycleInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleInfoCell.swift; sourceTree = "<group>"; };
 		CF419B011E6D692700EA7B74 /* MotorcycleInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorcycleInfoCell.xib; sourceTree = "<group>"; };
-		CF41DEBE20A6D6EA00F4A508 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		CF41DEBF20A6D6EA00F4A508 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		CF41DEC220A6D95000F4A508 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
-		CF41DEC320A6D95000F4A508 /* SearchResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultsViewController.xib; sourceTree = "<group>"; };
 		CF466A0E208B212800E44BF2 /* WheelbaseFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelbaseFilterViewController.swift; sourceTree = "<group>"; };
 		CF466A12208B27EA00E44BF2 /* StrokeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeCycle.swift; sourceTree = "<group>"; };
 		CF466A14208B364700E44BF2 /* StrokeCycleFilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeCycleFilterTableViewController.swift; sourceTree = "<group>"; };
@@ -319,9 +311,7 @@
 			children = (
 				CF90A0BB230063CF00A5EB89 /* Various */,
 				CF1B241C224A8B2D0086DB9F /* MotorcyclesVC */,
-				CF1B241D224A8B3F0086DB9F /* SearchVC */,
 				CF1B2427224A8C640086DB9F /* MyGarageVC */,
-				CF1B2426224A8C4C0086DB9F /* SearchResultsVC */,
 				CF1B2425224A8C370086DB9F /* MotorcycleInfoVC */,
 				CF1B2424224A8C200086DB9F /* ImagesVC */,
 				CF1B2423224A8C010086DB9F /* SingleImageVC */,
@@ -353,15 +343,6 @@
 				CF1A41D51E60808C00E76F11 /* MotorcyclesViewController.xib */,
 			);
 			path = MotorcyclesVC;
-			sourceTree = "<group>";
-		};
-		CF1B241D224A8B3F0086DB9F /* SearchVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF41DEBE20A6D6EA00F4A508 /* SearchViewController.swift */,
-				CF41DEBF20A6D6EA00F4A508 /* SearchViewController.xib */,
-			);
-			path = SearchVC;
 			sourceTree = "<group>";
 		};
 		CF1B241E224A8B640086DB9F /* Filters View Controllers */ = {
@@ -442,15 +423,6 @@
 				CF419AFD1E6D643300EA7B74 /* MotorcycleInfoViewController.xib */,
 			);
 			path = MotorcycleInfoVC;
-			sourceTree = "<group>";
-		};
-		CF1B2426224A8C4C0086DB9F /* SearchResultsVC */ = {
-			isa = PBXGroup;
-			children = (
-				CF41DEC220A6D95000F4A508 /* SearchResultsViewController.swift */,
-				CF41DEC320A6D95000F4A508 /* SearchResultsViewController.xib */,
-			);
-			path = SearchResultsVC;
 			sourceTree = "<group>";
 		};
 		CF1B2427224A8C640086DB9F /* MyGarageVC */ = {
@@ -726,7 +698,6 @@
 				CF0ED0841E6F15E8008BAB23 /* MotorcycleImagesCell.xib in Resources */,
 				CF1A41D71E60808C00E76F11 /* MotorcyclesViewController.xib in Resources */,
 				CF419AFF1E6D643300EA7B74 /* MotorcycleInfoViewController.xib in Resources */,
-				CF41DEC120A6D6EB00F4A508 /* SearchViewController.xib in Resources */,
 				CFE485CC21353DF900949E81 /* PowerFilterViewController.xib in Resources */,
 				CFE400D3207B703E001F9E1A /* FamilyFilterViewController.xib in Resources */,
 				CF73C4452093188A00596118 /* ComparatorsViewController.xib in Resources */,
@@ -742,7 +713,6 @@
 				CF0B83181E785D71001C4172 /* SingleImageViewController.xib in Resources */,
 				CFE485E821353E5F00949E81 /* MinMaxYearFilterViewController.xib in Resources */,
 				CF690CA91E7150BF00523796 /* ImageCell.xib in Resources */,
-				CF41DEC520A6D95000F4A508 /* SearchResultsViewController.xib in Resources */,
 				CFAB03F91E60432E0032BD11 /* Assets.xcassets in Resources */,
 				CF5D2DB92138362F00E01DFA /* InfoViewController.xib in Resources */,
 				CF690CAD1E7153AB00523796 /* ImagesViewController.xib in Resources */,
@@ -822,7 +792,6 @@
 				CF8306532087342000570E60 /* Bore.swift in Sources */,
 				CF73C4442093188A00596118 /* ComparatorsViewController.swift in Sources */,
 				CF56823B20B6A3ED00B52AEB /* FilterButton.swift in Sources */,
-				CF41DEC020A6D6EA00F4A508 /* SearchViewController.swift in Sources */,
 				CF0F546A1E819FEC0059650F /* Key.swift in Sources */,
 				CF8C6285206FC7DD002B8CF6 /* Ref.swift in Sources */,
 				CF690CAC1E7153AB00523796 /* ImagesViewController.swift in Sources */,
@@ -832,7 +801,6 @@
 				CF63E8AC22F9BE5400D97FC8 /* MotorcycleSplitViewController.swift in Sources */,
 				CF0ED0831E6F15E8008BAB23 /* MotorcycleImagesCell.swift in Sources */,
 				CF73C441209315F200596118 /* Ordering.swift in Sources */,
-				CF41DEC420A6D95000F4A508 /* SearchResultsViewController.swift in Sources */,
 				CFB4E1F2213ED0C50081E0CC /* Texts.swift in Sources */,
 				CFD4E44F1E66DC8000EFAB57 /* Data.swift in Sources */,
 				CF90A0BE230063F900A5EB89 /* EmptyViewController.swift in Sources */,
