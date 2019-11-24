@@ -55,7 +55,7 @@ class VCFactory {
         myGarageVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "my_garage_regular_tab_icon"), tag: 2)
         
         if UIDevice.current.userInterfaceIdiom == .phone {
-            myGarageVC.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+            myGarageVC.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         }
         
         return myGarageVC

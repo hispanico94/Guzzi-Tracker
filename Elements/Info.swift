@@ -101,7 +101,7 @@ extension Information {
         let emailURL = emailUrlEncoded ?? "mailto:guzzitracker@gmail.com"
         
         let contacts = [ Contact(text: "email: guzzitracker@gmail.com", link: URL(string: emailURL)),
-                         Contact(text: "GitHub", link: URL(string: "https://github.com/hispanico94/Guzzi-Tracker")) ]
+                         Contact(text: "GitHub", link: URL(string: "https://github.com/hispanico94")) ]
         let review = Review(text: NSLocalizedString("Write a review!", comment: "write a review in the app store"), link: URL(string: "https://itunes.apple.com/app/guzzi-tracker/id1435726246?action=write-review"))
         
         return Information(version: version, about: about, contacts: contacts, review: review)

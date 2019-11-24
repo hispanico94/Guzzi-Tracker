@@ -61,6 +61,7 @@ extension MotorcycleSplitViewController: UISplitViewControllerDelegate {
         let numberOfControllers = navController.viewControllers.count
         
         guard numberOfControllers > 1 else {
+            splitViewController.preferredDisplayMode = .allVisible
             return UINavigationController(rootViewController: EmptyViewController())
         }
         
