@@ -52,7 +52,7 @@ class VCFactory {
         let myGarageVC = MyGarageViewController(vcFactory: self)
         myGarageVC.title = myGarageString
         myGarageVC.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "info_icon"), style: .plain, target: myGarageVC, action: #selector(myGarageVC.didTapInfoButton(sender:)))
-        myGarageVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "my_garage_regular_tab_icon"), tag: 2)
+        myGarageVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "my_garage_regular_tab_icon"), tag: 1)
         
         if UIDevice.current.userInterfaceIdiom == .phone {
             myGarageVC.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)

@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let garageVC = vcFactory!.makeSecondTabVC()
         
         let tabBarController = UITabBarController()
+        tabBarController.delegate = self
         tabBarController.viewControllers = [motorcyclesVC, garageVC]
         
         window?.rootViewController = tabBarController
@@ -89,6 +90,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarAppearance.stackedLayoutAppearance = tabBarItemAppearance
         
         UITabBar.appearance().standardAppearance = tabBarAppearance
+    }
+}
+
+extension AppDelegate: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        // if the current selected tab is the first ("Motorcycle" tab)
+        // and the users selects the first again we get the navigationVC
+        // in the splitVC and pops it to root
+        if tabBarController.selectedIndex == 0 && viewController.tabBarItem.tag == 0,
+            let splitVC = viewController as? MotorcycleSplitViewController,
+            let navigationVC = splitVC.viewControllers.first as? UINavigationController {
+            navigationVC.popToRootViewController(animated: true)
+        }
+        return true
     }
 }
 
