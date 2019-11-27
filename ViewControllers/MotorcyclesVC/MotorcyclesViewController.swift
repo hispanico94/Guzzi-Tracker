@@ -19,32 +19,14 @@ class MotorcyclesViewController: UITableViewController {
             motorcyclesDisplayed.value = motorcycleListToShow.count
             
             if splitViewController?.isCollapsed == false {
+                if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                    tableView.deselectRow(at: selectedIndexPath, animated: true)
+                }
                 splitViewController?.showDetailViewController(EmptyViewController(), sender: nil)
             }
             
             if #available(iOS 13.0, *) {
-                let diffs = motorcycleListToShow.difference(from: oldArray) { $0.id == $1.id }
-                
-                tableView.performBatchUpdates({
-                    for change in diffs {
-                        switch change {
-                        case .remove(let offset, _, _):
-                            tableView.deleteRows(at: [IndexPath(row: offset, section: 0)], with: .automatic)
-                        case .insert(let offset, _, _):
-                            tableView.insertRows(at: [IndexPath(row: offset, section: 0)], with: .automatic)
-                        }
-                    }
-                }, completion: { [weak self] animationCompleted in
-                    guard
-                        animationCompleted,
-                        let self = self,
-                        self.tableView.numberOfRows(inSection: 0) > 0,
-                        self.tableView.indexPathsForVisibleRows?.contains(IndexPath(row: 0, section: 0)) == false
-                        else { return }
-                    
-                    self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
-                    
-                })
+                performDiffs(oldArray: oldArray)
             } else {
                 tableView.reloadData()
             }
@@ -265,6 +247,32 @@ class MotorcyclesViewController: UITableViewController {
         .lazy
         .filter(filterPredicate <> searchTextPredicate)
         .sorted(by: comparator)
+    }
+    
+    @available(iOS 13, *)
+    private func performDiffs(oldArray: [Motorcycle]) {
+        let diffs = motorcycleListToShow.difference(from: oldArray) { $0.id == $1.id }
+        
+        tableView.performBatchUpdates({
+            for change in diffs {
+                switch change {
+                case .remove(let offset, _, _):
+                    tableView.deleteRows(at: [IndexPath(row: offset, section: 0)], with: .automatic)
+                case .insert(let offset, _, _):
+                    tableView.insertRows(at: [IndexPath(row: offset, section: 0)], with: .automatic)
+                }
+            }
+        }, completion: { [weak self] animationCompleted in
+            guard
+                animationCompleted,
+                let self = self,
+                self.tableView.numberOfRows(inSection: 0) > 0,
+                self.tableView.indexPathsForVisibleRows?.contains(IndexPath(row: 0, section: 0)) == false
+                else { return }
+            
+            self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+            
+        })
     }
 }
 
