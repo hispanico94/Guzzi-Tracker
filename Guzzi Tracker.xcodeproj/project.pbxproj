@@ -150,9 +150,6 @@
 		CF8320FA230089BB00F0B725 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		CF8C6282206FC629002B8CF6 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		CF8C6284206FC7DD002B8CF6 /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
-		CF8CCE901E65CBB500F4A37E /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
-		CF8CCE911E65CBB500F4A37E /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
-		CF8CCE951E65CFFE00F4A37E /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		CF90A0BC230063F900A5EB89 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		CF90A0BD230063F900A5EB89 /* EmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewController.xib; sourceTree = "<group>"; };
 		CF98DB1B20849A44002EFC9B /* Displacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displacement.swift; sourceTree = "<group>"; };
@@ -564,9 +561,6 @@
 			isa = PBXGroup;
 			children = (
 				CF3923F62201F42E000B81E6 /* Kingfisher.framework */,
-				CF8CCE951E65CFFE00F4A37E /* Curry.framework */,
-				CF8CCE901E65CBB500F4A37E /* Argo.framework */,
-				CF8CCE911E65CBB500F4A37E /* Runes.framework */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
