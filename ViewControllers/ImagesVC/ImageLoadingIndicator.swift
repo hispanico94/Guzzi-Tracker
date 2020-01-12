@@ -26,9 +26,13 @@ class ImageLoadingIndicatorView: UIView {
         setupView()
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        setActivityIndicatorStyle()
+    }
+    
     private func setupView() {
+        setActivityIndicatorStyle()
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.style = .gray
         
         addSubview(activityIndicator)
         
@@ -40,6 +44,17 @@ class ImageLoadingIndicatorView: UIView {
         ])
         
         activityIndicator.startAnimating()
+    }
+    
+    private func setActivityIndicatorStyle() {
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+            activityIndicator.style = .white
+        case .light, .unspecified:
+            activityIndicator.style = .gray
+        @unknown default:
+            activityIndicator.style = .gray
+        }
     }
     
     func startAnimating() {

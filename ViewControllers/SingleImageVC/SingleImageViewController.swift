@@ -43,13 +43,27 @@ class SingleImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        closeButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        setButton()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         updateMinZoomScale(forSize: view.bounds.size)
+    }
+    
+    private func setButton() {
+        closeButton.setTitle(NSLocalizedString("Close", comment: "Close"), for: .normal)
+        
+        let blurEffect = UIBlurEffect(style: .regular)
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        visualEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        visualEffectView.isUserInteractionEnabled = false
+        visualEffectView.frame = closeButton.bounds
+        visualEffectView.layer.cornerRadius = visualEffectView.frame.size.height / 2
+        visualEffectView.clipsToBounds = true
+        
+        closeButton.insertSubview(visualEffectView, at: 0)
     }
     
     private func updateMinZoomScale(forSize size: CGSize) {

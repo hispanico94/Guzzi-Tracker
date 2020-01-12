@@ -76,7 +76,7 @@ class ComparatorsViewController: UITableViewController {
         
         let currentOrder = orders[indexPath.section][indexPath.row]
         
-        cell.detailTextLabel?.textColor = .blue
+        cell.detailTextLabel?.textColor = .systemBlue
         cell.detailTextLabel?.text = nil
         cell.textLabel?.text = currentOrder.title
         
@@ -89,12 +89,6 @@ class ComparatorsViewController: UITableViewController {
     }
 
     // MARK: - Table view delegate
-    
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if let headerView = view as? UITableViewHeaderFooterView {
-            headerView.backgroundView?.backgroundColor = UIColor.lightLegnanoGreen
-        }
-    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defer {
@@ -148,10 +142,17 @@ class ComparatorsViewController: UITableViewController {
         cell.detailTextLabel?.text = String(selectedOrders.count)
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if #available(iOS 13, *) {}
+        else if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.backgroundView?.backgroundColor = UIColor.ios12SystemGray5
+        }
+    }
+    
     // MARK: - Private instance methods
     
     @objc private func clearOrders() {
-        selectedOrders.removeAll()
+        selectedOrders = [orders[1][1]] // assign the default "yearDescending" order to selectedOrders
         selectedIndexPaths.removeAll()
         tableView.reloadData()
     }

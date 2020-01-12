@@ -52,7 +52,7 @@ extension Information.About: CellRepresentable {
         let cell = tableView.dequeueReusableCell(withIdentifier: "aboutIdentifier") ?? UITableViewCell(style: .default, reuseIdentifier: "aboutIdentifier")
         cell.selectionStyle = .none
         cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.textAlignment = .justified
+        cell.textLabel?.textAlignment = .left
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.text = text
         return cell
@@ -101,7 +101,7 @@ extension Information {
         let emailURL = emailUrlEncoded ?? "mailto:guzzitracker@gmail.com"
         
         let contacts = [ Contact(text: "email: guzzitracker@gmail.com", link: URL(string: emailURL)),
-                         Contact(text: "GitHub", link: URL(string: "https://github.com/hispanico94/Guzzi-Tracker")) ]
+                         Contact(text: "GitHub", link: URL(string: "https://github.com/hispanico94")) ]
         let review = Review(text: NSLocalizedString("Write a review!", comment: "write a review in the app store"), link: URL(string: "https://itunes.apple.com/app/guzzi-tracker/id1435726246?action=write-review"))
         
         return Information(version: version, about: about, contacts: contacts, review: review)
@@ -111,14 +111,14 @@ extension Information {
         var elements: [SectionData] = []
         elements.reserveCapacity(4)
         
-        elements.append(SectionData(sectionName: NSLocalizedString("Version", comment: "application version"),
-                                    sectionElements: [version]))
         elements.append(SectionData(sectionName: NSLocalizedString("About the app", comment: "about the app"),
                                     sectionElements: [about]))
         elements.append(SectionData(sectionName: NSLocalizedString("Contacts", comment: "(or contact the developer)"),
                                     sectionElements: contacts))
         elements.append(SectionData(sectionName: NSLocalizedString("Reviews", comment: "Reviews"),
                                     sectionElements: [review]))
+        elements.append(SectionData(sectionName: NSLocalizedString("Version", comment: "application version"),
+        sectionElements: [version]))
         
         return elements
     }
