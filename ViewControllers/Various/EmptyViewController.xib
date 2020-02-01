@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyViewController" customModule="Guzzi_Tracker" customModuleProvider="target">
+            <connections>
+                <outlet property="iconImageView" destination="jL0-dB-2YX" id="nfs-Ii-lQS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_vc_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jL0-dB-2YX" userLabel="Icon Image View">
+                    <rect key="frame" x="107" y="348" width="200" height="200"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" name="emptyVCBackground"/>
+            <constraints>
+                <constraint firstItem="jL0-dB-2YX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="69G-Cs-vOL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jL0-dB-2YX" secondAttribute="trailing" constant="16" id="O1g-gI-Kim"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jL0-dB-2YX" secondAttribute="bottom" constant="16" id="OCa-4n-XGy"/>
+                <constraint firstItem="jL0-dB-2YX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ThD-Ff-pRO"/>
+                <constraint firstItem="jL0-dB-2YX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="hNM-TI-Ipu"/>
+                <constraint firstItem="jL0-dB-2YX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="p3b-vU-i4a"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty_vc_icon" width="100" height="100"/>
+        <namedColor name="emptyVCBackground">
+            <color red="0.93333333333333335" green="0.95686274509803926" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -72,7 +72,10 @@ class ImagesViewController: UITableViewController {
             let image = cell.motorcycleImageView.image
         else { return }
         
-        present(SingleImageViewController(imageToBeDisplayed: image), animated: true, completion: nil)
+        let singleImageVC = SingleImageViewController(imageToBeDisplayed: image)
+        singleImageVC.modalPresentationStyle = .fullScreen
+        
+        present(singleImageVC, animated: true, completion: nil)
     }
     
     // MARK: - Private instance methods

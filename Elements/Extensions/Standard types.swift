@@ -1,64 +1,4 @@
 import UIKit
-import Argo
-import Curry
-
-// MARK: - Conforming to Argo.Decodable protocol
-
-extension URL: Argo.Decodable {
-    public static func decode(_ json: JSON) -> Decoded<URL> {
-        guard case .string(let path) = json else {
-            return Decoded.failure(.typeMismatch(expected: "String", actual: "\(json)"))
-        }
-        guard let url = URL(string: path) else {
-            return Decoded.failure(.custom("Cannot create URL from string \(path)"))
-        }
-        return Decoded.success(url)
-    }
-}
-
-extension Array: Argo.Decodable where Element: Argo.Decodable, Element.DecodedType == Element {
-    public typealias DecodedType = Array
-    
-    public static func decode(_ json: JSON) -> Decoded<Array> {
-        guard case let .array(array) = json else {
-            return .typeMismatch(expected: "array", actual: json)
-        }
-        
-        return .materialize {
-            try array.map { internalJson in
-                try Element.decode(internalJson).dematerialize()
-            }
-        }
-    }
-}
-
-extension Dictionary: Argo.Decodable where Key == String, Value: Argo.Decodable, Value.DecodedType == Value {
-    public typealias DecodedType = Dictionary
-    
-    public static func decode(_ json: JSON) -> Decoded<Dictionary<Key, Value>> {
-        guard case let .object(dict) = json else {
-            return .typeMismatch(expected: "object", actual: json)
-        }
-        
-        return .materialize {
-            try dict.mapValues { internalJson in
-                try Value.decode(internalJson).dematerialize()
-            }
-        }
-    }
-}
-
-//extension Optional: Argo.Decodable where Wrapped: Argo.Decodable, Wrapped.DecodedType == Wrapped {
-//    public typealias DecodedType = Optional
-//
-//    public static func decode(_ json: JSON) -> Decoded<Optional<Wrapped>> {
-//        if case .null = json {
-//            return .success(nil)
-//        }
-//
-//        return Wrapped.decode(json).map { Optional($0) }
-//    }
-//}
 
 // MARK: - Conforming to CellRepresentable protocol
 
@@ -104,6 +44,13 @@ extension Array {
     /// - parameter comparator: the `Comparator<Element>` that handles the comparison
     mutating func sort(by comparator: Comparator<Element>) {
         self.sort { comparator.call(($0, $1)) == .lt }
+    }
+    
+    /// Returns a new array with the elements sorted using `comparator` as the comparing function.
+    /// - parameter comparator: the `Comparator<Element>` that handles the comparison
+    /// - returns: a new array sorted using `comparator`
+    func sorted(by comparator: Comparator<Element>) -> Array {
+        return self.sorted { comparator.call(($0, $1)) == .lt }
     }
 }
 
@@ -215,6 +162,7 @@ extension UIColor {
     static let legnanoGreen = UIColor(displayP3Red: 181.0/255.0, green: 208.0/255.0, blue: 81.0/255.0, alpha: 1.0)
     static let lightLegnanoGreen = UIColor(displayP3Red: 238.0/255.0, green: 244.0/255.0, blue: 215.0/255.0, alpha: 1)
     static let guzziRed = UIColor(displayP3Red: 195.0/255.0, green: 21.0/255.0, blue: 26.0/255.0, alpha: 1.0)
+    static let ios12SystemGray5 = UIColor(displayP3Red: 229.0/255.0, green: 229.0/255.0, blue: 234.0/255.0, alpha: 1.0)
 }
 
 // MARK: - UISearchBar extensions
@@ -326,7 +274,12 @@ extension UITableView {
         
         let greenFooterView = UIView(frame: .zero)
         greenFooterView.translatesAutoresizingMaskIntoConstraints = false
-        greenFooterView.backgroundColor = .lightLegnanoGreen
+//        greenFooterView.backgroundColor = .lightLegnanoGreen
+        
+        if #available(iOS 13, *) {
+            greenFooterView.backgroundColor = .systemBackground
+        }
+        
         footerView.addSubview(greenFooterView)
         
         greenFooterView.topAnchor.constraint(equalTo: footerView.topAnchor).isActive = true

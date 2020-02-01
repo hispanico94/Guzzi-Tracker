@@ -17,7 +17,6 @@ class TableBackgroundViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightLegnanoGreen
         label.text = text
     }
 }

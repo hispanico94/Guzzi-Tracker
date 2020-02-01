@@ -183,8 +183,9 @@ class FiltersViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if let headerView = view as? UITableViewHeaderFooterView {
-            headerView.backgroundView?.backgroundColor = UIColor.lightLegnanoGreen
+        if #available(iOS 13, *) {}
+        else if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.backgroundView?.backgroundColor = UIColor.ios12SystemGray5
         }
     }
     
