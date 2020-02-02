@@ -75,7 +75,13 @@ On the left of the navigation bar there is an *i* button. When tapped an `InfoVi
 
 ## Data management
 
-The app use no database for data persistency. All the data needed is stored in a JSON file called *info_moto.json*.
+The app use no database for data persistency. All the data needed is stored in a JSON file called *info_moto.json*. The data management is handled by the class `MotorcycleData` and struct `DataManager` defined in the Elements/Data.swift file. MotorcycleData acts as an interface and manager to the rest of the app, DataManager handles the http request, storing locally and fetching the json file and data extraction from the file.
 
+When the app is launched for the first time the *info_moto.json* is copied from the bundle to the app's *LibraryDirectory*. After that the json is read and decoded and the array of `Motorcycle`, containing all the data about the motorcycles, is available to the rest of the app.
 
+The data updating is done by checking the json's version stored in a GitHub Gist [TODO: MAYBE REVERT TO LOCAL REPOSITORY]. The version value is stored in a `value` key in the json's root object. If the version of the remote file is greater than the version of the local file the latter is replaced by the newer in the LibraryDirectory.
+The http request is handled with a simple URLSession dataTask. See `DataManager.checkForUpdatedJson(currentVersion:)` method definition for reference.
 
+If a new version of the file was found and saved the MotorcycleData receives the new json by assignment to a property and via a didSet observer an update of the `Motorcycle` list and values of filters is triggered. The update is propagated in the app thanks to the `Ref` class that holds references to closures defined in the various view controllers that need the array of `Motorcycle` and the closures are called with the new value of the array.
+
+## Localization
