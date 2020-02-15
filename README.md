@@ -85,3 +85,18 @@ The http request is handled with a simple URLSession dataTask. See `DataManager.
 If a new version of the file was found and saved the MotorcycleData receives the new json by assignment to a property and via a didSet observer an update of the `Motorcycle` list and values of filters is triggered. The update is propagated in the app thanks to the `Ref` class that holds references to closures defined in the various view controllers that need the array of `Motorcycle` and the closures are called with the new value of the array.
 
 ## Localization
+
+The app is localized in italian and english. The language is automatically set via the Locale of the device. The json file contains the texts both in italian and english and only one is parsed, depending on the locale of the device. Besides the *Localizable.strings*, the *Localizable.stringsdict* is used for handling the translation of singular and plural text.
+
+## UI Management
+
+In creating the user interface only xibs were used. Layout is handled exclusively by Auto Layout. 
+
+Version 1.1 introduced the use of a UISplitViewController for the Motorcycle tab, this allows, on the iPad and iPhones Plus/Max, maintaining the motorcycle list on the left of screen while having a motorcycle detail or images screen on the right.
+
+Version 1.1 also introduced *Dark Mode* with automatic activation based on the device traits. The custom color used were defined as `Color Set`s in the *xcassets* for taking advantage of the automatic set of the appropriate color when the user interface style (dark, light) changes.
+
+Version 1.1 rolls back to a more subtle, conservative color palette compared to the earlier 1.0 version of the app.
+
+The icons used come from [Icons8](https://icons8.it)
+
