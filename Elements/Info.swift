@@ -6,8 +6,6 @@ struct Information {
     let version: Version
     let about: About
     let contacts: [Contact]
-    let review: Review
-    
     
     struct Version {
         let appName: String
@@ -25,11 +23,6 @@ struct Information {
     }
     
     struct Contact {
-        let text: String
-        let link: URL?
-    }
-    
-    struct Review {
         let text: String
         let link: URL?
     }
@@ -73,20 +66,6 @@ extension Information.Contact: CellRepresentable {
     }
 }
 
-extension Information.Review: CellRepresentable {
-    func makeTableViewCell(forTableView tableView: UITableView) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reviewIdentifier") ?? UITableViewCell(style: .default, reuseIdentifier: "reviewIdentifier")
-        cell.textLabel?.textAlignment = .center
-        cell.textLabel?.textColor = .guzziRed
-        cell.textLabel?.text = text
-        return cell
-    }
-
-    var selectionBehavior: CellSelection {
-        return .openURL(linkURL: link)
-    }
-}
-
 // MARK: - Information defaults and SectionData array
 
 extension Information {
@@ -101,10 +80,9 @@ extension Information {
         let emailURL = emailUrlEncoded ?? "mailto:guzzitracker@gmail.com"
         
         let contacts = [ Contact(text: "email: guzzitracker@gmail.com", link: URL(string: emailURL)),
-                         Contact(text: "GitHub", link: URL(string: "https://github.com/hispanico94")) ]
-        let review = Review(text: NSLocalizedString("Write a review!", comment: "write a review in the app store"), link: URL(string: "https://itunes.apple.com/app/guzzi-tracker/id1435726246?action=write-review"))
+                         Contact(text: "GitHub", link: URL(string: "https://github.com/hispanico94/Guzzi-Tracker")) ]
         
-        return Information(version: version, about: about, contacts: contacts, review: review)
+        return Information(version: version, about: about, contacts: contacts)
     }
     
     func makeArray() -> [SectionData] {
@@ -115,8 +93,6 @@ extension Information {
                                     sectionElements: [about]))
         elements.append(SectionData(sectionName: NSLocalizedString("Contacts", comment: "(or contact the developer)"),
                                     sectionElements: contacts))
-        elements.append(SectionData(sectionName: NSLocalizedString("Reviews", comment: "Reviews"),
-                                    sectionElements: [review]))
         elements.append(SectionData(sectionName: NSLocalizedString("Version", comment: "application version"),
         sectionElements: [version]))
         

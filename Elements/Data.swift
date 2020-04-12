@@ -79,7 +79,7 @@ fileprivate struct DataManager {
         return fileName + "." + fileExtension
     }
     
-    private let remoteJsonUrl = "https://gist.githubusercontent.com/hispanico94/a48b323f0c10fe35334af01a60c96f53/raw/info_moto.json"
+    private let remoteJsonUrl = "https://raw.githubusercontent.com/hispanico94/Guzzi-Tracker/master/Guzzi%20Tracker/info_moto.json"
     
     /// Save the bundle's info_moto.json in the library directory if it doesn't already exists.
     func saveBundleJsonToLibrary() {
