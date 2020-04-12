@@ -1,15 +1,23 @@
 # Guzzi-Tracker
 
-Guzzi Tracker is an app that provides to the users the technical specs of (almost) all Moto Guzzi motorcycles manufactured since 1921. The app is entirely written in Swift 5.1 and it uses MVC architecture.
+![](Images/screen1.png) ![](Images/screen2.png) ![](Images/screen3.png)
+
+Guzzi Tracker is an app that provides to the users the technical specs of (almost) all Moto Guzzi motorcycles manufactured since 1921. The app is entirely written in Swift 5 and it uses MVC architecture.
 
 The app was available in version 1.0 on the App Store from september 2018 to december 2019. The app's App Store page is archived and is available [HERE](http://archive.is/Pa68R).
-The current app version is 1.1 and presents several differences from the old version available on the App Store. The structure has been simplified by removing the *search* tab (the search functionality is now embedded in the first tab). The app fully supports Dark Mode and animated table view data source diffing (on iOS 13), better handling of images and better support iPads, with split view controllers and readable width and several other small improvements.
+The current app version is 1.1 and presents several differences from the old version available on the App Store. The structure has been simplified by removing the *search* tab (the search functionality is now embedded in the first tab). The app fully supports Dark Mode and animated table view data source diffing (on iOS 13), better handling of images and better support iPads, with split view controllers and readable content width and several other small improvements.
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Framework and Libraries](#frameworks-and-Libraries)
 - [Structure](#structure)
+  - [Motorcycles](#motorcycles)
+  -	[Garage](#garage)
+- [Data Management](#data-management)
+- [Localization](#localization)
+- [UI Management](#ui-management)
+- [Measurements](#measurements)
 
 ## Framework and Libraries
 
@@ -57,7 +65,7 @@ The motorcycle list in `MotorcyclesViewController` can be ordered and filtered a
 
 In the `MotorcyclesViewController` tapping on the funnel icon on the navigation bar will present modally a `FiltersViewController` view controller. This view controller is a subclcass of UITableViewController and it's embedded in a navigation controller. The table view is composed of two sections: *Filters* and *Ordering*.
 
-*Filters* groups several filtering criteria. Tapping on a cell [TODO: INSERT TYPES] a new view controller is pushed and here the user can select a range or a list of elements to include in the filtering. The elements and the ranges are extracted from the motorcycle list model (see `MotorcycleData` in *Data.swift*, the filters available in `Elements/Filter` and `MotorcycleElements` in *Elements.swift*). The view controllers for the filtering are available in `ViewControllers/Filers View Controllers`.
+*Filters* groups several filtering criteria. Tapping on a cell a new view controller is pushed and here the user can select a range or a list of elements to include in the filtering. The elements and the ranges are extracted from the motorcycle list model (see `MotorcycleData` in *Data.swift*, the filters available in `Elements/Filter` and `MotorcycleElements` in *Elements.swift*). The view controllers for the filtering are available in `ViewControllers/Filers View Controllers`.
 
 *Ordering* allows the user to selects more the one criteria to how order the list. The default criteria is by descending year of manufacturing, but it's possible to select one or more criteria. The order on which they are applied depends on the order on which they are selected by the user. The list ordering can also be applied along any applied filter. The source code for the ordering is available in the files listed in the `Elements/Order` folder. The view controller is the `ComparatorsViewController`
 
@@ -79,7 +87,7 @@ The app use no database for data persistency. All the data needed is stored in a
 
 When the app is launched for the first time the *info_moto.json* is copied from the bundle to the app's *LibraryDirectory*. After that the json is read and decoded and the array of `Motorcycle`, containing all the data about the motorcycles, is available to the rest of the app.
 
-The data updating is done by checking the json's version stored in a GitHub Gist [TODO: MAYBE REVERT TO LOCAL REPOSITORY]. The version value is stored in a `value` key in the json's root object. If the version of the remote file is greater than the version of the local file the latter is replaced by the newer in the LibraryDirectory.
+The data updating is done by checking the json's version stored in the repo here on GitHub. The version value is stored in a `value` key in the json's root object. If the version of the remote file is greater than the version of the local file the latter is replaced by the newer in the LibraryDirectory.
 The http request is handled with a simple URLSession dataTask. See `DataManager.checkForUpdatedJson(currentVersion:)` method definition for reference.
 
 If a new version of the file was found and saved the MotorcycleData receives the new json by assignment to a property and via a didSet observer an update of the `Motorcycle` list and values of filters is triggered. The update is propagated in the app thanks to the `Ref` class that holds references to closures defined in the various view controllers that need the array of `Motorcycle` and the closures are called with the new value of the array.
@@ -92,11 +100,17 @@ The app is localized in italian and english. The language is automatically set v
 
 In creating the user interface only xibs were used. Layout is handled exclusively by Auto Layout. 
 
-Version 1.1 introduced the use of a UISplitViewController for the Motorcycle tab, this allows, on the iPad and iPhones Plus/Max, maintaining the motorcycle list on the left of screen while having a motorcycle detail or images screen on the right.
+Version 1.1 introduced the use of a UISplitViewController for the Motorcycle tab, this allows, on the iPad and iPhones Plus/Max, maintaining the motorcycle list on the left of screen while having a motorcycle detail or images screen on the right. 
 
 Version 1.1 also introduced *Dark Mode* with automatic activation based on the device traits. The custom color used were defined as `Color Set`s in the *xcassets* for taking advantage of the automatic set of the appropriate color when the user interface style (dark, light) changes.
 
-Version 1.1 rolls back to a more subtle, conservative color palette compared to the earlier 1.0 version of the app.
+![](Images/screen1.png) ![](Images/screen1_dark.png)
 
-The icons used come from [Icons8](https://icons8.it)
+Version 1.1 uses a more subtle, conservative color palette compared to the earlier 1.0 version of the app. The latest version also introduces the use of the readable content width for `UITableViewCell`s, `.pageSheet` as modal presentation style and collection diffing when searching and filtering the list of motorcycles. The readable content width is available both on iOS 13 and 12, while the other features are iOS 13 exclusive.
+
+The icons used come from [Icons8](https://icons8.it). The latest app icon was designed by me.
+
+## Measurements
+
+Because many of the tech specs are values with units of measure associated, the `Measurement` and `Dimension` Foundation's classe are used extensively in the app. During the development it was experimented the use of localized measurements, but many automatic conversions didn't use an appropriate unit for representing the dimension (for example wheelbases and brake disk size where often converted to feet instead to more appropriate inches).
 
